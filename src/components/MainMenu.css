@@ -1,0 +1,14 @@
+.MainMenu{
+    /* float: right; */
+}
+
+button {
+    border-radius: 50%;
+    border-image: linear-gradient(66deg, rgba(0,138,255,1) 0%, rgba(252,0,255,1) 100%);
+    border-image-slice: 1;
+    border-width: 2px;
+    padding: 7px;
+    font-size: 2vw;
+    background-color: transparent;
+    color: white;
+}
