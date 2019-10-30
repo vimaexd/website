@@ -1,4 +1,4 @@
-.MainMenu{
+.MainMenu-Buttons{
     display: flex;
     flex-direction: column;
 }
@@ -25,6 +25,50 @@
     background-color: transparent;
     color: white;
     margin: 2px
+}
+
+.MainMenu-Social{
+    padding-top: 2vw;
+}
+
+.MainMenu-SocialButton{
+    padding-right: 1vw;
+    color:white;
+}
+
+.S-discord:hover{
+    color: #7289DA;
+    cursor: pointer;
+}
+
+.S-github:hover{
+    color: #b8b8b8;
+    cursor: pointer;
+}
+
+.S-twitter:hover{
+    color: #1da1f2;
+    cursor: pointer;
+}
+
+.S-spotify:hover{
+    color: #1db954;
+    cursor: pointer;
+}
+
+.S-twitch:hover{
+    color: #9146ff;
+    cursor: pointer;
+}
+
+.S-twitch:hover{
+    color: #9146ff;
+    cursor: pointer;
+}
+
+.S-youtube:hover{
+    color: #ff0000;
+    cursor: pointer;
 }
 
 button:hover {

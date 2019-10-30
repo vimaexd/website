@@ -7,6 +7,9 @@
   "author": "etstringy",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
     "emoji-awesome": "^0.0.2",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.13.0",
