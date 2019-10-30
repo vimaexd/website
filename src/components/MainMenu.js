@@ -7,8 +7,11 @@ class MainMenu extends React.Component {
     render() {
         return (
             <div className="MainMenu">
-                <Link to="/test">
-                    <button className="MainMenu-Options">Test</button>
+                <Link to="/projects">
+                    <button className="MainMenu-Grad1">Projects</button>
+                </Link>
+                <Link to="/music">
+                    <button className="MainMenu-Grad2">Music</button>
                 </Link>
             </div>
         )

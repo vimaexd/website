@@ -1,14 +1,32 @@
 .MainMenu{
-    /* float: right; */
+    display: flex;
+    flex-direction: column;
 }
 
-button {
-    border-radius: 50%;
+.MainMenu-Grad1 {
     border-image: linear-gradient(66deg, rgba(0,138,255,1) 0%, rgba(252,0,255,1) 100%);
+    border-radius: 50%;
     border-image-slice: 1;
     border-width: 2px;
     padding: 7px;
     font-size: 2vw;
     background-color: transparent;
     color: white;
+    margin-bottom: 5px;
+}
+
+.MainMenu-Grad2 {
+    border-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+    border-radius: 50%;
+    border-image-slice: 1;
+    border-width: 2px;
+    padding: 7px;
+    font-size: 2vw;
+    background-color: transparent;
+    color: white;
+    margin: 2px
+}
+
+button:hover {
+    cursor: pointer;
 }
