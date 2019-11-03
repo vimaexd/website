@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './MainMenu.css';
+import './css/MainMenu.css';
 import './App.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -21,14 +21,15 @@ class MainMenu extends React.Component {
     render() {
         return (
             <div className="MainMenu">
-                {/* <div className="MainMenu-Buttons">
-                    <Link to="/projects">
-                        <button className="MainMenu-Grad1">Projects</button>
+                <div className="MainMenu-Buttons">
+                    <a href="https://files.stringy.software">
+                        <button className="MainMenu-Grad1">Files</button>
+                    </a>
+                    <Link to="/community">
+                        <button className="MainMenu-Grad2">Community</button>
                     </Link>
-                    <Link to="/music">
-                        <button className="MainMenu-Grad2">Music</button>
-                    </Link>
-                </div> */}
+
+                </div>
                 <div className="MainMenu-Social">
                     <a href="https://discord.gg/E8Vf4ZR"><FontAwesomeIcon className="MainMenu-SocialButton S-discord" icon={faDiscord} size="2x"/></a> 
                     <a href="https://github.com/etstringy"><FontAwesomeIcon className="MainMenu-SocialButton S-github" icon={faGithub} size="2x"/></a>

@@ -1,0 +1,32 @@
+.Proj-Boxes {
+    display: flex;
+    justify-content: center;
+}
+
+.Proj-MainText{
+    text-align: center;
+}
+
+.Proj-Box-1{
+    display: inline-block;
+    width:25vw;
+    height:15%;
+    align-items: center;
+    border-radius: 5%;
+    text-align: center;
+    padding-top: 4px;
+    background-color: #38f000;
+    background-size: 100%;
+    /* margin-left: 10vw; */
+}
+
+.goBtn{
+    border-radius: 10%;
+    border-color: transparent;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    font-family: "Roboto";
+    float: left;
+    padding-top: 5px;
+    width: 100%
+}

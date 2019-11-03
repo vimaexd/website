@@ -2,7 +2,7 @@ import React from 'react'
 import Twemoji from 'react-twemoji';
 import fetch from 'node-fetch'
 import './App.css';
-import './animate.css';
+import './css/animate.css';
 import logo from '../assets/strsft.png';
 
 import MainMenu from './MainMenu'
