@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './home'
 import Community from './community'
-import IdiotCon from './idiotcon.js'
+import IdiotCon from './idiotcon';
 
 class App extends React.Component {
   render() {
