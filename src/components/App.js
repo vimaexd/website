@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './home'
 import Community from './community'
@@ -11,9 +11,11 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <div>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/community" component={Community} />
-            <Route exact path="/community/idiotcon" component={IdiotCon} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/community" component={Community} />
+              <Route exact path="/community/idiotcon" component={IdiotCon} />
+            </Switch>
           </div>
         </div>
       </Router>
