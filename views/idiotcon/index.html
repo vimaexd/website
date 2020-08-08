@@ -1,0 +1,210 @@
+<html>
+    <head>
+        <title>Idiotcon</title>
+            <!-- Primary Meta Tags -->
+            <title>Stringy Software</title>
+            <meta name="title" content="Stringy Software">
+            <meta name="description" content="💻 Software that's Stringy.">
+            <meta name="viewport" content="width=device-width" />
+    
+            <!-- Open Graph / Facebook -->
+            <meta property="og:type" content="website">
+            <meta property="og:url" content="https://strsft.xyz/">
+            <meta property="og:title" content="Stringy Software">
+            <meta property="og:description" content="💻 Software that's Stringy.">
+            <meta property="og:image" content="banner.png">
+    
+            <!-- Twitter -->
+            <meta property="twitter:card" content="summary_large_image">
+            <meta property="twitter:url" content="https://strsft.xyz/">
+            <meta property="twitter:title" content="Stringy Software">
+            <meta property="twitter:description" content="💻 Software that's Stringy.">
+            <meta property="twitter:image" content="banner.png">
+    
+            <!-- Bootstrap -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+            <!-- Google Fonts -->
+            <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+            <!-- Font Awesome -->
+            <script src="https://kit.fontawesome.com/6e28df878b.js"></script>
+    
+            <!-- SweetAlert2 -->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    
+            <!-- SpinKit Spinner-->
+            <link rel="stylesheet" href="/css/spinner.css">
+    
+            <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+            <link rel="stylesheet" href="ic/stylesheet.css">
+    </head>
+    <style>
+        body{
+            background: rgb(0,255,42);
+            background: linear-gradient(66deg, rgba(0,255,42,1) 49%, rgba(0,18,255,1) 50%);
+            color: white;
+        }
+        #countdown{
+            font-family: Berlin Sans FB;
+            font-size: 1000%;
+            text-align: center;
+            color: yellow;
+            /* text-shadow:
+            -6px -6px 0 #000,
+            px -6px 0 #000,
+            -6px 6px 0 #000,
+            6px 6px 0 #000; */
+            -webkit-text-stroke: 5px black;
+        }
+
+        
+    </style>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: transparent;">
+                <a class="navbar-brand" href="#">Idiotcon</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Countdown<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link disabled" href="#">Map</a>
+                    <a class="nav-item nav-link disabled" href="#">Stream</a>
+                    <!-- <a class="nav-item nav-link" href="../api/discord/idiotcon">Login</a> -->
+
+                    <img id="user" class="user usercircle round" src="img/Wiretap.jpg" width="40px" height="40px">
+                    <i id="userarrow" class="user material-icons white">keyboard_arrow_down</i>
+                    </div>
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                        <!-- <button id="login" class="btn btn-outline-success my-2 my-sm-0" href="../api/discord/idiotcon">Login with Discord</button> -->
+                </form>
+        </nav>
+
+        <h1 id="countdown">Loading...</h1>
+        <script>
+            function getCookie(name) {
+                  var nameEQ = name + "=";
+                  var ca = document.cookie.split(';');
+                  for(var i=0;i < ca.length;i++) {
+                      var c = ca[i];
+                      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                  }
+                  return null;
+            }
+
+            function login() {
+                console.log("Logging In...")
+                window.location.href = "../api/discord/idiotcon/"
+            }
+            window.onload = () => {
+
+                var d = new Date();
+
+                var localTime = d.getTime();
+
+                var localOffset = d.getTimezoneOffset() * 60000;
+
+                var utc = localTime + localOffset;
+
+                // obtain and add destination's UTC time offset
+                // for example, Bombay 
+                // which is UTC + 5.5 hours
+                var offset = 5.5;   
+                var bombay = utc + (3600000*offset);
+
+                var nd = new Date(bombay); 
+                alert("Bombay time is " + nd.toLocaleString() + "<br>");
+                var fragment = new URLSearchParams(window.location.search);
+
+                // Set the date we're counting down to
+                var countDownDate = new Date("Nov 21, 2019 17:00:00").getTime();
+                
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                
+                  // Get today's date and time
+                  var now = new Date().getTime();
+                
+                  // Find the distance between now and the count down date
+                  var distance = countDownDate - now;
+                
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                  // Display the result in the element with id="demo"
+                  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                
+                  // If the count down is finished, write some text
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Idiotcon";
+                  }
+                }, 1000);
+
+                if(fragment.has("loggedin")) {
+                    Toast.fire({
+                        type: 'success',
+                        title: 'Success',
+                        text: 'You are now logged in.',
+                    })
+                }
+
+                if(fragment.has("loggedout")) {
+                    Toast.fire({
+                        type: 'success',
+                        title: 'Success',
+                        text: 'You have successfully logged out.',
+                    })
+                }
+
+                if(fragment.has("denied")) {
+                    Swal.fire({
+                    type: 'error',
+                    title: 'Denied',
+                    text: 'Login cancelled.',
+                    })
+                }
+
+                if (getCookie("idiot_at")) {
+
+                console.log("Checked for token, Token found.")
+                const accessToken = getCookie("idiot_at");
+                // const tokenType = getCookie("token_type");
+                const tokenType = "Bearer"
+        
+                fetch('https://discordapp.com/api/users/@me', {
+                  headers: {
+                    authorization: `${tokenType} ${accessToken}`
+                  }
+                })
+                  .then(res => res.json())
+                  .then(response => {
+                    const { username, discriminator, id, avatar, mfa_enabled } = response;
+                    document.getElementById("user").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.png`
+                    document.getElementById('login').remove()
+                  })
+                  .catch(error => {console.log(error)});
+        
+                }
+                else {
+                    // document.getElementById('login').style.display = 'block';
+
+                    document.getElementById("user").remove();
+                    document.getElementById("userarrow").remove();
+                }
+
+            }
+        </script>
+    </body>
+</html>

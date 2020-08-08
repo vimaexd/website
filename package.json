@@ -1,47 +1,19 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "https://stringy.software - Built with React - 🚀",
   "main": "index.js",
-  "repository": "http://github.com/etstringy/website",
-  "author": "etstringy",
+  "repository": "https://github.com/etstringy/website.git",
+  "author": "etstringy <eddyteddyt@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.7",
-    "emoji-awesome": "^0.0.2",
-    "node-fetch": "^2.6.0",
-    "node-sass": "^4.13.0",
-    "pretty-ms": "^5.0.0",
-    "react": "^16.11.0",
-    "react-countdown-now": "^2.1.1",
-    "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "react-twemoji": "^0.2.3",
-    "react-youtube": "^7.9.0",
-    "whatwg-fetch": "^3.0.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node index"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "colors": "^1.4.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "querystring": "^0.2.0"
   }
 }

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap');
+
+body{
+    margin: 0;
+    background-color: #222222;
+    /* background-color: white; */
+    color: white;
+    font-family: "Roboto";
+    
+}
+
+.main-header{
+    background-color: #1791FB;
+    padding: 2px;
+    overflow: hidden;
+}
+
+/* .main-header-text{
+    /* font-weight: 500; */
+    /* font-size: 40px; */
+    /* float: left; */
+    /* text-align: center; */
+} */
+
+.main-header-right{
+    float: right;
+}
+
+.li a{
+    /* display: block; */
+    text-align: center;
+    color: white;
+}
+
+.pfp{
+    vertical-align: middle;
+    /* margin-top: 50%; */
+}
+
+#editbtn{
+    margin: 5px;
+}
+
+#newcont, #newact{
+    color: white;
+}
+
+input[type=text]{
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .card{
+        background-color: #2c2f33;
+        /* width: 20vw; */
+        /* display: inline-block; */
+        /* margin: 15px; */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+}
+
+.S-discord:hover{ color: #7289DA; cursor: pointer; }
+.S-github:hover { color: #b8b8b8; cursor: pointer; }
+.S-twitter:hover{ color: #1da1f2; cursor: pointer; }
+.S-spotify:hover{ color: #1db954; cursor: pointer; }
+.S-twitch:hover { color: #9146ff; cursor: pointer; }
+.S-twitch:hover { color: #9146ff; cursor: pointer; }
+.S-youtube:hover{ color: #ff0000; cursor: pointer; }
+
+.fab{ color: white; font-size: 48px; }
+
+.S-box{
+    padding: 15px !important; 
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(66,214,203,1) 0%, rgba(43,198,95,1) 100%);
+    display: inline-block;
+}

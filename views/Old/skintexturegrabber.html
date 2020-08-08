@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+    <head>
+        <!-- Primary Meta Tags -->
+        <title>Minecraft Texture Hash Grabber</title>
+        <meta name="title" content="Minecraft Texture Hash Grabber">
+        <meta name="description" content="idk why are you reading this lol">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://metatags.io/">
+        <meta property="og:title" content="Minecraft Texture Hash Grabber">
+        <meta property="og:description" content="idk why are you reading this lol">
+        <meta property="og:image" content="http://files.stringy.software/V7m50-thonk.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://metatags.io/">
+        <meta property="twitter:title" content="Minecraft Texture Hash Grabber">
+        <meta property="twitter:description" content="idk why are you reading this lol">
+        <meta property="twitter:image" content="http://files.stringy.software/V7m50-thonk.png">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <style>
+        body {
+            background-color: #2C2F33;
+            color: white;
+            font-family: Roboto;
+        }
+
+        h2 {
+            font-weight: 100;
+        }
+
+        #content {
+            padding-top: 25px;
+            padding-left: 30%;
+            padding-right: 30%;
+        }
+
+        input {
+            padding: 4px;
+            border-radius: 5px;
+        }
+
+        .box {
+            background-color: #23272A;
+            padding: 14px;
+            border-radius: 15;
+            word-wrap: break-word
+        }
+
+        .btn {
+            background-color: #7289DA;
+            padding: 5px 15px 5px 15px;
+            border-radius: 5px;
+            border-color:transparent;
+            cursor: pointer;
+            color: white;
+        }
+
+        #output {
+            font-family: 'Lucida Console';
+        }
+
+        /* spinner lol */
+        .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            border-color: #fff transparent #fff transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <body>
+        <div id="content">
+            <h1>Stringy's Skin Texture Grabber</h1>
+            <h2>For ToV.</h2>
+            <br>
+
+            <div class="box box-top">
+                <div id="inputbox">
+                    <span>Minecraft Username</span>
+                    <input id="mcusrname">
+                    <br> <br>
+                    <button class="btn" onclick="doStuff()"><b>Do the things!</b></button>
+                </div>
+            </div>
+            <br>
+            <div class="box box-mid">
+                <h3>Output: </h3>
+                <p id="output">
+
+                </p>
+            </div>
+            <div class="box">
+                <p id="output2">
+
+                </p>
+            </div>
+
+            <script>
+                let isRunning = false;
+                let proxyURL = "https://cors-anywhere.herokuapp.com/"
+                async function doStuff() {
+                    // is your refridgerator running
+                    if(isRunning) return;
+                    isRunning = true
+
+                    // remove the dialog
+                    $("#inputbox").hide()
+                    $(".box-top").append(`<div class="lds-dual-ring"></div>`)
+
+                    // get uuid
+                    let usr = $("#mcusrname").val();
+                    $("#output").append(`Getting UUID from Mojang for username ${usr}<br> <br>`)
+
+                    $.ajax({url: `${proxyURL}https://api.mojang.com/users/profiles/minecraft/${usr}`, success: (res) => {
+                        if(!res) return $("#output").append(`This user does not exist! <br> <br>`);
+                        $("#output").append(`Got UUID! ${res.id} <br> <br>`)
+                        getTextureInfo(res.id, usr)
+                    }, error: (err) => {
+                        $("#output").append(`Error getting UUID from Mojang! Check console for more info <br> <br>`)
+                        console.log(err)
+                    }})
+                }
+
+                async function getTextureInfo(uuid, usrna){
+                    // get texture info
+                    $("#output").append(`Getting texture info for ${uuid}, this might take a bit...<br> <br>`)
+
+                    let textureinfo;
+                    $.ajax({url: `${proxyURL}https://sessionserver.mojang.com/session/minecraft/profile/${uuid}?unsigned=false`, success: (res) => {
+                        if(!res) return $("#output").append(`This user does not exist! <br> <br>`);
+                        textureinfo = res
+                        $("#output").append(`Got texture info! <br> <br>`)
+                        $("#output2").append(`Texture hash for ${usrna}: <b>${textureinfo.properties[0].value}</b><br> <br>`)
+                        let skinurl = JSON.parse(atob(textureinfo.properties[0].value)).textures.SKIN.url
+                        $("#output2").append(`Texture URL for ${usrna}: <a href="${skinurl}" target="_blank">${skinurl}</a><br> <br>`)
+                        $("#output2").append(`Head command for ${usrna}: <b> /give @p minecraft:player_head{SkullOwner:{Id:[I;${randomNumber().toFixed().toString()},${randomNumber().toFixed().toString()},${randomNumber().toFixed().toString()},${randomNumber().toFixed().toString()}],Properties:{textures: [{Value: "${textureinfo.properties[0].value}"}]}}}</b><br> <br>`)
+                        $(".box-top").hide()
+                        $(".box-mid").hide()
+                        $("#output2").append(`<button class="btn" onclick="javascript:location.reload()"><b>Another!</b></button>`)
+                    }, error: (err) => {
+                        $("#output").append(`Error getting texture info from Mojang! Check console for more info <br> <br>`)
+                        console.log(err)
+                    }})
+                }
+
+                function randomNumber() {
+                    let min = -1971837451
+                    let max = 1971837451
+                    return Math.random() * (max - min) + min;
+                }
+                // /give @p minecraft:player_head{SkullOwner:{Id:[I;-1971837451,794903217,-1187879297,-1253797325],Properties:{textures: [{Value: "ewogICJ0aW1lc3RhbXAiIDogMTU5NDI1NTI1NjQyMSwKICAicHJvZmlsZUlkIiA6ICIzOWRjOWJjZDYyNDE0MDhiODI3ZTFiOWM3ZGYwM2RiYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJldFN0cmluZ3kiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmJkY2NkYmZmNjhiYWU0ODFhOTZkNmZhOTdjNmUzMTJjNTgyOGRlNWZlZWMxZDlkYTc0MzI1MmIwNjcyYzAzYSIKICAgIH0KICB9Cn0="}]}}}
+                // /give @p minecraft:player_head{SkullOwner:{Id:[I;-1971837451,794903217,-1187879297,-1253797325],Properties:{textures: [{Value: "ewogICJ0aW1lc3RhbXAiIDogMTU5NDI1NTk3OTIyNSwKICAicHJvZmlsZUlkIiA6ICJkYzg1OTA3ODU4MzU0ZWNjYjM2ZjEzZGI1Y2E3YTM4YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaGVJZGlvdEdhbWVyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2IxMzk1MDAyYzkzMjEwN2IwYmQzMjA2Y2UxMWZlYmQ0NmM0ODMxODNlOTFkZmE5YjUyYTE4MjY5YmE4NjljODciCiAgICB9CiAgfQp9"}]}}}
+
+            </script>
+        </div>
+    </body>
+</html>

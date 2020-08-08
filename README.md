@@ -1,3 +1,0 @@
-## Stringy Software Website
-
-🚀
