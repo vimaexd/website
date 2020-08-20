@@ -134,3 +134,10 @@ animation-delay: -0.9s;
 .f_pad {
     margin-top: 5px;
 }
+
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}

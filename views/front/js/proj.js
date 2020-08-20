@@ -118,6 +118,8 @@ function showPage(){
 window.onload = () => {
     getProj()
     setTimeout(showPage, 500);
+    
+    twemoji.parse(document.body);
 
     fetch("https://api.stringy.software/database/profile", { method: 'get', headers: { "X-DiscordToken": Cookies.get("at") } })
     .then(res => res.json())

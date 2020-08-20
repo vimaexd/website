@@ -5,6 +5,7 @@ function showPage(){
 }
 window.onload = () => {
     setTimeout(showPage, 200);
+    twemoji.parse(document.body);
     fetch("https://api.stringy.software/randomquote")
         .then(res => res.text())
         .then(q => $("#quote").text(q))
