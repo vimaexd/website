@@ -2,6 +2,7 @@
 
 # no you cant have my stuff for free c:
 public/audio/*
+src/assets/albumart/*
 
 # dependencies
 /node_modules
