@@ -22,5 +22,6 @@ export default [
     "600 When 600 When 600 When 600 When",
     "Cannot BRUH /",
     "Don't let the Dalux bite.",
-    "bodge was here - meep"
+    "bodge was here - meep",
+    "where are the bobux"
 ]
