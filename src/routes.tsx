@@ -2,13 +2,15 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import index from './pages/main';
-import music from './pages/music';
+import NiceTry from './components/DaluxGlare';
 
 function Routes() {
   return (
       <Switch>
         <Route path='/' component={index} exact />
-        <Route path='/music' component={music} exact />
+
+        {/* haha, nice try ;) */}
+        <Route path="/audio/600.mp3" component={NiceTry} exact/>
       </Switch>
   );
 }
