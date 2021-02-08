@@ -1,9 +1,7 @@
-import React, { Component, createRef } from 'react'
-import { Reference } from 'react-popper';
+import React, { Component } from 'react'
 import Twemoji from 'react-twemoji';
 
 import Blob1 from '../assets/blob1.svg'
-import Blob2 from '../assets/blob2.svg'
 import ExylLogo from '../assets/sitelogos/exyl.png'
 
 interface WebsitesState {
@@ -18,14 +16,6 @@ export default class Websites extends Component<any, WebsitesState> {
             blob: Blob1
         }
     }
-
-    // componentDidMount() {
-    //     let blobs = [Blob1, Blob2]
-    //     setInterval(() => {
-    //         let blobId = Math.floor(Math.random() * blobs.length);
-    //         this.setState({blob: blobs[blobId]})
-    //     }, 1000)
-    // }
 
     render() {
         return (
