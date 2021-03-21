@@ -3,6 +3,25 @@ import Release from './Release';
 let releaseArray: Array<Release> = [];
 
 releaseArray.push(new Release(
+    "Shapeverse",
+    "EP of mainly synthwave-y songs.",
+    {
+        artwork: "Shapeverse.png",
+        audio: "Shapeverse.zip"
+    },
+    1616288760,
+    "EP",
+    [
+        "Intro",
+        "Cherp",
+        "Stringwave",
+        "Coolepic",
+        "Dreams 2"
+    ],
+    "https://www.youtube.com/watch?v=4v2qjJeIuw4"
+))
+
+releaseArray.push(new Release(
     "500",
     "A future bass-y subscriber special I made for 500 subscribers that was hyped up for months.",
     {
