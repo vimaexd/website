@@ -4,6 +4,7 @@ import Music from './music';
 import About from './about';
 import Websites from './websites';
 
+import DiscordPresence from '../components/DiscordPresence';
 import Popup from '../components/Popup';
 import Curtain from '../components/Curtain';
 import Footer from '../components/Footer';
@@ -15,7 +16,7 @@ import Funnies from '../resources/Funnies';
 import Wave from '../assets/wave.svg';
 import Wave2 from '../assets/wave2.svg';
 import Wave3 from '../assets/wave3.svg';
-import "../css/index.css";
+import "../css/index.scss";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -61,6 +62,10 @@ class main extends Component<ReactPropTypes, MainState> {
 
         <TopPage/>
         <img draggable={false} src={Wave} alt="wave" style={{display: "block"}}></img>
+
+        <DiscordPresence/>
+
+
         <About/>
         <img draggable={false} src={Wave2} alt="wave" style={{display: "block"}}></img>
         <Music setPopup={this.setPopup}/>
@@ -87,14 +92,13 @@ function TopPage() {
         <div className="main_container">
           <h1 className="brand_text">Stringy</h1>
         </div>
-        <p className="aboutme">
-          Hi, I'm Stringy. A 14 year old programmer, and music producer.<br/>
-          <i>"{funny}"</i>
-        </p>
+          <p className="aboutme">
+            Hi, I'm Stringy. A 14 year old programmer, and music producer.<br/>
+            <i>"{funny}"</i>
+          </p>
       </div>
 
       <FontAwesomeIcon className="scrolldown" size="2x" icon={['fas', 'chevron-down']}/>
-      
     </main>
   )
 }

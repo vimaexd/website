@@ -678,3 +678,234 @@ html, body, main, #strsft {
 .sites_container {
   margin-bottom: 25px;
 }
+
+.sideby {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.presences {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  margin-bottom: 50px;
+  animation: presencePop 0.3s ease;
+}
+
+.presence {
+  box-shadow: 10px 10px 28px -5px rgba(0,0,0,0.3);
+  width: 400px;
+  height: auto;
+  
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.404);
+  color: #000;
+  margin: 10px;
+
+  font-family: Roboto;
+  font-weight: 100;
+
+  background-position: 2%;
+  background-size: cover;
+
+  flex-shrink: 3;
+  min-height: 152px;
+}
+
+@keyframes presencePop {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+}
+
+.presence b {
+  font-weight: 500;
+}
+
+.presence h1 {
+  color: #000;
+}
+
+.presence_music {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  text-overflow: ellipsis;
+}
+
+.presence_music .title {
+  margin-top: 2px;
+}
+
+.presence_music_lower {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: relative;
+  top: 10px;
+  left: 5px;
+
+  margin-bottom: 10px;
+}
+
+.presence_small_img {
+  z-index: 50;
+  position: absolute;
+
+  border-radius: 1000px;
+
+  left: -25px;
+  top: 25px;
+
+  width: 30px;
+  height: 30px;
+}
+
+.presence_music .info {
+  /* margin-top: 2px; */
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.presence_music .info h2 {
+  margin-top: 5px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.presence_music .info p {
+  text-overflow: ellipsis;
+}
+
+.presence_large_img {
+  border-radius: 4px;
+  height: 100px;
+}
+
+progress {
+  margin-left: 5px;
+  margin-right: 5px;
+
+  background-color: #f3f3f3;
+  height: 12px;
+  border-radius: 15px;
+
+  transition: 0.2s ease;
+}
+
+progress::-webkit-progress-value {
+  /* background: linear-gradient(90deg, rgb(190, 80, 241) 0%, rgb(65, 167, 226) 100%); */
+  background-color: #1DB954;
+  border-radius: 15px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #dbdbdb;
+  border-radius: 15px;
+}
+
+.str_button {
+  /* background: linear-gradient(90deg, rgb(190, 80, 241) 0%, rgb(65, 167, 226) 100%); */
+  background-color: #9146ff;
+  color: #fff;
+
+  /* margin: 4px;
+  margin-bottom: 0px;
+  margin-left: 0px; */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: Roboto;
+  font-weight: 500;
+  /* padding: 3px 20px; */
+  font-size: 15px;
+}
+
+.spotify {
+  background-color: #191414;
+  color: #fff;
+}
+
+.discord_style {
+  background-color: #2C2F33;
+  color: #fff;
+}
+
+.short {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.lanyard {
+  z-index: 50;
+  position: absolute;
+
+  border-radius: 1000px;
+
+  left: 330px;
+  top: -28px;
+}
+  
+.tippy-box[data-theme~='disq'] {
+	background-color: black;
+  font-family: Roboto;
+	box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.tippy-box[data-state="visible"] {
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tippy-box[data-placement^="top"][data-animation="discord-anim"] {
+    transform-origin: center !important;
+    &[data-state="hidden"] {
+        opacity: 0;
+        transform: scale(0.9) translateY(-11px);
+    }
+    &[data-state="visible"] {
+        transform: scale(1) translateY(-11px);
+    }
+}
+
+.tippy-box[data-theme~='disq'][data-placement^="top"]  > .tippy-arrow::before {
+	border-top-color: black;
+}
+
+.tippy-box[data-placement^="right"][data-animation="discord-anim"] {
+    transform-origin: center !important;
+    &[data-state="hidden"] {
+        opacity: 0;
+        transform: scale(0.9) translateX(11px);
+    }
+    &[data-state="visible"] {
+        transform: scale(1) translateX(11px);
+    }
+}
+
+.tippy-arrow {
+	color: #000 !important;
+}
+
+.tippy-box[data-theme~='disq'] .tippy-content {
+	color: rgba(255, 255, 255, 0.95);
+	font-weight: 500;
+	letter-spacing: 0.4px;
+	font-size: 0.965em;
+
+	h2 {
+		margin: 0;
+		margin-bottom: 8px;
+	}
+}

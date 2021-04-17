@@ -30,8 +30,8 @@ export default class Music extends Component<MusicProps, MusicState> {
     }
 
     componentDidMount() {
-        let releaseMap = releases.map((r: Release) => {
-            return <ReleaseComponent release={r} setPopup={this.setPopup}/>
+        let releaseMap = releases.map((r: Release, i: number) => {
+            return <ReleaseComponent key={i} release={r} setPopup={this.setPopup}/>
         })
 
         this.setState({releaseString: releaseMap})
