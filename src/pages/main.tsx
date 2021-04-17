@@ -61,7 +61,7 @@ class main extends Component<ReactPropTypes, MainState> {
         {(this.state.showPopup) ? <Curtain hide={this.hidePopup}/> : void(0)}
 
         <TopPage/>
-        <img draggable={false} src={Wave} alt="wave" style={{display: "block"}}></img>
+        <img className="wave" draggable={false} src={Wave} alt="wave" style={{display: "block"}}></img>
 
         <DiscordPresence/>
 

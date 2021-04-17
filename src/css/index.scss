@@ -791,6 +791,16 @@ html, body, main, #strsft {
   height: 100px;
 }
 
+@media only screen and (max-width: 450px) {
+  .presence {
+    width: 90vw;
+  }
+
+  progress {
+    width: 28vw;
+  }
+}
+
 progress {
   margin-left: 5px;
   margin-right: 5px;
@@ -849,15 +859,29 @@ progress::-webkit-progress-bar {
 }
 
 .lanyard {
+  margin: 0;
+  margin-left: auto;
   z-index: 50;
-  position: absolute;
+  // position: absolute;
 
   border-radius: 1000px;
 
-  left: 330px;
-  top: -28px;
+  // left: 1px;
+}
+
+.presence_songname {
+  color: #000;
+  text-decoration: none;
+}
+
+.presence_songname:hover {
+  text-decoration: underline;
 }
   
+.wave {
+  margin-top: -1px;
+}
+
 .tippy-box[data-theme~='disq'] {
 	background-color: black;
   font-family: Roboto;

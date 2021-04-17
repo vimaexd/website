@@ -54,10 +54,9 @@ interface SpotifyData {
     timestamps: {
         start: number;
         end: number;
-    }
+    };
+    track_id: string;
 }
-
-const ws = new WebSocket("wss://api.lanyard.rest/socket")
 
 export default class DiscordPresence extends React.Component<any, PresenceState> {
     constructor(props: any){
@@ -70,7 +69,8 @@ export default class DiscordPresence extends React.Component<any, PresenceState>
                   "song": "",
                   "artist": "",
                   "album_art_url": "",
-                  "album": ""
+                  "album": "",
+                  "track_id": ""
                 },
                 "listening_to_spotify": true,
                 "activities": [
@@ -120,6 +120,8 @@ export default class DiscordPresence extends React.Component<any, PresenceState>
         const info = await _info.json()
         this.setState({presence: info.data})
 
+        const ws = new WebSocket("wss://api.lanyard.rest/socket")
+
         function heartbeat(){
             ws.send(JSON.stringify({ op: 3 }))
             console.log("[Lanyard] ❤")
@@ -145,7 +147,6 @@ export default class DiscordPresence extends React.Component<any, PresenceState>
                     if(data.t === "INIT_STATE") presence = data.d['577743466940071949'];
                     else if(data.t === "PRESENCE_UPDATE") presence = data.d;
 
-                    console.log()
                     this.setState({presence})
                     break;
 
@@ -231,15 +232,13 @@ export default class DiscordPresence extends React.Component<any, PresenceState>
                         <div className="presence_music">
                             <div className="title sideby">
                                     <FontAwesomeIcon size="2x" icon={['fab', 'spotify']} fixedWidth color="#1DB954"/>
-                                    <div style={{position: "relative", width: 0, height: 0}}>
-                                        <Tippy theme="disq" animation="discord-anim" content="Powered by Lanyard" placement="top">
-                                                <p className="lanyard">
-                                                    <a style={{color: "#000"}} href="https://github.com/Phineas/lanyard">
-                                                        <span className="material-icons">info</span>
-                                                    </a>
-                                                </p>
-                                        </Tippy>
-                                    </div>
+                                    <Tippy theme="disq" animation="discord-anim" content="Powered by Lanyard" placement="top">
+                                            <p className="lanyard">
+                                                <a style={{color: "#000"}} href="https://github.com/Phineas/lanyard">
+                                                    <span className="material-icons">info</span>
+                                                </a>
+                                            </p>
+                                    </Tippy>
                             </div>
                             <div className="presence_music_lower">
                                 <Img 
@@ -251,7 +250,9 @@ export default class DiscordPresence extends React.Component<any, PresenceState>
                                 </Img>
                                 <div className="info">
                                     <p>
-                                        <b>{this.state.presence.spotify.song}</b><br/>
+                                        <a className="presence_songname" href={`https://open.spotify.com/track/${this.state.presence.spotify.track_id}`}>
+                                            <b>{this.state.presence.spotify.song}</b><br/>
+                                        </a>
                                         by <b>{this.state.presence.spotify.artist.split(";").join(",")}</b><br/>
                                         on <b>{this.state.presence.spotify.album}</b><br/>
                                         <div className="sideby">
@@ -266,49 +267,47 @@ export default class DiscordPresence extends React.Component<any, PresenceState>
                     </div> : ""
                     }
                     {
-                    (this.state.presence.activities[0] && this.state.presence.activities[0].type !== 2) ?
+                    (this.state.presence.activities.filter(a => a.type !== 2)[0]) ?
                     <div className="presence">
                         <div className="presence_music">
                             <div className="title sideby">
                                     <FontAwesomeIcon size="2x" icon={['fab', 'discord']} fixedWidth color="#7289da"/>
-                                    <div style={{position: "relative", width: 0, height: 0}}>
-                                        <Tippy theme="disq" animation="discord-anim" content="Powered by Lanyard" placement="top">
-                                                <p className="lanyard">
-                                                    <a style={{color: "#000"}} href="https://github.com/Phineas/lanyard">
-                                                        <span className="material-icons">info</span>
-                                                    </a>
-                                                </p>
-                                        </Tippy>
-                                    </div>
+                                    <Tippy theme="disq" animation="discord-anim" content="Powered by Lanyard" placement="top">
+                                            <p className="lanyard">
+                                                <a style={{color: "#000"}} href="https://github.com/Phineas/lanyard">
+                                                    <span className="material-icons">info</span>
+                                                </a>
+                                            </p>
+                                    </Tippy>
                             </div>
                             <div className="presence_music_lower">
                                 {
-                                    (this.state.presence.activities[0].assets.large_image) ?
+                                    (this.state.presence.activities.filter(a => a.type !== 2)[0].assets.large_image) ?
                                     <Img 
                                         // style={{backgroundColor: '#d4d4d4', animation: 'imageload 1s ease infinite'}}
                                         className="presence_large_img"
                                         debounce={1000} 
-                                        src={`https://cdn.discordapp.com/app-assets/${this.state.presence.activities[0].application_id}/${this.state.presence.activities[0].assets.large_image}`}
+                                        src={`https://cdn.discordapp.com/app-assets/${this.state.presence.activities.filter(a => a.type !== 2)[0].application_id}/${this.state.presence.activities.filter(a => a.type !== 2)[0].assets.large_image}`}
                                         alt="Album Art">
                                     </Img> : ""
                                 }
                                 {
-                                    (this.state.presence.activities[0].assets.small_image) ?
+                                    (this.state.presence.activities.filter(a => a.type !== 2)[0].assets.small_image) ?
                                     <div style={{position: "relative", width: 0, height: 0}}>
                                         <Img 
                                             style={{backgroundColor: '#d4d4d4', animation: 'imageload 1s ease infinite'}}
                                             className="presence_small_img"
                                             debounce={1000} 
-                                            src={`https://cdn.discordapp.com/app-assets/${this.state.presence.activities[0].application_id}/${this.state.presence.activities[0].assets.small_image}`}
+                                            src={`https://cdn.discordapp.com/app-assets/${this.state.presence.activities.filter(a => a.type !== 2)[0].application_id}/${this.state.presence.activities.filter(a => a.type !== 2)[0].assets.small_image}`}
                                             alt="Album Art">
                                         </Img>
                                     </div> : ""
                                 }
                                 <div className="info">
                                     <p>
-                                        <span><b>{this.state.presence.activities[0].name}</b><br/></span>
-                                        <span>{this.state.presence.activities[0].state}<br/></span>
-                                        <span>{this.state.presence.activities[0].details}<br/></span>
+                                        <span><b>{this.state.presence.activities.filter(a => a.type !== 2)[0].name}</b><br/></span>
+                                        <span>{this.state.presence.activities.filter(a => a.type !== 2)[0].state}<br/></span>
+                                        <span>{this.state.presence.activities.filter(a => a.type !== 2)[0].details}<br/></span>
                                     </p>
                                 </div>
                             </div>
