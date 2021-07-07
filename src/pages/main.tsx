@@ -4,7 +4,6 @@ import Music from './music';
 import About from './about';
 import Websites from './websites';
 
-import DiscordPresence from '../components/DiscordPresence';
 import Popup from '../components/Popup';
 import Curtain from '../components/Curtain';
 import Footer from '../components/Footer';
@@ -13,7 +12,7 @@ import releases from '../resources/releases';
 import Release from '../resources/Release';
 import Funnies from '../resources/Funnies';
 
-import Wave from '../assets/wave.svg';
+import { Wave1 } from '../components/Waves/Waves'
 import Wave2 from '../assets/wave2.svg';
 import Wave3 from '../assets/wave3.svg';
 import "../css/index.scss";
@@ -21,6 +20,7 @@ import "../css/index.scss";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import Presence from "../components/Presence/Presence";
 
 library.add(fas)
 
@@ -61,12 +61,9 @@ class main extends Component<ReactPropTypes, MainState> {
         {(this.state.showPopup) ? <Curtain hide={this.hidePopup}/> : void(0)}
 
         <TopPage/>
-        <img className="wave" draggable={false} src={Wave} alt="wave" style={{display: "block"}}></img>
-
-        <DiscordPresence/>
-
-
+        <Wave1/>
         <About/>
+        <Presence/>
         <img draggable={false} src={Wave2} alt="wave" style={{display: "block"}}></img>
         <Music setPopup={this.setPopup}/>
         <img draggable={false} src={Wave3} alt="wave" style={{display: "block"}}></img>

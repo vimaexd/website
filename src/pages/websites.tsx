@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Twemoji from 'react-twemoji';
 
 import Blob1 from '../assets/blob1.svg'
-import ExylLogo from '../assets/sitelogos/exyl.png'
 
 interface WebsitesState {
     blob: string;
@@ -26,15 +25,14 @@ export default class Websites extends Component<any, WebsitesState> {
                             <h1 className="page_title">Other websites</h1>
                             <Twemoji options={{ className: 'twemoji', ext: '.svg', size: "svg" }}>
                                 <div className="sites_items_container">
-                                    <Site title="Disq" description="Disq is a File upload and Short URL service. 🔗" gradient="grad_disq" link="https://disq.me"/>
-                                    <Site title="Kei" description="Easy temporary music file upload. 🎵" gradient="grad_kei" link="https://kei.disq.me"/>
-                                    <Site title="Nice Logo" description={"A fan website for Exyl"} gradient="grad_nice" link="https://nicelogo.xyz"/>
+                                    <Site title="Disq" description="Screenshot uploads and Web tools 🔗" gradient="grad_disq" link="https://disq.me"/>
+                                    <Site title="Misq" description="Random storage for internet things. 🤔" gradient="grad_kei" link="https://kei.disq.me"/>
                                 </div>
                             </Twemoji>
                         </div>
-                        <div className="sites_right">
+                        {/* <div className="sites_right">
                             <img className="sites_blob" src={this.state.blob} alt="blob"></img>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -58,17 +56,10 @@ class Site extends Component<SiteProps> {
                 <div className="sites_site_content">
                     <h1>{this.props.title}</h1>
                     <p>
-                        {(this.props.description.split(" ").includes("Exyl")) ? this.props.description + ". ": this.props.description}
-                        {(this.props.description.split(" ").includes("Exyl")) ? <Exyl/> : void(0)}
+                        {this.props.description}
                     </p>
                 </div>
             </div>
         )
     }
-}
-
-function Exyl() {
-    return (
-        <img className="twemoji" src={ExylLogo} alt="Egg"></img>
-    )
 }

@@ -1,9 +1,8 @@
 body {
   -webkit-font-smoothing: subpixel-antialiased;
-  /* background: linear-gradient(90deg, rgb(190, 80, 241) 0%, rgb(65, 167, 226) 100%); */
-  /* background-color:#050505; */
   color: #fff;
   margin: 0;
+  font-family: "Inter";
 }
 
 .center_container {
@@ -16,10 +15,8 @@ body {
 
 .logo {
   width: 10vw;
-  /* height: 150px; */
   border-radius: 1000px;
   align-self: center;
-  /* transition: all 0.2s; */
 }
 
 hr {
@@ -29,7 +26,6 @@ hr {
 .brand_text {
   margin: 0;
   /* margin-left: 35px; */
-  font-family: Roboto;
 
   font-size: 10vw;
   font-size: calc(100px + 2.5vw);
@@ -93,10 +89,6 @@ html, body, main, #strsft {
   /* background-repeat: space; */
 }
 
-.aboutme {
-  font-family: Roboto;
-}
-
 .discord:hover { background-color: #8197e6;}
 .twitch:hover { background-color: #9146ff;}
 .youtube:hover { background-color: #ff0000;}
@@ -114,7 +106,6 @@ html, body, main, #strsft {
 
 .page_title {
   margin-top: 0px;
-  font-family: Roboto;
   font-size: calc(50px + 2.5vw);
   color: #000;
   font-weight: 00;
@@ -222,20 +213,19 @@ html, body, main, #strsft {
   } 
   
   .popup_content h1 {
-    font-family: Roboto;
     font-size: 40px;
     margin-top: 15px;
     margin-bottom: 5px;
   }
   
   .popup_content p {
-    font-family: Roboto;
     margin-top: 15px;
     font-size: 15px;
   }
 
   .popup_left img {
-    border-radius: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     margin: 0;
     text-align: center;
     width: 100%;
@@ -257,7 +247,7 @@ html, body, main, #strsft {
   
     width: calc(800px + 2.5vw);
     height: calc(400px + 2.5vw);
-    border-radius: 15px;
+    border-radius: 10px;
   
     display: flex;
   
@@ -280,20 +270,20 @@ html, body, main, #strsft {
   }  
 
   .popup_content h1 {
-    font-family: Roboto;
     font-size: 40px;
     margin-top: 15px;
     margin-bottom: 5px;
   }
   
   .popup_content p {
-    font-family: Roboto;
     margin-top: 15px;
     font-size: 18px;
   }
   
   .popup_left img {
-    border-radius: 15px;
+    // border-radius: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     margin: 0;
     text-align: center;
     /* height: 427px; */
@@ -328,7 +318,6 @@ html, body, main, #strsft {
   padding: 8px;
   border-radius: 3px;
 
-  font-family: Roboto;
   font-weight: 500;
   font-size: 15px;
   text-transform: uppercase;
@@ -349,7 +338,6 @@ html, body, main, #strsft {
   color: #fff;
   border-radius: 3px;
 
-  font-family: Roboto;
   font-weight: 500;
   font-size: 27px;
   text-transform: uppercase;
@@ -371,7 +359,11 @@ html, body, main, #strsft {
 }
 
 .page_top {
-  background: linear-gradient(90deg, rgb(190, 80, 241) 0%, rgb(65, 167, 226) 100%);
+  background: linear-gradient(90deg, rgba(133,72,245,1) 0%, rgba(250,147,255,1) 100%);
+}
+
+.wave1 {
+  fill: linear-gradient(90deg, rgba(133,72,245,1) 0%, rgba(250,147,255,1) 100%);
 }
 
 .scrolldown {
@@ -407,7 +399,6 @@ html, body, main, #strsft {
 
 .footer_container {
   text-align: center;
-  font-family: "Roboto";
   margin-bottom: 15px;
   margin-top: 15px;
   
@@ -513,7 +504,6 @@ html, body, main, #strsft {
   
   .about_right p {
     text-align: left;
-    font-family: Roboto;
   }
 
   .sites_right {
@@ -560,11 +550,12 @@ html, body, main, #strsft {
     /* width: 50%; */
     display: flex;
     justify-content: center;
+    display: none;
   }
   
   .about_left img {
     width: 40vw;
-    /* height: 500px; */
+    // /* height: 500px; */
     border-radius: 15px;
     margin: 5px;
     margin-bottom: 25px;
@@ -581,7 +572,6 @@ html, body, main, #strsft {
   
   .about_right p {
     text-align: left;
-    font-family: Roboto;
   }
 
   .sites_blob {
@@ -642,7 +632,6 @@ html, body, main, #strsft {
 }
 
 .sites_site h1, .sites_site p {
-  font-family: Roboto;
   color: #fff;
   text-align: left;
 }
@@ -692,7 +681,7 @@ html, body, main, #strsft {
   justify-content: center;
   flex-wrap: wrap;
   
-  margin-bottom: 50px;
+  margin-top: 50px;
   animation: presencePop 0.3s ease;
 }
 
@@ -707,7 +696,6 @@ html, body, main, #strsft {
   color: #000;
   margin: 10px;
 
-  font-family: Roboto;
   font-weight: 100;
 
   background-position: 2%;
@@ -834,7 +822,6 @@ progress::-webkit-progress-bar {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  font-family: Roboto;
   font-weight: 500;
   /* padding: 3px 20px; */
   font-size: 15px;
@@ -884,7 +871,7 @@ progress::-webkit-progress-bar {
 
 .tippy-box[data-theme~='disq'] {
 	background-color: black;
-  font-family: Roboto;
+  font-family: Inter;
 	box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
