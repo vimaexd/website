@@ -1,0 +1,217 @@
+[
+  {
+    "name": "UNDERLING violence",
+    "description": "A remix of UNDERLING violence from NomNomNami's game BAD END THEATER",
+    "assets": {
+        "artwork": "UVRMX.png",
+        "audio": "UnderlingViolenceStringyRemix.mp3"
+    },
+    "timestamp": 1633190937,
+    "type": "Remix",
+    "tracks": ["UNDERLING violence (Stringy Remix)"],
+    "yt": "https://www.youtube.com/watch?v=d3duijV3R9s",
+    "artists": ["NomNomNami"]
+  },
+  {
+    "name": "Fidelity",
+    "description": "An EP of Lo-Fi and chill music",
+    "assets": {
+        "artwork": "Fidelity.jpg",
+        "audio": "Fidelity.zip"
+    },
+    "timestamp": 1633190937,
+    "type": "EP",
+    "tracks": [
+      "insomnia",
+      "tears",
+      "welcome back",
+      "ily to the stars",
+      "gn"
+    ],
+    "yt": "https://www.youtube.com/watch?v=kPFPOFzZBxk",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "Fluff",
+    "description": "A Kawaii Future Bass song",
+    "assets": {
+        "artwork": "Fluff.png",
+        "audio": "Fluff.mp3"
+    },
+    "timestamp": 1628006937,
+    "type": "Single",
+    "tracks": ["Fluff"],
+    "yt": "https://www.youtube.com/watch?v=zFQ28ZuBbh0",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "Nightworld",
+    "description": "A dark sounding song.",
+    "assets": {
+        "artwork": "Nightworld.jpg",
+        "audio": "Nightworld.mp3"
+    },
+    "timestamp": 1622311435,
+    "type": "Single",
+    "tracks": ["Nightworld"],
+    "yt": "https://youtu.be/QJBSKhXFNU0",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "TRM Outro",
+    "description": "A remix of TheRandomMelon's Outro music, originally by PirateCanvas",
+    "assets": {
+        "artwork": "TRM.png",
+        "audio": "TRMRemix.mp3"
+    },
+    "timestamp": 1619109973,
+    "type": "Remix",
+    "tracks": ["TRM Outro (Stringy Remix)"],
+    "yt": "https://www.youtube.com/watch?v=vEamsrUJVs0",
+    "artists": ["PirateCanvas"]
+  },
+  {
+    "name": "Shapeverse",
+    "description": "EP of mainly synthwave-y songs.",
+    "assets": {
+        "artwork": "Shapeverse.png",
+        "audio": "Shapeverse.zip"
+    },
+    "timestamp": 1616288760,
+    "type": "EP",
+    "tracks": [
+        "Intro",
+        "Cherp",
+        "Stringwave",
+        "Coolepic",
+        "Dreams 2"
+    ],
+    "yt": "https://www.youtube.com/watch?v=4v2qjJeIuw4",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "500",
+    "description": "A future bass-y subscriber special I made for 500 subscribers that was hyped up for months.",
+    "assets": {
+        "artwork": "500.jpg",
+        "audio": "500.mp3"
+    },
+    "timestamp": 1611532800,
+    "type": "Single",
+    "tracks": ["500"],
+    "yt": "https://www.youtube.com/watch?v=37dLHK9-vnU",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "Stringwave",
+    "description": "Synthwave/80s type track with the Triángle visuals.",
+    "assets": {
+        "artwork": "Stringwave.jpg",
+        "audio": "Stringwave.mp3"
+    },
+    "timestamp": 1606348800,
+    "type": "Single",
+    "tracks": ["Stringwave"],
+    "yt": "https://www.youtube.com/watch?v=Zux3MXSc0f0",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "Coolepic",
+    "description": "An ungenred synthy track with a house beat. Contains Báll. The song is named after the project file (coolepic.flp)",
+    "assets": {
+        "artwork": "Coolepic.jpg",
+        "audio": "Coolepic.mp3"
+    },
+    "timestamp": 1601168400,
+    "type": "Single",
+    "tracks": ["Coolepic"],
+    "yt": "https://www.youtube.com/watch?v=bXnQ4jIH9MU",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "200 (Remixes)",
+    "description": "Remixes of 200 made by Kanro and Sublynx!",
+    "assets": {
+        "artwork": "200Rmx.jpg",
+        "audio": "200Remixes.zip"
+    },
+    "timestamp": 1605056400,
+    "type": "EP",
+    "tracks": [
+        "200 (Kanro Remix)",
+        "200 (Sublynx Remix)"
+    ],
+    "artists": ["Stringy", "Kanro", "Sublynx"]
+  },
+  {
+    "name": "Examination (8 Bit)",
+    "description": "An 8 Bit Version of the song Examination by Scion",
+    "assets": {
+        "artwork": "Scion.jpg",
+        "audio": "Examination8Bit.mp3"
+    },
+    "timestamp": 1595379600,
+    "type": "Remix",
+    "tracks": ["Examination (Stringy 8 Bit Version)"],
+    "yt": "https://www.youtube.com/watch?v=XBbuqBuV5Mw",
+    "artists": ["Scion"]
+  },
+  {
+    "name": "Cheer",
+    "description": "Swingy, Glitch Hop-y track that uses the Twitch Cheer sound effect.",
+    "assets": {
+        "artwork": "Cheer.jpg",
+        "audio": "Cheer.mp3"
+    },
+    "timestamp": 1595379600,
+    "type": "Single",
+    "tracks": ["Cheer"],
+    "yt": "https://www.youtube.com/watch?v=5h8rIwMrrrQ",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "200",
+    "description": "Two hundred subscriber special song. Future Bass.",
+    "assets": {
+        "artwork": "200.jpg",
+        "audio": "200.mp3"
+    },
+    "timestamp": 1592787600,
+    "type": "Single",
+    "tracks": ["200"],
+    "yt": "https://www.youtube.com/watch?v=eyzemZwqDYo",
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "Intensity",
+    "description": "A 2 track single put out consisting of an ungenred song and a Drum and Bass song.",
+    "assets": {
+        "artwork": "Intensity.jpg",
+        "audio": "Intensity.zip"
+    },
+    "timestamp": 1591837200,
+    "type": "Single",
+    "tracks": [
+        "Destroi",
+        "Escape"
+    ],
+    "artists": ["Stringy"]
+  },
+  {
+    "name": "Bit",
+    "description": "My first EP that has 8 bit inspired music in it. First release using FL Studio.",
+    "assets": {
+        "artwork": "Bit.jpg",
+        "audio": "Bit.zip"
+    },
+    "timestamp": 1581987600,
+    "type": "EP",
+    "tracks": [
+        "8 Bit Syndrome",
+        "Purgatory",
+        "Deadly Adventure",
+        "Sunset"
+    ],
+    "artists": ["Stringy"]
+  }
+]
