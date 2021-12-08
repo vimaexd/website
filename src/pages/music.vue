@@ -73,13 +73,7 @@ export default {
         "All",
         "Single", 
         "EP",
-        "Remix",
-        "GD Colon Gaming",
-        "Furry Rap Anthems",
-        "Classics",
-        "Disciple Releases",
-        "Soundcloud Raps",
-        "Shitposts"
+        "Remix"
       ],
       filter_type: 'All' // all, single, ep, remix_ep
     }

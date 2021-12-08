@@ -29,8 +29,7 @@ const typed_strings = [
   "Web developer",
   "Internet user",
   "PHP Hater",
-  "Cookie enjoyer",
-  ""
+  "Cookie enjoyer"
 ]
 </script>
 
