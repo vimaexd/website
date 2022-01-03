@@ -13,7 +13,7 @@
           <h1 class="font-normal">Search</h1>
         </div>
         <input
-        class="bg-str-bleck-200 py-2 px-1 rounded-lg my-1"
+        class="dark:bg-str-bleck-200 bg-str-ice-200 py-2 px-1 rounded-lg my-1"
         v-model="search_query"
         />
 
@@ -26,7 +26,7 @@
           v-for="filter in filter_types"
           :key="filter"
           :filter_name="filter" 
-          :button_color="(filter_type === filter) ? 'bg-str-cotton' : 'bg-str-bleck-200'"
+          :button_color="(filter_type === filter) ? 'bg-str-cotton' : 'dark:bg-str-bleck-200 bg-str-ice-200'"
           @click="filter_type = filter"
           />
         </div>
@@ -39,7 +39,7 @@
         :release="release"
         />
         <div v-if="releases.length === 0" class="w-96 h-40 rounded-md m-2">
-          <div class="flex justify-center items-center bg-str-bleck-100 rounded-lg h-full">
+          <div class="flex justify-center items-center dark:bg-str-bleck-100 bg-str-ice-100 rounded-lg h-full">
             <h1 class="text-2xl font-bold">😔 No results</h1>
           </div>
         </div>

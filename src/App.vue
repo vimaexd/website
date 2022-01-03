@@ -6,6 +6,9 @@ import anime from 'animejs';
 import navbar from './components/layout/navbar.vue';
 
 export default {
+  mounted() {
+
+  },
   components: { navbar },
   methods: {
     enter(el: Element, done: any) {
@@ -27,19 +30,22 @@ export default {
         easing: 'easeInCubic',
         complete: done,
       })
-    }
+    },
+
   }
 }
 </script>
 
 <template>
-  <div class="bg-str-bleck text-white min-h-screen">
-    <navbar/>
-    <router-view v-slot="{ Component }">
-      <!-- <transition name="fade" :css="false" @enter="enter" @leave="leave"> -->
-        <component :is="Component" />
-      <!-- </transition> -->
-    </router-view>
+  <div class="dark">
+    <div class="bg-str-ice text-black dark:bg-str-bleck dark:text-white min-h-screen">
+      <navbar/>
+      <router-view v-slot="{ Component }">
+        <!-- <transition name="fade" :css="false" @enter="enter" @leave="leave"> -->
+          <component :is="Component" />
+        <!-- </transition> -->
+      </router-view>
+    </div>
   </div>
 </template>
 

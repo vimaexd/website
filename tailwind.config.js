@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -12,7 +12,10 @@ module.exports = {
         'str-yarn': '#FA93FF',
         'str-bleck': '#060606',
         'str-bleck-100': '#0a0a0a',
-        'str-bleck-200': '#0f0f0f'
+        'str-bleck-200': '#0f0f0f',
+        'str-ice': '#f5f5f5',
+        'str-ice-100': '#ebebeb',
+        'str-ice-200': '#dedede'
       }
     },
   },

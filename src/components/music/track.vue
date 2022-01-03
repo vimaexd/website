@@ -4,7 +4,7 @@
   class="flex flex-col w-80 md:w-96 rounded-md m-2"
   >
     <div
-    class="bg-center bg-cover bg-str-bleck-100 rounded-lg h-full"
+    class="bg-center bg-cover dark:bg-str-bleck-100 bg-str-ice-100 rounded-lg h-full"
     >
       <div class="h-full w-full p-4">
         <div class="flex flex-row justify-between">
@@ -12,12 +12,12 @@
             <img :src="`./assets/albumart/${release.assets.artwork}`" class="w-14 h-14 rounded-md"/>
             <div class="text-xl ml-4 leading-6 self-center">
               <h3 class="font-semibold">{{ release.name }}</h3>
-              <h4 class="text-base font-normal text-gray-300">{{ release.artists.join(", ")}}</h4>
+              <h4 class="text-base font-normal dark:text-gray-200 text-gray-700">{{ release.artists.join(", ")}}</h4>
             </div>
           </div>
           <a :href="'/audio/' + release.assets.audio" download>
             <button class="bg-str-cotton w-10 h-10 rounded-full transition-all transform-gpu hover:scale-110 self-center">
-                <span class="material-icons text-2xl">download</span>
+                <span class="material-icons text-2xl text-str-ice">download</span>
             </button>
           </a>
         </div>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div
-        class="w-full bg-str-bleck-200 flex py-1 px-2 my-1 rounded-md"
+        class="w-full dark:bg-str-bleck-200 bg-str-ice-200 flex py-1 px-2 my-1 rounded-md"
         v-for="(track, trackindex) in release.tracks"
         :key="track"
         >

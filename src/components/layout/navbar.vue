@@ -9,7 +9,7 @@
         v-for="page in pages" 
         :key="page.name" 
         v-on:click="$router.push(page.route)"
-        :class=" ((page.route == $router.currentRoute.value.path) ? 'bg-str-cotton' : '') +
+        :class=" ((page.route == $router.currentRoute.value.path) ? 'bg-str-cotton text-white' : '') +
         ` rounded-lg pl-3 pr-3 pt-2 pb-2 flex space-x-1 transform transition-all duration-200 hover:bg-str-cotton hover:scale-105 hover:-translate-y-1`"
         >
           <span class="material-icons">{{ page.icon }}</span>
@@ -25,7 +25,7 @@
   v-on:enter="menu_enter"
   v-on:leave="menu_exit"
   >
-    <div id="mobile_navbar" class="absolute h-full w-full z-10 bg-str-bleck" v-if="display_menu">
+    <div id="mobile_navbar" class="absolute h-full w-full z-10 dark:bg-str-bleck bg-str-ice" v-if="display_menu">
       <button
       id="nav_button"
       v-for="page in pages"
