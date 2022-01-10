@@ -40,7 +40,10 @@
         />
         <div v-if="releases.length === 0" class="w-96 h-40 rounded-md m-2">
           <div class="flex justify-center items-center dark:bg-str-bleck-100 bg-str-ice-100 rounded-lg h-full">
-            <h1 class="text-2xl font-bold">😔 No results</h1>
+            <h1 class="text-2xl font-bold flex items-center justify-center space-x-2" v-emojify>
+              <span>😔</span>
+              No results
+            </h1>
           </div>
         </div>
       </div>
@@ -71,8 +74,9 @@ export default {
       search_query: '',
       filter_types: [
         "All",
-        "Single", 
+        "Album",
         "EP",
+        "Single",
         "Remix"
       ],
       filter_type: 'All' // all, single, ep, remix_ep

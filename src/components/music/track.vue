@@ -33,7 +33,7 @@
             <div class="space-x-1">
               <a :href="release.yt">
                 <button class="transition-all transform-gpu hover:scale-110" v-if="release.yt">
-                  <span class="material-icons text-xl">music_video</span>
+                  <span class="bx bxl-youtube bx-sm"></span>
                 </button>
               </a>
             </div>

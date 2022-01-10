@@ -6,7 +6,7 @@
     :href="s.url"
     class="anim_social_icon"
     >
-      <i :class='"bx bx-md transform transition-transform hover:scale-105 hover:-translate-y-1 " + s.icon'></i>
+      <i :class='"bx bx-md text-str-bleck-100 dark:text-str-ice-200 transform transition-transform hover:scale-105 hover:-translate-y-1 " + s.icon'></i>
     </a>
   </div>
 </template>

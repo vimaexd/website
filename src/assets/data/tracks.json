@@ -1,5 +1,18 @@
 [
   {
+    "name": "Mango on a Fork",
+    "description": "Fast mix of Dubstep, DnB and Hardstyle",
+    "assets": {
+        "artwork": "MOAF.jpg",
+        "audio": "MangoOnAFork.mp3"
+    },
+    "timestamp": 1640282400,
+    "type": "Single",
+    "tracks": ["Mango on a Fork"],
+    "yt": "https://www.youtube.com/watch?v=gYtzEJWOUwI",
+    "artists": ["Stringy"]
+  },
+  {
     "name": "UNDERLING violence",
     "description": "A remix of UNDERLING violence from NomNomNami's game BAD END THEATER",
     "assets": {
