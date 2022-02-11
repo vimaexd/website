@@ -28,7 +28,7 @@
     "jest-ts-auto-mock": "^2.0.0",
     "lodash": "^4.17.21",
     "node-fetch": "^2.6.1",
-    "node-sass": "4.14",
+    "node-sass": "7.0",
     "react": "^16.13.1",
     "react-cool-img": "^1.2.9",
     "react-dom": "^16.13.1",
