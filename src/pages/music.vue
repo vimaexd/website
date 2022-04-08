@@ -117,16 +117,19 @@ export default {
       opacity: [0, 1],
     })
 
-    const trackAnimation = anime({
-      targets: "#track_info",
-      easing: 'easeOutExpo',
-      translateX: [20, 0],
-      opacity: [0, 1],
-      delay: anime.stagger(100)
-    })
+    // const trackAnimation = anime({
+    //   targets: "#track_info:nth-child(-n+3)",
+    //   duration: 600,
+    //   easing: 'easeOutExpo',
+    //   translateX: [20, 0],
+    //   opacity: [0, 1],
+    //   delay: (el, i, l) => {
+    //     return i * 75
+    //   }
+    // })
 
     buttonAnimation.play();
-    trackAnimation.play();
+    // trackAnimation.play();
   }
 }
 </script>

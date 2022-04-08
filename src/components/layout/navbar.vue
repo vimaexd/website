@@ -60,9 +60,9 @@ export default {
           icon: 'audiotrack'
         },
         {
-          name: 'Test',
-          route: '/test1',
-          icon: 'masks'
+          name: 'Commissions',
+          route: '/commissions',
+          icon: 'payments'
         }
       ]
     }

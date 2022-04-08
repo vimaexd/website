@@ -1,6 +1,6 @@
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'class', // or 'media' or 'class'
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -18,9 +18,6 @@ module.exports = {
         'str-ice-200': '#dedede'
       }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
