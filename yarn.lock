@@ -43,6 +43,11 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@eggsydev/vue-lanyard@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@eggsydev/vue-lanyard/-/vue-lanyard-1.1.3.tgz#8136d214315dbc8dde411b26572a1f7c7970d3c8"
+  integrity sha512-QEM1geHPw0OfZf8Y+jaN2S0cq201+zq0MOG/FUH0CAV8Dpe1hVz+0lES4JMCBSRr6xRcuqTot68PKycd5C2Fkg==
+
 "@emmetio/abbreviation@^2.2.2":
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/@emmetio/abbreviation/-/abbreviation-2.2.2.tgz#746762fd9e7a8c2ea604f580c62e3cfe250e6989"

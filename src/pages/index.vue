@@ -26,10 +26,7 @@
           <h2 class="text-xl font-light flex flex-row items-center space-x-1">
             🏳️‍⚧️
             <p>
-              <a href="https://lgbta.fandom.com/wiki/Transgender" target="_blank">transgirl</a>
-              and
-              <a href="https://lgbta.fandom.com/wiki/Bisexual" target="_blank">bisexual</a>
-              (she/they)
+              transgirl and bisexual (she/they)
             </p>
           </h2>
         </div>
@@ -109,7 +106,7 @@ export default {
     "icon-row": iconrow,
     blob
   },
-  mounted() {
+  async mounted() {
     this.parseTwemoji();
     const tl = anime.timeline();
     tl.add({
@@ -127,6 +124,7 @@ export default {
       opacity: [0, 1],
       delay: anime.stagger(100)
     }, "-=900")
+
   },
   updated() {
     this.parseTwemoji();

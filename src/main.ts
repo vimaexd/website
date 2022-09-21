@@ -1,8 +1,9 @@
 import { createApp } from 'vue';
 
 // Plugins
-import router from './plugins/router';
-import twemoji from './plugins/twemoji';
+import VueRouter from './plugins/router';
+import VueTwemoji from './plugins/twemoji';
+// import VueLanyard from "@eggsydev/vue-lanyard";
 import VueGtag from "vue-gtag-next";
 
 // Main component + CSS
@@ -13,8 +14,9 @@ import 'boxicons/css/boxicons.min.css';
 const isProduction = window.location.hostname != 'localhost';
 
 const app = createApp(App);
-app.use(router);
-app.use(twemoji);
+app.use(VueRouter);
+app.use(VueTwemoji);
+// app.use(VueLanyard);
 
 if(isProduction){
   app.use(VueGtag, { property: { id: "UA-148249653-1" } });
