@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
@@ -12,6 +10,7 @@ import { Tooltip } from 'react-tooltip'
 
 
 export default function Home() {
+  'use client'
   anime({
     targets: ".anim-initslide",
     opacity: [0, 1],
