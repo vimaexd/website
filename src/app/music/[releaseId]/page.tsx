@@ -7,9 +7,3 @@ export default function ReleaseWrapper() {
     <Release/>
   )
 }
-
-export async function getStaticProps(context: GetStaticPropsContext) {
-  return {
-    props: {}
-  }
-}

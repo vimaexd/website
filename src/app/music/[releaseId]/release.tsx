@@ -11,8 +11,8 @@ export interface IRelease {
   artist_comment: string;
   album_art: string;
 }
-
-export default function Release({release}: {release: IRelease}) {
+// {release}: {release: IRelease}
+export default function Release() {
   return (
     <div>
       <div className='w-full h-full blur-3xl absolute top-0 left-0 z-10'>
