@@ -1,0 +1,17 @@
+[
+  {
+    "type": "jumbotron",
+    "name": "Website v8",
+    "description": "The 8th evolution of my personal website. You're currently looking at it.",
+    "image": "all.png"
+  },
+  {
+    "type": "project",
+    "name": "Online Confine Dashboard",
+    "description": "A web dashboard for authenticated users to manage DNS records for subdomains assigned to them.",
+    "image": "/assets/project_images/ocdash.png",
+    "links": {
+      "Website": "https://onlineconfine.lol"
+    }
+  }
+]

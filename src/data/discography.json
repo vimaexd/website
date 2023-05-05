@@ -1,0 +1,50 @@
+{
+  "tracks": [
+    {
+      "id": "pixp",
+      "name": "pixel palace",
+      "genre": "Lo-fi",
+      "length": "2:20"
+    },
+    {
+      "id": "glasshypno",
+      "name": "glass hypnotist",
+      "genre": "Lo-fi",
+      "length": "2:06"
+    },
+    {
+      "id": "strawb",
+      "name": "strawberry factory",
+      "genre": "Electronic",
+      "length": "3:30"
+    },
+    {
+      "id": "eepy",
+      "name": "sleepyhead",
+      "genre": "Lo-fi",
+      "length": "1:45"
+    }
+  ],
+  "releases": [
+    {
+      "slug": "moon",
+      "title": "moon",
+      "type": "EP",
+      "year": 2023,
+      "tracks": [
+        "track:pixp",
+        "track:glasshypno",
+        "track:strawb",
+        "track:eepy"
+      ],
+      "links": {
+        "bandcamp": "",
+        "spotify": "",
+        "applemusic": "",
+        "youtube": ""
+      },
+      "artist_comment": "",
+      "album_art": "/assets/tmp/cover.png"
+    }
+  ]
+}
