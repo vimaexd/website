@@ -1,16 +1,13 @@
+'use client'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
 import LatestRelease from '@mae/components/frontpage_blocks/latest_release';
 import LatestProject from '@mae/components/frontpage_blocks/latest_project';
-import { ReactSVG } from 'react-svg'
 import anime from 'animejs';
 import Link from 'next/link';
 import { Tooltip } from 'react-tooltip'
 
 
 export default function Home() {
-  'use client'
   anime({
     targets: ".anim-initslide",
     opacity: [0, 1],
@@ -36,7 +33,7 @@ export default function Home() {
                   </li>
                   <li className='flex flex-row items-center anim-initslide'>
                     <span className='w-6 mr-2 h-6 flex'>
-                      <ReactSVG src="/assets/icons/neurodiversity.svg" wrapper="svg"/>
+                      <Image src="/assets/icons/neurodiversity.svg" width="64" height="64" alt={'Neurodiversity "infinity" symbol'}/>
                     </span>
                     I'm neurodivergent
                   </li>

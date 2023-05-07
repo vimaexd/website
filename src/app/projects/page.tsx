@@ -1,12 +1,10 @@
+'use client'
 import React from 'react'
 import Portfolio from '../../data/portfolio.json'
 import Link from 'next/link'
 import anime from 'animejs';
 
-
-
 export default function meow() {
-  'use client'
   React.useEffect(() => {
       anime({
         targets: ".anim-projects",
