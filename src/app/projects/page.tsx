@@ -1,11 +1,11 @@
 'use client'
-import React from 'react'
 import Portfolio from '../../data/portfolio.json'
 import Link from 'next/link'
 import anime from 'animejs';
+import { useEffect } from 'react';
 
 export default function meow() {
-  React.useEffect(() => {
+  useEffect(() => {
       anime({
         targets: ".anim-projects",
         opacity: [0, 1],

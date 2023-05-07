@@ -5,10 +5,11 @@ import LatestProject from '@mae/components/frontpage_blocks/latest_project';
 import anime from 'animejs';
 import Link from 'next/link';
 import { Tooltip } from 'react-tooltip'
+import { useEffect } from 'react';
 
 
 export default function Home() {
-  React.useEffect(() => {
+  useEffect(() => {
     anime({
       targets: ".anim-initslide",
       opacity: [0, 1],
