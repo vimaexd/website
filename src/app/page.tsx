@@ -8,13 +8,16 @@ import { Tooltip } from 'react-tooltip'
 
 
 export default function Home() {
-  anime({
-    targets: ".anim-initslide",
-    opacity: [0, 1],
-    duration: 1000,
-    translateX: [-20, 0],
-    delay: anime.stagger(50)
+  React.useEffect(() => {
+    anime({
+      targets: ".anim-initslide",
+      opacity: [0, 1],
+      duration: 1000,
+      translateX: [-20, 0],
+      delay: anime.stagger(50)
+    })
   })
+  
   return (
     <main>
       <div className='flex items-center flex-col pt-4'>

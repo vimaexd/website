@@ -13,7 +13,6 @@ export default function meow() {
         duration: 1000,
         delay: anime.stagger(50)
       })
-      console.log("a")
   })
   
   return (
