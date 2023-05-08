@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import ChipButton from '../chip_button';
+import ChipButton from '@mae/components/Chip';
 
 export default function latest_release() {
   return (

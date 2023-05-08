@@ -1,9 +1,20 @@
 import React from 'react'
-import Release from './release';
-import { GetStaticPropsContext } from 'next';
+import Release, { IRelease } from './release';
+import { GetStaticProps, GetStaticPropsContext, NextPage } from 'next';
+import { notFound } from 'next/navigation';
 
-export default function ReleaseWrapper() {
+import discog from '../../../data/discography.json';
+
+interface Props {
+  release: IRelease;
+}
+export default function ReleaseWrapper(props: any) {
+  const release = (discog as { releases: IRelease[] }).releases.find(d => (d.slug == props.params.releaseId))
+  if(!release) {
+    notFound()
+  }
+
   return (
-    <Release/>
+    <Release release={release!}/>
   )
 }

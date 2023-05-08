@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
+import Button from '@mae/components/Button'
 export interface IRelease {
   slug: string;
   title: string;
@@ -12,28 +13,29 @@ export interface IRelease {
   album_art: string;
 }
 // {release}: {release: IRelease}
-export default function Release() {
+export default function Release({release}: {release: IRelease}) {
   return (
     <div>
       <div className='w-full h-full blur-3xl absolute top-0 left-0 z-10'>
-        <img src="/assets/tmp/cover.png" className='w-full h-full object-cover object-center'/>
+        <img src={release.album_art} className='w-full h-full object-cover object-center'/>
       </div>
       <div className="z-10 sticky flex justify-center">
         <div className='w-[1024px] space-y-8'>
           <div className='flex items-center gap-8'>
-            <img src="/assets/tmp/cover.png" width="128px" className='rounded-lg shadow-xl'></img>
+            <img src={release.album_art} width="140px" className='rounded-lg shadow-xl'></img>
             <div className='mb-auto'>
               <h1 className='text-7xl font-bold -mt-5'>moon</h1>
               <h2>EP • 4 tracks • 2023</h2>
               <div className='flex gap-2'>
-                <Link href={"https://etstringy.bandcamp.com"}>
-                  <h3 className='bg-str-cotton text-center w-32 mt-5 hover:bg-purple-500 transition-all py-1 px-4 rounded-md active:scale-90'>
-                    Buy
-                  </h3>
-                </Link>
+                {
+                  (release.links.bandcamp != undefined)
+                  ? <Button text="Buy" href={release.links.bandcamp} className='mt-5 w-32 bg-str-cotton hover:bg-purple-500 text-center'/>
+                  : <h4 className='text-neutral-300 mt-5'>Unavaliable</h4>
+                }
               </div>
             </div>
             <div className='flex flex-col gap-2 ml-auto'>
+              <Button text="watch" href="https://etstringy.bandcamp.com" className='flex outline-1 outline-double text-center hover:bg-white hover:text-black bg-transparent'></Button>
               <Link href={"https://etstringy.bandcamp.com"}>
                   <h3 className='flex outline-1 outline-double text-center hover:bg-white hover:text-black transition-all py-1 px-4 rounded-md active:scale-90'>
                     <i className='bx bxl-youtube bx-sm mr-2'></i>
@@ -63,10 +65,12 @@ export default function Release() {
 
           <table className='w-full'>
             <thead>
-              <th>Track</th>
-              <th>Title</th>
-              <th>Genre</th>
-              <th>Length</th>
+              <tr>
+                <th>Track</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Length</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
