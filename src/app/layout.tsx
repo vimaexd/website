@@ -1,7 +1,6 @@
-import { Inter } from 'next/font/google'
-import 'react-tooltip/dist/react-tooltip.css'
-import '../css/globals.css'
-
+import { Inter } from 'next/font/google';
+import 'react-tooltip/dist/react-tooltip.css';
+import '../css/globals.css';
 import Navbar from '@mae/components/layout/Navbar';
 
 export const metadata = {

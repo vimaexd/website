@@ -49,7 +49,7 @@ export default function releaseCard({release}: {release: IUnresolvedRelease}) {
   })
 
   return (
-      <div className='flex flex-col items-center gap-2 cursor-pointer' onMouseEnter={enter} onMouseLeave={exit}>
+      <div className='flex flex-col items-center gap-2 cursor-pointer'>
         <div className='flex flex-row w-full'>
           <Link href={'/music/' + release.slug}>
             <Image
@@ -58,13 +58,14 @@ export default function releaseCard({release}: {release: IUnresolvedRelease}) {
             height={128}
             quality={75}
             alt={"Album art for " + release.title}
-            className={`transition-all ${(isExpanded) ? 'rounded-tl-lg rounded-bl-lg' : 'rounded-lg'}`}></Image>
+            className={`transition-all ${(isExpanded) ? 'rounded-tl-lg rounded-bl-lg' : 'rounded-lg'}`}
+            onMouseEnter={enter} onMouseLeave={exit}></Image>
           </Link>
           {
             isExpanded &&
             <div className='relative h-full'>
               <div className="absolute h-full">
-                <div className='h-full bg-str-bleck-200 w-36 py-2 px-4 rounded-tr-lg rounded-br-lg' data-anim={popoverId}>
+                <div className='h-full bg-[rgba(0,0,0,0.4)] backdrop-blur-xl w-36 py-2 px-4 rounded-tr-lg rounded-br-lg' data-anim={popoverId}>
                   <h1 className='font-bold'>{release.title}</h1>
                   <h2 className='text-sm'>{release.type}</h2>
                   <h2 className='text-sm'>{release.tracks.length} song{(release.tracks.length > 1) && "s"}</h2>
