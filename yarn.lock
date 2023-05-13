@@ -143,6 +143,11 @@
   resolved "https://registry.yarnpkg.com/@types/animejs/-/animejs-3.1.7.tgz#4d9b23fff04b52e755119625a6087e2bc024527a"
   integrity sha512-kFSyjM+fLo3oE9noWEtUvF82ttN8fTrKohiEMIrSzEzEjnsCmtO0rBCUQBlSPEb2w8vfN+v4/Zo0tK21Bgmq4g==
 
+"@types/howler@^2.2.7":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@types/howler/-/howler-2.2.7.tgz#5acfbed57f9e1d99b8dabe1b824729e1c1ea1fae"
+  integrity sha512-PEZldwZqJJw1PWRTpupyC7ajVTZA8aHd8nB/Y0n6zRZi5u8ktYDntsHj13ltEiBRqWwF06pASxBEvCTxniG8eA==
+
 "@types/node@18.15.7":
   version "18.15.7"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.15.7.tgz"
@@ -399,6 +404,11 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+howler@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/howler/-/howler-2.2.3.tgz#a2eff9b08b586798e7a2ee17a602a90df28715da"
+  integrity sha512-QM0FFkw0LRX1PR8pNzJVAY25JhIWvbKMBFM4gqk+QdV+kPXOhleWGCB6AiAF/goGjIHK2e/nIElplvjQwhr0jg==
 
 is-binary-path@~2.1.0:
   version "2.1.0"

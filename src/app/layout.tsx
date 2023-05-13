@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
       </head>
-      <body className={inter.className + " " + "bg-str-bleck text-gray-200"}>
+      <body className={inter.className + " " + "bg-[#0c0c0c] text-gray-200"}>
         <Navbar/>
         {children}
       </body>

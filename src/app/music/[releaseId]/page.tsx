@@ -1,20 +1,26 @@
 import React from 'react'
-import Release, { IRelease } from './release';
+import Release from './release';
 import { GetStaticProps, GetStaticPropsContext, NextPage } from 'next';
 import { notFound } from 'next/navigation';
+import type { IDiscography, IResolvedRelease } from '@mae/misc/discography/types';
 
-import discog from '../../../data/discography.json';
+import _discog from '@mae/data/discography.json';
+import { resolveRelease } from '@mae/misc/discography/utils';
 
-interface Props {
-  release: IRelease;
-}
+// wrapper fetches the release from the json and then supplies it to the component
 export default function ReleaseWrapper(props: any) {
-  const release = (discog as { releases: IRelease[] }).releases.find(d => (d.slug == props.params.releaseId))
-  if(!release) {
+  const discog = (_discog as IDiscography)
+  let unresolved = discog
+    .releases
+    .find(d => (d.slug == props.params.releaseId))
+
+  if(!unresolved) {
     notFound()
   }
 
+  const release = resolveRelease(unresolved, discog.tracks);
+
   return (
-    <Release release={release!}/>
+    <Release release={release}/>
   )
 }
