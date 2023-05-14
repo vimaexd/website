@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <PageContainer>
       <Introduction/>
-      <div className='flex gap-8'>
+      <div className='flex flex-col lg:flex-row gap-8'>
         <LatestRelease/>
         <LatestProject/>
       </div>

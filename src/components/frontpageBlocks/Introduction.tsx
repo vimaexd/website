@@ -69,7 +69,7 @@ export default function Introduction() {
             </li>
           </ol>
         </div>
-        <div className='text-4xl text-neutral-100 flex gap-1 mt-auto'>
+        <div className='text-4xl text-neutral-100 flex gap-1 mt-8'>
           <Link href='https://youtube.com/Stringy' data-tooltip-content='YouTube' data-tooltip-id='front:social:yt'>
             <Tooltip id="front:social:yt" className='text-sm' />
             <i className='bx bxl-youtube hover:scale-110 hover:text-str-yarn transition-all duration-75 active:scale-90'></i>
@@ -92,7 +92,7 @@ export default function Introduction() {
           </Link>
         </div>
       </div>
-      <div className='w-1/2 flex justify-end'>
+      <div className='w-1/2 justify-end hidden lg:flex'>
         <Image src="/maewave.png" width={256} height={256} alt={''} data-anim="goober"></Image>
       </div>
     </div>

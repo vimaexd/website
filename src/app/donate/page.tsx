@@ -64,7 +64,7 @@ export default function Donate() {
                 It's not the best option due to Twitch requiring a $50 minimum before payout and taking a cut, but you can either donate bits or subscribe to me on Twitch.
               </p>
               <div className='mt-8 flex-grow-0'>
-                <Link href='/projects'>
+                <Link href='https://twitch.tv/etstringy'>
                   <h1 className='text-sm flex items-center gap-1'>
                     Donate on Twitch <i className='bx bx-link-external'></i>
                   </h1>
