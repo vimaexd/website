@@ -1,5 +1,5 @@
 'use client';
-import anime from 'animejs';
+import anime from 'animejs/lib/anime.es';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react'

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { IBaseRelease, IUnresolvedRelease } from '@mae/misc/discography/types';
-import anime from 'animejs';
+import anime from 'animejs/lib/anime.es';
 import Link from 'next/link';
 
 export default function releaseCard({release}: {release: IUnresolvedRelease}) {

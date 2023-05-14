@@ -1,7 +1,7 @@
 'use client'
 import Portfolio from '../../data/portfolio.json'
 import Link from 'next/link'
-import anime from 'animejs';
+import anime from 'animejs/lib/anime.es';
 import { useEffect } from 'react';
 
 import Project from '@mae/components/projectCards/Project';
