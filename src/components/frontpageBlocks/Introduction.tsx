@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Tooltip } from 'react-tooltip'
 import { useEffect } from 'react';
 
-import anime, { stagger as animestagger } from 'animejs';
+import anime from 'animejs';
 
 export default function Introduction() {
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function Introduction() {
       opacity: [0, 1],
       duration: 1000,
       translateX: [-6, 0],
-      delay: animestagger(50)
+      delay: anime.stagger(50)
     })
 
     anime.timeline({

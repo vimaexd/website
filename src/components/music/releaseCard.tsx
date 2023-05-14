@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { IBaseRelease, IUnresolvedRelease } from '@mae/misc/discography/types';
-import anime, { stagger as animestagger } from 'animejs';
+import anime from 'animejs';
 import Link from 'next/link';
 
 export default function releaseCard({release}: {release: IUnresolvedRelease}) {
@@ -42,7 +42,7 @@ export default function releaseCard({release}: {release: IUnresolvedRelease}) {
         translateX: [-5, 0],
         opacity: [0, 1],
         easing: "spring(0.5, 120, 10, 0)",
-        delay: animestagger(50)
+        delay: anime.stagger(50)
       })
       hasAnimatedIn = true;
     }

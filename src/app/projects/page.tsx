@@ -1,7 +1,7 @@
 'use client'
 import Portfolio from '../../data/portfolio.json'
 import Link from 'next/link'
-import anime, { stagger } from 'animejs';
+import anime from 'animejs';
 import { useEffect } from 'react';
 
 import Project from '@mae/components/projectCards/Project';
@@ -18,7 +18,7 @@ export default function meow() {
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 1000,
-      delay: stagger(50)
+      delay: anime.stagger(50)
     })
   })
   
