@@ -73,7 +73,7 @@ export default function Donate() {
             </div>
           </div>
           <div className='transform-gpu scale-150 translate-y-4 translate-x-36'>
-            <Image src="/assets/logos/twitch.png" width={240} height={240} alt="Twitch Logo"></Image>
+            <Image src="/assets/logos/twitch.svg" width={240} height={240} alt="Twitch Logo"></Image>
           </div>
         </div>
       </div>
