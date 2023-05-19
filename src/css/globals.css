@@ -6,6 +6,10 @@
   background: linear-gradient(51.17deg, #4CA6FF 8.14%, #4D4DFF 27.76%, #990AFF 42.97%, #D21EB4 53.68%, #FFC400 78.99%);
 }
 
+.bg-twitch-gradient {
+  background: linear-gradient(to right, #7f00ff, #e100ff);;
+}
+
 @keyframes tooltip-anim {
   0% {
     transparency: 0%;
