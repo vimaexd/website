@@ -15,8 +15,13 @@ export default function Donate() {
       <div className='w-full rounded-lg bg-throne-gradient'>
         <div className='w-full h-full p-6 backdrop-blur-xl rounded-lg flex flex-row justify-start gap-4'>
           <div className='flex flex-col'>
-            <h1 className='text-4xl font-bold tracking-tight'>Throne</h1>
-            <p className='w-2/3'>
+            <div className='flex gap-2'>
+              <Image src="/assets/logos/throne_white.svg" width={32} height={32} alt="Throne Logo"></Image>
+              <h1 className='text-4xl font-bold tracking-tight'>
+                Throne
+              </h1>
+            </div>
+            <p className='md:w-2/3 w-full'>
               If you want to buy me a gift anonymously from my wishlist, Throne serves as my wishlist that 
               you can buy from anonymously (or not) and the gift will be shipped to me
             </p>
@@ -28,17 +33,17 @@ export default function Donate() {
               </Link>
             </div>
           </div>
-          <div className='transform-gpu scale-125 rotate-12 translate-y-4 translate-x-6'>
-            <Image src="/assets/logos/throne_white.svg" width={240} height={240} alt="Throne Logo"></Image>
-          </div>
         </div>
       </div>
       
       <div className='w-full rounded-lg bg-[#FF5E5B]'>
         <div className='w-full h-full p-6 backdrop-blur-xl rounded-lg flex flex-row justify-start gap-4'>
           <div className='flex flex-col'>
+          <div className='flex gap-2'>
+            <Image src="/assets/logos/kofi.png" width={32} height={32} alt="Ko-fi Logo" className='w-10 scale-125'></Image>
             <h1 className='text-4xl font-bold tracking-tight'>Ko-fi</h1>
-            <p className='w-2/3'>
+          </div>
+            <p className='md:w-2/3 w-full'>
               If you just want to donate money (or "buy me a coffee"), you can do so via my Ko-fi page
             </p>
             <div className='mt-8 flex-grow-0'>
@@ -48,9 +53,6 @@ export default function Donate() {
                 </h1>
               </Link>
             </div>
-          </div>
-          <div className='transform-gpu scale-150 translate-y-4 translate-x-36'>
-            <Image src="/assets/logos/kofi.png" width={128} height={240} alt="Ko-fi Logo"></Image>
           </div>
         </div>
       </div>
