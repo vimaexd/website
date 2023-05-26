@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-throne-gradient {
+  background: linear-gradient(51.17deg, #4CA6FF 8.14%, #4D4DFF 27.76%, #990AFF 42.97%, #D21EB4 53.68%, #FFC400 78.99%);
+}
+
+@keyframes tooltip-anim {
+  0% {
+    transparency: 0%;
+    transform: translateY(10px) scale(0.5);
+  }
+  100% {
+    transparency: 100%;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.react-tooltip {
+  animation: tooltip-anim 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: none;
+  border-radius: 6px !important;
+  padding: 8px 16px !important;
+}
+
+table {
+  @apply rounded-lg overflow-hidden shadow-lg;
+}
+
+th {
+  @apply bg-[#00000080] font-medium text-lg text-left;
+}
+
+tbody tr {
+  @apply bg-[#ffffff20] text-sm;
+}
+
+tbody tr:nth-child(odd) {
+  @apply bg-[#ffffff30];
+}
+
+th, td {
+  @apply px-4 py-2;
+}

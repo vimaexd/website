@@ -1,0 +1,198 @@
+{
+  "tracks": [
+    {
+      "id": "pixp",
+      "name": "pixel palace",
+      "genre": "Lo-fi",
+      "length": "2:20",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "glasshypno",
+      "name": "glass hypnotist",
+      "genre": "Lo-fi",
+      "length": "2:06",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "strawb",
+      "name": "strawberry factory",
+      "genre": "Electronic",
+      "length": "3:30",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "eepy",
+      "name": "sleepyhead",
+      "genre": "Lo-fi",
+      "length": "1:45",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "oomm",
+      "name": "outofmymind",
+      "genre": "Hyperpop",
+      "length": "1:58",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "moaf",
+      "name": "Mango on a Fork",
+      "genre": "Hardstyle Dubstep",
+      "length": "3:55",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "insomnia",
+      "name": "insomnia",
+      "genre": "Lo-fi",
+      "length": "2:30",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "tears",
+      "name": "tears",
+      "genre": "Lo-fi",
+      "length": "2:51",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "jazzyshit",
+      "name": "welcome back",
+      "genre": "Lo-fi",
+      "length": "2:04",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "coolepicsample",
+      "name": "ily to the stars",
+      "genre": "Lo-fi",
+      "length": "3:05",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "thesnareclicksontherightchannel",
+      "name": "gn",
+      "genre": "Lo-fi",
+      "length": "1:22",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "kawaii",
+      "name": "Fluff",
+      "genre": "Future Bass",
+      "length": "2:51",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "nightworld",
+      "name": "Nightworld",
+      "genre": "Future House",
+      "length": "2:50",
+      "artists": ["Stringy"]
+    }
+  ],
+  "releases": [
+    {
+      "slug": "moon",
+      "title": "moon",
+      "type": "EP",
+      "year": 2023,
+      "tracks": [
+        "track:pixp",
+        "track:glasshypno",
+        "track:strawb",
+        "track:eepy"
+      ],
+      "links": {
+        "bandcamp": "https://etstringy.bandcamp.com/album/moon",
+        "spotify": "https://open.spotify.com/album/1xa1S4aDqLfLPPeWiFJl2S",
+        "applemusic": "https://music.apple.com/gb/album/moon-ep/1677580097",
+        "soundcloud": "https://soundcloud.com/etstringy/sets/moon"
+      },
+      "artist_comment": "moon was an ep i made of a bunch of music i had made that was half finished that mainly takes on a lo-fi and electronic genre.",
+      "album_art": "/assets/music/covers/moon.png"
+    },
+    {
+      "slug": "oomm",
+      "title": "outofmymind",
+      "type": "Single",
+      "year": 2022,
+      "tracks": ["track:oomm"],
+      "links": {
+        "bandcamp": "https://etstringy.bandcamp.com/album/outofmymind",
+        "spotify": "https://open.spotify.com/album/33CxzF1cHfwUb85ngFSR9J",
+        "applemusic": "https://music.apple.com/gb/album/outofmymind-single/1625304792",
+        "soundcloud": "https://soundcloud.com/etstringy/outofmymind"
+      },
+      "artist_comment": "made this song while i was out of inspiration to make music. this was my only original release in 2022",
+      "album_art": "/assets/music/covers/oomm.png"
+    },
+    {
+      "slug": "moaf",
+      "title": "Mango on a Fork",
+      "type": "Single",
+      "year": 2021,
+      "tracks": ["track:moaf"],
+      "links": {
+        "bandcamp": "https://etstringy.bandcamp.com/album/mango-on-a-fork",
+        "spotify": "",
+        "applemusic": "",
+        "soundcloud": "https://soundcloud.com/etstringy/moaf"
+      },
+      "artist_comment": "MANGO ON A FORK YAAAAHH",
+      "album_art": "/assets/music/covers/moaf.png"
+    },
+    {
+      "slug": "fidelity",
+      "title": "Fidelity",
+      "type": "EP",
+      "year": 2021,
+      "tracks": [
+        "track:insomnia",
+        "track:tears",
+        "track:jazzyshit",
+        "track:coolepicsample",
+        "track:thesnareclicksontherightchannel"
+      ],
+      "links": {
+        "bandcamp": "https://etstringy.bandcamp.com/album/fidelity",
+        "spotify": "https://open.spotify.com/album/1yOdnBwaPJJWbNa5xXUTOg",
+        "applemusic": "",
+        "soundcloud": "https://soundcloud.com/etstringy/sets/fidelity"
+      },
+      "artist_comment": "",
+      "album_art": "/assets/music/covers/fidelity.png"
+    },
+    {
+      "slug": "fluff",
+      "title": "Fluff",
+      "type": "Single",
+      "year": 2021,
+      "tracks": ["track:kawaii"],
+      "links": {
+        "bandcamp": "https://etstringy.bandcamp.com/album/fluff",
+        "spotify": "https://open.spotify.com/album/0EHYY6Jwwj5i8oAqF0yQPr",
+        "applemusic": "",
+        "soundcloud": "https://soundcloud.com/etstringy/fluff"
+      },
+      "artist_comment": "",
+      "album_art": "/assets/music/covers/fluff.png"
+    },
+    {
+      "slug": "nightworld",
+      "title": "Nightworld",
+      "type": "Single",
+      "year": 2021,
+      "tracks": ["track:nightworld"],
+      "links": {
+        "bandcamp": "https://etstringy.bandcamp.com/album/nightworld",
+        "spotify": "https://open.spotify.com/album/0EHYY6Jwwj5i8oAqF0yQPr",
+        "applemusic": "",
+        "soundcloud": "https://soundcloud.com/etstringy/nightworld"
+      },
+      "artist_comment": "",
+      "album_art": "/assets/music/covers/nightworld.png"
+    }
+  ]
+}
