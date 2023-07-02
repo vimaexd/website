@@ -30,7 +30,7 @@ export const resolveRelease = (unresolved: IUnresolvedRelease, tracks: ITrack[] 
   return resolved;
 }
 
-export const groupReleasesByYear = (releases: IUnresolvedRelease[]) => {
+export const groupReleasesByYear = (releases: IUnresolvedRelease[]): {[year: number]: IUnresolvedRelease[]} => {
   let groups: {[year: number]: IUnresolvedRelease[]} = {}
 
   for(let i = 0; i < releases.length; i++) {
