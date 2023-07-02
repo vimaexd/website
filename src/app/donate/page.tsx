@@ -27,7 +27,7 @@ export default function Donate() {
             </p>
             <div className='mt-8 flex-grow-0'>
               <Link href='https://throne.com/str/wishlist'>
-                <h1 className='text-sm flex items-center gap-1'>
+                <h1 className='text-sm flex items-center gap-1 text-white'>
                   See my wishlist <i className='bx bx-link-external'></i>
                 </h1>
               </Link>
@@ -48,7 +48,7 @@ export default function Donate() {
             </p>
             <div className='mt-8 flex-grow-0'>
               <Link href='https://ko-fi.com/stringy'>
-                <h1 className='text-sm flex items-center gap-1'>
+                <h1 className='text-sm flex items-center gap-1 text-white'>
                   Buy me a coffee <i className='bx bx-link-external'></i>
                 </h1>
               </Link>
@@ -67,7 +67,7 @@ export default function Donate() {
               </p>
               <div className='mt-8 flex-grow-0'>
                 <Link href='https://twitch.tv/etstringy'>
-                  <h1 className='text-sm flex items-center gap-1'>
+                  <h1 className='text-sm flex items-center gap-1 text-white'>
                     Donate on Twitch <i className='bx bx-link-external'></i>
                   </h1>
                 </Link>

@@ -1,12 +1,11 @@
 import Link from 'next/link';
 import React from 'react'
 
-export default function Chip({href, text}: {href: string; text: string;}) {
+export default function Chip({className, text}: {className: string; text: string;}) {
   return (
-    <Link href={href}>
-      <h1 className='text-sm text-black px-4 flex items-center h-8 rounded-full hover:bg-str-cotton bg-white hover:text-white transition-all'>
-        {text}
-      </h1>
-    </Link>
+    <div className={'text-sm text-black px-2 py-1 rounded-full bg-white w-fit flex items-center gap-2 ' + className}>
+      <div className='w-4 h-4 bg-[rgba(255,255,255,0.5)] float-left rounded-full'></div>
+      {text}
+    </div>
   )
 }

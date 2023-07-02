@@ -43,6 +43,6 @@ function LogoText() {
   })
 
   return (
-    <h3 className='font-bold text-5xl tracking-tighter' data-anim="logo">mae</h3>
+    <h3 className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">mae</h3>
   )
 }

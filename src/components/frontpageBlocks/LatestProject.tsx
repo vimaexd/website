@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import ChipButton from '@mae/components/Chip';
+import ChipButton from '@mae/components/ChipButton';
 import Link from 'next/link';
 
 export default function portfolio_redirect() {
@@ -14,7 +14,7 @@ export default function portfolio_redirect() {
           <h1 className='text-4xl font-bold tracking-tight'>Website v8</h1>
           <div className='mt-auto flex-grow-0'>
             <Link href='/projects'>
-              <h1 className='text-sm flex items-center gap-1'>
+              <h1 className='text-sm flex items-center gap-1 text-white'>
                 More projects <i className='bx bx-link-external'></i>
               </h1>
             </Link>

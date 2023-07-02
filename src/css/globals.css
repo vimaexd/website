@@ -43,3 +43,11 @@ tbody tr:nth-child(odd) {
 th, td {
   @apply px-4 py-2;
 }
+
+hr {
+  border-top: 2px solid #bbb;
+}
+
+a {
+  @apply text-str-yarn;
+}

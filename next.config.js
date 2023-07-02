@@ -3,7 +3,16 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  swcMinify: false
+  swcMinify: false,
+  async redirects() {
+    return [
+      {
+        source: "/discord",
+        destination: "https://discord.gg/A8A52G2",
+        permanent: true
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig

@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import Project from '@mae/components/projectCards/Project';
 import ProjectWithImg from '@mae/components/projectCards/ProjectWithImg';
 import ProjectJumbotron from '@mae/components/projectCards/ProjectJumbotron';
-import Chip from '@mae/components/Chip';
+import ChipButton from '@mae/components/ChipButton';
 import PageContainer from '@mae/components/layout/PageContainer';
 import PageHeader from '@mae/components/layout/PageHeader';
 
@@ -48,26 +48,26 @@ export default function meow() {
               description='A web dashboard for authenticated users to manage DNS records for subdomains assigned to them.'
               image='/assets/project_images/ocdash.png'
             >
-              <Chip text="Website" href='https://onlineconfine.lol'/>
+              <ChipButton text="Website" href='https://onlineconfine.lol'/>
             </ProjectWithImg>
             <ProjectWithImg 
               title='Disq' 
               description='A service which allowed you to upload screenshots (with ShareX support) and create Short URLs.'
               image='/assets/project_images/disq.png'
             >
-              <Chip text="Source" href='https://github.com/disqTeam/api'/>
+              <ChipButton text="Source" href='https://github.com/disqTeam/api'/>
             </ProjectWithImg>
             <Project
               title='Knok' 
               description="A web UI and server to make an iPad act as a doorbell for my room."
             >
-              <Chip text="Source" href='https://github.com/etstringy/knok'/>
+              <ChipButton text="Source" href='https://github.com/etstringy/knok'/>
             </Project>
             <Project
               title='Stringy Software API' 
               description="A multi-purpose API used for past versions of my website and various other projects that returned various data."
             >
-              <Chip text="Source" href='https://github.com/etstringy/api'/>
+              <ChipButton text="Source" href='https://github.com/etstringy/api'/>
             </Project>
           </div>
           <div className='w-full space-y-4'>
@@ -76,30 +76,30 @@ export default function meow() {
               description='A Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.'
               image='/assets/project_images/satori.png'
             >
-              <Chip text="Source" href='https://github.com/disqTeam/api'/>
+              <ChipButton text="Source" href='https://github.com/disqTeam/api'/>
             </ProjectWithImg>
             <Project
               title='Blob Maker' 
               description='A web app to customize your very own blob character. Mainly created to try out VueJS.'>
-              <Chip text="Source" href='https://github.com/etstringy/blobmaker'/>
+              <ChipButton text="Source" href='https://github.com/etstringy/blobmaker'/>
             </Project>
             <Project 
             title='SwitchPresence' 
             description="An early attempt at using the Discord Game SDK and Electron to show what Nintendo Switch game you're playing."
             >
-              <Chip text="Source" href='https://github.com/etstringy/switchpresence'/>
+              <ChipButton text="Source" href='https://github.com/etstringy/switchpresence'/>
             </Project>
             <Project 
             title='Website v7' 
             description="A scrapped version of this website that used VueJS. I decided not to use it as I wanted to make the site in React."
             >
-              <Chip text="Source" href='https://github.com/etstringy/website/tree/v7'/>
+              <ChipButton text="Source" href='https://github.com/etstringy/website/tree/v7'/>
             </Project>
             <Project 
             title='Website v6' 
             description="The last live version of this website that used React + CRA."
             >
-              <Chip text="Source" href='https://github.com/etstringy/website/tree/v6'/>
+              <ChipButton text="Source" href='https://github.com/etstringy/website/tree/v6'/>
             </Project>
           </div>
         </div>
