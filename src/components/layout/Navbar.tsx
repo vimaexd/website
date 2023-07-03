@@ -15,7 +15,7 @@ export default function Navbar() {
             <Link href='/'>
               <LogoText/>
             </Link>
-            <h6 className='text-xs font-mono'>v8.0.0</h6>
+            <h6 className='text-xs font-mono'>v8.1.0</h6>
           </div>
         </div>
         <div className='lg:ml-auto flex flex-row lg:justify-end flex-wrap gap-2 lg:w-5/6'>
@@ -23,6 +23,8 @@ export default function Navbar() {
           <Button text="📦 Projects" href="/projects"/>
           <Button text="🎵 Music" href="/music"/>
           <Button text="😀 My OC" href="/oc"/>
+          <Button text="💻 Services" href="/services"/>
+          <Button text="⌨️ Gear" href="/gear"/>
           <Button text="💰 Donate" href="/donate"/>
         </div>
       </div>

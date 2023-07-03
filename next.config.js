@@ -12,6 +12,11 @@ const nextConfig = {
         permanent: true
       }
     ]
+  },
+  images: {
+    domains: [
+      "i.mae.wtf"
+    ]
   }
 }
 

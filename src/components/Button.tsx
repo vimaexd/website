@@ -9,7 +9,7 @@ const soundClick = new Howl({
   volume: 0.2
 });
 
-export default function NavbarLink({text, href, className, icon}: {text: string; href: string; className?: string; icon?: string;}) {
+export default function Button({text, href, className, icon}: {text: string; href: string; className?: string; icon?: string;}) {
   const pathname = usePathname();
 
   const playSound = () => {
