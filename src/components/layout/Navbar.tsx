@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 
 export default function Navbar() {
-  const bar = useRef()
+  const bar = useRef<HTMLDivElement>(null);
   const [stars, setStars] = useState<number[][]>([]);
 
   useEffect(() => {
