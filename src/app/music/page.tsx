@@ -6,6 +6,12 @@ import PageContainer from '@mae/components/layout/PageContainer';
 import PageHeader from '@mae/components/layout/PageHeader';
 import Image from 'next/image';
 import ReleaseCard from '@mae/components/music/releaseCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Music |✨ mae',
+  description: 'all music i have released as Stringy'
+}
 
 export default function page() {
   const releases = (discog as IDiscography).releases;
