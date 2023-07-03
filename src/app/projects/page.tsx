@@ -82,6 +82,7 @@ export default function meow() {
               title='Blob Maker' 
               description='A web app to customize your very own blob character. Mainly created to try out VueJS.'>
               <ChipButton text="Source" href='https://github.com/etstringy/blobmaker'/>
+              <ChipButton text="Website" href='https://mkblob.web.app'/>
             </Project>
             <Project 
             title='SwitchPresence' 

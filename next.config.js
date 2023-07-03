@@ -10,6 +10,11 @@ const nextConfig = {
         source: "/discord",
         destination: "https://discord.gg/A8A52G2",
         permanent: true
+      },
+      {
+        source: "/socials",
+        destination: "/contact",
+        permanent: true
       }
     ]
   },

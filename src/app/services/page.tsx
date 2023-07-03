@@ -7,7 +7,7 @@ import Chip from '@mae/components/Chip';
 export default function Services() {
   return (
     <div className='flex flex-col lg:flex-row justify-center gap-8 lg:mx-8'>
-      <details open={true} className='mx-4 lg:mx-0 lg:w-80 bg-neutral-900 p-4 rounded-lg flex flex-col flex-shrink-0 h-fit'>
+      <details open={true} className='mx-4 lg:mx-0 lg:w-80 bg-neutral-900 p-4 rounded-lg flex flex-col flex-shrink-0 h-fit mt-8'>
         <summary className='cursor-pointer text-xl font-semibold text-center mb-4'>Contents</summary>
         <a href="#calckey" className='py-2 border-b-2 border-neutral-700 text-neutral-300'>mae's space station</a>
         <a href="#cobalt" className='py-2 border-b-2 border-neutral-700 text-neutral-300'>cobalt</a>
@@ -16,7 +16,7 @@ export default function Services() {
         <a href="#matrix" className='py-2 border-b-2 border-neutral-700 text-neutral-300'>Matrix</a>
         <a href="#disq" className='py-2 border-b-2 border-neutral-700 text-neutral-300'>Disq</a>
       </details>
-      <div className='flex items-center flex-col pt-4 flex-shrink'>
+      <div className='flex items-center flex-col pt-8 flex-shrink'>
         <div className='max-w-[1024px] px-4 lg:px-0 space-y-8 mb-8'>
           <PageHeader title="💻 services">
             I host a couple of web services on this domain, here's a current list of them
