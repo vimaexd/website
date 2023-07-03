@@ -2,6 +2,12 @@ import PageContainer from '@mae/components/layout/PageContainer'
 import React from 'react'
 import Image from 'next/image';
 import Button from '@mae/components/Button';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'My OC |✨ mae',
+  description: 'info and references for my oc'
+}
 
 export default function Donate() {
   return (

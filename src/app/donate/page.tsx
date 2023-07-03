@@ -3,6 +3,12 @@ import PageHeader from '@mae/components/layout/PageHeader'
 import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Donate |✨ mae',
+  description: 'donate to me if you want :)'
+}
 
 export default function Donate() {
   return (

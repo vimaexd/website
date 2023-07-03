@@ -10,6 +10,13 @@ import ProjectJumbotron from '@mae/components/projectCards/ProjectJumbotron';
 import ChipButton from '@mae/components/ChipButton';
 import PageContainer from '@mae/components/layout/PageContainer';
 import PageHeader from '@mae/components/layout/PageHeader';
+import { Metadata } from 'next';
+
+// TODO: rewrite this page so we can use the metadata api
+// export const metadata: Metadata = {
+//   title: 'Projects |✨ mae',
+//   description: 'projects that i have written or contributed to'
+// }
 
 export default function meow() {
   useEffect(() => {

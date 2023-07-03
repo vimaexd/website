@@ -3,6 +3,12 @@ import PageHeader from '@mae/components/layout/PageHeader'
 import React from 'react'
 import Image from 'next/image';
 import Chip from '@mae/components/Chip';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Services |✨ mae',
+  description: 'directory of services hosted on mae.wtf'
+}
 
 export default function Services() {
   return (

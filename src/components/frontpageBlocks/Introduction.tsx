@@ -91,9 +91,6 @@ export default function Introduction() {
             <i className='bx bxl-twitter hover:scale-110 hover:text-str-yarn transition-all duration-75 active:scale-90'></i>
           </Link>
         </div>
-        <Link href="/socials" className='text-sm text-neutral-400 '>
-          All socials
-        </Link>
       </div>
       <div className='w-1/2 justify-end hidden lg:flex'>
         <Image src="/maewave.png" width={256} height={256} alt={''} data-anim="goober"></Image>

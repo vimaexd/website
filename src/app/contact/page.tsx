@@ -1,21 +1,17 @@
-'use client'
 import PageContainer from '@mae/components/layout/PageContainer'
 import PageHeader from '@mae/components/layout/PageHeader'
-import React, { useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import anime from 'animejs';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact |✨ mae',
+  description: 'info on how and where to contact me'
+}
 
 export default function page() {
-  useEffect(() => {
-    anime({
-      targets: ".anim-contact-card",
-      translateY: [40, 0],
-      delay: anime.stagger(50),
-      opacity: [0, 1]
-    })
-  })
-
   return (
     <PageContainer>
       <PageHeader title="📱 contact">

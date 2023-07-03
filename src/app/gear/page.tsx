@@ -2,6 +2,12 @@ import PageContainer from '@mae/components/layout/PageContainer'
 import PageHeader from '@mae/components/layout/PageHeader'
 import React from 'react'
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Gear |✨ mae',
+  description: 'gear and software i use to make my projects'
+}
 
 export default function GearPage() {
   return (

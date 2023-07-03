@@ -2,14 +2,17 @@ import LatestRelease from '@mae/components/frontpageBlocks/LatestRelease';
 import LatestProject from '@mae/components/frontpageBlocks/LatestProject';
 import PageContainer from '@mae/components/layout/PageContainer';
 import Introduction from '@mae/components/frontpageBlocks/Introduction';
-import Head from 'next/head';
+import Image from 'next/image'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home |✨ mae',
+  description: 'the website of mae (aka Stringy)'
+}
 
 export default function Home() {
   return (
     <PageContainer>
-      <Head>
-        <title>✨🌟 mae</title>
-      </Head>
       <Introduction/>
       <div className='flex flex-col lg:flex-row gap-8'>
         <LatestRelease/>
@@ -17,8 +20,8 @@ export default function Home() {
       </div>
       <hr/>
       <div className='flex'>
+        <Image src="/assets/code_screenshot_full.png" width={400} height={500} alt="a screenshot of visual studio code"/>
         <div>
-          
         </div>
         <div className='space-y-4 text-right'>
           <h2 className='text-2xl font-semibold'>✨ since the start..</h2>

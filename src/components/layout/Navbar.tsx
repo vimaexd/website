@@ -14,7 +14,6 @@ export default function Navbar() {
   useEffect(() => {
     const width = bar.current!.offsetWidth
     const height = bar.current!.offsetHeight
-    console.log(width, height)
 
     let newStars = []
     for(let i = 0; i < 8; i++) {
@@ -36,7 +35,7 @@ export default function Navbar() {
             width={16} 
             height={16} 
             alt="star" 
-            className='absolute' 
+            className={'absolute ' + `anim_star`} 
             style={{top: star[1], left: star[0], imageRendering: "pixelated"}}
             key={"star_" + i}/>
           ))
