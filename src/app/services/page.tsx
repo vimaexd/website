@@ -25,7 +25,7 @@ export default function Services() {
       <div className='flex items-center flex-col pt-8 flex-shrink'>
         <div className='max-w-[1024px] px-4 lg:px-0 space-y-8 mb-8'>
           <PageHeader title="💻 services">
-            I host a couple of web services on this domain, here's a current list of them
+            i host a couple of web services on this domain, here's a current list of them
           </PageHeader>
           <hr/>
           <div className='inline-block' id="calckey">
