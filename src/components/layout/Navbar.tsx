@@ -18,7 +18,7 @@ export default function Navbar() {
     let newStars = []
     for(let i = 0; i < 8; i++) {
       let star = Math.floor(Math.random() * (4));
-      let randX = Math.floor(Math.random() * (width)) + 0;
+      let randX = Math.floor(Math.random() * (width - 16)) + 0;
       let randY = Math.floor(Math.random() * (height - 16));
       newStars.push([randX, randY, star])
     }
@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <div className='w-full lg:h-32 flex justify-center z-20 sticky bg-neutral-900' ref={bar}>
-      <div className="absolute top-0 left-0 w-[1024px] opacity-60 z-0 text-clip">
+      <div className="absolute top-0 left-0 lg:w-[1024px] w-full opacity-60 z-0 text-clip">
         {
           stars.map((star, i) => (
             <Image 
