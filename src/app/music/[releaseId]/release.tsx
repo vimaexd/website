@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image';
 
 import Button from '@mae/components/Button'
 import type { IResolvedRelease } from '@mae/misc/discography/types'
@@ -18,7 +19,7 @@ export default function Release({release}: {release: IResolvedRelease}) {
             <span className='font-bold'>All releases</span>
           </Link>
           <div className='flex gap-8'>
-            <img src={release.album_art} width="140px" className='rounded-lg shadow-xl'></img>
+            <Image src={release.album_art} width="140" height="140" alt="Cover art" className='rounded-lg shadow-xl'></Image>
             <div className='mb-auto flex flex-col h-full'>
               <h1 className='text-7xl font-bold -mt-5'>{release.title}</h1>
               <h2>{release.type} • {release.tracks.length} tracks • {release.year}</h2>

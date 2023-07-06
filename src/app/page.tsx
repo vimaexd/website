@@ -20,7 +20,7 @@ export default function Home() {
       </div>
       <hr/>
       <div className='flex flex-col sm:flex-row gap-4'>
-        <Image src="/assets/code_screenshot_full.png" width={400} height={500} className='rounded-lg' alt="a screenshot of visual studio code"/>
+        <Image src="/assets/code_screenshot_full.png" width={400} height={500} className='rounded-lg border-2 border-str-cotton' alt="a screenshot of visual studio code"/>
         <div className='space-y-4 text-right'>
           <h2 className='text-2xl font-semibold'>✨ since the start..</h2>
           <p>
