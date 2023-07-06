@@ -20,24 +20,27 @@ export default function page() {
   return (
     <PageContainer>
       <PageHeader title="🎵 music">
-        my discography of music i've made over the years. hover to see more info
+        my discography of original music i've made over the years. hover to see more info
       </PageHeader>
       {
-        Object.keys(groups).map((year) => {
-          const releasesInYear = groups[+year];
-          return (
-            <div>
-              <h1 className='text-2xl font-bold mb-2'>{year}</h1>
-              <div className='flex gap-8 flex-wrap'>
-                {
-                  releasesInYear.map((release) => (
-                    <ReleaseCard release={release}/>
-                  ))
-                }
+        Object
+          .keys(groups)
+          .reverse()
+          .map((year) => {
+            const releasesInYear = groups[+year];
+            return (
+              <div>
+                <h1 className='text-2xl font-bold mb-2'>{year}</h1>
+                <div className='flex gap-8 flex-wrap'>
+                  {
+                    releasesInYear.map((release) => (
+                      <ReleaseCard release={release}/>
+                    ))
+                  }
+                </div>
               </div>
-            </div>
-          )
-        })
+            )
+          })
       }
     </PageContainer>
   )

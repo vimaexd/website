@@ -2,6 +2,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google';
 import 'react-tooltip/dist/react-tooltip.css';
 import '../css/globals.css';
 import Navbar from '@mae/components/layout/Navbar';
+import PageContextWrapper from '@mae/store/PageContext';
 
 export const metadata = {
   title: 'Create Next App',
@@ -23,8 +24,10 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
       </head>
       <body className={inter.className + " " + "bg-[#0c0c0c] text-gray-200"}>
-        <Navbar/>
-        {children}
+        <PageContextWrapper>
+          <Navbar/>
+          {children}
+        </PageContextWrapper>
       </body>
     </html>
   )

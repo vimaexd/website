@@ -90,7 +90,42 @@
       "genre": "Future House",
       "length": "2:50",
       "artists": ["Stringy"]
-    }
+    },
+    {
+      "id": "sv_intro",
+      "name": "Intro",
+      "genre": "Sound Effect",
+      "length": "0:09",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "cherp",
+      "name": "Cherp",
+      "genre": "Synthwave",
+      "length": "3:55",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "stringwave",
+      "name": "Stringwave",
+      "genre": "Synthwave",
+      "length": "3:13",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "coolepic",
+      "name": "Coolepic",
+      "genre": "Synth House",
+      "length": "3:01",
+      "artists": ["Stringy"]
+    },
+    {
+      "id": "dreams2",
+      "name": "Dreams 2",
+      "genre": "Synthwave",
+      "length": "3:01",
+      "artists": ["Stringy"]
+    },
   ],
   "releases": [
     {
@@ -98,6 +133,7 @@
       "title": "moon",
       "type": "EP",
       "year": 2023,
+      "release_date": "30/03/2023",
       "tracks": [
         "track:pixp",
         "track:glasshypno",
@@ -118,6 +154,7 @@
       "title": "outofmymind",
       "type": "Single",
       "year": 2022,
+      "release_date": "16/05/2022",
       "tracks": ["track:oomm"],
       "links": {
         "bandcamp": "https://etstringy.bandcamp.com/album/outofmymind",
@@ -133,11 +170,12 @@
       "title": "Mango on a Fork",
       "type": "Single",
       "year": 2021,
+      "release_date": "23/12/2021",
       "tracks": ["track:moaf"],
       "links": {
         "bandcamp": "https://etstringy.bandcamp.com/album/mango-on-a-fork",
-        "spotify": "",
-        "applemusic": "",
+        "spotify": "https://open.spotify.com/album/5RerZwcXhZhncVJEXuqEka",
+        "applemusic": "https://music.apple.com/gb/album/mango-on-a-fork-single/1602813820",
         "soundcloud": "https://soundcloud.com/etstringy/moaf"
       },
       "artist_comment": "MANGO ON A FORK YAAAAHH",
@@ -148,6 +186,7 @@
       "title": "Fidelity",
       "type": "EP",
       "year": 2021,
+      "release_date": "02/10/2021",
       "tracks": [
         "track:insomnia",
         "track:tears",
@@ -158,7 +197,7 @@
       "links": {
         "bandcamp": "https://etstringy.bandcamp.com/album/fidelity",
         "spotify": "https://open.spotify.com/album/1yOdnBwaPJJWbNa5xXUTOg",
-        "applemusic": "",
+        "applemusic": "https://music.apple.com/gb/album/fidelity-ep/1591910073",
         "soundcloud": "https://soundcloud.com/etstringy/sets/fidelity"
       },
       "artist_comment": "",
@@ -169,11 +208,12 @@
       "title": "Fluff",
       "type": "Single",
       "year": 2021,
+      "release_date": "03/08/2021",
       "tracks": ["track:kawaii"],
       "links": {
         "bandcamp": "https://etstringy.bandcamp.com/album/fluff",
         "spotify": "https://open.spotify.com/album/0EHYY6Jwwj5i8oAqF0yQPr",
-        "applemusic": "",
+        "applemusic": "https://music.apple.com/gb/album/fluff-single/1580166771",
         "soundcloud": "https://soundcloud.com/etstringy/fluff"
       },
       "artist_comment": "",
@@ -184,15 +224,38 @@
       "title": "Nightworld",
       "type": "Single",
       "year": 2021,
+      "release_date": "29/05/2021",
       "tracks": ["track:nightworld"],
       "links": {
         "bandcamp": "https://etstringy.bandcamp.com/album/nightworld",
         "spotify": "https://open.spotify.com/album/0EHYY6Jwwj5i8oAqF0yQPr",
-        "applemusic": "",
+        "applemusic": "https://music.apple.com/gb/album/nightworld-single/1570506562",
         "soundcloud": "https://soundcloud.com/etstringy/nightworld"
       },
       "artist_comment": "",
       "album_art": "/assets/music/covers/nightworld.png"
+    },
+    {
+      "slug": "shapeverse",
+      "title": "Shapeverse",
+      "type": "EP",
+      "year": 2021,
+      "release_date": "21/03/2021",
+      "tracks": [
+        "track:sv_intro",
+        "track:cherp",
+        "track:stringwave",
+        "track:coolepic",
+        "track:dreams2"
+      ],
+      "links": {
+        "bandcamp": "https://etstringy.bandcamp.com/album/shapeverse",
+        "spotify": "https://open.spotify.com/album/2GHu3fTJNrsQulmKweVbQY",
+        "applemusic": "https://music.apple.com/gb/album/shapeverse-ep/1560204134",
+        "soundcloud": "https://soundcloud.com/etstringy/sets/shapeverse"
+      },
+      "artist_comment": "synthwave ep! shout out to marc steel :)",
+      "album_art": "/assets/music/covers/shapeverse.png"
     }
   ]
 }
