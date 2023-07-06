@@ -82,7 +82,7 @@ export default function Navbar() {
             <Link href='/'>
               <LogoText/>
             </Link>
-            <h6 className='text-xs font-mono'>v8.1.0</h6>
+            <h6 className='text-xs font-mono'>v8.1.1</h6>
           </div>
           <div className='ml-auto lg:hidden'>
             <i className='bx bx-menu bx-md cursor-pointer anim-navbar-hamburger' onClick={() => { 
