@@ -37,7 +37,6 @@ export default function FakeAdWrapper() {
   const index = Math.floor(Math.random() * fakeAds.length);
   const ad = fakeAds[index];
 
-  console.log(ad)
   return (
     <FakeAd ad={ad}/>
   )
