@@ -150,6 +150,9 @@ export default function page() {
               <Link href="https://steamcommunity.com/id/etstringy/" className='text-[#66c0f4]'>
                 Steam <span className='font-thin'>(etstringy)</span>
               </Link>
+              <Link href="https://www.last.fm/user/etstringy">
+                last.fm <span className='font-thin'>(etstringy)</span>
+              </Link>
             </div>
           </div>
         </div>

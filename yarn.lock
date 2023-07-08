@@ -2552,6 +2552,11 @@ use-lanyard@^1.4.4:
   resolved "https://registry.yarnpkg.com/use-lanyard/-/use-lanyard-1.4.4.tgz#bcf9f57ad1044f9bbb25f9c44f00a785c20aa051"
   integrity sha512-QceDXahv4LlEt+0cTbLwOTgeCA+83BEi26m//2mu/bZkmiHyiF3ZsUYGeukkc0cCLwGm4mm5XVgy71YO6PINxQ==
 
+use-local-storage@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/use-local-storage/-/use-local-storage-3.0.0.tgz#ecf90952374150f0c65baf027eaaf2062a4c20c6"
+  integrity sha512-wlPNnBCG3ULIJMr5A+dvWqLiPWCfsN1Kwijq+sAhT5yV4ex0u6XmZuNwP+RerIOfzBuz1pwSZuzhZMiluGQHfQ==
+
 util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
