@@ -2,9 +2,14 @@
 import React from 'react'
 import Image from 'next/image';
 import useLocalStorage from 'use-local-storage';
+import fakeAds from '@mae/data/fakeAds.json';
 
-export default function FakeAd({ad}: {ad: any}) {
+export default function FakeAd() {
   const [visible, setVisibility] = useLocalStorage("mae.showFakeAds", true);
+
+  const index = Math.floor(Math.random() * fakeAds.list.length);
+  const ad = fakeAds.list[index];
+  console.log("picking fake ad", ad)
 
   if(!visible) return (
     <div className='flex justify-between'>

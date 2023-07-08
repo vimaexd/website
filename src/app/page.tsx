@@ -11,7 +11,7 @@ import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { FakeAdPlaceholder } from '@mae/components/frontpageBlocks/FakeAd';
 
-const FakeAdWrapper = dynamic(() => import('@mae/components/frontpageBlocks/FakeAdWrapper'), { 
+const FakeAd = dynamic(() => import('@mae/components/frontpageBlocks/FakeAd'), { 
   ssr: false, 
   loading: () => <FakeAdPlaceholder/>
 })
@@ -116,7 +116,7 @@ function Sideblocks() {
         </div>
       </SideBlock> */}
       <LanyardBlock id={"577743466940071949"} />
-    <FakeAdWrapper/>
+    <FakeAd/>
     </div>
   )
 }
