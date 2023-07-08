@@ -83,7 +83,7 @@ export default function meow() {
               description='A Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.'
               image='/assets/project_images/satori.png'
             >
-              <ChipButton text="Source" href='https://github.com/disqTeam/api'/>
+              <ChipButton text="Source" href='https://github.com/etstringy/egg'/>
             </ProjectWithImg>
             <Project
               title='Blob Maker' 

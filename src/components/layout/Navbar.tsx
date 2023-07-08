@@ -1,21 +1,14 @@
 'use client';
 import anime from 'animejs';
 import Link from 'next/link'
-import { usePathname } from 'next/navigation';
 import { useContext, useEffect, useRef, useState } from 'react'
 import Button from '@mae/components/Button';
 import Image from 'next/image';
-import Head from 'next/head';
 import _ from 'lodash';
-import { PageContext } from '@mae/store/PageContext';
-
-export enum NavbarState {
-  SOLID = 0,
-  TRANSPARENT = 1
-}
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
-  const page = useContext(PageContext);
+  const path = usePathname();
 
   const bar = useRef<HTMLDivElement>(null);
   const [stars, setStars] = useState<number[][]>([]);
@@ -61,7 +54,7 @@ export default function Navbar() {
   }, [bar, menuVisible])
 
   return (
-    <div className={`w-full lg:h-32 flex justify-center z-20 sticky ${(page.navbar == NavbarState.SOLID) ? 'bg-neutral-900' : 'bg-transparent'}`} ref={bar}>
+    <div className={`w-full lg:h-32 flex justify-center z-20 sticky ${(path.startsWith('/music/')) ? 'bg-transparent' : 'bg-neutral-900'}`} ref={bar}>
       <div className="absolute top-0 left-0 lg:w-[1024px] w-full opacity-60 z-0 text-clip">
         {
           stars.map((star, i) => (
@@ -82,7 +75,7 @@ export default function Navbar() {
             <Link href='/'>
               <LogoText/>
             </Link>
-            <h6 className='text-xs font-mono'>v8.1.1</h6>
+            <h6 className='text-xs font-mono'>v8.1.2</h6>
           </div>
           <div className='ml-auto lg:hidden'>
             <i className='bx bx-menu bx-md cursor-pointer anim-navbar-hamburger' onClick={() => { 
