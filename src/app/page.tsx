@@ -8,6 +8,8 @@ import LanyardBlock from '@mae/components/frontpageBlocks/LanyardBlock';
 import SocialSpeeddial from '@mae/components/frontpageBlocks/SocialSpeeddial';
 import ClockBlock from '@mae/components/frontpageBlocks/ClockBlock';
 import { Suspense } from 'react';
+import FakeAd from '@mae/components/frontpageBlocks/FakeAd';
+import FakeAdWrapper from '@mae/components/frontpageBlocks/FakeAdWrapper';
 
 export const metadata: Metadata = {
   title: 'Home |✨ mae',
@@ -21,14 +23,10 @@ export default function Home() {
           <Suspense fallback="im waiting">
             <Introduction />
           </Suspense>
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* <LatestRelease /> */}
-            {/* <LatestProject /> */}
-          </div>
           <div className='max-[1380px]:block hidden'>
             <Sideblocks/>
           </div>
-          <hr />
+          <hr className='mt-2 opacity-40'/>
           <div className="flex flex-col sm:flex-row gap-4">
             <Image
               src="/assets/code_screenshot_full.png"
@@ -36,6 +34,9 @@ export default function Home() {
               height={500}
               className="rounded-lg border-2 border-str-cotton"
               alt="a screenshot of visual studio code"
+              style={{
+                boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)"
+              }}
             />
             <div className="space-y-4 text-right">
               <h2 className="text-2xl font-semibold">✨ since the start..</h2>
@@ -53,18 +54,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
-
-function Goober() {
-  return (
-    <Image
-      src="/assets/code_screenshot_full.png"
-      width={400}
-      height={500}
-      className="rounded-lg border-2 border-str-cotton"
-      alt="a screenshot of visual studio code"
-    />
-  )
 }
 
 function Sideblocks() {
@@ -122,6 +111,7 @@ function Sideblocks() {
         </div>
       </SideBlock> */}
       <LanyardBlock id={"577743466940071949"} />
+      <FakeAdWrapper/>
     </div>
   )
 }

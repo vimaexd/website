@@ -41,8 +41,8 @@ export default function Introduction() {
     })
   })
   return (
-    <div className='flex justify-evenly'>
-      <div className='w-full flex flex-col'>
+    <div className='flex items-center justify-between gap-4'>
+      <div className='w-1/2 flex flex-col'>
         <h1 className='text-4xl font-bold tracking-tight' data-anim="initslide">👋 hey! i'm mae</h1>
         <div className='leading-6 text-base space-y-2 flex flex-col mt-2'>
           <p data-anim="initslide">
@@ -64,14 +64,21 @@ export default function Introduction() {
                 <div className='w-4 h-4 bg-purple-400 rounded-full inline-block'></div>
               </span>
               <span> 
-                I love the color <span className='bg-gradient-to-r from-purple-300 to-violet-500 bg-clip-text text-transparent font-bold'>purple!</span>
+                I love the color 
+                <span className='bg-gradient-to-r from-purple-300 to-violet-500 bg-clip-text text-transparent font-bold'
+                  style={{
+                    textShadow: "0px 2px 32px rgba(133, 72, 245, 0.8)"
+                  }}
+                >
+                  &nbsp;purple!
+                </span>
               </span>
             </li>
           </ol>
         </div>
       </div>
-      <div className='w-1/2 justify-end hidden lg:flex'>
-        <Image src="/maewave.png" width={256} height={256} alt={''} data-anim="goober" className='w-fit h-fit'></Image>
+      <div className='block'>
+        <Image src="/maewave.png" width={200} height={200} alt={''} data-anim="goober" className=''></Image>
       </div>
     </div>
   )

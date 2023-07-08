@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'mono': ['var(--font-jbm)']
+      },
       colors: {
         'str-cotton': "#8548F5",
         'str-yarn': '#FA93FF',
