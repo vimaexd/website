@@ -20,7 +20,9 @@ const nextConfig = {
   },
   images: {
     domains: [
-      "i.mae.wtf"
+      "i.mae.wtf",
+      "i.scdn.co",
+      "cdn.discordapp.com"
     ]
   }
 }

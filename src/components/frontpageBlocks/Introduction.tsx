@@ -51,7 +51,7 @@ export default function Introduction() {
           <ol className='space-y-1'>
             <li data-anim="initslide">
               <span className='w-6 mr-2 inline-block text-center align'>🏳️‍⚧️</span>
-              I use she/her pronouns
+              I use she/they pronouns
             </li>
             <li className='flex flex-row items-center' data-anim="initslide">
               <span className='w-6 mr-2 h-6 flex'>
@@ -69,31 +69,9 @@ export default function Introduction() {
             </li>
           </ol>
         </div>
-        <div className='text-4xl text-neutral-100 flex gap-1 mt-8'>
-          <Link href='https://youtube.com/Stringy' data-tooltip-content='YouTube' data-tooltip-id='front:social:yt' className='text-white'>
-            <Tooltip id="front:social:yt" className='text-sm' />
-            <i className='bx bxl-youtube hover:scale-110 hover:text-str-yarn transition-all duration-75 active:scale-90'></i>
-          </Link>
-          <Link href='https://discord.gg/A8A52G2' data-tooltip-content='Discord server' data-tooltip-id='front:social:discord' className='text-white'>
-            <Tooltip id="front:social:discord" className='text-sm'/>
-            <i className='bx bxl-discord-alt hover:scale-110 hover:text-str-yarn transition-all duration-75 active:scale-90'></i>
-          </Link>
-          <Link href='https://wetdry.world/@mae' data-tooltip-content='Mastodon' data-tooltip-id='front:social:wdw' rel="me" className='text-white'>
-            <Tooltip id="front:social:wdw" className='text-sm'/>
-            <i className='bx bxl-mastodon hover:scale-110 hover:text-str-yarn transition-all duration-75 active:scale-90'></i>
-          </Link>
-          <Link href='https://github.com/etstringy' data-tooltip-content='GitHub' data-tooltip-id='front:social:gh' className='text-white'>
-            <Tooltip id="front:social:gh" className='text-sm'/>
-            <i className='bx bxl-github hover:scale-110 hover:text-str-yarn transition-all duration-75 active:scale-90'></i>
-          </Link>
-          <Link href='https://twitter.com/etstringy' data-tooltip-content='Twitter' data-tooltip-id='front:social:birdsite' className='text-white'>
-            <Tooltip id="front:social:birdsite" className='text-sm'/>
-            <i className='bx bxl-twitter hover:scale-110 hover:text-str-yarn transition-all duration-75 active:scale-90'></i>
-          </Link>
-        </div>
       </div>
       <div className='w-1/2 justify-end hidden lg:flex'>
-        <Image src="/maewave.png" width={256} height={256} alt={''} data-anim="goober"></Image>
+        <Image src="/maewave.png" width={256} height={256} alt={''} data-anim="goober" className='w-fit h-fit'></Image>
       </div>
     </div>
   )
