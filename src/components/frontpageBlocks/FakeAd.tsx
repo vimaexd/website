@@ -4,7 +4,6 @@ import Image from 'next/image';
 import useLocalStorage from 'use-local-storage';
 
 export default function FakeAd({ad}: {ad: any}) {
-  console.log(ad)
   const [visible, setVisibility] = useLocalStorage("mae.showFakeAds", true);
 
   if(!visible) return (
@@ -28,6 +27,18 @@ export default function FakeAd({ad}: {ad: any}) {
         <p className='text-xs text-neutral-600 hover:text-white hover:underline cursor-pointer' onClick={() => setVisibility(!visible)}>
           hide
         </p>
+      </div>
+    </div>
+  )
+}
+
+export function FakeAdPlaceholder() {
+  return (
+    <div>
+      <div className='w-full h-[160px] bg-gray-400 animate-pulse'></div>
+      <div className='flex justify-between'>
+        <div className='bg-gray-400 animate-pulse w-2/6'/>
+        <div className='bg-gray-400 animate-pulse w-1/6'/>
       </div>
     </div>
   )

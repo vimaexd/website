@@ -28,6 +28,9 @@ const fakeAds: { filename: string; author: string; }[] = [
   }
 ]
 
+// Disable cache
+export const revalidate = 0
+
 /**
  * Fake Ad Wrapper
  * This wrapper is required, as the image is picked in a Server Component

@@ -8,8 +8,13 @@ import LanyardBlock from '@mae/components/frontpageBlocks/LanyardBlock';
 import SocialSpeeddial from '@mae/components/frontpageBlocks/SocialSpeeddial';
 import ClockBlock from '@mae/components/frontpageBlocks/ClockBlock';
 import { Suspense } from 'react';
-import FakeAd from '@mae/components/frontpageBlocks/FakeAd';
-import FakeAdWrapper from '@mae/components/frontpageBlocks/FakeAdWrapper';
+import dynamic from 'next/dynamic';
+import { FakeAdPlaceholder } from '@mae/components/frontpageBlocks/FakeAd';
+
+const FakeAdWrapper = dynamic(() => import('@mae/components/frontpageBlocks/FakeAdWrapper'), { 
+  ssr: false, 
+  loading: () => <FakeAdPlaceholder/>
+})
 
 export const metadata: Metadata = {
   title: 'Home |✨ mae',
@@ -111,7 +116,7 @@ function Sideblocks() {
         </div>
       </SideBlock> */}
       <LanyardBlock id={"577743466940071949"} />
-      <FakeAdWrapper/>
+    <FakeAdWrapper/>
     </div>
   )
 }
