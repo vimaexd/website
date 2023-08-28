@@ -52,6 +52,7 @@ a {
   @apply text-str-yarn;
 }
 
+/* misc */
 .bg-hazardtape {
   background-image: repeating-linear-gradient(
     -55deg,
@@ -60,4 +61,9 @@ a {
     #ffb101 20px,
     #ffb101 40px
   );
+}
+
+/* */
+.mae-tool-img-flstudio {
+  filter: brightness(0%) invert(1) drop-shadow(0px 2px 16px #ff8500);
 }

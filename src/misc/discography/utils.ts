@@ -30,8 +30,13 @@ export const resolveRelease = (unresolved: IUnresolvedRelease, tracks: ITrack[] 
   return resolved;
 }
 
-export const groupReleasesByYear = (releases: IUnresolvedRelease[]): {[year: number]: IUnresolvedRelease[]} => {
-  let groups: {[year: number]: IUnresolvedRelease[]} = {}
+/**
+ * @deprecated
+ * @param releases IUnresolvedRelease[]
+ * @returns {[year: string]: IUnresolvedRelease[]}
+ */
+export const groupReleasesByYear = (releases: IUnresolvedRelease[]): {[year: string]: IUnresolvedRelease[]} => {
+  let groups: {[year: string]: IUnresolvedRelease[]} = {}
 
   for(let i = 0; i < releases.length; i++) {
     let release = releases[i];
@@ -39,6 +44,20 @@ export const groupReleasesByYear = (releases: IUnresolvedRelease[]): {[year: num
       groups[release.year] = [];
 
     groups[release.year].push(release);
+  }
+  
+  return groups;
+}
+
+export const groupReleasesByKey = (releases: IUnresolvedRelease[], key: string): {[year: string]: IUnresolvedRelease[]} => {
+  let groups: {[title: string]: IUnresolvedRelease[]} = {}
+
+  for(let i = 0; i < releases.length; i++) {
+    let release = releases[i];
+    if(!groups.hasOwnProperty((release as any)[key]))
+      groups[(release as any)[key]] = [];
+
+    groups[(release as any)[key]].push(release);
   }
   
   return groups;

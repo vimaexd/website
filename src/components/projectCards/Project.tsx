@@ -1,3 +1,5 @@
+import type { ProjectProps } from './types';
+
 export default function Project(props: ProjectProps) {
   return (
     <div className='bg-str-bleck-200 w-full rounded-md flex flex-col justify-end bg-cover h-auto max-h-44 anim-projects'>

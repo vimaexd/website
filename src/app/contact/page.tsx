@@ -40,6 +40,13 @@ export default function page() {
               <h1 className="text-2xl font-semibold">Stringy</h1>
             </div>
             <div className="flex flex-col text-lg font-medium">
+              <span className="mb-2">
+                Email{" "}
+                <span className="font-light font-mono">
+                  (stringy at mae dot wtf)
+                </span>
+              </span>
+
               <Link
                 href="https://youtube.com/@Stringy"
                 className="text-[#ff6868]"
@@ -59,16 +66,10 @@ export default function page() {
                 Newgrounds <span className="font-light">(etstringy)</span>
               </Link>
               <Link
-                href="https://etstringy.newgrounds.com"
+                href="https://soundcloud.com/etstringy"
                 className="text-[#ff8800]"
               >
                 SoundCloud <span className="font-light">(Stringy)</span>
-              </Link>
-              <Link
-                href="https://etstringy.newgrounds.com"
-                className="text-[#ff8800]"
-              >
-                SoundCloud <span className="font-light">(✨ mae)</span>
               </Link>
               <Link
                 href="https://reddit.com/u/etstringy"
@@ -85,12 +86,6 @@ export default function page() {
               <Link href="https://tiktok.com/@etstringy" className='text-[#FE2C55]'>
                 TikTok <span className="font-light">(etstringy)</span>
               </Link>
-              <span className="">
-                Email{" "}
-                <span className="font-light font-mono">
-                  (stringy at mae dot wtf)
-                </span>
-              </span>
             </div>
           </div>
           <div className="space-y-4 bg-neutral-800 p-4 rounded-lg w-full shadow-xl anim-contact-card">
@@ -152,6 +147,12 @@ export default function page() {
               </Link>
               <Link href="https://www.last.fm/user/etstringy">
                 last.fm <span className='font-thin'>(etstringy)</span>
+              </Link>
+              <Link
+                href="https://soundcloud.com/vimae"
+                className="text-[#ff8800]"
+              >
+                SoundCloud <span className="font-light">(✨ mae)</span>
               </Link>
             </div>
           </div>

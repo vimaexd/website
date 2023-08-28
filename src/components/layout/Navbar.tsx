@@ -1,14 +1,22 @@
 'use client';
 import anime from 'animejs';
 import Link from 'next/link'
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Button from '@mae/components/Button';
 import Image from 'next/image';
 import _ from 'lodash';
 import { usePathname } from 'next/navigation';
+import { useRecoilState } from 'recoil';
+import { transparentNavbar } from '@mae/store/transparentNavbar';
 
-export default function Navbar() {
-  const path = usePathname();
+export default function Navbar({version}: {version: string}) {
+  const pathname = usePathname();
+  const [isTransparentPage, setTransparentPage] = useRecoilState(transparentNavbar);
+
+  // when navigating to a new page, set the transparent state to default
+  useEffect(() => {
+    setTransparentPage(false)
+  }, [pathname])
 
   const bar = useRef<HTMLDivElement>(null);
   const [stars, setStars] = useState<number[][]>([]);
@@ -54,7 +62,7 @@ export default function Navbar() {
   }, [bar, menuVisible])
 
   return (
-    <div className={`w-full lg:h-32 flex justify-center z-20 sticky ${(path.startsWith('/music/')) ? 'bg-transparent' : 'bg-neutral-900'}`} ref={bar}>
+    <div className={`w-full lg:h-32 flex justify-center z-20 sticky ${(isTransparentPage) ? 'bg-transparent' : 'bg-neutral-900'}`} ref={bar}>
       <div className="absolute top-0 left-0 lg:w-[1024px] w-full opacity-60 z-0 text-clip">
         {
           stars.map((star, i) => (
@@ -75,7 +83,7 @@ export default function Navbar() {
             <Link href='/'>
               <LogoText/>
             </Link>
-            <h6 className='text-xs font-mono'>v8.1.3</h6>
+            <h6 className='text-xs font-mono'>v{version}</h6>
           </div>
           <div className='ml-auto lg:hidden'>
             <i className='bx bx-menu bx-md cursor-pointer anim-navbar-hamburger' onClick={() => { 
@@ -93,6 +101,7 @@ export default function Navbar() {
           <Button text="🎵 Music" href="/music"/>
           <Button text="😀 My OC" href="/oc"/>
           <Button text="💻 Services" href="/services"/>
+          <Button text="📝 Blog" href="/blog"/>
           <Button text="💰 Donate" href="/donate"/>
           <Button text="📱 Contact" href="/contact"/>
           <Button text="⌨️ Gear" href="/gear"/>

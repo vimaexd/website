@@ -1,9 +1,11 @@
-interface ProjectProps {
-  children?: React.ReactNode | React.ReactNode[]
+import { ComponentChildren } from "@mae/misc/types";
+
+export interface ProjectProps {
+  children?: ComponentChildren
   title: string;
   description: string;
 }
 
-type ProjectPropsImg = ProjectProps & {
+export type ProjectPropsImg = ProjectProps & {
   image: string;
 }

@@ -1,3 +1,5 @@
+import type { ProjectPropsImg } from './types';
+
 export default function ProjectJumbotron(props: ProjectPropsImg) {
   return (
     <div className='bg-slate-700 w-full rounded-md h-60 bg-cover col-span-2 anim-projects' style={{

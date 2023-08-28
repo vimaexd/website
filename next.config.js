@@ -1,9 +1,14 @@
+const { version } = require('./package.json');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: true
   },
   swcMinify: false,
+  publicRuntimeConfig: {
+    version
+  },
   async redirects() {
     return [
       {
@@ -22,9 +27,10 @@ const nextConfig = {
     domains: [
       "i.mae.wtf",
       "i.scdn.co",
-      "cdn.discordapp.com"
+      "cdn.discordapp.com",
+      "f4.bcbits.com"
     ]
   }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

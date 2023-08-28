@@ -4,13 +4,21 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
+
+const BandcampSupporters = dynamic(() => import('@mae/components/supporters/BandcampSupporters'), { ssr: false });
+const DiscordSupporters = dynamic(() => import('@mae/components/supporters/DiscordSupporters'), { ssr: false });
+const ThroneSupporters = dynamic(() => import('@mae/components/supporters/ThroneSupporters'), { ssr: false });
+const OtherSupporters = dynamic(() => import('@mae/components/supporters/OtherSupporters'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'Donate |✨ mae',
   description: 'donate to me if you want :)'
 }
 
-export default function Donate() {
+let cache_test = 0
+
+export default async function Donate() {
   return (
     <PageContainer>
       <PageHeader title='💸 donate'>
@@ -82,8 +90,16 @@ export default function Donate() {
           </div>
         </div>
       </div>
-      <div className='w-full h-16'>
-      </div>
+
+      <h1 className='font-bold text-4xl'>Supporters</h1>
+      <p>
+        thank you so much to the people below for supporting me 😄<br/>
+        if you've given me something and dont see your name below, <Link href="/contact">let me know about it</Link>
+      </p>
+      <ThroneSupporters/>
+      <BandcampSupporters/>
+      <DiscordSupporters/>
+      <OtherSupporters/>
     </PageContainer>
   ) 
 }

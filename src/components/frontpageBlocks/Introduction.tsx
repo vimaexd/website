@@ -42,7 +42,7 @@ export default function Introduction() {
   })
   return (
     <div className='flex items-center justify-between gap-4'>
-      <div className='w-1/2 flex flex-col'>
+      <div className='w-full sm:w-1/2 flex flex-col'>
         <h1 className='text-4xl font-bold tracking-tight' data-anim="initslide">👋 hey! i'm mae</h1>
         <div className='leading-6 text-base space-y-2 flex flex-col mt-2'>
           <p data-anim="initslide">
@@ -77,7 +77,7 @@ export default function Introduction() {
           </ol>
         </div>
       </div>
-      <div className='block'>
+      <div className='hidden sm:block'>
         <Image src="/maewave.png" width={200} height={200} alt={''} data-anim="goober" className=''></Image>
       </div>
     </div>

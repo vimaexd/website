@@ -5,7 +5,7 @@ import { IBaseRelease, IUnresolvedRelease } from '@mae/misc/discography/types';
 import anime from 'animejs/lib/anime.es';
 import Link from 'next/link';
 
-export default function releaseCard({release}: {release: IUnresolvedRelease}) {
+export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
   const [isExpanded, setExpanded] = useState(false);
   let hasAnimatedIn = false;
   const popoverId = `musicpopover-${release.slug}`
@@ -51,7 +51,7 @@ export default function releaseCard({release}: {release: IUnresolvedRelease}) {
   return (
       <div className='flex flex-col items-center gap-2 cursor-pointer'>
         <div className='flex flex-row w-full'>
-          <Link href={'/music/' + release.slug}>
+          <Link href={'/music/release/' + release.slug}>
             <Image
             src={release.album_art}
             width={128}

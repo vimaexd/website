@@ -1,23 +1,13 @@
-import LatestReleaseBlock from '@mae/components/frontpageBlocks/LatestReleaseBlock';
 import PageContainer from '@mae/components/layout/PageContainer';
 import Introduction from '@mae/components/frontpageBlocks/Introduction';
 import Image from 'next/image'
 import { Metadata } from 'next';
-import SideBlock from '@mae/components/frontpageBlocks/SideBlock';
-import LanyardBlock from '@mae/components/frontpageBlocks/LanyardBlock';
-import SocialSpeeddial from '@mae/components/frontpageBlocks/SocialSpeeddial';
-import ClockBlock from '@mae/components/frontpageBlocks/ClockBlock';
-import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
-import { FakeAdPlaceholder } from '@mae/components/frontpageBlocks/FakeAd';
-
-const FakeAd = dynamic(() => import('@mae/components/frontpageBlocks/FakeAd'), { 
-  ssr: false, 
-  loading: () => <FakeAdPlaceholder/>
-})
+import Tool, { ToolAdobeIcon, ToolBoxicon } from '@mae/components/frontpageBlocks/Tool';
+import FrontpageSideblocks from '@mae/components/frontpageBlocks/FrontpageSideblocks';
+import { ComponentChildren } from '@mae/misc/types';
 
 export const metadata: Metadata = {
-  title: 'Home |✨ mae',
+  title: '✨ mae',
   description: 'the website of mae (aka Stringy)'
 }
 
@@ -25,13 +15,15 @@ export default function Home() {
   return (
     <div className="flex flex-row justify-center gap-8">
         <PageContainer>
-          <Suspense fallback="im waiting">
-            <Introduction />
-          </Suspense>
+          <Introduction />
+
+          {/* sideblocks mobile */}
           <div className='max-[1380px]:block hidden'>
-            <Sideblocks/>
+            <FrontpageSideblocks/>
           </div>
           <hr className='mt-2 opacity-40'/>
+
+          {/* backstory (mae lore) */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Image
               src="/assets/code_screenshot_full.png"
@@ -53,70 +45,88 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <hr className='mt-2 opacity-40'/>
+
+          {/* software i work with */}
+          <div className='flex flex-col space-y-8'>
+            <h2 className='font-semibold text-2xl'>🔧 software i work with</h2>
+            <div className='grid grid-flow-col justify-around items-center'>
+              <Tool name="FL Studio" color='#454545' useBoxShadow={false}>
+                <div className='w-12 h-12 flex items-center justify-center p-2 '>
+                  <Image src="/assets/logos/FLStudio_logo.png" width={32} height={32} alt="FL Studio Logo" className='mae-tool-img-flstudio' />
+                </div>
+              </Tool>
+              <Tool name="Ableton Live" color='rgba(255,255,255,0.1)' useBoxShadow={true}>
+                <div className='w-8 h-8 bg-white'>
+                  <p className='mix-blend-multiply text-black font-medium text-[12px] flex items-center justify-center h-full'>
+                    Live
+                  </p>
+                </div>
+              </Tool>
+              <Tool name="Photoshop" color='#001833' useBoxShadow={true}>
+                <ToolAdobeIcon text="Ps"/>
+              </Tool>
+              <Tool name="Premiere Pro" color='#00005b' useBoxShadow={true}>
+                <ToolAdobeIcon text="Pr"/>
+              </Tool>
+              <Tool name="After Effects" color='#00005b' useBoxShadow={true}>
+                <ToolAdobeIcon text="Ae"/>
+              </Tool>
+              <Tool name="Visual Studio Code" color='#0078d7'>
+                <ToolBoxicon icon="bxl-visual-studio"/>
+              </Tool>
+            </div>
+          </div>
+          <hr className='mt-2 opacity-40'/>
+
+          {/* tools i work with */}
+          <div className='flex flex-col space-y-8'>
+            <h2 className='font-semibold text-2xl'>🔧 tools i work with</h2>
+            <div className='grid grid-flow-col justify-around items-center'>
+              <Tool name="JavaScript" color='#f7df1e'>
+                <ToolBoxicon icon="bxl-javascript"/>
+              </Tool>
+              <Tool name="Python" color='#27cc53'>
+                <ToolBoxicon icon="bxl-python"/>
+              </Tool>
+              <Tool name="Node.js"  color='#6cc24a'>
+                <ToolBoxicon icon="bxl-nodejs"/>
+              </Tool>
+              <Tool name="React"  color='#00d8ff'>
+                <ToolBoxicon icon="bxl-react"/>
+              </Tool>
+              <Tool name="Tailwind CSS"  color='#38bdf8'>
+                <ToolBoxicon icon="bxl-tailwind-css"/>
+              </Tool>
+              <Tool name="HTML" color='#e34f26'>
+                <ToolBoxicon icon="bxl-html5"/>
+              </Tool>
+              <Tool name="CSS"  color='#264de4'>
+                <ToolBoxicon icon="bxl-css3"/>
+              </Tool>
+              <Tool name="GitHub" color='#fafafa'>
+                <ToolBoxicon icon="bxl-github"/>
+              </Tool>
+              <Tool name="PostgreSQL" color='#0064a5'>
+                <ToolBoxicon icon="bxl-postgresql"/>
+              </Tool>
+            </div>
+          </div>
         </PageContainer>
+
+      {/* sideblocks desktop */}
       <div className='min-[1380px]:block hidden'>
-        <Sideblocks/>
+        <FrontpageSideblocks/>
       </div>
+      
     </div>
   );
 }
 
-function Sideblocks() {
+function SideblockWrapper({children}: {children: ComponentChildren}) {
   return (
     <div className="min-[1380px]:w-72 mt-8 min-[1380px]:flex-col grid min-[1380px]:grid-cols-1 grid-cols-2 max-[624px]:grid-cols-1 min gap-4 w-full">
-      <SideBlock title="📱 speed dial">
-        <div className="text-4xl text-neutral-100 flex justify-evenly items-center">
-          <SocialSpeeddial
-            href="https://youtube.com/Stringy"
-            tooltipContent="YouTube"
-            tooltipId="front:social:yt"
-            icon="bxl-youtube"
-          />
-          <SocialSpeeddial
-            href="https://discord.gg/A8A52G2"
-            tooltipContent="Discord"
-            tooltipId="front:social:dc"
-            icon="bxl-discord-alt"
-          />
-          <SocialSpeeddial
-            href="https://wetdry.world/@mae"
-            tooltipContent="Mastodon"
-            tooltipId="front:social:mst"
-            icon="bxl-mastodon"
-          />
-          <SocialSpeeddial
-            href="https://github.com/etstringy"
-            tooltipContent="GitHub"
-            tooltipId="front:social:gh"
-            icon="bxl-github"
-          />
-          <SocialSpeeddial
-            href="https://twitter.com/etstringy"
-            tooltipContent="Twitter"
-            tooltipId="front:social:twt"
-            icon="bxl-twitter"
-          />
-        </div>
-      </SideBlock>
-      <ClockBlock />
-      <div className='row-span-2'>
-        <LatestReleaseBlock />
-      </div>
-      {/* <SideBlock title='📺 YouTube' disablePadding={true}>
-        <div className='flex'>
-          <iframe
-            width={284}
-            className='rounded-md'
-            src="https://www.youtube-nocookie.com/embed/videoseries?list=PLxOjvF2NKxDNT8mB9vEajUWf70rI_GECn"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen={true}
-          ></iframe>
-        </div>
-      </SideBlock> */}
-      <LanyardBlock id={"577743466940071949"} />
-    <FakeAd/>
+
     </div>
   )
 }

@@ -1,6 +1,7 @@
-import React, { ReactNode } from 'react'
+import { ComponentChildren } from '@mae/misc/types';
+import React from 'react'
 
-export default function PageHeader({title, children}: {title: string; children: ReactNode[] | ReactNode}) {
+export default function PageHeader({title, children}: {title: string; children: ComponentChildren}) {
   return (
     <div className='space-y-2'>
       <h1 className='font-bold text-4xl'>

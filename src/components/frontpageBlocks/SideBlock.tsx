@@ -1,6 +1,8 @@
+'use client'
+import { ComponentChildren } from '@mae/misc/types'
 import React, { Fragment } from 'react'
 
-export default function SideBlock({children, title, disablePadding = false}: {title: string, disablePadding?: boolean, children: React.ReactNode | React.ReactNode[]}) {
+export default function SideBlock({children, title, disablePadding = false}: {title: string, disablePadding?: boolean, children: ComponentChildren}) {
   return (
     <div className='w-full bg-zinc-900 rounded-lg border-2 border-gray-600 min-w-[288px]'>
       <div className='flex items-center'>
@@ -10,7 +12,7 @@ export default function SideBlock({children, title, disablePadding = false}: {ti
         <span className='ml-auto font-mono h-full select-none'>
           <span className='px-2'>─</span>
           <span className='px-2'>☐</span>
-          <span className='px-3'>✕</span>
+          <span className='px-3 select-all'>✕</span>
         </span>
       </div>
       {

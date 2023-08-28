@@ -9,11 +9,17 @@ const soundClick = new Howl({
   volume: 0.2
 });
 
-export default function Button({text, href, className, icon}: {text: string; href: string; className?: string; icon?: string;}) {
+export default function Button({text, href, className, icon, onClick}: {text: string; href: string; className?: string; icon?: string; onClick?: () => any;}) {
   const pathname = usePathname();
 
   const playSound = () => {
+    if(onClick) onClick();
     soundClick.play()
+  }
+
+
+  if(onClick) {
+    let href = null;
   }
 
   return (
