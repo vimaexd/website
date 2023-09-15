@@ -48,9 +48,6 @@ export default function Footer() {
           </div>
           <div className='flex flex-col'>
             <h1 className='font-semibold text-lg'>Services</h1>
-            <Link href="https://f.mae.wtf">
-              mae's space station
-            </Link>
             <Link href="https://co.mae.wtf">
               cobalt
             </Link>

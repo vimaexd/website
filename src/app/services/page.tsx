@@ -16,7 +16,6 @@ export default function Services() {
   return (
     <div className='flex flex-col lg:flex-row justify-center gap-8 lg:mx-8'>
       <Contents>
-        <ContentsOption href='#calckey' name="mae's space station"/>
         <ContentsOption href='#cobalt' name="cobalt"/>
         <ContentsOption href='#misq' name="Misq"/>
         <ContentsOption href='#blobmaker' name="Blob Maker"/>
@@ -28,31 +27,6 @@ export default function Services() {
           <PageHeader title="💻 services">
             i host a couple of web services on this domain, here's a current list of them
           </PageHeader>
-          <hr/>
-          <div className='inline-block' id="calckey">
-            <Image src="/assets/logos/spacestation/logo.png" height={200} width={400} alt="mae's space station logo
-            " className='mb-4'></Image>
-            <div className='flex space-x-2'>
-              <Chip text="Social" className='bg-blue-400 text-black'></Chip>
-              <Chip text="Invite only" className='bg-orange-300'></Chip>
-            </div>
-            <br/>
-            <h2 className='text-lg mt-6 mb-2 font-semibold'>Info</h2>
-            <p>
-              <strong>mae's space station</strong> is a <a href="https://calckey.org/">Calckey</a> instance, a part of the Fediverse.
-              Calckey is a feature-rich social network server that allows you to express yourself with features like reactions, markdown,
-              custom emojis and a lot more.
-            </p>
-            <h2 className='text-lg mt-6 mb-2 font-semibold'>Requirements</h2>
-            <p>
-              The space station is open to people who are part of the yarnspace discord server and that I know well enough. Feel free to DM
-              me for an invite if you meet the requirements
-            </p>
-            <h2 className='text-lg mt-6 mb-2 font-semibold'>URLs</h2>
-            <p>
-              <a href="https://f.mae.wtf">https://f.mae.wtf</a>
-            </p>
-          </div>
 
           <hr/>
           <div className='inline-block' id="cobalt">
