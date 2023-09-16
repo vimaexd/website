@@ -11,7 +11,7 @@ export default async function page(props: any) {
   const postPath = path.join('./blog', props.params.post)
   console.log("accessing post path: ", postPath)
   try {
-    await fs.access(postPath)
+    await fs.access(postPath, fs.constants.R_OK)
   } catch {
     return notFound();
   }
