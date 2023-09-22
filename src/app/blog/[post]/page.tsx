@@ -8,7 +8,9 @@ import remarkHtml from 'remark-html'
 import BlogPost from './BlogPost';
 
 export default async function page(props: any) {
-  const allblogs = await fs.readdir('blog')
+  console.log("cwd", process.cwd())
+
+  const allblogs = await fs.readdir(path.join('blog'))
   console.log("posts in folder:", allblogs)
 
   const postPath = path.join('blog', props.params.post)
