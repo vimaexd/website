@@ -2,9 +2,12 @@ import PageContainer from '@mae/components/layout/PageContainer';
 import Introduction from '@mae/components/frontpageBlocks/Introduction';
 import Image from 'next/image'
 import { Metadata } from 'next';
-import Tool, { ToolAdobeIcon, ToolBoxicon } from '@mae/components/frontpageBlocks/Tool';
+import { ToolAdobeIcon, ToolBoxicon } from '@mae/components/frontpageBlocks/Tool';
 import FrontpageSideblocks from '@mae/components/frontpageBlocks/FrontpageSideblocks';
 import { ComponentChildren } from '@mae/misc/types';
+import dynamic from 'next/dynamic';
+
+const Tool = dynamic(() => import('@mae/components/frontpageBlocks/Tool'))
 
 export const metadata: Metadata = {
   title: '✨ mae',
@@ -13,28 +16,30 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-row justify-center gap-8">
+    <div className="flex flex-row justify-center gap-4 lg:px-8 ">
         <PageContainer>
           <Introduction />
 
           {/* sideblocks mobile */}
-          <div className='max-[1380px]:block hidden'>
+          <div className='max-[670px]:block hidden'>
             <FrontpageSideblocks/>
           </div>
           <hr className='mt-2 opacity-40'/>
 
           {/* backstory (mae lore) */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Image
-              src="/assets/code_screenshot_full.png"
-              width={400}
-              height={500}
-              className="rounded-lg border-2 border-str-cotton"
-              alt="a screenshot of visual studio code"
-              style={{
-                boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)"
-              }}
-            />
+          <div className="flex flex-col sm:flex-row gap-8">
+            <div className='block'>
+              <Image
+                src="/assets/code_screenshot_full.png"
+                width={1280}
+                height={500}
+                className="rounded-lg"
+                alt="a screenshot of visual studio code"
+                style={{
+                  boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)"
+                }}
+              />
+            </div>
             <div className="space-y-4 text-right">
               <h2 className="text-2xl font-semibold">✨ since the start..</h2>
               <p>
@@ -115,18 +120,10 @@ export default function Home() {
         </PageContainer>
 
       {/* sideblocks desktop */}
-      <div className='min-[1380px]:block hidden'>
+      <div className='min-[670px]:block hidden lg:mx-0 mx-4'>
         <FrontpageSideblocks/>
       </div>
       
     </div>
   );
-}
-
-function SideblockWrapper({children}: {children: ComponentChildren}) {
-  return (
-    <div className="min-[1380px]:w-72 mt-8 min-[1380px]:flex-col grid min-[1380px]:grid-cols-1 grid-cols-2 max-[624px]:grid-cols-1 min gap-4 w-full">
-
-    </div>
-  )
 }

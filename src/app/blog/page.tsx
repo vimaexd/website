@@ -32,6 +32,11 @@ export default async function BlogAllPostsPage() {
       <PageHeader title="blog">
         i write here from time to time :)
       </PageHeader>
+      <p className='block p-4 bg-red-800'>
+        <h2 className='font-bold text-lg'>notice</h2>
+        the blog may not be working right now due to an unknown bug server-side.
+        sry about that :(
+      </p>
       <div className='grid sm:grid-cols-2 gap-8 flex-grow-0'>
         {
           posts.map((d) => (

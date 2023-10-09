@@ -25,7 +25,7 @@ export default function Button({text, href, className, icon, onClick}: {text: st
   return (
     <Link href={href} onClick={playSound}>
       <h3 className={
-        `${(pathname == href) ? 'bg-purple-500 hover:bg-purple-400 text-white' : 'bg-neutral-800 hover:bg-neutral-700'} select-none transition-all py-1 px-4 rounded-md active:scale-90 text-white ${className}`
+        `${(pathname == href) ? 'bg-purple-600 hover:bg-purple-500 text-white' : 'bg-neutral-800 hover:bg-neutral-700'} select-none transition-all py-1 px-4 rounded-md active:scale-90 text-white ${className}`
         }>
         {icon && <i className={icon}></i>}
         {text}

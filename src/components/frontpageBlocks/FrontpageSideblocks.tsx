@@ -21,10 +21,6 @@ const MaesweeperGameBlock = dynamic(() => import('@mae/components/games/Maesweep
 
 export default function FrontpageSideblocks() {
   const [hideCount, setHideCount] = useRecoilState(fakeAdHideCountState);
-  
-  useEffect(() => {
-    console.log(hideCount)
-  }, [hideCount])
 
   if(hideCount >= 6) {
     return (

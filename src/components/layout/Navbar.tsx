@@ -62,7 +62,7 @@ export default function Navbar({version}: {version: string}) {
   }, [bar, menuVisible])
 
   return (
-    <div className={`w-full lg:h-32 flex justify-center z-20 sticky ${(isTransparentPage) ? 'bg-transparent' : 'bg-neutral-900'}`} ref={bar}>
+    <nav className={`w-full lg:h-32 flex justify-center z-20 sticky ${(isTransparentPage) ? 'bg-transparent' : 'bg-neutral-900'}`} ref={bar}>
       <div className="absolute top-0 left-0 lg:w-[1024px] w-full opacity-60 z-0 text-clip">
         {
           stars.map((star, i) => (
@@ -77,13 +77,13 @@ export default function Navbar({version}: {version: string}) {
           ))
         }
       </div>
-      <div className='w-[1024px] px-4 lg:px-0 h-full flex lg:flex-row flex-col lg:items-center py-4 lg:py-8 gap-4 lg:gap-0 z-10'>
+      <div className='w-[1024px] lg:px-0 h-full flex lg:flex-row flex-col lg:items-center py-4 lg:py-8 gap-4 lg:gap-0 z-10 md:px-8 px-4'>
         <div className='flex flex-row items-center lg:justify-center justify-between space-x-4'>
           <div>
             <Link href='/'>
               <LogoText/>
             </Link>
-            <h6 className='text-xs font-mono'>v{version}</h6>
+            <h2 className='text-xs font-mono'>v{version}</h2>
           </div>
           <div className='ml-auto lg:hidden'>
             <i className='bx bx-menu bx-md cursor-pointer anim-navbar-hamburger' onClick={() => { 
@@ -107,12 +107,12 @@ export default function Navbar({version}: {version: string}) {
           <Button text="⌨️ Gear" href="/gear"/>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }
 
 function LogoText() {
   return (
-    <h3 className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">mae</h3>
+    <h1 className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">mae</h1>
   )
 }

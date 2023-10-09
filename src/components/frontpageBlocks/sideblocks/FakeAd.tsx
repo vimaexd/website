@@ -29,7 +29,6 @@ export default function FakeAd() {
   
   const index = Math.floor(Math.random() * fakeAds.list.length);
   const ad = fakeAds.list[index];
-  console.log("picking fake ad", ad)
 
   if(!visible) return (
     <div className='flex justify-between'>
@@ -51,11 +50,11 @@ export default function FakeAd() {
           </video>
         : <Image src={`/assets/fakeads/${ad.filename}`} alt="fake ad" width="288" height="120"/>
       }
-      <div className='flex justify-between'>
-        <p className='text-xs text-neutral-600'>
+      <div className='flex justify-between mt-1'>
+        <p className='text-xs text-neutral-400'>
           fake ad by {ad.author}
         </p>
-        <p className='text-xs text-neutral-600 hover:text-white hover:underline cursor-pointer' onClick={() => setVisibility(!visible)}>
+        <p className='text-xs text-neutral-400 hover:text-white hover:underline cursor-pointer' onClick={() => setVisibility(!visible)}>
           hide
         </p>
       </div>

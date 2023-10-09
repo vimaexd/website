@@ -1,6 +1,7 @@
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import 'react-tooltip/dist/react-tooltip.css';
 import '../css/globals.css';
+import 'boxicons/css/boxicons.min.css';
 import Navbar from '@mae/components/layout/Navbar';
 import Footer from '@mae/components/layout/Footer';
 import LayoutWrappers from './layoutWrappers';
@@ -29,7 +30,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+
       </head>
       <body className={`${inter.className} ${jbm.variable} bg-[#0c0c0c] text-gray-200`}>
         <LayoutWrappers>
