@@ -1,6 +1,6 @@
 import PageContainer from '@mae/components/layout/PageContainer'
 import PageHeader from '@mae/components/layout/PageHeader'
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import { promises as fs } from 'fs';
 import path from 'path'
@@ -30,7 +30,7 @@ export default async function BlogAllPostsPage() {
   return (
     <PageContainer>
       <PageHeader title="blog">
-        <Fragment>i write here from time to time :)</Fragment>
+        i write here from time to time :)
       </PageHeader>
       <p className='block p-4 bg-red-800'>
         <h2 className='font-bold text-lg'>notice</h2>
