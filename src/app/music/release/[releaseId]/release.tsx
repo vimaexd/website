@@ -20,7 +20,7 @@ export default function Release({release}: {release: IResolvedRelease}) {
         <div className='w-full h-full absolute top-0 left-0 z-20 bg-black opacity-60'></div>
         <Image src={release.album_art} alt="" fill={true} quality={1} className='w-full h-full object-cover object-center'/>
       </div>
-      <div className="z-10 sticky flex justify-center mt-8 mx-4">
+      <div className="z-10 sticky flex justify-center my-16 mx-4 min-h-screen">
         <div className='lg:w-[1024px] w-full space-y-8 mx-4'>
           {/* <Link href="/music" className='select-none text-white text-sm flex items-center bg-[rgba(0,0,0,0.6)] cursor-pointer w-fit px-4 py-2 rounded-lg hover:bg-black active:-translate-x-2 active:opacity-0 transition-all ease-out'>
             <i className='bx bx-left-arrow-alt bx-xs'></i>
