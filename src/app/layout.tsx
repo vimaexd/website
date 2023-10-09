@@ -35,10 +35,10 @@ export default async function RootLayout({
       <body className={`${inter.className} ${jbm.variable} bg-[#0c0c0c] text-gray-200`}>
         <LayoutWrappers>
           <Navbar version={pack.version}/>
-          {/* <div className='w-screen py-4 bg-hazardtape text-center font-bold text-4xl'>
-            <span className='drop-shadow-2xl text-red-500 bg-[rgba(0,0,0,0.8)]'>MAE MAKE THIS RESPONSIVE BEFORE YOU SHIP THIS</span>
-          </div> */}
-            {children}
+            {/* <div className='w-screen py-4 bg-hazardtape text-center font-bold text-4xl'>
+              <span className='drop-shadow-2xl text-red-500 bg-[rgba(0,0,0,0.8)]'>MAE MAKE THIS RESPONSIVE BEFORE YOU SHIP THIS</span>
+            </div> */}
+            <div>{children}</div>
           <Footer/>
         </LayoutWrappers>
       </body>
