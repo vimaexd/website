@@ -11,7 +11,7 @@ const Tool = dynamic(() => import('@mae/components/frontpageBlocks/Tool'))
 
 export const metadata: Metadata = {
   title: '✨ mae',
-  description: 'the website of mae (aka Stringy)'
+  description: 'vimae is a queer programmer, musician and internet user'
 }
 
 export default function Home() {

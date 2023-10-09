@@ -9,10 +9,13 @@ import { ComponentChildren } from '@mae/misc/types';
 
 import { promises as fs } from 'fs';
 import path from 'path'
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '✨ mae',
-  description: 'the website of mae (aka Stringy)',
+  description: 'vimae is a queer programmer, musician and internet user',
+  keywords: 'vimae, vimae discord, vimae twitter, mae, etstringy, stringy, stringy music, stringy artist, maewtf, personal website',
+  robots: 'index, follow'
 }
 
 const inter = Inter({ preload: true, weight: ['300', '400', '500', '600', '700', '900'], subsets: ['latin']});
