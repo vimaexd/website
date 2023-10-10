@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-row justify-center gap-4 lg:px-8 ">
+    <div className="flex flex-row justify-center gap-2 lg:gap-8 lg:px-8 ">
         <PageContainer>
           <Introduction />
 
@@ -120,7 +120,7 @@ export default function Home() {
         </PageContainer>
 
       {/* sideblocks desktop */}
-      <div className='min-[670px]:block hidden lg:mx-0 mx-4'>
+      <div className='min-[670px]:block hidden lg:mr-0 mr-4'>
         <FrontpageSideblocks/>
       </div>
       
