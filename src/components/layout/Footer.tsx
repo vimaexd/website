@@ -52,7 +52,7 @@ export default function Footer() {
               <Link href="https://co.mae.wtf">
                 cobalt
               </Link>
-              <Link href="https://mkblob.mae.wtf">
+              <Link href="https://mkblob.web.app">
                 Blob Maker
               </Link>
               <Link href="https://i.mae.wtf">
