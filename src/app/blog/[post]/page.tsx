@@ -16,13 +16,14 @@ export default async function page(props: any) {
   const postPath = path.join('blog', props.params.post)
   console.log("accessing post path: ", postPath)
   try {
-    await fs.readdir(postPath)
+    await fs.access(postPath, fs.constants.R_OK)
   } catch(err) {
     console.log(err)
     return notFound();
   }
 
   const meta = JSON.parse(await fs.readFile(path.join(postPath, 'post.json'), {encoding: "utf-8"}));
+  console.log(meta)
   const contentRaw = await fs.readFile(path.join(postPath, meta.file), {encoding: "utf-8"});
 
   const content = await remark()
