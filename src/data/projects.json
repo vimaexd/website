@@ -1,0 +1,110 @@
+{
+  "projects": [
+    {
+      "title": "Online Confine Dashboard",
+      "description": "A web dashboard for authenticated users to manage DNS records for subdomains assigned to them.",
+      "image": "/assets/project_images/ocdash.png",
+      "type": "ProjectWithImg",
+      "links": [
+        {
+          "name": "Website",
+          "href": "https://onlineconfine.lol"
+        }
+      ]
+    },
+    {
+      "title": "Disq",
+      "description": "A service which allowed you to upload screenshots (with ShareX support) and create Short URLs.",
+      "image": "/assets/project_images/disq.png",
+      "type": "ProjectWithImg",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/disqTeam/api"
+        }
+      ]
+    },
+    {
+      "title": "Knok",
+      "description": "A web UI and server to make an iPad act as a doorbell for my room.",
+      "type": "Project",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/knok"
+        }
+      ]
+    },
+    {
+      "title": "Stringy Software API",
+      "description": "A multi-purpose API used for past versions of my website and various other projects that returned various data.",
+      "type": "Project",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/api"
+        }
+      ]
+    },
+    {
+      "title": "Satori",
+      "description": "A Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.",
+      "image": "/assets/project_images/satori.png",
+      "type": "ProjectWithImg",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/egg"
+        }
+      ]
+    },
+    {
+      "title": "Blob Maker",
+      "description": "A web app to customize your very own blob character. Mainly created to try out VueJS.",
+      "type": "Project",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/blobmaker"
+        },
+        {
+          "name": "Website",
+          "href": "https://mkblob.web.app"
+        }
+      ]
+    },
+    {
+      "title": "SwitchPresence",
+      "description": "An early attempt at using the Discord Game SDK and Electron to show what Nintendo Switch game you're playing.",
+      "type": "Project",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/switchpresence"
+        }
+      ]
+    },
+    {
+      "title": "Website v7",
+      "description": "A scrapped version of this website that used VueJS. I decided not to use it as I wanted to make the site in React.",
+      "type": "Project",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/website/tree/v7"
+        }
+      ]
+    },
+    {
+      "title": "Website v6",
+      "description": "The last live version of this website that used React + CRA.",
+      "type": "Project",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/website/tree/v6"
+        }
+      ]
+    }
+  ]
+}

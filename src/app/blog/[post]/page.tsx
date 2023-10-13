@@ -8,20 +8,14 @@ import remarkHtml from 'remark-html'
 import BlogPost from './BlogPost';
 
 export default async function page(props: any) {
-  const allblogs = await fs.readdir(path.join(process.cwd(), 'blog'))
-  console.log("posts in folder:", allblogs)
-
   const postPath = path.join(process.cwd(), 'blog', props.params.post)
-  console.log("accessing post path: ", postPath)
   try {
     await fs.access(postPath, fs.constants.R_OK)
   } catch(err) {
-    console.log(err)
     return notFound();
   }
 
   const meta = JSON.parse(await fs.readFile(path.join(postPath, 'post.json'), {encoding: "utf-8"}));
-  console.log(meta)
   const contentRaw = await fs.readFile(path.join(postPath, meta.file), {encoding: "utf-8"});
 
   const content = await remark()
