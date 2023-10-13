@@ -8,15 +8,15 @@ module.exports = {
     let paths = []
     
     // discog
-    const discography = await import('./src/data/discography.json');
+    const discography = await require('./src/data/discography.json');
     discography.releases.forEach((r) => {
-      paths.push("/music/release/" + r.slug)
+      paths.push({loc: "/music/release/" + r.slug})
     })
 
     // blog
     const blogdir = await fs.readdir('blog');
     blogdir.forEach((b) => {
-      paths.push("/blog/" + b)
+      paths.push({loc: "/blog/" + b})
     })
 
     return paths;
