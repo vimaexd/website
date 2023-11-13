@@ -33,3 +33,5 @@ npm run start
 - Fake ads provided by [many contributors](https://github.com/etstringy/website/blob/master/src/data/fakeAds.json)
 
 - [Inter typeface](https://rsms.me/inter/) by Rasmuss Anderson under the Open Font License
+
+- [Catppuccin palette](https://github.com/catppuccin/catppuccin/tree/v0.2.0) by the community 💜
