@@ -5,7 +5,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <div className='flex justify-center z-10 sticky'>
-      <div className='w-full p-8 border-0 shadow-neutral-900 bg-neutral-900 flex justify-center'
+      <div className='w-full p-8 border-0 shadow-ctp-mantle bg-ctp-base flex justify-center'
       style={{
         boxShadow: "0px 0px 32px 8px var(--tw-shadow-color)",
       }}>

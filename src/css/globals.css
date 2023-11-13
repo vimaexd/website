@@ -63,7 +63,11 @@ a {
   );
 }
 
-/* */
+/* oops */
 .mae-tool-img-flstudio {
   filter: brightness(0%) invert(1) drop-shadow(0px 2px 16px #ff8500);
+}
+
+.shadow-beeg {
+  text-shadow: #000 0px 0px 16px;
 }

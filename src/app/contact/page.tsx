@@ -19,17 +19,17 @@ export default function page() {
       </PageHeader>
 
       <div>
-        please <b className='text-red-300'>do not</b> contact me regarding:
-        <ul className='list-disc list-inside'>
+        please <b className="text-red-300">do not</b> contact me regarding:
+        <ul className="list-disc list-inside">
           <li>collaborations</li>
           <li>advertisement</li>
         </ul>
       </div>
 
-      <div className='space-y-4'>
-        <h1 className='font-semibold text-xl'>All social media:</h1>
+      <div className="space-y-4">
+        <h1 className="font-semibold text-xl">All social media:</h1>
         <div className="flex flex-col md:flex-row justify-around gap-8">
-          <div className="space-y-4 bg-neutral-800 p-4 rounded-lg w-full shadow-xl anim-contact-card">
+          <div className="space-y-4 bg-ctp-surface0 p-4 rounded-lg w-full shadow-xl anim-contact-card">
             <div className="flex gap-2">
               <Image
                 alt="Stringy logo"
@@ -77,18 +77,27 @@ export default function page() {
               >
                 Reddit <span className="font-light">(u/etstringy)</span>
               </Link>
-              <Link href="https://twitch.tv/etstringy" className="text-[#9146ff]">
+              <Link
+                href="https://twitch.tv/etstringy"
+                className="text-[#9146ff]"
+              >
                 Twitch <span className="font-light">(etstringy)</span>
               </Link>
-              <Link href="https://etstringy.bandcamp.com" className='text-[#629aa9]'>
+              <Link
+                href="https://etstringy.bandcamp.com"
+                className="text-[#629aa9]"
+              >
                 Bandcamp <span className="font-light">(etstringy)</span>
               </Link>
-              <Link href="https://tiktok.com/@etstringy" className='text-[#FE2C55]'>
+              <Link
+                href="https://tiktok.com/@etstringy"
+                className="text-[#FE2C55]"
+              >
                 TikTok <span className="font-light">(etstringy)</span>
               </Link>
             </div>
           </div>
-          <div className="space-y-4 bg-neutral-800 p-4 rounded-lg w-full shadow-xl anim-contact-card">
+          <div className="space-y-4 bg-ctp-surface0 p-4 rounded-lg w-full shadow-xl anim-contact-card">
             <div className="flex gap-2">
               <Image
                 alt="Stringy logo"
@@ -125,16 +134,19 @@ export default function page() {
                 GitHub <span className="font-thin">(etstringy)</span>
               </Link>
               <Link href="https://wetdry.world/@mae" className="text-[#6364FF]">
-                Fediverse Main <span className="font-thin">(@mae@wetdry.world)</span>
+                Fediverse Main{" "}
+                <span className="font-thin">(@mae@wetdry.world)</span>
               </Link>
               <Link href="https://f.mae.wtf/@mae" className="text-[#c4a7e7]">
-                Fediverse Alt <span className="font-thin">(@mae@f.mae.wtf)</span>
+                Fediverse Alt{" "}
+                <span className="font-thin">(@mae@f.mae.wtf)</span>
               </Link>
               <Link
                 href="https://lethallava.land/@mae"
                 className="text-[#6364FF]"
               >
-                Fediverse Alt <span className="font-thin">(@mae@lethallava.land)</span>
+                Fediverse Alt{" "}
+                <span className="font-thin">(@mae@lethallava.land)</span>
               </Link>
               <Link
                 href="https://instagram.com/mae.flac"
@@ -142,11 +154,14 @@ export default function page() {
               >
                 Instagram <span className="font-thin">(mae.flac)</span>
               </Link>
-              <Link href="https://steamcommunity.com/id/etstringy/" className='text-[#66c0f4]'>
-                Steam <span className='font-thin'>(etstringy)</span>
+              <Link
+                href="https://steamcommunity.com/id/etstringy/"
+                className="text-[#66c0f4]"
+              >
+                Steam <span className="font-thin">(etstringy)</span>
               </Link>
               <Link href="https://www.last.fm/user/etstringy">
-                last.fm <span className='font-thin'>(etstringy)</span>
+                last.fm <span className="font-thin">(etstringy)</span>
               </Link>
               <Link
                 href="https://soundcloud.com/vimae"

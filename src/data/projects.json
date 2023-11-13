@@ -1,6 +1,25 @@
 {
   "projects": [
     {
+      "title": "Website v8",
+      "description": "My new website. You're looking at it right now",
+      "image": "/assets/gradient.png",
+      "links": [
+      ]
+    },
+    {
+      "title": "Stream Anywhere",
+      "description": "A Rust-based Discord bot that provides alternative services for Spotify and Apple Music links posted using the Odesli API.",
+      "image": "/assets/project_images/stream-anywhere.png",
+      "type": "ProjectWithImg",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/stream-anywhere"
+        }
+      ]
+    },
+    {
       "title": "Online Confine Dashboard",
       "description": "A web dashboard for authenticated users to manage DNS records for subdomains assigned to them.",
       "image": "/assets/project_images/ocdash.png",
@@ -9,6 +28,18 @@
         {
           "name": "Website",
           "href": "https://onlineconfine.lol"
+        }
+      ]
+    },
+    {
+      "title": "Satori",
+      "description": "A Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.",
+      "image": "/assets/project_images/satori.png",
+      "type": "ProjectWithImg",
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/egg"
         }
       ]
     },
@@ -32,29 +63,6 @@
         {
           "name": "Source",
           "href": "https://github.com/etstringy/knok"
-        }
-      ]
-    },
-    {
-      "title": "Stringy Software API",
-      "description": "A multi-purpose API used for past versions of my website and various other projects that returned various data.",
-      "type": "Project",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/etstringy/api"
-        }
-      ]
-    },
-    {
-      "title": "Satori",
-      "description": "A Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.",
-      "image": "/assets/project_images/satori.png",
-      "type": "ProjectWithImg",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/etstringy/egg"
         }
       ]
     },

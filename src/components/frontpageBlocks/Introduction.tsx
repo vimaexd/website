@@ -78,7 +78,7 @@ export default function Introduction() {
         </div>
       </div>
       <div className='hidden sm:block'>
-        <Image src="/maewave.png" width={200} height={200} alt={''} data-anim="goober" className=''></Image>
+        <Image src="/assets/maewave.png" width={200} height={200} alt={''} data-anim="goober" className=''></Image>
       </div>
     </div>
   )

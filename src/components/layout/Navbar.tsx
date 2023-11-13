@@ -62,8 +62,8 @@ export default function Navbar({version}: {version: string}) {
   }, [bar, menuVisible])
 
   return (
-    <nav className={`w-full lg:h-32 flex justify-center z-20 sticky ${(isTransparentPage) ? 'bg-transparent' : 'bg-neutral-900'}`} ref={bar}>
-      <div className="absolute top-0 left-0 lg:w-[1024px] w-full opacity-60 z-0 text-clip">
+    <nav className={`w-full lg:h-32 flex justify-center z-20 sticky ${(isTransparentPage) ? 'bg-transparent' : 'bg-ctp-mantle'}`} ref={bar}>
+      <div className="absolute top-0 left-0 lg:w-[1024px] w-full opacity-60 z-0 text-clip" aria-hidden={true}>
         {
           stars.map((star, i) => (
             <Image 

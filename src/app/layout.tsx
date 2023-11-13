@@ -35,7 +35,7 @@ export default async function RootLayout({
       <head>
 
       </head>
-      <body className={`${inter.className} ${jbm.variable} bg-[#0c0c0c] text-gray-200`}>
+      <body className={`${inter.className} ${jbm.variable} bg-ctp-crust text-gray-200`}>
         <LayoutWrappers>
           <Navbar version={pack.version}/>
             {/* <div className='w-screen py-4 bg-hazardtape text-center font-bold text-4xl'>

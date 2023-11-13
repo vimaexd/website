@@ -16,13 +16,3 @@ export default function ProjectsPage() {
     <PageClient/>
   )
 }
-
-// function ProjectButton({href, text}: {href: string; text: string;}) {
-//   return (
-//     <Link href={href}>
-//       <h1 className='text-sm px-4 flex items-center min-w-[8] h-8 rounded-full bg-neutral-800 hover:bg-white hover:text-black transition-all'>
-//         {text}
-//       </h1>
-//     </Link>
-//   )
-// }

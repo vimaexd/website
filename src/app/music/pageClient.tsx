@@ -53,70 +53,83 @@ export default function MusicPageClient() {
 
   return (
     <Fragment>
-      <div className='flex flex-col sm:flex-row justify-between gap-2'>
-        <PageHeader title="💿 discography">
-        </PageHeader>
+      <div className="flex flex-col sm:flex-row justify-between gap-2">
+        <PageHeader title="💿 discography"></PageHeader>
 
-        <div className='flex flex-row items-center gap-4 overflow-scroll'>
-          <div className='space-x-2 text-sm flex'>
-            <label htmlFor='group' className='flex items-center gap-1 flex-shrink-0'>
-              <i className='bx bxs-category bx-xs'/>
+        <div className="flex flex-row items-center gap-4 overflow-scroll">
+          <div className="space-x-2 text-sm flex">
+            <label
+              htmlFor="group"
+              className="flex items-center gap-1 flex-shrink-0"
+            >
+              <i className="bx bxs-category bx-xs" />
               Group by
             </label>
-            <select name="group" id="cars" placeholder='Group by' className='bg-neutral-700 p-2 rounded-lg'
-            defaultValue={group}
-            onChange={(e:any) => setDiscography({...discogStore, group: e.target.value })}>
+            <select
+              name="group"
+              id="cars"
+              placeholder="Group by"
+              className="bg-ctp-surface0 p-2 rounded-lg"
+              defaultValue={group}
+              onChange={(e: any) =>
+                setDiscography({ ...discogStore, group: e.target.value })
+              }
+            >
               <option value="none">None</option>
               <option value="year">Release Year</option>
               <option value="type">Release Type</option>
             </select>
           </div>
-          <div className='flex gap-2'>
+          <div className="flex gap-2">
             <button
-            className='bg-neutral-700 p-2 rounded-lg flex items-center justify-center h-fit'
-            onClick={() => setDiscography({...discogStore, view: DiscographyView.GRIDLIST })}
+              className="bg-ctp-surface0 p-2 rounded-lg flex items-center justify-center h-fit"
+              onClick={() =>
+                setDiscography({
+                  ...discogStore,
+                  view: DiscographyView.GRIDLIST,
+                })
+              }
             >
-              <i className='bx bxs-grid-alt bx-sm'></i>
+              <i className="bx bxs-grid-alt bx-sm"></i>
             </button>
             <button
-            className='bg-neutral-700 p-2 rounded-lg flex items-center justify-center h-fit'
-            onClick={() => setDiscography({...discogStore, view: DiscographyView.ROW })}>
-              <i className='bx bxs-objects-horizontal-left bx-sm'></i>
+              className="bg-ctp-surface0 p-2 rounded-lg flex items-center justify-center h-fit"
+              onClick={() =>
+                setDiscography({ ...discogStore, view: DiscographyView.ROW })
+              }
+            >
+              <i className="bx bxs-objects-horizontal-left bx-sm"></i>
             </button>
           </div>
         </div>
-
       </div>
 
-      {
-        Object
-        .keys(getGroupings())
+      {Object.keys(getGroupings())
         .reverse()
         .map((groupTitle) => {
           const groupContents = getGroupings()[groupTitle];
           return (
             <div>
-              <h1 className='text-2xl font-bold mb-2'>{groupTitle}</h1>
-              <div className='flex gap-4 flex-wrap'>
-                {
-                  groupContents.map((release: IUnresolvedRelease) => (
-                    <Suspense fallback={<div className='w-[128px] h-[128px] bg-gray-500 animate-pulse'></div>}>
-                      {
-                        (view == DiscographyView.GRIDLIST)
-                        && <ReleaseCard release={release}/>
-                      }
-                      {
-                        (view == DiscographyView.ROW)
-                        && <ReleaseRow release={release}/>
-                      }
-                    </Suspense>
-                  ))
-                }
+              <h1 className="text-2xl font-bold mb-2">{groupTitle}</h1>
+              <div className="flex gap-4 flex-wrap">
+                {groupContents.map((release: IUnresolvedRelease) => (
+                  <Suspense
+                    fallback={
+                      <div className="w-[128px] h-[128px] bg-gray-500 animate-pulse"></div>
+                    }
+                  >
+                    {view == DiscographyView.GRIDLIST && (
+                      <ReleaseCard release={release} />
+                    )}
+                    {view == DiscographyView.ROW && (
+                      <ReleaseRow release={release} />
+                    )}
+                  </Suspense>
+                ))}
               </div>
             </div>
-          )
-        })
-      }
+          );
+        })}
     </Fragment>
-  )
+  );
 }
