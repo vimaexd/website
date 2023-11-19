@@ -8,21 +8,25 @@ const bandcampImageEndpoint = "https://f4.bcbits.com/img/"
 export default function BandcampSupporters() {
   let [fetching, setFetching] = useState(false);
   let [fetched, setFetched] = useState(false);
-  let [error, setError] = useState("false");
+  let [error, setError] = useState(false);
   let [supporters, setSupporters] = useState<{name: string; image_id: string;}[]>([]);
 
   const askBandcampVeryNicely = async () => {
     if(fetched || fetching) return;
     setFetching(true);
-    const bc = await axios.get('/_api/bandcamp-supporters')
-    console.log(bc.data)
-    setSupporters(bc.data.list);
-    
-    setFetching(false);
-    setFetched(true);
+    axios.get('/_api/bandcamp-supporters')
+      .then((bc) => {
+        console.log(bc.data)
+        setSupporters(bc.data.list);
+        
+        setFetching(false);
+        setFetched(true);
+      })
+      .catch((err) => {
+        setError(true);
+        console.log(err)
+      })
   }
-  
-  askBandcampVeryNicely();
 
   if(error) (
     <div className='flex gap-2 items-center'>
@@ -32,6 +36,8 @@ export default function BandcampSupporters() {
       <p className='text-xs'>couldn't fetch bandcamp supporters</p>
     </div>
   )
+
+  askBandcampVeryNicely();
 
   if(!fetched) return (
     <div className='flex gap-2 items-center'>

@@ -18,7 +18,7 @@ const Tool = dynamic(() => import("@mae/components/frontpageBlocks/Tool"));
 
 export default function Home() {
   return (
-    <div className="flex flex-row justify-center gap-2 lg:gap-8 lg:px-8 ">
+    <div className="flex flex-row justify-center gap-2 lg:gap-8 lg:px-8 transition-all">
       <PageContainer>
         <Introduction />
 

@@ -7,21 +7,25 @@ import Link from 'next/link'
 export default function BandcampSupporters() {
   let [fetching, setFetching] = useState(false);
   let [fetched, setFetched] = useState(false);
-  let [error, setError] = useState("false");
+  let [error, setError] = useState(false);
   let [supporters, setSupporters] = useState<{username: string; pfp: string;}[]>([]);
 
   const getDiscordUsers = async () => {
     if(fetched || fetching) return;
     setFetching(true);
-    const bc = await axios.get('/_api/discord-supporters')
-    console.log(bc.data)
-    setSupporters(bc.data.list);
-    
-    setFetching(false);
-    setFetched(true);
+    axios.get('/_api/discord-supporters')
+      .then((bc) => {
+        console.log(bc.data)
+        setSupporters(bc.data.list);
+        
+        setFetching(false);
+        setFetched(true);
+      })
+      .catch((err) => {
+        setError(true);
+        console.log(err)
+      })
   }
-  
-  getDiscordUsers();
 
   if(error) (
     <div className='flex gap-2 items-center'>
@@ -31,6 +35,8 @@ export default function BandcampSupporters() {
       <p className='text-xs'>couldn't fetch discord supporters</p>
     </div>
   )
+
+  getDiscordUsers();
 
   if(!fetched) return (
     <div className='flex gap-2 items-center'>

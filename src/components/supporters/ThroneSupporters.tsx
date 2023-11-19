@@ -7,23 +7,28 @@ import Link from 'next/link'
 export default function BandcampSupporters() {
   let [fetching, setFetching] = useState(false);
   let [fetched, setFetched] = useState(false);
-  let [error, setError] = useState("false");
+  let [error, setError] = useState(false);
   let [supporters, setSupporters] = useState<{username: string; pfp: string;}[]>([]);
 
   const getThroneGifters = async () => {
     if(fetched || fetching) return;
     setFetching(true);
-    const bc = await axios.get('/_api/throne-supporters')
-    console.log(bc.data)
-    setSupporters(bc.data.list);
-    
-    setFetching(false);
-    setFetched(true);
+    axios.get('/_api/throne-supporters')
+      .then((bc) => {
+        console.log(bc.data)
+        setSupporters(bc.data.list);
+        
+        setFetching(false);
+        setFetched(true);
+      })
+      .catch((err) => {
+        setError(true);
+        setFetching(false);
+        console.log(err)
+      })
   }
-  
-  getThroneGifters();
 
-  if(error) (
+  if(error) return (
     <div className='flex gap-2 items-center'>
       <div>
         <i className='bx bxs-error'></i>
@@ -31,6 +36,8 @@ export default function BandcampSupporters() {
       <p className='text-xs'>couldn't fetch throne supporters</p>
     </div>
   )
+
+  getThroneGifters();
 
   if(!fetched) return (
     <div className='flex gap-2 items-center'>
