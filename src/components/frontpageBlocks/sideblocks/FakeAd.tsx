@@ -45,10 +45,10 @@ export default function FakeAd() {
     <div>
       {
         ad.filename.endsWith(".webm")
-        ? <video width={288} controls={false} muted={true} autoPlay={true} loop={true}>
+        ? <video width={288} controls={false} muted={true} autoPlay={true} loop={true} aria-description="A fake advertisement video">
             <source src={`/assets/fakeads/${ad.filename}`} type="video/webm"></source>
           </video>
-        : <Image src={`/assets/fakeads/${ad.filename}`} alt="fake ad" width="288" height="120"/>
+        : <Image src={`/assets/fakeads/${ad.filename}`} alt="A fake advertisement image" width="288" height="120"/>
       }
       <div className='flex justify-between mt-1'>
         <p className='text-xs text-neutral-400'>
