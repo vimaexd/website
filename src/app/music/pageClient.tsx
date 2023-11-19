@@ -110,7 +110,7 @@ export default function MusicPageClient() {
           const groupContents = getGroupings()[groupTitle];
           return (
             <div>
-              <h1 className="text-2xl font-bold mb-2">{groupTitle}</h1>
+              <h2 className="text-2xl font-bold mb-2">{groupTitle}</h2>
               <div className="flex gap-4 flex-wrap">
                 {groupContents.map((release: IUnresolvedRelease) => (
                   <Suspense

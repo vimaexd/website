@@ -38,7 +38,7 @@ export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
         duration: 200
       })
       anime({
-        targets: [`[data-anim=${popoverId}] h1`, `[data-anim=${popoverId}] h2`],
+        targets: [`[data-anim=${popoverId}] h3`, `[data-anim=${popoverId}] p`],
         translateX: [-5, 0],
         opacity: [0, 1],
         easing: "spring(0.5, 120, 10, 0)",
@@ -66,9 +66,9 @@ export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
             <div className='relative h-full'>
               <div className="absolute h-full">
                 <div className='h-full bg-[rgba(0,0,0,0.4)] backdrop-blur-xl w-36 py-2 px-4 rounded-tr-lg rounded-br-lg' data-anim={popoverId}>
-                  <h1 className='font-bold'>{release.title}</h1>
-                  <h2 className='text-sm'>{release.type}</h2>
-                  <h2 className='text-sm'>{release.tracks.length} song{(release.tracks.length > 1) && "s"}</h2>
+                  <h3 className='font-bold'>{release.title}</h3>
+                  <p className='text-sm'>{release.type}</p>
+                  <p className='text-sm'>{release.tracks.length} song{(release.tracks.length > 1) && "s"}</p>
                 </div>
               </div>
             </div>

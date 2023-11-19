@@ -4,7 +4,7 @@ export default function Project(props: ProjectProps) {
   return (
     <div className='bg-ctp-surface0 w-full rounded-md flex flex-col justify-end bg-cover h-auto max-h-44 anim-projects'>
       <div className='p-4 space-y-1'>
-        <h1 className='font-bold text-lg'>{props.title}</h1>
+        <h3 className='font-bold text-lg'>{props.title}</h3>
         <p className='leading-5 text-sm pb-2'>
           {props.description}
         </p>

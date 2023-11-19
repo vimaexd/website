@@ -8,7 +8,7 @@ import Contents from '@mae/components/contents/Contents';
 import ContentsOption from '@mae/components/contents/ContentsOption';
 
 export const metadata: Metadata = {
-  title: 'Services |✨ mae',
+  title: 'Service directory | mae ✨',
   description: 'directory of services hosted on mae.wtf'
 }
 
@@ -51,7 +51,7 @@ export default function Services() {
 
           <hr/>
           <div className='inline-block' id="misq">
-            <h1 className='text-6xl mb-4'>Misq</h1>
+            <h2 className='text-6xl mb-4'>Misq</h2>
             <div className='flex space-x-2'>
               <Chip text="Public" className='bg-green-400'></Chip>
             </div>
@@ -69,7 +69,7 @@ export default function Services() {
 
           <hr/>
           <div className='inline-block' id="blobmaker">
-            <h1 className='text-4xl mb-4 font-bold'>Blob Maker</h1>
+            <h2 className='text-4xl mb-4 font-bold'>Blob Maker</h2>
             <div className='flex space-x-2'>
               <Chip text="Public" className='bg-green-400'></Chip>
             </div>

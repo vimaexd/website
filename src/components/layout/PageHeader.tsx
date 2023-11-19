@@ -7,9 +7,9 @@ export default function PageHeader({title, children}: {title: string; children?:
       <h1 className='font-bold text-4xl'>
         { title }
       </h1>
-      <h3 className='text-md'>
+      <p className='text-md'>
         { children }
-      </h3>
+      </p>
     </div>
   )
 }

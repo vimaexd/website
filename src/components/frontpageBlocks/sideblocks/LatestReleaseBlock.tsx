@@ -12,12 +12,12 @@ export default function latest_release() {
         backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 100%), url(${latest.album_art})`
       }}>
         <div className='w-full h-full p-4 backdrop-blur-xl rounded-lg space-y-2'>
-          <h1 className="text-xs font-semibold tracking-widest uppercase">Latest release</h1>
+          <h2 className="text-xs font-semibold tracking-widest uppercase">Latest release</h2>
           <div className='flex flex-row gap-4'>
             <Image src={latest.album_art} width={64} height={64} alt={'Cover art'} quality={100} className='w-fit h-fit rounded-lg'></Image>
             <div className='flex flex-col justify-center'>
-              <h1 className='text-2xl font-bold tracking-tight align-bottom -mt-2'>{latest.title}</h1>
-              <h2 className='text-xs'>{latest.tracks.length} tracks • {latest.year}</h2>
+              <h3 className='text-2xl font-bold tracking-tight align-bottom -mt-2'>{latest.title}</h3>
+              <p className='text-xs'>{latest.tracks.length} tracks • {latest.year}</p>
               {/* <div className='mt-auto flex-grow-0'>
                 <ChipButton href="/" text='Listen'/>
               </div> */}

@@ -80,9 +80,7 @@ export default function Navbar({version}: {version: string}) {
       <div className='w-[1024px] lg:px-0 h-full flex lg:flex-row flex-col lg:items-center py-4 lg:py-8 gap-4 lg:gap-0 z-10 md:px-8 px-4'>
         <div className='flex flex-row items-center lg:justify-center justify-between space-x-4'>
           <div>
-            <Link href='/'>
-              <LogoText/>
-            </Link>
+            <LogoText/>
             <h2 className='text-xs font-mono'>v{version}</h2>
           </div>
           <div className='ml-auto lg:hidden'>
@@ -113,6 +111,8 @@ export default function Navbar({version}: {version: string}) {
 
 function LogoText() {
   return (
-    <h1 className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">mae</h1>
+    <Link href='/' className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">
+      mae
+    </Link>
   )
 }

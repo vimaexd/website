@@ -10,8 +10,8 @@ export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
         backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%), url(${release.album_art})`
       }}>
         <div className='px-4 py-2 w-full h-full backdrop-blur-lg rounded-lg border-2 border-ctp-surface1 transition-all'>
-          <h1 className='text-lg font-semibold'>{release.title}</h1>
-          <h2 className='text-sm'>{release.type} • {release.tracks.length} track{(release.tracks.length > 1) ? 's' : ''} • {release.year}</h2>
+          <h2 className='text-lg font-semibold'>{release.title}</h2>
+          <p className='text-sm'>{release.type} • {release.tracks.length} track{(release.tracks.length > 1) ? 's' : ''} • {release.year}</p>
         </div>
       </div>
     </Link>

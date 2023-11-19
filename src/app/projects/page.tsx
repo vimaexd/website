@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
-  title: 'Projects |✨ mae',
+  title: 'My projects | mae ✨',
   description: 'projects that i have written or contributed to'
 }
 

@@ -7,7 +7,7 @@ import anime from 'animejs';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact |✨ mae',
+  title: 'Contact me | mae ✨',
   description: 'info on how and where to contact me'
 }
 
@@ -27,7 +27,7 @@ export default function page() {
       </div>
 
       <div className="space-y-4">
-        <h1 className="font-semibold text-xl">All social media:</h1>
+        <h2 className="font-semibold text-xl">All social media:</h2>
         <div className="flex flex-col md:flex-row justify-around gap-8">
           <div className="space-y-4 bg-ctp-surface0 p-4 rounded-lg w-full shadow-xl anim-contact-card">
             <div className="flex gap-2">
@@ -37,7 +37,7 @@ export default function page() {
                 width="32"
                 height="32"
               />
-              <h1 className="text-2xl font-semibold">Stringy</h1>
+              <h3 className="text-2xl font-semibold">Stringy</h3>
             </div>
             <div className="flex flex-col text-lg font-medium">
               <span className="mb-2">
@@ -106,7 +106,7 @@ export default function page() {
                 height="32"
                 className="rounded-full"
               />
-              <h1 className="text-2xl font-semibold">Personal</h1>
+              <h3 className="text-2xl font-semibold">Personal</h3>
             </div>
             <div className="flex flex-col text-lg font-medium">
               <Link

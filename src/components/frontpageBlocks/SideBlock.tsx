@@ -6,9 +6,9 @@ export default function SideBlock({children, title, disablePadding = false}: {ti
   return (
     <div className='w-full bg-ctp-surface0 rounded-lg min-w-[288px] shadow-md shadow-[rgba(255,255,255,0.1)]'>
       <div className='flex items-center'>
-        <h1 className='font-normal text-sm px-2 py-1'>
+        <span className='font-normal text-sm px-2 py-1'>
           {title}
-        </h1>
+        </span>
         {/* <span className='ml-auto font-mono h-full select-none'>
           <span className='px-2'>─</span>
           <span className='px-2'>☐</span>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 
 export const metadata: Metadata = {
-  title: 'Stems |✨ mae',
+  title: 'Remix stems | mae ✨',
   description: 'publicly released multitrack stems for some of my songs'
 }
 

@@ -6,7 +6,7 @@ export default function ProjectWithImg(props: ProjectPropsImg) {
       backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%), url(${props.image})`,
       }}>
       <div className='p-4 space-y-1'>
-        <h1 className='font-bold text-lg shadow-beeg'>{props.title}</h1>
+        <h3 className='font-bold text-lg shadow-beeg'>{props.title}</h3>
         <p className='leading-5 text-sm pb-2 shadow-beeg'>
           {props.description}
         </p>
