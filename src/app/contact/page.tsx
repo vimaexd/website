@@ -30,11 +30,11 @@ export default function page() {
       <div className='flex justify-between'>
         <div className='flex flex-col'>
           <h3 className='font-semibold'>preferred</h3>
-          <ContactLink text='vimae' icon='bxl-discord-alt' className='text-ctp-lavender'
+          <ContactLink text='vimae' icon='bxl-discord-alt' className='text-ctp-blue'
             link="https://discord.com/users/577743466940071949"/>
-          <ContactLink text='@mae@wetdry.world' icon='bxl-mastodon' className='text-ctp-lavender'
+          <ContactLink text='@mae@wetdry.world' icon='bxl-mastodon' className='text-ctp-blue'
             link="https://wetdry.world/@mae"/>
-          <ContactLink text='mae @ (this domain)' icon='bxs-envelope' className='text-ctp-lavender'
+          <ContactLink text='mae @ (this domain)' icon='bxs-envelope' className='text-ctp-blue'
             link="mailto:mae@mae.wtf"/>
         </div>
 
@@ -54,9 +54,9 @@ export default function page() {
 
         <div className='flex flex-col'>
           <h3 className='font-semibold'>everything else</h3>
-          <ContactLink text='/u/etstringy' icon='bxl-reddit' className='text-ctp-flamingo'
+          <ContactLink text='/u/etstringy' icon='bxl-reddit' className='text-ctp-rosewater'
             link="https://reddit.com/u/etstringy"/>
-          <ContactLink text='lastfm - etstringy' icon='' className='text-ctp-flamingo'
+          <ContactLink text='lastfm - etstringy' icon='' className='text-ctp-rosewater'
             link="https://www.last.fm/user/etstringy"/>
         </div>
 

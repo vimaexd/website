@@ -6,12 +6,13 @@ import Link from 'next/link';
 interface WebBadgeProps {
   href: string;
   src: string;
+  alt?: string;
 }
 
 export default function WebBadge(props: WebBadgeProps) {
   return (
     <Link href={props.href}>
-      <Image src={props.src} width={88} height={31} alt="Web badge"></Image>
+      <Image src={props.src} width={88} height={31} alt={props.alt || "Web badge"}></Image>
     </Link>
   )
 }
