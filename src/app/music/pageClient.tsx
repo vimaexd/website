@@ -56,7 +56,7 @@ export default function MusicPageClient() {
       <div className="flex flex-col sm:flex-row justify-between gap-2">
         <PageHeader title="💿 discography"></PageHeader>
 
-        <div className="flex flex-row items-center gap-4 overflow-scroll">
+        <div className="flex flex-row items-center gap-4 overflow-x-auto">
           <div className="space-x-2 text-sm flex">
             <label
               htmlFor="group"

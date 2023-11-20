@@ -20,7 +20,7 @@ export default function NavbarMusic() {
     className={`w-full p-2 flex justify-center gap-4 items-center z-20 sticky ${isTransparentPage ? 'bg-[rgba(0,0,0,0.25)]' : 'bg-ctp-crust'}`}>
       <div className='flex items-center gap-8 w-full max-w-[1024px]'>
         <h2 className='text-2xl font-semibold'>🎹</h2>
-        <div className='flex gap-8 overflow-scroll'>
+        <div className='flex gap-8 overflow-x-auto'>
           <Link href="/music">
             Discography
           </Link>

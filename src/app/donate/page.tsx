@@ -71,7 +71,7 @@ export default async function Donate() {
         </div>
       </div>
 
-      <div className='flex gap-8'>
+      {/* <div className='flex gap-8'>
         <div className='w-full rounded-lg bg-str-bleck'>
           <div className='w-full h-full p-6 backdrop-blur-xl rounded-lg flex flex-row justify-start gap-4'>
             <div className='flex flex-col'>
@@ -89,7 +89,7 @@ export default async function Donate() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <h2 className='font-bold text-4xl'>Supporters</h2>
       <p>

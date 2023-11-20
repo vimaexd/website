@@ -30,11 +30,11 @@ export default function page() {
       <div className='flex justify-between'>
         <div className='flex flex-col'>
           <h3 className='font-semibold'>preferred</h3>
-          <ContactLink text='vimae' icon='bxl-discord-alt' className='text-ctp-blue'
+          <ContactLink text='vimae' icon='bxl-discord-alt' className='text-ctp-lavender'
             link="https://discord.com/users/577743466940071949"/>
-          <ContactLink text='@mae@wetdry.world' icon='bxl-mastodon' className='text-ctp-blue'
+          <ContactLink text='@mae@wetdry.world' icon='bxl-mastodon' className='text-ctp-lavender'
             link="https://wetdry.world/@mae"/>
-          <ContactLink text='mae @ (this domain)' icon='bxs-envelope' className='text-ctp-blue'
+          <ContactLink text='mae @ (this domain)' icon='bxs-envelope' className='text-ctp-lavender'
             link="mailto:mae@mae.wtf"/>
         </div>
 
@@ -69,7 +69,7 @@ function ContactLink({text, className, icon, link}: {text: string; className?: s
   return (
     <Link
       href={link}
-      className={'text-ctp-overlay1 space-x-1 ' + className}
+      className={'space-x-1 ' + className}
     >
       <i className={'bx bx-sm align-bottom ' + icon}></i>
       <span>{text}</span>
