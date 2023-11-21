@@ -190,6 +190,7 @@ export default function Home() {
         
         <div className="flex justify-center flex-wrap gap-2">
           <WebBadge href="https://mae.wtf" src="/assets/buttons/mae.png" alt="Mae web button"></WebBadge>
+          <WebBadge href="https://arimelody.me" src="/assets/buttons/ari.gif" alt="Ari Melody web button"></WebBadge>
           <WebBadge href="https://invoxiplaygames.uk" src="/assets/buttons/ipg.png" alt="InvoxiPlayGames web button"></WebBadge>
           <WebBadge href="http://supitszaire.com" src="/assets/buttons/zaire.gif" alt="zaire web button"></WebBadge>
           <WebBadge href="javascript:void(0)" src="/assets/buttons/trans.png" alt="Transgender web button"></WebBadge>
