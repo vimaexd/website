@@ -25,7 +25,7 @@ export default function Button({text, href, className, icon, onClick}: {text: st
   return (
     <Link href={href} onClick={playSound} className='inline-flex'>
       <button className={
-        `${(pathname == href) ? 'bg-ctp-mauve text-ctp-crust font-semibold' : 'bg-ctp-surface0 hover:bg-ctp-surface1 text-white'} select-none transition-all duration-75 ease-out py-1 px-4 rounded-md active:scale-90 text-white ${className || ""}`
+        `${(pathname == href) ? 'bg-ctp-mauve text-ctp-crust font-semibold' : 'bg-ctp-surface0 hover:bg-ctp-surface1 text-white'} select-none transition-all duration-75 ease-out py-1 px-4 rounded-md active:scale-90 ${className || ""}`
         }>
         {icon && <i className={icon}></i>}
         {text}
