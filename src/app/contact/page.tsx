@@ -27,7 +27,7 @@ export default function page() {
         </ul>
       </div>
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between flex-wrap'>
         <div className='flex flex-col'>
           <h3 className='font-semibold'>preferred</h3>
           <ContactLink text='vimae' icon='bxl-discord-alt' className='text-ctp-lavender'
