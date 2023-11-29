@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  font-variation-settings: "opsz" 25;
+}
+
 .bg-throne-gradient {
   background: linear-gradient(51.17deg, #4CA6FF 8.14%, #4D4DFF 27.76%, #990AFF 42.97%, #D21EB4 53.68%, #FFC400 78.99%);
 }
