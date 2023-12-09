@@ -46,25 +46,25 @@ export default function Introduction() {
         <h1 className='text-4xl font-bold tracking-tight' data-anim="initslide">👋 hey! i'm mae</h1>
         <div className='leading-6 text-base space-y-2 flex flex-col mt-2'>
           <p data-anim="initslide">
-            I code websites and projects, make electronic music and generally just exist on the internet. Here's a few more facts about me.
+            i code websites and projects, make electronic music and generally just exist on the internet. here's a few more facts about me:
           </p>
           <ol className='space-y-1'>
             <li data-anim="initslide">
               <span className='w-6 mr-2 inline-block text-center align'>🏳️‍⚧️</span>
-              I use she/they pronouns
+              i use she/they pronouns
             </li>
             <li className='flex flex-row items-center' data-anim="initslide">
               <span className='w-6 mr-2 h-6 flex'>
                 <Image src="/assets/icons/neurodiversity.svg" width="64" height="64" alt={'Neurodiversity "infinity" symbol'}/>
               </span>
-              I'm neurodivergent
+              i'm neurodivergent
             </li>
             <li className='flex flex-row items-center' data-anim="initslide">
               <span className='w-6 mr-2 h-6 flex items-center justify-center'>
                 <div className='w-4 h-4 bg-purple-400 rounded-full inline-block'></div>
               </span>
               <span> 
-                I love the color 
+                i love the color 
                 <span className='bg-gradient-to-r from-purple-300 to-violet-500 bg-clip-text text-transparent font-bold'
                   style={{
                     textShadow: "0px 2px 32px rgba(133, 72, 245, 0.8)"
