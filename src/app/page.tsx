@@ -192,7 +192,8 @@ export default function Home() {
           <WebBadge href="https://mae.wtf" src="/assets/buttons/mae.png" alt="Mae web button"></WebBadge>
           <WebBadge href="https://arimelody.me" src="/assets/buttons/ari.gif" alt="Ari Melody web button"></WebBadge>
           <WebBadge href="https://invoxiplaygames.uk" src="/assets/buttons/ipg.png" alt="InvoxiPlayGames web button"></WebBadge>
-          <WebBadge href="http://supitszaire.com" src="/assets/buttons/zaire.gif" alt="zaire web button"></WebBadge>
+          <WebBadge href="https://supitszaire.com" src="/assets/buttons/zaire.gif" alt="zaire web button"></WebBadge>
+          <WebBadge href="https://notnite.com" src="/assets/buttons/notnite.png" alt="notnite web button"></WebBadge>
           <WebBadge href="javascript:void(0)" src="/assets/buttons/trans.png" alt="Transgender web button"></WebBadge>
           <WebBadge href="javascript:void(0)" src="/assets/buttons/bi.png" alt="Bisexual web button"></WebBadge>
         </div>
