@@ -1,13 +1,6 @@
 {
   "projects": [
     {
-      "title": "Website v8",
-      "description": "My new website. You're looking at it right now",
-      "image": "/assets/gradient.png",
-      "links": [
-      ]
-    },
-    {
       "title": "Fortnite Festival Setlist Bot",
       "description": "A Mastodon bot that posts the daily playable songs for the game Fortnite Festival, written in Rust.",
       "image": "/assets/project_images/festivalbot.png",

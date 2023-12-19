@@ -14,7 +14,7 @@ export default function ProjectWithImg(props: ProjectPropsImg) {
           objectFit="cover"
           objectPosition='top'
           className='rounded-lg'
-          quality={50}
+          quality={40}
         />
         <div className='p-4 space-y-1 z-10'>
           <h3 className='font-bold text-lg shadow-beeg'>{props.title}</h3>
