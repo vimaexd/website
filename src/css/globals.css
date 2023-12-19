@@ -81,6 +81,16 @@ a {
   text-shadow: #000 0px 0px 16px;
 }
 
+.progressive-dim::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+}
+
 .progressive-blur:after {
   content: '';
   position: absolute;
@@ -89,7 +99,7 @@ a {
   border: 1px solid rgba(255,255,255,0.15);
   width: 100%;
   border-radius: 0.25rem;
-  -webkit-mask: linear-gradient(180deg, transparent, black 65%);
+  -webkit-mask: linear-gradient(180deg, transparent, #000000fc 50%);
 }
 
 .backface-hidden {

@@ -62,7 +62,7 @@ export default function pageClient() {
         stuff i've made and worked on<br/>
       </PageHeader>
       
-      <div className='flex flex-col gap-4'>
+      {/* <div className='flex flex-col gap-4'>
         <div className='flex w-full gap-4 mb-12'>
           <div className='w-full space-y-4'>
             {
@@ -81,6 +81,13 @@ export default function pageClient() {
             }
           </div>
         </div>
+      </div> */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12'>
+        {
+          projectData.projects.map((p: any, i: number) => {
+            return buildProjectComponent(p)
+          })
+        }
       </div>
     </PageContainer>
   )
