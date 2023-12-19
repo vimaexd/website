@@ -8,6 +8,22 @@
       ]
     },
     {
+      "title": "Fortnite Festival Setlist Bot",
+      "description": "A Mastodon bot that posts the daily playable songs for the game Fortnite Festival, written in Rust.",
+      "image": "/assets/project_images/festivalbot.png",
+      "type": "Project",
+      "links": [
+        {
+          "name": "Mastodon",
+          "href": "https://wetdry.world/@festival"
+        },
+        {
+          "name": "Source",
+          "href": "https://github.com/etstringy/festival"
+        }
+      ]
+    },
+    {
       "title": "Stream Anywhere",
       "description": "A Rust-based Discord bot that provides alternative services for Spotify and Apple Music links posted using the Odesli API.",
       "image": "/assets/project_images/stream-anywhere.png",
@@ -40,6 +56,18 @@
         {
           "name": "Source",
           "href": "https://github.com/etstringy/egg"
+        }
+      ]
+    },
+    {
+      "title": "servercount",
+      "description": "A website that counts how many Discord servers you have joined, completely client side.",
+      "image": "/assets/project_images/servercount.png",
+      "type": "ProjectWithImg",
+      "links": [
+        {
+          "name": "Website",
+          "href": "https://misc.mae.wtf/servercount"
         }
       ]
     },

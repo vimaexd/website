@@ -80,3 +80,13 @@ a {
 .shadow-beeg {
   text-shadow: #000 0px 0px 16px;
 }
+
+.progressive-blur:after {
+  content: '';
+  position: absolute;
+  inset: 0%;
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 0.25rem;
+  -webkit-mask: linear-gradient(180deg, transparent, black 65%);
+}
