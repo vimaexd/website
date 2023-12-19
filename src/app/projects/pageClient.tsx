@@ -16,8 +16,8 @@ export default function pageClient() {
   useEffect(() => {
     anime({
       targets: ".anim-projects",
-      opacity: [0, 1],
       translateY: [20, 0],
+      opacity: [0, 1],
       duration: 1000,
       delay: anime.stagger(50)
     })

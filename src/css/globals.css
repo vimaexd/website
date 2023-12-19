@@ -91,3 +91,7 @@ a {
   border-radius: 0.25rem;
   -webkit-mask: linear-gradient(180deg, transparent, black 65%);
 }
+
+.backface-hidden {
+  backface-visibility: hidden;
+}

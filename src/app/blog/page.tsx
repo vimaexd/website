@@ -35,7 +35,8 @@ export default async function BlogAllPostsPage() {
       <div className='grid sm:grid-cols-2 gap-8 flex-grow-0'>
         {
           posts.map((d) => (
-            <Link key={d.id} href={`/blog/${d.id}`} className='text-white hover:scale-110 transition-all duration-300 ease-out cursor-pointer select-none w-auto'>
+            <Link key={d.id} href={`/blog/${d.id}`} 
+              className='text-white hover:scale-110 translate-z-0 backface-hidden transition-all duration-300 ease-out cursor-pointer select-none w-auto'>
               <ProjectWithImg
               title={d.title}
               description={`${dayjs(d.date).format("DD/MM/YYYY")} • ${d.tags.join(", ")}`}

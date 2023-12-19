@@ -60,7 +60,7 @@
       ]
     },
     {
-      "title": "servercount",
+      "title": "Server Count",
       "description": "A website that counts how many Discord servers you have joined, completely client side.",
       "image": "/assets/project_images/servercount.png",
       "type": "ProjectWithImg",
