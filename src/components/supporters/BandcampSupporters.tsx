@@ -14,7 +14,7 @@ export default function BandcampSupporters() {
   const askBandcampVeryNicely = async () => {
     if(fetched || fetching) return;
     setFetching(true);
-    axios.get('/_api/bandcamp-supporters')
+    axios.get('/api/bandcamp-supporters')
       .then((bc) => {
         console.log(bc.data)
         setSupporters(bc.data.list);

@@ -26,7 +26,8 @@ const nextConfig = {
       "i.mae.wtf",
       "i.scdn.co",
       "cdn.discordapp.com",
-      "f4.bcbits.com"
+      "f4.bcbits.com",
+      "static-cdn.jtvnw.net"
     ]
   }
 }

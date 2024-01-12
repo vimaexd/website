@@ -20,7 +20,7 @@ export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
       translateX: [0, -10],
       opacity: [1, 0],
       easing: 'easeOutExpo',
-      duration: 200,
+      duration: 0,
       complete() {
         setExpanded(false)
         hasAnimatedIn = false;

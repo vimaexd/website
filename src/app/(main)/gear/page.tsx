@@ -19,7 +19,7 @@ export default function GearPage() {
       <div className='flex flex-row justify-between'>
         <div className='space-y-4 flex-grow'>
           <h2 className='font-semibold text-2xl'>Software</h2>
-          <h4>📽️ for videos:</h4>
+          <h4 className="font-semibold text-xl">📽️ for videos:</h4>
           <ul className='list-disc list-inside'>
             <li>Blender</li>
             <li>Premiere Pro</li>
@@ -27,7 +27,7 @@ export default function GearPage() {
             <li>Aseprite</li>
           </ul>
           
-          <h4>👩‍💻 for code:</h4>
+          <h4 className="font-semibold text-xl">👩‍💻 for code:</h4>
           <ul className='list-disc list-inside'>
             <li>Visual Studio Code</li>
             <li>Visual Studio 2022</li>
@@ -36,7 +36,7 @@ export default function GearPage() {
             <li>Git</li>
           </ul>
 
-          <h4>🎵 for music:</h4>
+          <h4 className="font-semibold text-xl">🎵 for music:</h4>
           <ul className='list-disc list-inside'>
             <li><b>Ableton Live</b></li>
             <li><b>FL Studio</b></li>
@@ -64,7 +64,7 @@ export default function GearPage() {
       <div className='h-80 w-full relative'>
         <Image src="/assets/pc.jpg" fill={true} alt="mae computer" className='rounded-xl object-cover object-center'></Image>
       </div>
-      <div className='flex justify-around'>
+      <div className='grid grid-cols-2'>
         <div className='space-y-2'>
           <h2 className='font-semibold text-2xl'>Main Computer</h2>
           <ul className='list-inside'>

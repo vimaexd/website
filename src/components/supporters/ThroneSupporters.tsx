@@ -4,6 +4,21 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+const ImageWithFallback = (props: any) => {
+  const { src, fallbackSrc, ...rest } = props;
+  const [imgSrc, setImgSrc] = useState(src);
+
+  return (
+      <Image
+          {...rest}
+          src={imgSrc}
+          onError={() => {
+              setImgSrc(fallbackSrc);
+          }}
+      />
+  );
+};
+
 export default function BandcampSupporters() {
   let [fetching, setFetching] = useState(false);
   let [fetched, setFetched] = useState(false);
@@ -13,7 +28,7 @@ export default function BandcampSupporters() {
   const getThroneGifters = async () => {
     if(fetched || fetching) return;
     setFetching(true);
-    axios.get('/_api/throne-supporters')
+    axios.get('/api/throne-supporters')
       .then((bc) => {
         console.log(bc.data)
         setSupporters(bc.data.list);
@@ -59,7 +74,7 @@ export default function BandcampSupporters() {
         {
           supporters.map((s) => (
             <div key={s.username} className='flex gap-2 text-xs items-center'>
-              <img src={s.pfp} height={32} width={32} alt="Profile picture" className='rounded-full'></img>
+              <ImageWithFallback src={s.pfp} fallbackSrc="/assets/logos/throne_white.svg" height={32} width={32} alt="Profile picture" className='rounded-full'></ImageWithFallback>
               {s.username}
             </div>
           ))

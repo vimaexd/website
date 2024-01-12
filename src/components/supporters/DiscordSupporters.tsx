@@ -13,7 +13,7 @@ export default function BandcampSupporters() {
   const getDiscordUsers = async () => {
     if(fetched || fetching) return;
     setFetching(true);
-    axios.get('/_api/discord-supporters')
+    axios.get('/api/discord-supporters')
       .then((bc) => {
         console.log(bc.data)
         setSupporters(bc.data.list);

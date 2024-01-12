@@ -109,9 +109,9 @@ export default function MusicPageClient() {
         .map((groupTitle) => {
           const groupContents = getGroupings()[groupTitle];
           return (
-            <div>
+            <div className=''>
               <h2 className="text-2xl font-bold mb-2">{groupTitle}</h2>
-              <div className="flex gap-4 flex-wrap">
+              <div className="flex gap-4 flex-wrap p-4 bg-ctp-base rounded-lg">
                 {groupContents.map((release: IUnresolvedRelease) => (
                   <Suspense
                     fallback={
