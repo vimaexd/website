@@ -43,7 +43,7 @@ export default function page() {
           <ContactLink text='@mae:matrix.mae.wtf' icon='bxs-chat' className='text-ctp-pink'
             link="https://wetdry.world"/>
           <ContactLink text='@etstringy' icon='bxl-twitter' className='text-ctp-pink'
-            link="https://twitter.com/@etstringy"/>
+            link="https://twitter.com/@vimaexd"/>
           <ContactLink text='@etstringy' icon='bxl-tiktok' className='text-ctp-pink'
             link="https://tiktok.com/@etstringy"/>
           <ContactLink text='@mae@f.mae.wtf' icon='bxl-mastodon' className='text-ctp-pink'

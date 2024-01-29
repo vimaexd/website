@@ -61,7 +61,7 @@ export default function FrontpageSideblocks() {
             icon="bxl-github"
           />
           <SocialSpeeddialBlock
-            href="https://twitter.com/etstringy"
+            href="https://twitter.com/vimaexd"
             tooltipContent="Twitter"
             tooltipId="front:social:twt"
             icon="bxl-twitter"
