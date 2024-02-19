@@ -37,3 +37,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 package-lock.json
+
+robots.txt
+sitemap.xml
+sitemap-0.xml
+rss.xml

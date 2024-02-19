@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap && tsx ./src/misc/genRssFeed.ts",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,6 +17,7 @@
     "@types/node": "18.15.7",
     "@types/react": "^18.2.27",
     "@types/react-dom": "^18.2.12",
+    "@types/rss": "^0.0.32",
     "animejs": "^3.2.1",
     "axios": "^1.4.0",
     "axios-cache-interceptor": "^1.2.0",
@@ -34,6 +35,8 @@
     "recoil": "^0.7.7",
     "remark": "^14.0.3",
     "remark-html": "^15.0.2",
+    "rss": "^1.2.2",
+    "tsx": "^4.7.1",
     "typescript": "latest",
     "use-lanyard": "^1.4.4",
     "use-local-storage": "^3.0.0"

@@ -28,6 +28,7 @@ export default function NavbarBlog() {
         </Link> */}
 
         <div className='ml-auto'>
+          <a href="/rss.xml">RSS Feed</a>
         </div>
       </div>
     </div>

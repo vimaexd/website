@@ -2,7 +2,7 @@
 import { ComponentChildren } from '@mae/misc/types'
 import React, { Fragment } from 'react'
 
-export default function SideBlock({children, title, disablePadding = false}: {title: string, disablePadding?: boolean, children: ComponentChildren}) {
+export default function SideBlock({children, title, disablePadding = false}: {title: string, disablePadding?: boolean, children?: ComponentChildren}) {
   return (
     <div className='w-full bg-ctp-surface0 rounded-lg min-w-[288px] shadow-[rgba(255,255,255,0.1)]'>
       <div className='flex items-center'>
