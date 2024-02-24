@@ -4,7 +4,7 @@ import React from 'react'
 
 import { promises as fs } from 'fs';
 import path from 'path'
-import ProjectWithImg from '@mae/components/projectCards/ProjectWithImg';
+import ProjectWithImg from '@mae/components/cards/ProjectWithImg';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 

@@ -5,9 +5,9 @@ import { useEffect } from 'react';
 
 import projectData from '@mae/data/projects.json'
 
-import Project from '@mae/components/projectCards/Project';
-import ProjectWithImg from '@mae/components/projectCards/ProjectWithImg';
-import ProjectJumbotron from '@mae/components/projectCards/ProjectJumbotron';
+import Project from '@mae/components/cards/Project';
+import ProjectWithImg from '@mae/components/cards/ProjectWithImg';
+import ProjectJumbotron from '@mae/components/cards/ProjectJumbotron';
 import ChipButton from '@mae/components/ChipButton';
 import PageContainer from '@mae/components/layout/PageContainer';
 import PageHeader from '@mae/components/layout/PageHeader';
