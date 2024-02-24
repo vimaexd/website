@@ -4,6 +4,9 @@ const fs = require('fs/promises')
 module.exports = {
   siteUrl: "https://mae.wtf",
   generateRobotsTxt: true,
+  exclude: [
+    "/api/*"
+  ],
   async additionalPaths() {
     let paths = []
     

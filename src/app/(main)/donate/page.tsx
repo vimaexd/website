@@ -40,7 +40,7 @@ export default async function Donate() {
               you can buy from anonymously (or not) and the gift will be shipped to me
             </p>
             <div className='mt-8 flex-grow-0'>
-              <Link href='https://throne.com/str/wishlist'>
+              <Link href='https://throne.com/vimae/wishlist'>
                 <p className='text-sm flex items-center gap-1 text-white'>
                   See my wishlist <i className='bx bx-link-external'></i>
                 </p>
