@@ -1,6 +1,6 @@
 {
   "name": "site",
-  "version": "8.4.2",
+  "version": "8.4.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
