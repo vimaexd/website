@@ -34,19 +34,19 @@ export default function FrontpageSideblocks() {
 
   return (
     <SideblockWrapper>
-      <SideBlock title="📱 speed dial">
+      <SideBlock title="📱 socials">
         <div className="text-4xl text-neutral-100 flex justify-evenly items-center">
-          <SocialSpeeddialBlock
-            href="https://youtube.com/Stringy"
-            tooltipContent="YouTube"
-            tooltipId="front:social:yt"
-            icon="bxl-youtube"
-          />
           <SocialSpeeddialBlock
             href="https://discord.gg/A8A52G2"
             tooltipContent="Discord"
             tooltipId="front:social:dc"
             icon="bxl-discord-alt"
+          />
+          <SocialSpeeddialBlock
+            href="https://twitter.com/vimaexd"
+            tooltipContent="Twitter"
+            tooltipId="front:social:twt"
+            icon="bxl-twitter"
           />
           <SocialSpeeddialBlock
             href="https://wetdry.world/@mae"
@@ -55,16 +55,10 @@ export default function FrontpageSideblocks() {
             icon="bxl-mastodon"
           />
           <SocialSpeeddialBlock
-            href="https://github.com/etstringy"
-            tooltipContent="GitHub"
-            tooltipId="front:social:gh"
-            icon="bxl-github"
-          />
-          <SocialSpeeddialBlock
-            href="https://twitter.com/vimaexd"
-            tooltipContent="Twitter"
-            tooltipId="front:social:twt"
-            icon="bxl-twitter"
+            href="https://youtube.com/@vimaee"
+            tooltipContent="YouTube"
+            tooltipId="front:social:yt"
+            icon="bxl-youtube"
           />
         </div>
       </SideBlock>

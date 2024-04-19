@@ -9,7 +9,7 @@ const PageClient = dynamic(() => import('./pageClient'), {
 
 export const metadata: Metadata = {
   title: 'Music (Discography) | mae ✨',
-  description: 'all music i have released as Stringy'
+  description: 'all music i have released'
 }
 export default function page() {
 

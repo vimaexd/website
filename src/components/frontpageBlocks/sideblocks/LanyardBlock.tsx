@@ -17,6 +17,11 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
     </SideBlock>
   );
 
+  console.log(lanyard)
+
+  const mediaProxyRegex = /mp:external\/[^\/]*\/(.*)/;
+  let musicbee = lanyard.activities.find(a => a.application_id == "409394531948298250");
+
   return (
     <Fragment>
       {
@@ -45,6 +50,23 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
                 <h2 className='text-sm font-medium'>{lanyard.spotify.song}</h2>
               </Link>
               <h3 className='text-xs'>{lanyard.spotify.artist.replace(/;/g, ",")}</h3>
+            </div>
+          </div>
+        </SideBlock>
+      }
+
+      {
+        /* MusicBee now playing */
+        musicbee != null && 
+        <SideBlock title="🎧 now playing">
+          <div className='flex flex-row gap-2'>
+            {
+              musicbee.assets?.large_image && musicbee.assets?.large_image.startsWith("mp:external") &&
+              <Image src={musicbee.assets?.large_image.match(mediaProxyRegex)![1].replace("https/", "https://")} alt="Album art" width={48} height={48} className='w-fit h-fit'/>
+            }
+            <div className="flex flex-col justify-center">
+              <h2 className='text-sm font-medium'>{musicbee.details?.split("-")[1]}</h2>
+              <h3 className='text-xs'>{musicbee.details?.split("-")[0]}</h3>
             </div>
           </div>
         </SideBlock>

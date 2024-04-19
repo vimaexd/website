@@ -2,12 +2,13 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import { Tooltip } from 'react-tooltip'
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
+import Chip from '../Chip';
 
 import anime from 'animejs/lib/anime.es';
 
 export default function Introduction() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     anime({
       targets: '[data-anim="initslide"]',
       opacity: [0, 1],
@@ -18,19 +19,14 @@ export default function Introduction() {
 
     anime.timeline({
       targets: '[data-anim="goober"]',
+      delay: anime.stagger(20)
     })
     .add({
-      translateY: [-120, 20],
+      translateY: [-5, 5],
       rotateX: [-2, 0],
       easing: "easeInExpo",
       opacity: [0, 1],
-      duration: 300
-    })
-    .add({
-      scaleX: [1, 1.06],
-      scaleY: [1, 0.8],
-      duration: 50,
-      easing: "linear"
+      duration: 200
     })
     .add({
       scaleY: 1,
@@ -39,46 +35,34 @@ export default function Introduction() {
       easing: "easeOutExpo",
       duration: 200
     })
+
+    anime({
+      targets: '[data-anim="tags"] div',
+      translateY: [-20, 0],
+      easing: "easeOutExpo",
+      opacity: [0, 1],
+      delay: anime.stagger(200)
+    })
   })
   return (
-    <div className='flex items-center justify-between gap-4'>
-      <div className='w-full sm:w-1/2 flex flex-col'>
-        <h1 className='text-4xl font-bold tracking-tight' data-anim="initslide">👋 hey! i'm mae</h1>
-        <div className='leading-6 text-base space-y-2 flex flex-col mt-2'>
-          <p data-anim="initslide">
-            i code websites and projects, make electronic music and generally just exist on the internet. here's a few more facts about me:
-          </p>
-          <ol className='space-y-1'>
-            <li data-anim="initslide">
-              <span className='w-6 mr-2 inline-block text-center align'>🏳️‍⚧️</span>
-              i use she/they pronouns
-            </li>
-            <li className='flex flex-row items-center' data-anim="initslide">
-              <span className='w-6 mr-2 h-6 flex'>
-                <Image src="/assets/icons/neurodiversity.svg" width="64" height="64" alt={'Neurodiversity "infinity" symbol'}/>
-              </span>
-              i'm neurodivergent
-            </li>
-            <li className='flex flex-row items-center' data-anim="initslide">
-              <span className='w-6 mr-2 h-6 flex items-center justify-center'>
-                <div className='w-4 h-4 bg-purple-400 rounded-full inline-block'></div>
-              </span>
-              <span> 
-                i love the color 
-                <span className='bg-gradient-to-r from-purple-300 to-violet-500 bg-clip-text text-transparent font-bold'
-                  style={{
-                    textShadow: "0px 2px 32px rgba(133, 72, 245, 0.8)"
-                  }}
-                >
-                  &nbsp;purple!
-                </span>
-              </span>
-            </li>
-          </ol>
-        </div>
+    <div className='flex flex-col my-16'>
+      <div className='relative'>
+        <div className='absolute left-1/2 -translate-x-1/2 w-1/3 h-24 bg-str-cotton blur-3xl opacity-80'/>
       </div>
-      <div className='hidden sm:block'>
-        <Image src="/assets/maewave.png" width={200} height={200} alt={'A drawing of Mae\'s OC waving'} data-anim="goober" className=''></Image>
+      <h1 className='text-6xl font-bold tracking-tight text-center' data-anim="goober">
+        <span className='inline-block mr-4'>
+          <Image src="/assets/maewave.png" width={52} height={52} alt={'A drawing of Mae\'s OC waving'}></Image>
+        </span>
+        hiii! i'm vimae
+      </h1>
+      <p data-anim="initslide" className='text-center text-lg' data-anim="goober">
+        i code, make music and live on the internet
+      </p>
+      
+      <div className='flex justify-center gap-2 mt-4' data-anim="tags">
+        <Chip text='🏳️‍⚧️ she • they' hideDot={true} className='bg-ctp-surface0 text-ctp-text select-none shadow-xl'></Chip>
+        <Chip text=' autistic' hideDot={true} className='bg-ctp-surface0 text-ctp-text select-none shadow-xl'></Chip>
+        <Chip text='🇬🇧 en-gb' hideDot={true} className='bg-ctp-surface0 text-ctp-text select-none shadow-xl'></Chip>
       </div>
     </div>
   )

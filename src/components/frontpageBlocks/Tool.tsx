@@ -6,16 +6,11 @@ import { Tooltip } from 'react-tooltip'
 export default function Tool({name, children, color, useBoxShadow=false}: {name: string; children: ComponentChildren; color: string; useBoxShadow?: boolean}) {
   
   const style: React.CSSProperties = {
-
-  }
-  if(useBoxShadow) {
-    style.boxShadow = `0px 2px 20px 16px ${color}`
-  } else {
-    style.textShadow = `0px 2px 32px ${color}`
+    background: `${color}20`
   }
   
   return (
-    <div className='w-fit h-fit rounded-full flex items-center mae-tool'
+    <div className='h-24 flex items-center justify-center mae-tool rounded-lg border-2 border-opacity-10 border-white'
     style={style}
     >
       <Tooltip id={`frontpage-tool-${name}`} />

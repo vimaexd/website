@@ -26,10 +26,12 @@ const nextConfig = {
       "i.mae.wtf",
       "i.scdn.co",
       "cdn.discordapp.com",
+      "media.discordapp.net",
       "f4.bcbits.com",
-      "static-cdn.jtvnw.net"
+      "static-cdn.jtvnw.net",
+      "i.imgur.com"
     ]
-  }
+  },
 }
 
 module.exports = nextConfig;

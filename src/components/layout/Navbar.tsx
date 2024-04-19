@@ -94,15 +94,15 @@ export default function Navbar({version}: {version: string}) {
           </div>
         </div>
         <div className={`lg:ml-auto lg:flex lg:flex-row flex-col lg:justify-end flex-wrap gap-2 lg:w-8/12 anim-navbar-tray ${(menuVisible) ? 'flex' : 'hidden'}`}>
-          <Button text="🏠 Home" href="/"/>
-          <Button text="📦 Projects" href="/projects"/>
-          <Button text="🎵 Music" href="/music"/>
-          <Button text="😀 My OC" href="/oc"/>
-          <Button text="💻 Services" href="/services"/>
-          <Button text="📝 Blog" href="/blog"/>
-          <Button text="💰 Donate" href="/donate"/>
-          <Button text="📱 Contact" href="/contact"/>
-          <Button text="⌨️ Gear" href="/gear"/>
+          <Button text="🏠 Home" href="/" className='w-full'/>
+          <Button text="📦 Projects" href="/projects" className='w-full'/>
+          <Button text="🎵 Music" href="/music" className='w-full'/>
+          <Button text="😀 My OC" href="/oc" className='w-full'/>
+          <Button text="💻 Services" href="/services" className='w-full'/>
+          <Button text="📝 Blog" href="/blog" className='w-full'/>
+          <Button text="💰 Donate" href="/donate" className='w-full'/>
+          <Button text="📱 Contact" href="/contact" className='w-full'/>
+          <Button text="⌨️ Gear" href="/gear" className='w-full'/>
         </div>
       </div>
     </nav>
