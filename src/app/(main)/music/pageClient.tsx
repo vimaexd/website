@@ -68,7 +68,6 @@ export default function MusicPageClient() {
             <select
               name="group"
               id="cars"
-              placeholder="Group by"
               className="bg-ctp-surface0 p-2 rounded-lg"
               defaultValue={group}
               onChange={(e: any) =>
