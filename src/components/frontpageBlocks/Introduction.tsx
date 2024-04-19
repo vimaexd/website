@@ -55,7 +55,7 @@ export default function Introduction() {
         </span>
         hiii! i'm vimae
       </h1>
-      <p data-anim="initslide" className='text-center text-lg' data-anim="goober">
+      <p className='text-center text-lg' data-anim="goober">
         i code, make music and live on the internet
       </p>
       
