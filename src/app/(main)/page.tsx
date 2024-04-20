@@ -32,7 +32,7 @@ export default function Home() {
               src="/assets/moon16by9_origres.png"
               width={1000}
               height={500}
-              className="rounded-lg"
+              className="rounded-sm"
               alt="a pixel art illustration of mae's oc sitting on grass by the beach next to a building
                 that says NUU CORP with a transgender flag on top. there is a moon in the corner of the frame
                 and icons in the other corner"
@@ -63,13 +63,13 @@ export default function Home() {
           </div>
         </div>
         <HorizSeperator />
-        <div className="flex flex-col sm:flex-row gap-8">
+        <div className="flex flex-col sm:flex-row-reverse gap-8">
           <div className="block">
             <Image
               src="/assets/ableton_screenshot.png"
-              width={400}
-              height={200}
-              className="rounded-lg"
+              width={1280}
+              height={720}
+              className="rounded-sm "
               alt="a screenshot of visual studio code"
               style={{
                 boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)",
