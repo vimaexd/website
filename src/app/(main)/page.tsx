@@ -26,7 +26,7 @@ export default function Home() {
         <HorizSeperator />
 
         {/* backstory (mae lore) */}
-        <div className="flex flex-col sm:flex-row gap-8">
+        <div className="flex flex-col md:flex-row gap-8">
           <div className="block">
             <Image
               src="/assets/moon16by9_origres.png"
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         </div>
         <HorizSeperator />
-        <div className="flex flex-col sm:flex-row-reverse gap-8">
+        <div className="flex flex-col md:flex-row-reverse gap-8">
           <div className="block">
             <Image
               src="/assets/ableton_screenshot.png"
@@ -109,7 +109,7 @@ export default function Home() {
             on the web side, i'm experienced with modern frameworks and toolsets like&nbsp;
             <b>React</b>, <b>Next.js</b>, <b>Svelte</b>, <b>SvelteKit</b>, <b>Vite</b> and <b>TailwindCSS</b>
           </p>
-          <div className="grid grid-flow-col items-center py-4 gap-4">
+          <div className="grid grid-flow-col grid-rows-2 sm:grid-rows-1 items-center py-4 gap-4">
             <Tool name="Rust" color="#ff954d">
               <Image src="/assets/logos/rust.svg" alt="Rust logo" width={32} height={32} style={{filter: "invert(100%)"}}/>
             </Tool>

@@ -38,7 +38,7 @@ const nextConfig = {
         hostname: "f4.bcbits.com"
       },
       {
-        hostname: "static-cdn.jtvnw"
+        hostname: "static-cdn.jtvnw.net"
       },
       {
         hostname: "i.imgur.com"
