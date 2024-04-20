@@ -29,15 +29,17 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-8">
           <div className="block">
             <Image
-              src="/assets/moon16by9.png"
+              src="/assets/moon16by9_origres.png"
               width={1000}
               height={500}
               className="rounded-lg"
               alt="a pixel art illustration of mae's oc sitting on grass by the beach next to a building
                 that says NUU CORP with a transgender flag on top. there is a moon in the corner of the frame
                 and icons in the other corner"
+              unoptimized={true}
               style={{
                 boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)",
+                imageRendering: "pixelated"
               }}
             />
           </div>
