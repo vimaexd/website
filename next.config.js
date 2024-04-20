@@ -2,7 +2,6 @@ const { version } = require('./package.json');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: false,
   productionBrowserSourceMaps: true,
   publicRuntimeConfig: {
     version
@@ -22,14 +21,28 @@ const nextConfig = {
     ]
   },
   images: {
-    domains: [
-      "i.mae.wtf",
-      "i.scdn.co",
-      "cdn.discordapp.com",
-      "media.discordapp.net",
-      "f4.bcbits.com",
-      "static-cdn.jtvnw.net",
-      "i.imgur.com"
+    remotePatterns: [
+      {
+        hostname: "i.mae.wtf"
+      },
+      {
+        hostname: "i.scdn.co"
+      },
+      {
+        hostname: "cdn.discordapp.com"
+      },
+      {
+        hostname: "media.discordapp.net"
+      },
+      {
+        hostname: "f4.bcbits.com"
+      },
+      {
+        hostname: "static-cdn.jtvnw"
+      },
+      {
+        hostname: "i.imgur.com"
+      }
     ]
   },
 }

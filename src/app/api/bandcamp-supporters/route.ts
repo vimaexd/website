@@ -17,7 +17,7 @@ const _bc = axios.create({
     'X-Requested-With': "com.bandcamp.android"
   }
 })
-const bc = setupCache(_bc);
+const bc = setupCache(_bc as any);
 
 export async function GET() {
   const band = await bc.get(`/mobile/25/band_details?band_id=${bandcampBandId}`)

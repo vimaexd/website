@@ -10,7 +10,7 @@ const _dc = axios.create({
     "Authorization": `Bot ${process.env.DISCORD_TOKEN}`
   }
 })
-const dc = setupCache(_dc);
+const dc = setupCache(_dc as any);
 
 export async function GET() {
   const members = await dc.get(`/guilds/${process.env.DISCORD_GUILDID}/members?limit=1000`)

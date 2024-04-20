@@ -10,7 +10,7 @@ const _throne = axios.create({
     "User-Agent": "maewtf-website (mae.wtf, 8.0.0)"
   }
 })
-const throne = setupCache(_throne);
+const throne = setupCache(_throne as any);
 
 export async function GET() {
   const res = await throne.get(`/api-order/v1/order/public/received/wishlist/${throneUserId}`)

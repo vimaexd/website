@@ -1,20 +1,17 @@
+import React from 'react';
 import PageContainer from "@mae/components/layout/PageContainer";
 import Introduction from "@mae/components/frontpageBlocks/Introduction";
-import Image from "next/image";
-import { Metadata } from "next";
 import {
-  ToolAdobeIcon,
   ToolBoxicon,
 } from "@mae/components/frontpageBlocks/Tool";
 import FrontpageSideblocks from "@mae/components/frontpageBlocks/FrontpageSideblocks";
-import { ComponentChildren } from "@mae/misc/types";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import Button from "@mae/components/Button";
 import HorizSeperator from "@mae/components/HorizSeperator";
 import WebBadge from "@mae/components/WebBadge";
+import Tool from '@mae/components/frontpageBlocks/Tool'
+import Image from "next/image";
 
-const Tool = dynamic(() => import("@mae/components/frontpageBlocks/Tool"));
 
 export default function Home() {
   return (
