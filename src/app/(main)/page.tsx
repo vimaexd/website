@@ -130,7 +130,7 @@ export default function Home() {
         <HorizSeperator />
         
         <div className="flex justify-center flex-wrap gap-2">
-          <WebBadge href="https://mae.wtf" src="/assets/buttons/friends/mae.png" alt="mae"/>
+          <WebBadge href="https://mae.wtf" src="/assets/buttons/mae.png" alt="mae"/>
           <WebBadge href="https://arimelody.me" src="/assets/buttons/friends/ari.gif" alt="ari melody"/>
           <WebBadge href="https://invoxiplaygames.uk" src="/assets/buttons/friends/ipg.png" alt="InvoxiPlayGames"/>
           <WebBadge href="https://supitszaire.com" src="/assets/buttons/friends/zaire.gif" alt="zaire"/>
