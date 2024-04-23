@@ -7,7 +7,7 @@ import PlausibleProvider from 'next-plausible'
 export default function LayoutWrappers({children}: {children: ComponentChildren}) {
   return (
     <RecoilRoot>
-      <PlausibleProvider domain="https://mae.wtf" customDomain='https://metrics.mae.wtf'>
+      <PlausibleProvider domain="mae.wtf" customDomain='https://metrics.mae.wtf'>
         {children}
       </PlausibleProvider>
     </RecoilRoot>
