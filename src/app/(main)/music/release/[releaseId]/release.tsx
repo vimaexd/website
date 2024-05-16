@@ -70,6 +70,14 @@ export default function Release({release}: {release: IResolvedRelease}) {
                 icon="bx bxl-soundcloud bx-sm mr-2"
                 className='flex justify-center outline-1 outline-double outline-neutral-400 text-center hover:bg-white hover:text-black bg-transparent'/>
             }
+            {
+              release.links.youtube &&
+                <Button 
+                text="YouTube" 
+                href={release.links.youtube}
+                icon="bx bxl-youtube bx-sm mr-2"
+                className='flex justify-center outline-1 outline-double outline-neutral-400 text-center hover:bg-white hover:text-black bg-transparent'/>
+            }
           </div>
 
           {

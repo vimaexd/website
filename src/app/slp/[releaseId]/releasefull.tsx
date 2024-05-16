@@ -8,14 +8,16 @@ const serviceToIcon: {[a: string]: string;} = {
   "bandcamp": "bx bx-money",
   "spotify": "bx bxl-spotify",
   "applemusic": "bx bxl-apple",
-  "soundcloud": "bx bxl-soundcloud"
+  "soundcloud": "bx bxl-soundcloud",
+  "youtube": "bx bxl-youtube"
 }
 
 const serviceSlugToName: {[a: string]: string;} = {
   "bandcamp": "Bandcamp",
   "spotify": "Spotify",
   "applemusic": "Apple Music",
-  "soundcloud": "SoundCloud"
+  "soundcloud": "SoundCloud",
+  "youtube": "YouTube"
 }
 
 export default function releasefull({release}: {release: IResolvedRelease}) {
