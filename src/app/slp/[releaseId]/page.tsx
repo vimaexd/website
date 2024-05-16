@@ -4,7 +4,7 @@ import { GetStaticProps, GetStaticPropsContext, NextPage } from 'next';
 import { notFound } from 'next/navigation';
 import type { IDiscography, IResolvedRelease } from '@mae/misc/discography/types';
 
-import _discog from '@mae/data/discography.json';
+import _discog from '@mae/data/discography-vimae.json';
 import { resolveRelease } from '@mae/misc/discography/utils';
 
 export async function generateMetadata(

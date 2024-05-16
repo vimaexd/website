@@ -1,0 +1,26 @@
+{
+  "tracks": [
+    {
+      "id": "chase",
+      "name": "CHASE",
+      "genre": "hypergarbage",
+      "length": "2:27",
+      "artists": ["vimae"]
+    }
+  ],
+  "releases": [
+    {
+      "slug": "chase",
+      "title": "CHASE",
+      "type": "Single",
+      "year": 2024,
+      "release_date": "17/05/2024",
+      "tracks": ["track:chase"],
+      "links": {
+        "bandcamp": "https://vimae.bandcamp.com/track/chase",
+        "spotify": "https://open.spotify.com/track/4S8P7SMzgL4vaJOcq8QORm",
+        "soundcloud": "https://soundcloud.com/vimae/chase/"
+      }
+    }
+  ]
+}

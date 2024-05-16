@@ -4,7 +4,7 @@ import PageHeader from '@mae/components/layout/PageHeader';
 import { useRecoilState } from 'recoil';
 import { discography, DiscographyGroup, DiscographyView } from '@mae/store/discography';
 import { IDiscography, IUnresolvedRelease } from '@mae/misc/discography/types';
-import discog from '@mae/data/discography.json'
+import discog from '@mae/data/discography-vimae.json'
 import { groupReleasesByKey, groupReleasesByYear } from '@mae/misc/discography/utils';
 import ReleaseCard from '@mae/components/music/releaseCard';
 import ReleaseRow from '@mae/components/music/ReleaseRow';

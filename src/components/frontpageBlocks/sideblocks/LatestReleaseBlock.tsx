@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import ChipButton from '@mae/components/ChipButton';
-import Releases from '@mae/data/discography.json';
+import Releases from '@mae/data/discography-vimae.json';
 import Link from 'next/link';
 
 export default function latest_release() {

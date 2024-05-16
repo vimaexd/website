@@ -11,7 +11,7 @@ module.exports = {
     let paths = []
     
     // discog
-    const discography = await require('./src/data/discography.json');
+    const discography = await require('./src/data/discography-vimae.json');
     discography.releases.forEach((r) => {
       paths.push({loc: "/music/release/" + r.slug})
     })
