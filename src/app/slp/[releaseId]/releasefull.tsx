@@ -29,7 +29,7 @@ export default function releasefull({release}: {release: IResolvedRelease}) {
           </div>
           <div className='w-full'>
             <h2 className="font-semibold text-4xl">{release.title}</h2>
-            <h3 className="text-lg">Stringy</h3>
+            <h3 className="text-lg">vimae</h3>
           </div>
 
           <div className='flex flex-col gap-2 w-full'>
@@ -45,9 +45,13 @@ export default function releasefull({release}: {release: IResolvedRelease}) {
             }
           </div>
         </div>
-        {/* <Link href="/music" className='text-white'>More music <i className='bx bxs-arrow-left'></i> </Link> */}
       </div>
-      <Image src="/assets/logos/stringy/StringyV3_White.svg" width={32} height={32} alt="Stringy logo" className='absolute bottom-8 left-1/2 -translate-x-1/2'></Image>
+      <Link href={"/"} className='z-50 text-ctp-text font-bold'>
+        <div className='absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-[rgba(0,0,0,0.2)] p-2 rounded-full'>
+          <Image src="/assets/pfp_evil.jpeg" width={32} height={32} alt="mae profile picture" className='rounded-full'></Image>
+          <p>vimae</p>
+        </div>
+      </Link>
     </>
   )
 }

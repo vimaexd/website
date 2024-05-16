@@ -17,10 +17,8 @@ export default function Services() {
     <div className='flex flex-col lg:flex-row justify-center gap-8 lg:mx-8'>
       <Contents>
         <ContentsOption href='#cobalt' name="cobalt"/>
-        <ContentsOption href='#misq' name="Misq"/>
-        <ContentsOption href='#blobmaker' name="Blob Maker"/>
+        <ContentsOption href='#misq' name="misc"/>
         <ContentsOption href='#matrix' name="Matrix"/>
-        <ContentsOption href='#disq' name="Disq"/>
       </Contents>
       <div className='flex items-center flex-col pt-8 flex-shrink'>
         <div className='max-w-[1024px] px-4 lg:px-0 space-y-8 mb-8'>
@@ -51,38 +49,19 @@ export default function Services() {
 
           <hr/>
           <div className='inline-block' id="misq">
-            <h2 className='text-6xl mb-4'>Misq</h2>
+            <h2 className='text-6xl mb-4'>misc.mae.wtf</h2>
             <div className='flex space-x-2'>
               <Chip text="Public" className='bg-green-400'></Chip>
             </div>
             <br/>
             <h2 className='text-lg mt-6 mb-2 font-semibold'>Info</h2>
             <p>
-              <strong>Misq</strong> is a dump for random websites. It has not been updated recently, and features some broken URLs to
-              an old image host. It is up for archival purposes and to statically host files.
+              <strong>misc.mae.wtf</strong> is a dump for random files and anything i just wanna statically host,
+              there's a directory for some of the content and you can find some old stuff of mine here.
             </p>
             <h2 className='text-lg mt-6 mb-2 font-semibold'>URLs</h2>
             <p>
               <a href="https://misc.mae.wtf">https://misc.mae.wtf</a>
-            </p>
-          </div>
-
-          <hr/>
-          <div className='inline-block' id="blobmaker">
-            <h2 className='text-4xl mb-4 font-bold'>Blob Maker</h2>
-            <div className='flex space-x-2'>
-              <Chip text="Public" className='bg-green-400'></Chip>
-            </div>
-            <br/>
-            <h2 className='text-lg mt-6 mb-2 font-semibold'>Info</h2>
-            <p>
-              <strong>Blob Maker</strong> is a project I made to learn VueJS. It allows you to create your own Blob character on the site,
-              and download your creation. The blob assets were supplied by <a href="https://muatex.uk">Muatex</a>. This project originally lived
-              at <code>blobmaker.stringy.software</code>, but that domain has since gone offline.
-            </p>
-            <h2 className='text-lg mt-6 mb-2 font-semibold'>URLs</h2>
-            <p>
-              <a href="https://mkblob.web.app">https://mkblob.web.app</a>
             </p>
           </div>
 
@@ -100,25 +79,6 @@ export default function Services() {
             <h2 className='text-lg mt-6 mb-2 font-semibold'>URLs</h2>
             <p>
               <code>@mae:matrix.mae.wtf</code>
-            </p>
-          </div>
-
-          <hr/>
-          <div className='inline-block' id="disq">
-            <Image src="/assets/logos/disq/disq.svg" height={100} width={100} alt="cobalt pattern" className='mb-4'></Image>
-            <div className='flex space-x-2'>
-              <Chip text="Private" className='bg-red-400'></Chip>
-            </div>
-            <br/>
-            <h2 className='text-lg mt-6 mb-2 font-semibold'>Info</h2>
-            <p>
-              <strong>Disq</strong> is a file host website that I ran from around 2020 - 2021. I host a very stripped down instance of the original
-              source code for hosting personal files that is allowlisted to only me and has many functions disabled. I do not recommend using Disq
-              yourself nowadays.
-            </p>
-            <h2 className='text-lg mt-6 mb-2 font-semibold'>URLs</h2>
-            <p>
-              <a href="https://i.mae.wtf">https://i.mae.wtf</a>
             </p>
           </div>
         </div>

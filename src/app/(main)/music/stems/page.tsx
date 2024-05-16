@@ -15,23 +15,28 @@ export default function page() {
       <PageHeader title='🎛️ stems'>
         publicly released multitrack stems for some of my songs
       </PageHeader>
-      <div className='flex flex-col gap-2'>
-        <Link href="https://drive.google.com/file/d/1buYBDqva2yPzjwPxU2-C3_3Q9ncjHDLI/view?usp=drive_link">
-          strawberry factory
-        </Link>
-        <Link href="https://drive.google.com/file/d/1nCLTtRug9LlT6nM2WjBhw1-oCG4MoW0f/view?usp=drive_link">
-          Mango on a Fork (Remix Stems)
-        </Link>
-        <Link href="https://drive.google.com/file/d/1UgOeNAjn7EwO98FV5FXA7CVGXRzYM6_L/view?usp=drive_link">
-          Nightworld
-        </Link>
-        <Link href="https://drive.google.com/file/d/13Ti-W8ndIR4p5P3e4Kt6tlu4NcDrkg-i/view?usp=drive_link">
-          Fluff
-        </Link>
-        <Link href="https://drive.google.com/file/d/1h0uDx8xc93QZtco-ynEF38J4eUzPTKhA/view?usp=drive_link">
-          Coolepic
-        </Link>
-      </div>
+      <p>none yet! check back soon :3</p>
+
+      <details>
+        <summary>older stuff</summary>
+        <div className='flex flex-col gap-2'>
+          <Link href="https://drive.google.com/file/d/1buYBDqva2yPzjwPxU2-C3_3Q9ncjHDLI/view?usp=drive_link">
+            strawberry factory
+          </Link>
+          <Link href="https://drive.google.com/file/d/1nCLTtRug9LlT6nM2WjBhw1-oCG4MoW0f/view?usp=drive_link">
+            Mango on a Fork (Remix Stems)
+          </Link>
+          <Link href="https://drive.google.com/file/d/1UgOeNAjn7EwO98FV5FXA7CVGXRzYM6_L/view?usp=drive_link">
+            Nightworld
+          </Link>
+          <Link href="https://drive.google.com/file/d/13Ti-W8ndIR4p5P3e4Kt6tlu4NcDrkg-i/view?usp=drive_link">
+            Fluff
+          </Link>
+          <Link href="https://drive.google.com/file/d/1h0uDx8xc93QZtco-ynEF38J4eUzPTKhA/view?usp=drive_link">
+            Coolepic
+          </Link>
+        </div>
+      </details>
     </PageContainer>
   )
 }

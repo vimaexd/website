@@ -17,7 +17,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'mae / vimae\'s cozy site ✨',
   description: 'vimae is a queer programmer, musician, fediverse person and internet user interested in tech.',
-  keywords: 'vimae, vimae discord, vimae twitter, mae, etstringy, stringy, stringy music, stringy artist, maewtf, personal website',
+  keywords: 'vimae, vimae discord, vimae twitter, mae, etstringy, maewtf, personal website',
   robots: 'index, follow'
 }
 

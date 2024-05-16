@@ -3,7 +3,7 @@
     {
       "id": "chase",
       "name": "CHASE",
-      "genre": "hypergarbage",
+      "genre": "alternative hyper something",
       "length": "2:27",
       "artists": ["vimae"]
     }
@@ -20,7 +20,9 @@
         "bandcamp": "https://vimae.bandcamp.com/track/chase",
         "spotify": "https://open.spotify.com/track/4S8P7SMzgL4vaJOcq8QORm",
         "soundcloud": "https://soundcloud.com/vimae/chase/"
-      }
+      },
+      "artist_comment": "this is the first song i've really felt that speaks to me, and something meaningful i can release.",
+      "album_art": "/assets/music/covers/chase.png"
     }
   ]
 }
