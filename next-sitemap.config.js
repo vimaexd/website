@@ -5,7 +5,9 @@ module.exports = {
   siteUrl: "https://mae.wtf",
   generateRobotsTxt: true,
   exclude: [
-    "/api/*"
+    "/api/*",
+    "/contact/music-agent",
+    "/shhh__/*"
   ],
   async additionalPaths() {
     let paths = []
