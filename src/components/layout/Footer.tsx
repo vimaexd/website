@@ -21,6 +21,9 @@ export default function Footer() {
             <Link href="https://github.com/etstringy/website">
                 source code
             </Link>
+            <Link href="/privacy">
+                privacy
+            </Link>
           </div>
           <div className='flex gap-16 sm:justify-end w-full'>
             <div className='flex flex-col'>
