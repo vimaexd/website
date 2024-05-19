@@ -48,12 +48,6 @@ export default function releasefull({release}: {release: IResolvedRelease}) {
           </div>
         </div>
       </div>
-      <Link href={"/"} className='z-50 text-ctp-text font-bold'>
-        <div className='absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-[rgba(0,0,0,0.2)] p-2 rounded-full'>
-          <Image src="/assets/pfp_evil.jpeg" width={32} height={32} alt="mae profile picture" className='rounded-full'></Image>
-          <p>vimae</p>
-        </div>
-      </Link>
     </>
   )
 }
