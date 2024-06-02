@@ -6,7 +6,6 @@ module.exports = {
   generateRobotsTxt: true,
   exclude: [
     "/api/*",
-    "/contact/music-agent",
     "/shhh__/*"
   ],
   async additionalPaths() {

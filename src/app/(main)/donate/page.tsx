@@ -61,7 +61,7 @@ export default async function Donate() {
               If you just want to donate money (or "buy me a coffee"), you can do so via my Ko-fi page
             </p>
             <div className='mt-8 flex-grow-0'>
-              <Link href='https://ko-fi.com/stringy'>
+              <Link href='https://ko-fi.com/vimae'>
                 <p className='text-sm flex items-center gap-1 text-white'>
                   Buy me a coffee <i className='bx bx-link-external'></i>
                 </p>
