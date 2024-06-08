@@ -101,39 +101,6 @@
           "href": "https://mkblob.web.app"
         }
       ]
-    },
-    {
-      "title": "SwitchPresence",
-      "description": "An early attempt at using the Discord Game SDK and Electron to show what Nintendo Switch game you're playing.",
-      "type": "Project",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/switchpresence"
-        }
-      ]
-    },
-    {
-      "title": "Website v7",
-      "description": "A scrapped version of this website that used VueJS. I decided not to use it as I wanted to make the site in React.",
-      "type": "Project",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/website/tree/v7"
-        }
-      ]
-    },
-    {
-      "title": "Website v6",
-      "description": "The last live version of this website that used React + CRA.",
-      "type": "Project",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/website/tree/v6"
-        }
-      ]
     }
   ]
 }
