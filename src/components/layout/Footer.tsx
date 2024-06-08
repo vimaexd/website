@@ -18,7 +18,7 @@ export default function Footer() {
             <p>
           
             </p>
-            <Link href="https://github.com/etstringy/website">
+            <Link href="https://github.com/vimaexd/website">
                 source code
             </Link>
             <Link href="/privacy">

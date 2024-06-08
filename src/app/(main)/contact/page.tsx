@@ -41,8 +41,8 @@ export default function page() {
         <div className='flex flex-col'>
           <h3 className='font-semibold'>less likely to answer</h3>
           <ContactLink text='@mae:matrix.mae.wtf' icon='bxs-chat' className='text-ctp-pink'
-            link="https://wetdry.world"/>
-          <ContactLink text='@etstringy' icon='bxl-twitter' className='text-ctp-pink'
+            link=""/>
+          <ContactLink text='@vimaexd' icon='bxl-twitter' className='text-ctp-pink'
             link="https://twitter.com/@vimaexd"/>
           <ContactLink text='@etstringy' icon='bxl-tiktok' className='text-ctp-pink'
             link="https://tiktok.com/@etstringy"/>

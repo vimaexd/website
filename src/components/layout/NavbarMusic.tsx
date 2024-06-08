@@ -36,7 +36,7 @@ export default function NavbarMusic() {
         </Link> */}
 
         <div className='ml-auto'>
-          <Link href="https://etstringy.bandcamp.com">
+          <Link href="https://vimae.bandcamp.com">
             <Image src="/assets/logos/bandcamp.png" width={120} height={20} alt="Bandcamp"/>
           </Link>
         </div>

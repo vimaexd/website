@@ -30,7 +30,7 @@ npm run start
 ## Credits
 - Logos provided by their relevant companies and people
 
-- Fake ads provided by [many contributors](https://github.com/etstringy/website/blob/master/src/data/fakeAds.json)
+- Fake ads provided by [many contributors](https://github.com/vimaexd/website/blob/master/src/data/fakeAds.json)
 
 - [Inter typeface](https://rsms.me/inter/) by Rasmuss Anderson under the Open Font License
 
