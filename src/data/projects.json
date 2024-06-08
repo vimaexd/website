@@ -35,8 +35,8 @@
       "type": "ProjectWithImg",
       "links": [
         {
-          "name": "Website",
-          "href": "https://onlineconfine.lol"
+          "name": "Source",
+          "href": "https://github.com/vimaexd/oc_dashboard"
         }
       ]
     },
