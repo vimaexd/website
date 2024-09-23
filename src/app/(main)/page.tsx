@@ -152,8 +152,12 @@ export default function Home() {
                     <WebBadge src="/assets/buttons/misc/bi.png" alt="Bisexual flag"></WebBadge>
                 </div>
 
-            <div id='cobaltWebring'></div>
-            <Script src="https://instances.hyper.lol/assets/js/webring.js" />
+                <HorizSeperator />
+
+                <div id='cobaltWebring' style={{
+                    display: "flex"
+                }}></div>
+                <Script src="https://instances.hyper.lol/assets/js/webring.js" />
             </PageContainer>
 
             {/* sideblocks desktop */}
