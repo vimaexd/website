@@ -155,7 +155,8 @@ export default function Home() {
                 <HorizSeperator />
 
                 <div id='cobaltWebring' style={{
-                    display: "flex"
+                    display: "flex",
+                    imageRendering: "pixelated"
                 }}></div>
                 <Script src="https://instances.hyper.lol/assets/js/webring.js" />
             </PageContainer>
