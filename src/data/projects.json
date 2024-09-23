@@ -1,6 +1,18 @@
 {
   "projects": [
     {
+        "title": "href webtoys (Commission)",
+        "description": "9 webtoys created for electronic artist disphing to coincide with the launch of their album \"href\"",
+        "image": "/assets/project_images/comm_href.png",
+        "type": "Project",
+        "links": [
+          {
+            "name": "Website",
+            "href": "https://disphing.com/href"
+          }
+        ]
+    },
+    {
       "title": "Fortnite Festival Setlist Bot",
       "description": "A Mastodon bot that posts the daily playable songs for the game Fortnite Festival, written in Rust.",
       "image": "/assets/project_images/festivalbot.png",
@@ -69,12 +81,7 @@
       "description": "A service which allowed you to upload screenshots (with ShareX support) and create Short URLs.",
       "image": "/assets/project_images/disq.png",
       "type": "ProjectWithImg",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/disqTeam/api"
-        }
-      ]
+      "links": []
     },
     {
       "title": "Knok",
