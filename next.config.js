@@ -42,6 +42,9 @@ const nextConfig = {
       },
       {
         hostname: "i.imgur.com"
+      },
+      {
+        hostname: "thronecdn.com"
       }
     ]
   },

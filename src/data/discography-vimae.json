@@ -1,30 +1,52 @@
 {
-  "tracks": [
-    {
-      "id": "chase",
-      "name": "CHASE",
-      "genre": "alternative hyper something",
-      "length": "2:27",
-      "artists": ["vimae"]
-    }
-  ],
-  "releases": [
-    {
-      "slug": "chase",
-      "title": "CHASE",
-      "type": "Single",
-      "year": 2024,
-      "release_date": "17/05/2024",
-      "tracks": ["track:chase"],
-      "links": {
-        "bandcamp": "https://vimae.bandcamp.com/track/chase",
-        "spotify": "https://open.spotify.com/track/4S8P7SMzgL4vaJOcq8QORm",
-        "soundcloud": "https://soundcloud.com/vimae/chase/",
-        "youtube": "https://youtu.be/CzYy0hEL0xI",
-        "applemusic": "https://music.apple.com/us/album/chase/1744290225"
-      },
-      "artist_comment": "this is the first song i've really felt that speaks to me, and something meaningful i can release.",
-      "album_art": "/assets/music/covers/chase.png"
-    }
-  ]
+    "tracks": [
+        {
+            "id": "chase",
+            "name": "CHASE",
+            "genre": "alternative hyper something",
+            "length": "2:27",
+            "artists": ["vimae"]
+        },
+        {
+            "id": "personalspc",
+            "name": "personal space",
+            "genre": "indie rock pop",
+            "length": "3:12",
+            "artists": ["vimae"]
+        }
+    ],
+    "releases": [
+        {
+            "slug": "personalspace",
+            "title": "personal space",
+            "type": "Single",
+            "year": 2024,
+            "release_date": "26/07/2024",
+            "tracks": ["track:personalspc"],
+            "links": {
+                "bandcamp": "https://inkeycollective.bandcamp.com/album/01",
+                "soundcloud": "https://soundcloud.com/in-key-collective/vimae-personal-space"
+            },
+            "is_free": true,
+            "artist_comment": "released on in:key collective has part of in:key 1. exclusive to bandcamp and soundcloud",
+            "album_art": "/assets/music/covers/inkey1.jpg"
+        },
+        {
+            "slug": "chase",
+            "title": "CHASE",
+            "type": "Single",
+            "year": 2024,
+            "release_date": "17/05/2024",
+            "tracks": ["track:chase"],
+            "links": {
+                "bandcamp": "https://vimae.bandcamp.com/track/chase",
+                "spotify": "https://open.spotify.com/track/4S8P7SMzgL4vaJOcq8QORm",
+                "soundcloud": "https://soundcloud.com/vimae/chase/",
+                "youtube": "https://youtu.be/CzYy0hEL0xI",
+                "applemusic": "https://music.apple.com/us/album/chase/1744290225"
+            },
+            "artist_comment": "this is the first song i've really felt that speaks to me, and something meaningful i can release.",
+            "album_art": "/assets/music/covers/chase.png"
+        }
+    ]
 }

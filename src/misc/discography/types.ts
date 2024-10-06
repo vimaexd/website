@@ -10,6 +10,7 @@ export interface IBaseRelease {
   links: {[service: string]: string;}
   artist_comment: string;
   album_art: string;
+  is_free?: boolean;
 }
 
 export type IResolvedRelease = IBaseRelease & { tracks: ITrack[]; }

@@ -41,10 +41,10 @@ export default function Release({release}: {release: IResolvedRelease}) {
             {
               release.links.bandcamp &&
                 <Button 
-                text="Buy" 
+                text={(release.is_free ? "Free Download" : "Buy")}
                 href={release.links.bandcamp}
-                icon="bx bx-money bx-sm mr-2"
-                className='flex lg:w-36 justify-center bg-str-cotton hover:bg-purple-500 text-center'/>
+                icon={`bx bx-sm mr-2 ${(release.is_free) ? "bx-down-arrow-alt" : "bx-money"}`}
+                className='flex lg:w-42 justify-center bg-str-cotton hover:bg-purple-500 text-center'/>
             }
             {
               release.links.spotify &&
