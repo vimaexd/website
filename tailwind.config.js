@@ -17,6 +17,9 @@ module.exports = {
         "str-ice-100": "#ebebeb",
         "str-ice-200": "#dedede",
       },
+      boxShadow: {
+        'mae': '0px 2px 32px 8px rgba(133, 72, 245, 0.1)'
+      }
     },
   },
   plugins: [
