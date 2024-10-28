@@ -19,7 +19,7 @@ using finder, navigate to `/Users/(your user)/Library/Application Support/Steam/
 ### how do i do that?
 to do this, click on documents or something and at the bottom you should see "Users > username > Documents". click on your username. after that, press `⌘ CMD + ⇧ SHIFT + .` to show hidden folders. you should then see the library folder appear!
 
-in the folder, use any text editor (vscode works well) to create a file called `appmanifest_3146520.acl` containing the following:
+in the folder, use any text editor (vscode works well) to create a file called `appmanifest_3146520.acf` containing the following:
 
 ```
 "AppState"
