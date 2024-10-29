@@ -23,7 +23,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "i.mae.wtf"
+        hostname: "cdn.mae.wtf"
       },
       {
         hostname: "i.scdn.co"
