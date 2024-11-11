@@ -12,7 +12,7 @@ export default function BlogPost({content, meta}: {content: any; meta: any;}) {
     <PageContainer>
       <div className="flex gap-8 flex-col lg:flex-row items-center lg:items-start">
         <div
-          dangerouslySetInnerHTML={{ __html: content.toString() + "<hr/>" }}
+          dangerouslySetInnerHTML={{ __html: pageContent }}
           className="prose prose-invert w-full flex-shrink-0"
         ></div>
         <div className="w-full gap-4 flex flex-col">
