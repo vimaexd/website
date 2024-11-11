@@ -7,6 +7,7 @@ export default function BlogPost({content, meta}: {content: any; meta: any;}) {
   return (
     <PageContainer>
       <div className="flex gap-8 flex-col lg:flex-row items-center lg:items-start">
+        <h1>{meta.title}</h1>
         <div
           dangerouslySetInnerHTML={{ __html: content.toString() + "<hr/>" }}
           className="prose prose-invert w-full flex-shrink-0"

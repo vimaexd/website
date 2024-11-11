@@ -1,5 +1,3 @@
-# how to run WEBFISHING (or most Godot games) natively on macOS
-
 ![webfishing header](/assets/blog_img/28102024-webfishing-mac/webfishing.png)
 
 as of writing, WEBFISHING is a super cool game but it only has a build for windows. shame! if only there was a complicated guide to making it work natively on macOS without virtualisation

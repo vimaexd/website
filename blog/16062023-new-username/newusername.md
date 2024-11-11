@@ -1,5 +1,3 @@
-# what’s up with your new username?
-
 <aside>
 💡 **********************************************************************************tldr if you dont have time to read below:**********************************************************************************
 stringy feels too corporate and i want to be myself talking to friends

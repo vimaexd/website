@@ -1,5 +1,3 @@
-# a guide to making music, on the cheap
-
 ![musicicons.png](/assets/blog_img/19022024-free-music-stuff/musicicons.png)
 
 over a few years, i've been occasionally asked over discord and wherever by new 

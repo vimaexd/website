@@ -1,5 +1,3 @@
-# How I made an interactive doorbell for my office with a spare iPad and WebSockets
-
 ![ipad.jpeg](/assets/blog_img/01052021-interactive-doorbell/ipad.jpeg)
 
 Recently, I've had a constant issue. Members of my family seemed to appear in my doorway, never knocking while I'm busy streaming or programming. One day, I was bored just sitting and breathing in the fresh air from outside when I had an idea. The idea is that there would be some sort of doorbell outside my room, where any family member could ring and it would send a notification to my computer saying that someone is there, completely avoiding the shock of someone bursting in the room uninvited.
