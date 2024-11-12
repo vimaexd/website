@@ -39,6 +39,8 @@ after the game has installed, open the local files for the game like so:
 
 ![steam local files](/assets/blog_img/28102024-webfishing-mac/localfiles.png)
 
+---
+
 ## step 3 - download godot steam export templates
 webfishing uses an extension of the godot engine called [GodotSteam](https://godotsteam.com/) to interface with steam. we will need to download an export template for a mac game, so we can repack webfishing into a mac version.
 
@@ -143,6 +145,8 @@ at this point, your app package should look like this:
 
 we're not quite done yet however, as macOS thinks this app is broken, so we need to fix it.
 
+---
+
 ## step 5 - this aint fix a fish
 
 right now if you try and run the webfishing file you'll probably get a popup like this:
@@ -158,6 +162,8 @@ to get the path to your webfishing file easily, you can drag and drop the app fi
 `sudo xattr -cr /Users/mae/Desktop/webfishing.app`
 
 press enter and you should be prompted for your password (it wont show as typed in the window so just type it and press enter). 
+
+---
 
 ## step 6 - fish
 
