@@ -1,113 +1,129 @@
 {
-  "projects": [
-    {
-        "title": "href webtoys (Commission)",
-        "description": "9 webtoys created for electronic artist disphing to coincide with the launch of their album \"href\"",
-        "image": "/assets/project_images/comm_href.png",
-        "type": "Project",
-        "links": [
-          {
-            "name": "Website",
-            "href": "https://disphing.com/href"
-          }
-        ]
-    },
-    {
-      "title": "Fortnite Festival Setlist Bot",
-      "description": "A Mastodon bot that posts the daily playable songs for the game Fortnite Festival, written in Rust.",
-      "image": "/assets/project_images/festivalbot.png",
-      "type": "Project",
-      "links": [
+    "projects": [
         {
-          "name": "Mastodon",
-          "href": "https://wetdry.world/@festival"
+            "title": "href webtoys (Commission)",
+            "description": "9 webtoys created for electronic artist disphing to coincide with the launch of their album \"href\"",
+            "image": "/assets/project_images/comm_href.png",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Website",
+                    "href": "https://disphing.com/href"
+                }
+            ]
         },
         {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/festival"
-        }
-      ]
-    },
-    {
-      "title": "Stream Anywhere",
-      "description": "A Rust-based Discord bot that provides alternative services for Spotify and Apple Music links posted using the Odesli API.",
-      "image": "/assets/project_images/stream-anywhere.png",
-      "type": "ProjectWithImg",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/stream-anywhere"
-        }
-      ]
-    },
-    {
-      "title": "Online Confine Dashboard",
-      "description": "A web dashboard for authenticated users to manage DNS records for subdomains assigned to them.",
-      "image": "/assets/project_images/ocdash.png",
-      "type": "ProjectWithImg",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/oc_dashboard"
-        }
-      ]
-    },
-    {
-      "title": "Satori",
-      "description": "A Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.",
-      "image": "/assets/project_images/satori.png",
-      "type": "ProjectWithImg",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/egg"
-        }
-      ]
-    },
-    {
-      "title": "Server Count",
-      "description": "A website that counts how many Discord servers you have joined, completely client side.",
-      "image": "/assets/project_images/servercount.png",
-      "type": "ProjectWithImg",
-      "links": [
-        {
-          "name": "Website",
-          "href": "https://misc.mae.wtf/servercount"
-        }
-      ]
-    },
-    {
-      "title": "Disq",
-      "description": "A service which allowed you to upload screenshots (with ShareX support) and create Short URLs.",
-      "image": "/assets/project_images/disq.png",
-      "type": "ProjectWithImg",
-      "links": []
-    },
-    {
-      "title": "Knok",
-      "description": "A web UI and server to make an iPad act as a doorbell for my room.",
-      "type": "Project",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/knok"
-        }
-      ]
-    },
-    {
-      "title": "Blob Maker",
-      "description": "A web app to customize your very own blob character. Mainly created to try out VueJS.",
-      "type": "Project",
-      "links": [
-        {
-          "name": "Source",
-          "href": "https://github.com/vimaexd/blobmaker"
+            "title": "campfire UI",
+            "description": "designing the user interface and assisting with code for campfire, a WIP fediverse client with ari melody",
+            "image": "/assets/project_images/campfire.png",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Campfire Client Beta",
+                    "href": "https://campfire.bliss.town"
+                },
+                {
+                    "name": "ari melody",
+                    "href": "https://arimelody.me"
+                }
+            ]
         },
         {
-          "name": "Website",
-          "href": "https://mkblob.web.app"
+            "title": "Fortnite Festival Setlist Bot",
+            "description": "A Mastodon bot that posts the daily playable songs for the game Fortnite Festival, written in Rust.",
+            "image": "/assets/project_images/festivalbot.png",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Mastodon",
+                    "href": "https://wetdry.world/@festival"
+                },
+                {
+                    "name": "Source",
+                    "href": "https://github.com/vimaexd/festival"
+                }
+            ]
+        },
+        {
+            "title": "Stream Anywhere",
+            "description": "A Rust-based Discord bot that provides alternative services for Spotify and Apple Music links posted using the Odesli API.",
+            "image": "/assets/project_images/stream-anywhere.png",
+            "type": "ProjectWithImg",
+            "links": [
+                {
+                    "name": "Source",
+                    "href": "https://github.com/vimaexd/stream-anywhere"
+                }
+            ]
+        },
+        {
+            "title": "Online Confine Dashboard",
+            "description": "A web dashboard for authenticated users to manage DNS records for subdomains assigned to them.",
+            "image": "/assets/project_images/ocdash.png",
+            "type": "ProjectWithImg",
+            "links": [
+                {
+                    "name": "Source",
+                    "href": "https://github.com/vimaexd/oc_dashboard"
+                }
+            ]
+        },
+        {
+            "title": "Satori",
+            "description": "A Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.",
+            "image": "/assets/project_images/satori.png",
+            "type": "ProjectWithImg",
+            "links": [
+                {
+                    "name": "Source",
+                    "href": "https://github.com/vimaexd/egg"
+                }
+            ]
+        },
+        {
+            "title": "Server Count",
+            "description": "A website that counts how many Discord servers you have joined, completely client side.",
+            "image": "/assets/project_images/servercount.png",
+            "type": "ProjectWithImg",
+            "links": [
+                {
+                    "name": "Website",
+                    "href": "https://misc.mae.wtf/servercount"
+                }
+            ]
+        },
+        {
+            "title": "Disq",
+            "description": "A service which allowed you to upload screenshots (with ShareX support) and create Short URLs.",
+            "image": "/assets/project_images/disq.png",
+            "type": "ProjectWithImg",
+            "links": []
+        },
+        {
+            "title": "Knok",
+            "description": "A web UI and server to make an iPad act as a doorbell for my room.",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Source",
+                    "href": "https://github.com/vimaexd/knok"
+                }
+            ]
+        },
+        {
+            "title": "Blob Maker",
+            "description": "A web app to customize your very own blob character. Mainly created to try out VueJS.",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Source",
+                    "href": "https://github.com/vimaexd/blobmaker"
+                },
+                {
+                    "name": "Website",
+                    "href": "https://mkblob.web.app"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
