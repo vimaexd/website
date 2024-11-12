@@ -2,6 +2,8 @@
 
 as of writing, WEBFISHING is a super cool game but it only has a build for windows. shame! if only there was a complicated guide to making it work natively on macOS without virtualisation
 
+---
+
 ## step 1 - install steam for mac
 
 to get the game files, you need to own WEBFISHING on steam. you can sorta skip these steps if you've already got the files for the game on a windows/linux pc and can drag them across to your mac
@@ -9,6 +11,8 @@ to get the game files, you need to own WEBFISHING on steam. you can sorta skip t
 [download steam if you dont have it already for some reason??](https://store.steampowered.com/about/)
 
 after it's installed, **make sure steam is completely closed** for the next step
+
+---
 
 ## step 2 - force install webfishing
 
@@ -46,6 +50,8 @@ click it and download the zip file beginning with "macos". **do not click Source
 
 after downloading the zip file, unzip it by double clicking. it should have a folder inside of it with 2 more zip files. unzip the one called `macos.zip`. this should then give you a strange app file called `osx_template`. drag this to your desktop!
 
+---
+
 ## step 4 - cram webfishing inside this file
 
 ![Show package contents](/assets/blog_img/28102024-webfishing-mac/pkg.png)
@@ -53,6 +59,9 @@ after downloading the zip file, unzip it by double clicking. it should have a fo
 right click on the file and click "Show package contents". this will take you inside the app file. there's a couple steps of setup we need to do before we can run the game.
 
 go to your WEBFISHING steam files
+
+**UPDATE 12/11/2024:**
+As of a recent update, the webfishing.pck file has been removed. You can work around this by renaming the webfishing.exe to webfishing.pck - trust me it works somehow
 
 1. copy the `webfishing.pck` file. put it inside `Contents/Resources` in the app package.
 2. copy the `steam_appid.txt` file to `Contents/MacOS` in the app package.

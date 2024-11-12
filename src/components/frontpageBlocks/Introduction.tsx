@@ -47,7 +47,7 @@ export default function Introduction() {
   return (
     <div className='flex flex-col my-16'>
       <div className='relative'>
-        <div className='absolute left-1/2 -translate-x-1/2 w-1/3 h-24 bg-str-cotton blur-3xl opacity-80 -z-10'/>
+        <div className='absolute left-1/2 -translate-x-1/2 w-1/3 h-24 bg-purple-500 blur-3xl opacity-80 -z-10'/>
       </div>
       <h1 className='text-6xl font-bold tracking-tight text-center' data-anim="goober">
         <span className='inline-block mr-4'>

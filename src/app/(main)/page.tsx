@@ -15,7 +15,7 @@ import Script from 'next/script'
 
 export default function Home() {
     return (
-        <div className="flex flex-row justify-center gap-2 lg:gap-8 lg:px-8 transition-all">
+        <div className="flex flex-row justify-center gap-2 lg:gap-8 lg:px-8 transition-all bg-pattern">
             <PageContainer>
                 <Introduction />
 
@@ -53,13 +53,8 @@ export default function Home() {
                             i've done webdev, gamedev, 3D modelling, pixelart, graphic design,
                             reverse engineering, native development and system administration.
                         </p>
-                        <div className="mt-auto w-fit">
-                            <Button
-                                href="/projects"
-                                text="projects"
-                                className="bg-str-cotton"
-                            ></Button>
-                        </div>
+                        <br/>
+                        <a href="/projects">see more projects...</a>
                     </div>
                 </div>
                 <HorizSeperator />

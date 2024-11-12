@@ -27,37 +27,25 @@ export default function page() {
         </ul>
       </div>
 
-      <div className='flex justify-between flex-wrap space-y-4 sm:space-y-0'>
+      <div className='flex flex-col justify-between space-y-4'>
         <div className='flex flex-col'>
           <h3 className='font-semibold'>preferred</h3>
           <ContactLink text='vimae' icon='bxl-discord-alt' className='text-ctp-lavender'
             link="https://discord.com/users/577743466940071949"/>
-          <ContactLink text='@mae@wetdry.world' icon='bxl-mastodon' className='text-ctp-lavender'
-            link="https://wetdry.world/@mae"/>
           <ContactLink text='mae @ (this domain)' icon='bxs-envelope' className='text-ctp-lavender'
-            link="mailto:mae@mae.wtf"/>
+            link=""/>
         </div>
 
         <div className='flex flex-col'>
           <h3 className='font-semibold'>less likely to answer</h3>
           <ContactLink text='@mae:matrix.mae.wtf' icon='bxs-chat' className='text-ctp-pink'
             link=""/>
-          <ContactLink text='@vimaexd' icon='bxl-twitter' className='text-ctp-pink'
-            link="https://twitter.com/@vimaexd"/>
-          <ContactLink text='@etstringy' icon='bxl-tiktok' className='text-ctp-pink'
-            link="https://tiktok.com/@etstringy"/>
+          <ContactLink text='@mae@wetdry.world' icon='bxl-mastodon' className='text-ctp-pink'
+            link="https://wetdry.world/@mae"/>
           <ContactLink text='@mae@f.mae.wtf' icon='bxl-mastodon' className='text-ctp-pink'
             link="https://f.mae.wtf/@mae"/>
-          <ContactLink text='mae' icon='bxl-steam' className='text-ctp-pink'
-            link="https://steamcommunity.com/id/etstringy/"/>
-        </div>
-
-        <div className='flex flex-col'>
-          <h3 className='font-semibold'>everything else</h3>
-          <ContactLink text='/u/etstringy' icon='bxl-reddit' className='text-ctp-rosewater'
-            link="https://reddit.com/u/etstringy"/>
-          <ContactLink text='lastfm - etstringy' icon='' className='text-ctp-rosewater'
-            link="https://www.last.fm/user/etstringy"/>
+          <ContactLink text='@vimaexd' icon='bxl-twitter' className='text-ctp-pink opacity-65'
+            link="https://twitter.com/@vimaexd"/>
         </div>
 
       </div>
