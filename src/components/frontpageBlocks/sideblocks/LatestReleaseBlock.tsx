@@ -8,7 +8,7 @@ export default function latest_release() {
   let latest = Releases.releases[0]
   return (
     <Link href={`/music/release/${latest.slug}`} className='text-white'>
-      <div className='w-full bg-str-bleck-200 rounded-lg bg-center bg-cover' style={{
+      <div className='w-full bg-neutral-800 rounded-lg bg-center bg-cover' style={{
         backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 100%), url(${latest.album_art})`
       }}>
         <div className='w-full h-full p-4 backdrop-blur-xl rounded-lg space-y-2'>

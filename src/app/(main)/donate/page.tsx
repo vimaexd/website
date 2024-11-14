@@ -71,26 +71,6 @@ export default async function Donate() {
         </div>
       </div>
 
-      {/* <div className='flex gap-8'>
-        <div className='w-full rounded-lg bg-str-bleck'>
-          <div className='w-full h-full p-6 backdrop-blur-xl rounded-lg flex flex-row justify-start gap-4'>
-            <div className='flex flex-col'>
-              <h2 className='text-4xl font-bold tracking-tight'>Twitch</h2>
-              <p className='w-2/3'>
-                It's not the best option due to Twitch requiring a $50 minimum before payout and taking a cut, but you can either donate bits or subscribe to me on Twitch.
-              </p>
-              <div className='mt-8 flex-grow-0'>
-                <Link href='https://twitch.tv/etstringy'>
-                  <p className='text-sm flex items-center gap-1 text-white'>
-                    Donate on Twitch <i className='bx bx-link-external'></i>
-                  </p>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <h2 className='font-bold text-4xl'>Supporters</h2>
       <p>
         thank you so much to the people below for supporting me 😄<br/>
