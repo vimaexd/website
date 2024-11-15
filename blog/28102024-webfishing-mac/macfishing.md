@@ -63,7 +63,9 @@ right click on the file and click "Show package contents". this will take you in
 go to your WEBFISHING steam files
 
 **UPDATE 12/11/2024:**
-As of a recent update, the webfishing.pck file has been removed. You can work around this by renaming the webfishing.exe to webfishing.pck - trust me it works somehow
+as of a recent update, **the webfishing.pck file has been removed**. you can work around this by renaming the webfishing.exe to webfishing.pck - trust me it works somehow. 
+if you get an error later about "Couldn't load project data", make sure you've renamed the exe file properly (right click > Get Info).
+additionally, **the steam_appid.txt file was removed**. just make your own textfile containing `3146520`
 
 1. copy the `webfishing.pck` file. put it inside `Contents/Resources` in the app package.
 2. copy the `steam_appid.txt` file to `Contents/MacOS` in the app package.
