@@ -13,9 +13,30 @@
             "genre": "indie rock pop",
             "length": "3:12",
             "artists": ["vimae"]
+        },
+        {
+            "id": "cmdgirl",
+            "name": "cmdgirl",
+            "genre": "indie rock pop",
+            "length": "1:07",
+            "artists": ["vimae"]
         }
     ],
     "releases": [
+        {
+            "slug": "cmdgirl",
+            "title": "cmdgirl",
+            "type": "Single",
+            "year": 2025,
+            "release_date": "03/02/2025",
+            "tracks": ["track:cmdgirl"],
+            "links": {
+                "soundcloud": "https://soundcloud.com/vimae/cmdgirl-form-any-round-2"
+            },
+            "is_free": true,
+            "artist_comment": "originally made for FORM any%: Level 2, a competition where all songs must be 50-70 seconds long",
+            "album_art": "/assets/music/covers/cmdgirl.png"
+        },
         {
             "slug": "personalspace",
             "title": "personal space",
