@@ -136,6 +136,7 @@ export default function Home() {
                     <WebBadge href="https://ioletsgo.gay" src="/assets/buttons/friends/ivory.gif" alt="ioletsgo"></WebBadge>
                     <WebBadge href="https://idkimjustadog.neocities.org" src="/assets/buttons/friends/ellie.png" alt="ellie"></WebBadge>
                     <WebBadge href="https://ixnoah.live" src="/assets/buttons/friends/noah.gif" alt="ixnoah"></WebBadge>
+                    <WebBadge href="https://disphing.com" src="/assets/buttons/friends/disphing.gif" alt="disphing" />
 
                     <WebBadge href="https://wetdry.world" src="/assets/buttons/misc/wdw.gif" alt="Wet-Dry World"></WebBadge>
                     <WebBadge href="https://eightyeightthirty.one" src="/assets/buttons/misc/eightyeight.png" alt="8831"></WebBadge>
