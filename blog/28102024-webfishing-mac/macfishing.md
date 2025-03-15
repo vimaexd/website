@@ -2,6 +2,11 @@
 
 as of writing, WEBFISHING is a super cool game but it only has a build for windows. shame! if only there was a complicated guide to making it work natively on macOS without virtualisation
 
+## ⚠️ UPDATE 15-03-2025 (i can't join lobbies!) ⚠️
+recent game updates have caused **lobbies to break**, meaning this guide may produce a game client which **cannot join game lobbies**.
+
+you can try to use [**webfishing-macos-installer**](https://github.com/Estyms/webfishing-macos-installer) by [Estyms](https://github.com/Estyms/webfishing-macos-installer), which will patch the issue with the game, and may fix the bug for you. the program automates the steps of this guides and provides additional patches and modding capabilities.
+
 ---
 
 ## step 1 - install steam for mac
