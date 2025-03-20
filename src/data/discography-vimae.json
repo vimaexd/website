@@ -20,9 +20,47 @@
             "genre": "indie rock pop",
             "length": "1:07",
             "artists": ["vimae"]
+        },
+        {
+            "id": "putp",
+            "name": "PICKUPTHEPHONE",
+            "genre": "Electronic",
+            "length": "3:07",
+            "artists": ["vimae"]
+        },
+        {
+            "id": "ffft",
+            "name": "fck440",
+            "genre": "Electronic",
+            "length": "3:57",
+            "artists": ["vimae"]
+        },
+        {
+            "id": "iew",
+            "name": "ily every way",
+            "genre": "Electronic",
+            "length": "3:04",
+            "artists": ["vimae"]
         }
     ],
     "releases": [
+        {
+            "slug": "watercolor",
+            "title": "watercolor",
+            "type": "Album",
+            "year": 2025,
+            "release_date": "21/03/2025",
+            "tracks": ["track:putp", "track:chase", "track:ffft", "track:iew"],
+            "links": {
+                "bandcamp": "https://vimae.bandcamp.com/track/chase",
+                "spotify": "https://open.spotify.com/album/6zSVV2NTGUV0qQzLSD7but",
+                "soundcloud": "https://soundcloud.com/vimae/sets/watercolor",
+                "youtube": "https://www.youtube.com/watch?v=qMFZ7jwpFgs",
+                "applemusic": "https://geo.music.apple.com/album/1798734940"
+            },
+            "artist_comment": "",
+            "album_art": "/assets/music/covers/watercolor.png"
+        },
         {
             "slug": "cmdgirl",
             "title": "cmdgirl",
