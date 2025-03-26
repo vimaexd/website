@@ -20,7 +20,7 @@ const _bc = axios.create({
 const bc = setupCache(_bc as any);
 
 export async function GET() {
-    const albumKeys: string[] = [];
+    let albumKeys: string[] = [];
 
     const stringyBand = await bc.get(
         `/mobile/25/band_details?band_id=${bandcampBandIdStringy}`
@@ -30,14 +30,14 @@ export async function GET() {
         `/mobile/25/band_details?band_id=${bandcampBandIdVimae}`
     );
 
-    albumKeys.concat(stringyBand.data.discography.map(
+    albumKeys = albumKeys.concat(stringyBand.data.discography.map(
         (item: any) => item.item_type[0] + item.item_id
     ))
 
-    albumKeys.concat(vimaeBand.data.discography.map(
+    albumKeys = albumKeys.concat(vimaeBand.data.discography.map(
         (item: any) => item.item_type[0] + item.item_id
     ))
-
+    
     const collectedBy = await bc.post(
         `/mobile/25/collected_by`,
         JSON.stringify({
