@@ -41,9 +41,7 @@ export async function GET() {
     const collectedBy = await bc.post(
         `/mobile/25/collected_by`,
         JSON.stringify({
-            tralbum_keys: stringyBand.data.discography.map(
-                (item: any) => item.item_type[0] + item.item_id
-            ),
+            tralbum_keys: albumKeys
         })
     );
 
