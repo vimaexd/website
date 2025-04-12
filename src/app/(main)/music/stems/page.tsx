@@ -15,7 +15,12 @@ export default function page() {
       <PageHeader title='🎛️ stems'>
         publicly released multitrack stems for some of my songs
       </PageHeader>
-      <p>none yet! check back soon :3</p>
+
+      <div className='flex flex-col gap-2'>
+        <Link href="https://drive.google.com/drive/folders/198X_ZzJQv7VeguTzRgJ6RJy8z9fihQr8?usp=sharing">
+            watercolor stems
+        </Link>
+      </div>
 
       <details>
         <summary>older stuff</summary>

@@ -12,6 +12,11 @@ const nextConfig = {
         source: "/socials",
         destination: "/contact",
         permanent: true
+      },
+      {
+        source: "/watercolor-stems",
+        destination: "https://drive.google.com/drive/folders/198X_ZzJQv7VeguTzRgJ6RJy8z9fihQr8?usp=sharing",
+        permanent: true
       }
     ]
   },
