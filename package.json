@@ -29,6 +29,7 @@
   "dependencies": {
     "@catppuccin/palette": "^1.7.1",
     "@catppuccin/tailwindcss": "^0.1.6",
+    "@sveltejs/adapter-node": "^5.2.12",
     "@tailwindcss/typography": "^0.5.16",
     "@types/howler": "^2.2.12",
     "anime": "^0.1.2",
