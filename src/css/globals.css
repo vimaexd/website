@@ -1,123 +1,118 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import './vi.css';
 
-:root {
-    font-variation-settings: "opsz" 25;
-    font-synthesis: none; /* fix font in safari */
+@theme {
+	--font-sans: 'InterDisplay', 'Inter', sans-serif;
+
+	--shadow-mae: 0px 2px 32px 8px rgba(133, 72, 245, 0.1);
+
+	--bg-throne-gradient: linear-gradient(
+		51.17deg,
+		#4ca6ff 8.14%,
+		#4d4dff 27.76%,
+		#990aff 42.97%,
+		#d21eb4 53.68%,
+		#ffc400 78.99%
+	);
 }
 
-.bg-throne-gradient {
-    background: linear-gradient(
-        51.17deg,
-        #4ca6ff 8.14%,
-        #4d4dff 27.76%,
-        #990aff 42.97%,
-        #d21eb4 53.68%,
-        #ffc400 78.99%
-    );
+:root {
+	font-variation-settings: 'opsz' 25;
+	font-synthesis: none; /* fix font in safari */
 }
 
 .bg-pattern {
 }
 
 @keyframes tooltip-anim {
-    0% {
-        transparency: 0%;
-        transform: translateY(10px) scale(0.5);
-    }
+	0% {
+		transparency: 0%;
+		transform: translateY(10px) scale(0.5);
+	}
 
-    50% {
-        transparency: 75%;
-    }
+	50% {
+		transparency: 75%;
+	}
 
-    100% {
-        transparency: 100%;
-        transform: translateY(0px) scale(1);
-    }
+	100% {
+		transparency: 100%;
+		transform: translateY(0px) scale(1);
+	}
 }
 
 .react-tooltip {
-    animation: tooltip-anim 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transition: none;
-    border-radius: 6px !important;
-    padding: 8px 16px !important;
+	animation: tooltip-anim 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+	transition: none;
+	border-radius: 6px !important;
+	padding: 8px 16px !important;
 }
 
 table {
-    @apply rounded-lg overflow-hidden shadow-lg;
+	@apply rounded-lg overflow-hidden shadow-lg;
 }
 
 th {
-    @apply bg-[#00000080] font-medium text-lg text-left;
+	@apply bg-[#00000080] font-medium text-lg text-left;
 }
 
 tbody tr {
-    @apply bg-[#ffffff20] text-sm;
+	@apply bg-[#ffffff20] text-sm;
 }
 
 tbody tr:nth-child(odd) {
-    @apply bg-[#ffffff30];
+	@apply bg-[#ffffff30];
 }
 
 th,
 td {
-    @apply px-4 py-2;
+	@apply px-4 py-2;
 }
 
-hr {
-    border-top: 2px solid #bbb;
-}
+@layer base {
+	a {
+		@apply text-vi-300;
+	}
 
-a {
-    @apply text-ctp-mauve;
+	hr {
+		border-top: 2px solid #bbb;
+	}
 }
 
 /* misc */
 .bg-hazardtape {
-    background-image: repeating-linear-gradient(
-        -55deg,
-        #000,
-        #000 20px,
-        #ffb101 20px,
-        #ffb101 40px
-    );
+	background-image: repeating-linear-gradient(-55deg, #000, #000 20px, #ffb101 20px, #ffb101 40px);
 }
 
 /* oops */
 .mae-tool-img-flstudio {
-    filter: brightness(0%) invert(1) drop-shadow(0px 2px 16px #ff8500);
+	filter: brightness(0%) invert(1) drop-shadow(0px 2px 16px #ff8500);
 }
 
 .shadow-beeg {
-    text-shadow: #000 0px 0px 16px;
+	text-shadow: #000 0px 0px 16px;
 }
 
 .progressive-dim::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.6) 0%,
-        rgba(0, 0, 0, 0.2) 100%
-    );
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .progressive-blur:after {
-    content: "";
-    position: absolute;
-    inset: 0%;
-    backdrop-filter: blur(50px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    width: 100%;
-    border-radius: 0.25rem;
-    -webkit-mask: linear-gradient(180deg, transparent, #000000fc 50%);
+	content: '';
+	position: absolute;
+	inset: 0%;
+	backdrop-filter: blur(50px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	width: 100%;
+	border-radius: 0.25rem;
+	-webkit-mask: linear-gradient(180deg, transparent, #000000fc 50%);
 }
 
 .backface-hidden {
-    backface-visibility: hidden;
+	backface-visibility: hidden;
 }

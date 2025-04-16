@@ -1,6 +1,17 @@
 # ✨ mae.wtf
 
-my personal website - built with **next.js** and **tailwindcss**
+my personal website - built with **sveltekit**
+
+## Development
+```bash
+bun run dev
+```
+
+## Production
+```bash
+bun run build
+bun run start
+```
 
 ## Contributing 
 if you have any feedback about my website, feel free to open a github issue or [contact me!](https://mae.wtf/contact)
@@ -14,18 +25,6 @@ it's called a *fake* ad for a reason!
 - if you're going to advertise yourself, be funny about
 it. unfunny and serious submissions will be rejected
 
-## Development
-```bash
-npm run dev
-# or
-bun run dev
-```
-
-## Production
-```bash
-npm run build
-npm run start
-```
 
 ## Credits
 - Logos provided by their relevant companies and people

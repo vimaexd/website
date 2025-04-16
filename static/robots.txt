@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mae.wtf
+
+# Sitemaps
+Sitemap: https://mae.wtf/sitemap.xml

@@ -1,27 +1,17 @@
-import { atom } from "recoil";
-import { localStorageEffect } from "./effects/localStorageEffect";
+import { persisted } from 'svelte-persisted-store';
 
 export enum DiscographyView {
-  GRIDLIST = 0,
-  ROW = 1
+	GRIDLIST = 0,
+	ROW = 1
 }
 
 export enum DiscographyGroup {
-  NONE = "none",
-  YEAR = "year",
-  TYPE = "type"
+	NONE = 'none',
+	YEAR = 'year',
+	TYPE = 'type'
 }
 
-export const discography = atom<{
-  group: DiscographyGroup;
-  view: DiscographyView;
-}>({
-  key: "@mae/discography",
-  default: {
-    group: DiscographyGroup.YEAR,
-    view: DiscographyView.GRIDLIST
-  },
-  effects: [
-    localStorageEffect('mae.music.discography')
-  ]
-})
+export let discogSettings = persisted('mae.music.discography', {
+	group: DiscographyGroup.YEAR,
+	view: DiscographyView.GRIDLIST
+});

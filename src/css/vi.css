@@ -1,0 +1,13 @@
+@theme {
+	--color-vi-950: #121118;
+	--color-vi-900: #201d29;
+	--color-vi-800: #312937;
+	--color-vi-700: #433b4d;
+	--color-vi-600: #5d4869;
+	--color-vi-500: #7c6b9f;
+	--color-vi-400: #9c7fcb; /* accent */
+	--color-vi-300: #cba8f0;
+	--color-vi-200: #e0cbf6;
+	--color-vi-100: #e0cbf6;
+	--color-vi-50: #f5eefc; /* text */
+}

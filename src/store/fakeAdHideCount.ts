@@ -1,6 +1,3 @@
-import { atom } from "recoil";
+import { writable } from 'svelte/store';
 
-export const fakeAdHideCountState = atom({
-  key: "@mae/fakeAdHideCount",
-  default: 0
-})
+export let fakeAdHideCount = writable(0);
