@@ -93,7 +93,7 @@
 
 			// windows
 			case potentialPlatformNames.includes('Windows NT 10.0'):
-				uaPlatform = 'Windows 10';
+				uaPlatform = 'Windows 10/11';
 				break;
 
 			case potentialPlatformNames.includes('Windows NT 6.3'):
