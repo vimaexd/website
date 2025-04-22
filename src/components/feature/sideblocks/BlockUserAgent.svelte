@@ -58,6 +58,7 @@
 				break;
 
 			case potentialPlatformNames.includes('PlayStation 5'):
+			case potentialPlatformNames.includes('PlayStation 4'):
 				uaPlatform = 'a PlayStation';
 				uaFlavourText = 'xbox better';
 				break;
