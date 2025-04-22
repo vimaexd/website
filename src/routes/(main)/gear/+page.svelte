@@ -1,6 +1,10 @@
 <script>
 	import PageContainer from '@mae/components/core/PageContainer.svelte';
 	import PageHeader from '@mae/components/core/PageHeader.svelte';
+
+	import ImgStargazer from '@mae/assets/img/computers/stargazer.jpg';
+	import ImgNebula from '@mae/assets/img/computers/nebula.png';
+	import ImgAurora from '@mae/assets/img/computers/aurora.png';
 </script>
 
 <PageContainer>
@@ -56,7 +60,7 @@
 
 		<div class="relative">
 			<img
-				src="/assets/computers/stargazer.jpg"
+				src={ImgStargazer}
 				alt="A computer tower with lights"
 				class="object-cover rounded-lg shadow-mae"
 			/>
@@ -90,7 +94,7 @@
 
 		<div class="relative">
 			<img
-				src="/assets/computers/nebula.png"
+				src={ImgNebula}
 				alt="A MacBook with the text 'i am nebula and i am hiding all the secrets' displayed in a TextEdit window"
 				class="object-cover rounded-lg shadow-mae"
 			/>
@@ -128,42 +132,8 @@
 
 		<div class="relative">
 			<img
-				src="/assets/computers/aurora.png"
+				src={ImgAurora}
 				alt="The internals of a tower computer on the floor"
-				class="object-cover rounded-lg shadow-mae"
-			/>
-		</div>
-	</div>
-
-	<!-- {/* orbit */} -->
-	<div class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 min-h-64">
-		<div class="space-y-2">
-			<h3 class="font-semibold text-4xl">🪐 orbit</h3>
-
-			<i>an old laptop i use as a really really basic server</i>
-			<ul class="list-inside">
-				<li>
-					<i class="bx bx-laptop"></i> Acer Aspire 5735
-				</li>
-
-				<li>
-					<i class="bx bx-chip"></i> Intel Pentium Dual T3400
-				</li>
-
-				<li>
-					<i class="bx bx-microchip"></i> 4GB RAM
-				</li>
-
-				<li>
-					<i class="bx bx-disc"></i> Ubuntu
-				</li>
-			</ul>
-		</div>
-
-		<div class="relative">
-			<img
-				src="/assets/computers/orbit.png"
-				alt="A laptop computer displaying the text '10 years without a wireguard connection, think about what that does to a computer'"
 				class="object-cover rounded-lg shadow-mae"
 			/>
 		</div>

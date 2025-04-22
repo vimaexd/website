@@ -3,6 +3,8 @@
 	import Chip from '@mae/components/ui/Chip.svelte';
 	import { onMount } from 'svelte';
 
+	import ImgMaeWave from '@mae/assets/img/maewave.png';
+
 	onMount(() => {
 		let spring = createSpring({ mass: 1, stiffness: 80, damping: 10, velocity: 0 });
 		waapi.animate('[data-anim="initslide"]', {
@@ -47,7 +49,7 @@
 	</div>
 	<h1 class="text-6xl font-bold tracking-tight text-center z-10" data-anim="goober">
 		<span class="inline-block mr-4">
-			<img src="/assets/maewave.png" width={52} height={52} alt={"A drawing of Mae's OC waving"} />
+			<img src={ImgMaeWave} width={52} height={52} alt={"A drawing of Mae's OC waving"} />
 		</span>
 		hiii! i'm vimae
 	</h1>

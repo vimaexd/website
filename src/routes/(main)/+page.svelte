@@ -6,6 +6,9 @@
 	import ToolBoxicon from '@mae/components/misc/ToolBoxicon.svelte';
 	import WebBadge from '@mae/components/misc/WebBadge.svelte';
 	import Introduction from '@mae/components/brand/Introduction.svelte';
+
+	import ImgMoonPixel from '@mae/assets/img/moon16by9_origres.png';
+	import ImgAbletonScreenshot from '@mae/assets/img/ableton_screenshot.png';
 </script>
 
 <div class="flex flex-row justify-center gap-2 lg:gap-8 lg:px-8 transition-all bg-pattern">
@@ -22,7 +25,7 @@
 		<div class="flex flex-col md:flex-row gap-8">
 			<div class="block">
 				<img
-					src="/assets/moon16by9_origres.png"
+					src={ImgMoonPixel}
 					width={1000}
 					height={500}
 					class="rounded-sm"
@@ -49,7 +52,7 @@
 		<div class="flex flex-col md:flex-row-reverse gap-8">
 			<div class="block">
 				<img
-					src="/assets/ableton_screenshot.png"
+					src={ImgAbletonScreenshot}
 					width={1280}
 					height={720}
 					class="rounded-sm"
