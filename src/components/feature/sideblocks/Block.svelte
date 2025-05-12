@@ -17,15 +17,19 @@
 </script>
 
 <div
-	class={`${disableBg ? '' : 'bg-vi-800'} w-full rounded-lg min-w-[288px] shadow-[rgba(255,255,255,0.1) ${className}`}
+	class={`${disableBg ? '' : 'bg-vi-800'} w-full rounded-lg min-w-[288px] shadow-[rgba(255,255,255,0.1)] border border-white/25 ${className}`}
 >
-	<div class="flex items-center">
-		<span class="font-normal text-sm px-2 py-1">
-			{title}
-		</span>
-	</div>
+	{#if title}
+		<div class="flex items-center">
+			<span class="font-normal text-sm px-4 py-2">
+				{title}
+			</span>
+		</div>
+	{/if}
+	{#if title && children}
+		<hr class="border-t border-t-vi-300" />
+	{/if}
 	{#if children}
-		<hr class="border-t-2 border-t-vi-300" />
 		<div class={!disablePadding ? 'p-2' : ''}>{@render children()}</div>
 	{/if}
 </div>

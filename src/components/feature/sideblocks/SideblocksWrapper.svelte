@@ -8,7 +8,9 @@
 	class={(shown ? 'min-[670px]:w-72' : '') +
 		' mt-8 min-[670px]:flex-col grid min-[670px]:grid-cols-1 grid-cols-2 max-[624px]:grid-cols-1 min gap-4 w-full'}
 >
-	<div class="flex justify-between items-center bg-vi-800 px-3 py-2 rounded-lg">
+	<div
+		class="flex justify-between items-center bg-vi-800 px-3 py-2 rounded-lg border border-white/25"
+	>
 		<button
 			onclick={() => (shown = !shown)}
 			aria-label="Toggle side blocks"

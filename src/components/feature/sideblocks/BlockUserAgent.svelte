@@ -154,7 +154,7 @@
 	});
 </script>
 
-<Block title="🌐 connection">
+<Block title="🌐 device">
 	{#if ua != ''}
 		<p class="text-sm text-center">
 			you're connected with <b>{uaBrowser}</b> on <b>{uaPlatform}</b>

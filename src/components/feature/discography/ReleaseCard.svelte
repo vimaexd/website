@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { IResolvedRelease } from '@mae/lib/discog/types';
+	import { maeSpring } from '@mae/lib/misc/anim';
 	import { animate, createSpring, stagger, waapi } from 'animejs';
 
 	let el: HTMLElement;
@@ -21,7 +22,7 @@
 			waapi.animate([el.getElementsByTagName('h3')[0], el.getElementsByTagName('p')], {
 				translateX: [-5, 0],
 				duration: 300,
-				ease: createSpring(),
+				ease: maeSpring,
 				delay: stagger(50)
 			});
 		}

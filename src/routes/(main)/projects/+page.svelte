@@ -7,13 +7,18 @@
 	import CardImage from '@mae/components/ui/CardImage.svelte';
 	import { onMount } from 'svelte';
 	import { animate, createSpring, stagger } from 'animejs';
+	import { maeSpring } from '@mae/lib/misc/anim';
 
 	onMount(() => {
 		animate('.anim-projects', {
-			translateY: [20, 0],
 			opacity: [0, 1],
-			duration: 100,
-			ease: createSpring(),
+			ease: 'outExpo',
+			delay: stagger(50)
+		});
+
+		animate('.anim-projects', {
+			translateY: [20, 0],
+			ease: maeSpring,
 			delay: stagger(50)
 		});
 	});

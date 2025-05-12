@@ -5,15 +5,6 @@
 	--font-sans: 'InterDisplay', 'Inter', sans-serif;
 
 	--shadow-mae: 0px 2px 32px 8px rgba(133, 72, 245, 0.1);
-
-	--bg-throne-gradient: linear-gradient(
-		51.17deg,
-		#4ca6ff 8.14%,
-		#4d4dff 27.76%,
-		#990aff 42.97%,
-		#d21eb4 53.68%,
-		#ffc400 78.99%
-	);
 }
 
 :root {
@@ -21,7 +12,15 @@
 	font-synthesis: none; /* fix font in safari */
 }
 
-.bg-pattern {
+.bg-throne-gradient {
+	background: linear-gradient(
+		51.17deg,
+		#4ca6ff 8.14%,
+		#4d4dff 27.76%,
+		#990aff 42.97%,
+		#d21eb4 53.68%,
+		#ffc400 78.99%
+	);
 }
 
 @keyframes tooltip-anim {

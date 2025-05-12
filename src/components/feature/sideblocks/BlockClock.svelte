@@ -5,7 +5,7 @@
 
 	let time = $state(dayjs().format('HH:mm:ss'));
 	onMount(() => {
-		setTimeout(() => {
+		setInterval(() => {
 			time = dayjs().format('HH:mm:ss');
 		}, 1000);
 	});

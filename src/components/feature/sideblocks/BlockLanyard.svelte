@@ -38,11 +38,17 @@
 
 	{#if $data.spotify}
 		<Block title="🎧 now playing">
-			<div class="flex flex-row gap-2">
+			<div class="flex flex-row gap-4 px-2 py-2">
 				{#if $data.spotify.album_art_url}
-					<img src={$data.spotify.album_art_url} alt="Album art" width={48} height={48} class="" />
+					<img
+						src={$data.spotify.album_art_url}
+						alt="Album art"
+						width={48}
+						height={48}
+						class="rounded-md shrink-0 h-12 w-12 shadow-md shadow-vi-950/15"
+					/>
 				{/if}
-				<div class="flex flex-col justify-center">
+				<div class="flex flex-col justify-center shrink">
 					<a
 						href={`https://open.spotify.com/track/${$data.spotify.track_id}`}
 						class="text-white hover:underline"

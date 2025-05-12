@@ -4,6 +4,7 @@
 	import LogoText from '@mae/components/brand/LogoText.svelte';
 	import { version, dev } from '$app/environment';
 	import { debounce } from '$lib/misc/utils';
+	import { maeSpring } from '@mae/lib/misc/anim';
 
 	// TODO MAKE STARS
 
@@ -82,7 +83,7 @@
 					onpointerdown={() => {
 						animate('.anim-navbar-hamburger', {
 							rotateZ: [0, 180],
-							ease: createSpring()
+							ease: maeSpring
 						});
 						menuVisible = !menuVisible;
 					}}
@@ -105,3 +106,4 @@
 		</div>
 	</div>
 </nav>
+<div class="bg-gradient-to-r from-vi-400 to-vi-300 z-10 h-0.5 sticky"></div>

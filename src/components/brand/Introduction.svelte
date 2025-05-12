@@ -6,7 +6,6 @@
 	import ImgMaeWave from '@mae/assets/img/maewave.png';
 
 	onMount(() => {
-		let spring = createSpring({ mass: 1, stiffness: 80, damping: 10, velocity: 0 });
 		waapi.animate('[data-anim="initslide"]', {
 			opacity: [0, 1],
 			duration: 1000,

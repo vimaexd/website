@@ -7,10 +7,11 @@
 	import { groupReleasesByKey } from '@mae/lib/discog/utils';
 	import type { IDiscography } from '@mae/lib/discog/types';
 	import ReleaseCard from '@mae/components/feature/discography/ReleaseCard.svelte';
+	import ReleaseRow from '@mae/components/feature/discography/ReleaseRow.svelte';
 
 	const releases = (discog as IDiscography).releases;
 
-	const getGroupings = () => {
+	const groupings = $derived.by(() => {
 		switch ($discogSettings.group) {
 			case DiscographyGroup.YEAR:
 				return groupReleasesByKey(releases, 'year');
@@ -41,7 +42,7 @@
 					All: releases
 				};
 		}
-	};
+	});
 </script>
 
 <PageContainer>
@@ -68,19 +69,22 @@
 			</div>
 			<div class="flex gap-2">
 				<button
-					class="bg-vi-800 p-2 rounded-lg flex items-center justify-center h-fit"
-					onclick={() =>
+					class="bg-vi-800 p-2 rounded-lg flex items-center justify-center h-fit border border-white/15 cursor-pointer"
+					onclick={() => {
 						discogSettings.set({
 							...$discogSettings,
 							view: DiscographyView.GRIDLIST
-						})}
+						});
+					}}
 					aria-label="Change discography view to grid"
 				>
 					<i class="bx bxs-grid-alt bx-sm"></i>
 				</button>
 				<button
-					class="bg-vi-800 p-2 rounded-lg flex items-center justify-center h-fit"
-					onclick={() => discogSettings.set({ ...$discogSettings, view: DiscographyView.ROW })}
+					class="bg-vi-800 p-2 rounded-lg flex items-center justify-center h-fit border border-white/15 cursor-pointer"
+					onclick={() => {
+						discogSettings.set({ ...$discogSettings, view: DiscographyView.ROW });
+					}}
 					aria-label="Change discography view to row"
 				>
 					<i class="bx bxs-objects-horizontal-left bx-sm"></i>
@@ -88,15 +92,15 @@
 			</div>
 		</div>
 	</div>
-	{#each Object.keys(getGroupings()).reverse() as groupTitle}
-		<div class="">
+	{#each Object.keys(groupings).reverse() as groupTitle}
+		<div>
 			<h2 class="text-2xl font-bold mb-2">{groupTitle}</h2>
-			<div class="flex gap-4 flex-wrap p-4 bg-vi-900 rounded-lg">
-				{#each getGroupings()[groupTitle] as release}
+			<div class="flex gap-4 flex-wrap p-4 bg-vi-900 rounded-lg border border-white/15">
+				{#each groupings[groupTitle] as release}
 					{#if $discogSettings.view == DiscographyView.GRIDLIST}
 						<ReleaseCard {release} />
 					{:else if $discogSettings.view == DiscographyView.ROW}
-						<!-- <ReleaseRow {release} /> -->
+						<ReleaseRow {release} />
 					{/if}
 				{/each}
 			</div>
