@@ -27,6 +27,7 @@
 				break;
 
 			case ua.includes('Chrome'):
+			case ua.includes('CriOS'):
 				uaBrowser = 'Chrome';
 				break;
 
@@ -121,7 +122,7 @@
 
 			// android
 			case potentialPlatformNames.find((n) => n.includes('Android')) != undefined:
-				uaPlatform = potentialPlatformNames.find((n) => n.includes('Android')) as string;
+				uaPlatform = 'Android';
 				break;
 
 			// linux
