@@ -41,9 +41,29 @@
             "genre": "Electronic",
             "length": "3:04",
             "artists": ["vimae"]
+        },
+        {
+            "id": "backhome",
+            "name": "back home",
+            "genre": "Electronic",
+            "length": "2:56",
+            "artists": ["vimae"]
         }
     ],
     "releases": [
+        {
+            "slug": "backhome",
+            "title": "back home",
+            "type": "Single",
+            "year": 2025,
+            "release_date": "19/08/2025",
+            "tracks": ["track:backhome"],
+            "links": {
+                "soundcloud": "https://soundcloud.com/vimae/back-home"
+            },
+            "artist_comment": "originally made for FORM All Nighter Vol. 10",
+            "album_art": "/assets/music/covers/backhome.png"
+        },
         {
             "slug": "watercolor",
             "title": "watercolor",
