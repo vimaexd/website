@@ -23,7 +23,7 @@ export async function generateMetadata(
 
   return {
     title: `${release.title} - ${release.type}`,
-    description: `${release.tracks.length} tracks • ${release.year}`,
+    description: `${release.tracks.length} track${(release.tracks.length > 1) ? "s" : ""} • ${release.year}`,
     openGraph: {
       images: [release.album_art],
     },

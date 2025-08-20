@@ -34,7 +34,7 @@ export default function Release({release}: {release: IResolvedRelease}) {
             </Suspense>
             <div className='flex flex-col justify-end'>
               <h1 className='lg:text-7xl text-4xl font-bold'>{release.title}</h1>
-              <h2 className='align-baseline'>{release.type} • {release.tracks.length} tracks • {release.year}</h2>
+              <h2 className='align-baseline'>{release.type} • {release.tracks.length} track{(release.tracks.length > 1) && "s"} • {release.year}</h2>
             </div>
           </div>
           <div className='flex lg:flex-row flex-col gap-2 mt-8'>
