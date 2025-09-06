@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import Button from '@mae/components/Button';
 import Image from 'next/image';
 import _ from 'lodash';
+import VimaeLogo from '@mae/assets/icons/logo-vimae';
 import { usePathname } from 'next/navigation';
 import { useRecoilState } from 'recoil';
 import { transparentNavbar } from '@mae/store/transparentNavbar';
@@ -112,7 +113,7 @@ export default function Navbar({version}: {version: string}) {
 function LogoText() {
   return (
     <Link href='/' className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">
-      mae
+      <VimaeLogo width="128px" height="fit" className="pb-2"/>
     </Link>
   )
 }
