@@ -140,7 +140,7 @@ anti-cheat can be hit or miss to run, due to some games forcibly
 disabling linux support even when technically possible. notably as of writing, **Fortnite** 
 lacks linux support in its implementation of Easy Anti-Cheat. this means the only ways
 for me to play Fortnite are to buy a second gpu and make a 
-Windows virtual machine with gpu passthrough, or use cloud gaming servies.
+Windows virtual machine with gpu passthrough, or use cloud gaming servers.
 
 *more about linux anti-cheat at [Are We Anti-Cheat Yet](https://areweanticheatyet.com/)!*
 
