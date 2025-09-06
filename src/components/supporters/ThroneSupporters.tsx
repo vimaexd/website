@@ -52,7 +52,9 @@ export default function BandcampSupporters() {
     </div>
   )
 
-  getThroneGifters();
+  if (typeof window != "undefined") {
+    getThroneGifters();
+  }
 
   if(!fetched) return (
     <div className='flex gap-2 items-center'>

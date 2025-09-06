@@ -37,7 +37,9 @@ export default function BandcampSupporters() {
     </div>
   )
 
-  askBandcampVeryNicely();
+  if (typeof window != "undefined") {
+    askBandcampVeryNicely();
+  }
 
   if(!fetched) return (
     <div className='flex gap-2 items-center'>

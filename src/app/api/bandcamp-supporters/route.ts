@@ -13,10 +13,16 @@ const _bc = axios.create({
     headers: {
         // im totally a phone bandcamp please believe me please
         // i swear im a phone
-        "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 13; Phone Build/1)",
-        "X-Requested-With": "com.bandcamp.android",
+        "Accept": "application/json",
+        "User-Agent": "vimae/1.0.0 (https://mae.wtf)",
+
+        // at some point, requests with this started returning 403
+        // removing it seems to work for now
+        
+        // "X-Requested-With": "com.bandcamp.android",
     },
 });
+
 const bc = setupCache(_bc as any);
 
 export async function GET() {

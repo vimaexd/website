@@ -36,7 +36,9 @@ export default function BandcampSupporters() {
     </div>
   )
 
-  getDiscordUsers();
+  if (typeof window != "undefined") {
+    getDiscordUsers();
+  }
 
   if(!fetched) return (
     <div className='flex gap-2 items-center'>
