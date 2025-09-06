@@ -17,7 +17,7 @@ export default function latest_release() {
             <Image src={latest.album_art} width={64} height={64} alt={'Cover art'} quality={100} className='w-fit h-fit rounded-lg'></Image>
             <div className='flex flex-col justify-center'>
               <h3 className='text-2xl font-bold tracking-tight align-bottom -mt-2'>{latest.title}</h3>
-              <p className='text-xs'>{latest.tracks.length} track{(release.tracks.length > 1) && "s"} • {latest.year}</p>
+              <p className='text-xs'>{latest.tracks.length} track{(latest.tracks.length > 1) && "s"} • {latest.year}</p>
               {/* <div className='mt-auto flex-grow-0'>
                 <ChipButton href="/" text='Listen'/>
               </div> */}
