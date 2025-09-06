@@ -12,7 +12,7 @@ const _throne = axios.create({
 })
 const throne = setupCache(_throne as any);
 
-export async function GET() {
+export async function POST() {
   const res = await throne.get(`/api-order/v1/order/public/received/wishlist/${throneUserId}`)
   const boughtGifts = res.data;
   return NextResponse.json({

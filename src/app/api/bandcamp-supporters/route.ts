@@ -18,14 +18,14 @@ const _bc = axios.create({
 
         // at some point, requests with this started returning 403
         // removing it seems to work for now
-        
+
         // "X-Requested-With": "com.bandcamp.android",
     },
 });
 
 const bc = setupCache(_bc as any);
 
-export async function GET() {
+export async function POST() {
     let albumKeys: string[] = [];
 
     const stringyBand = await bc.get(

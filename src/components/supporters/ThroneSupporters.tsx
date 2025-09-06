@@ -28,7 +28,7 @@ export default function BandcampSupporters() {
   const getThroneGifters = async () => {
     if(fetched || fetching) return;
     setFetching(true);
-    axios.get('/api/throne-supporters')
+    axios.post('/api/throne-supporters')
       .then((bc) => {
         console.log(bc.data)
         setSupporters(bc.data.list);

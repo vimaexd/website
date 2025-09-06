@@ -12,7 +12,7 @@ const _dc = axios.create({
 })
 const dc = setupCache(_dc as any);
 
-export async function GET() {
+export async function POST() {
   const members = await dc.get(`/guilds/${process.env.DISCORD_GUILDID}/members?limit=1000`)
   const boosters = members.data.filter((member: any) => member.premium_since != null)
   return NextResponse.json({

@@ -1,6 +1,8 @@
 'use client'
+export const dynamic = "force-dynamic";
+
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const bandcampImageEndpoint = "https://f4.bcbits.com/img/"
@@ -14,7 +16,7 @@ export default function BandcampSupporters() {
   const askBandcampVeryNicely = async () => {
     if(fetched || fetching) return;
     setFetching(true);
-    axios.get('/api/bandcamp-supporters')
+    axios.post('/api/bandcamp-supporters')
       .then((bc) => {
         console.log(bc.data)
         setSupporters(bc.data.list);
@@ -37,9 +39,9 @@ export default function BandcampSupporters() {
     </div>
   )
 
-  if (typeof window != "undefined") {
+  useEffect(() => {
     askBandcampVeryNicely();
-  }
+  }, []);
 
   if(!fetched) return (
     <div className='flex gap-2 items-center'>
