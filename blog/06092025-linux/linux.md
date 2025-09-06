@@ -137,8 +137,8 @@ to work and can be prone to crashing.
 game compatibility on the whole is great (especially with Proton), but
 i have run into a few game-specific problems. games with restrictive
 anti-cheat can be hit or miss to run, due to some games forcibly 
-disabling linux support even when technically possible. notably as of writing, **Fortnite** has linux support
-explicitly disabled in Easy Anti-Cheat. this means the only ways
+disabling linux support even when technically possible. notably as of writing, **Fortnite** 
+lacks linux support in its implementation of Easy Anti-Cheat. this means the only ways
 for me to play Fortnite are to buy a second gpu and make a 
 Windows virtual machine with gpu passthrough, or use cloud gaming servies.
 
