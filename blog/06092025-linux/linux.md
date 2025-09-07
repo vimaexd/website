@@ -15,7 +15,7 @@ because of just how many games i loved to play
 
 fast forward to today, 2025. i'm 18 and bored. the latest Windows
 11 didn't hit the same as older releases - filled with constant 
-begs for you to use their llm, copilot, [ads for cloud storage](https://www.reddit.com/r/Windows11/comments/1eefr2m/windows_11_now_shows_a_fullscreen_popup_to_use/) 
+begs for you to use their llm (copilot), [ads for cloud storage](https://www.reddit.com/r/Windows11/comments/1eefr2m/windows_11_now_shows_a_fullscreen_popup_to_use/) 
 every update and an absolute *insistance* on logging in with a
 microsoft account, with workarounds required to just make a normal
 user account. it feels like using windows in the modern day
@@ -121,8 +121,8 @@ is having issues due to linux.
 my main issue with linux and why i haven't been able to go full time
 sooner is a lack of professional creative tools. i make music and my
 DAW of choice is Ableton Live. while it is possible to run Live under
-Wine. even if i am able to get a DAW running, on the whole it's a
-fairly janky experience. there is hope for the future however! [Bitwig Studio](https://www.bitwig.com/) (a daw created by former Ableton employees) has native linux support, and there are
+Wine, even if i am able to get a DAW running on the whole it's a
+fairly janky experience. there is hope for the future however- [Bitwig Studio](https://www.bitwig.com/) (a daw created by former Ableton employees) has native linux support, and there are
 tools like [yabridge](https://github.com/robbert-vdh/yabridge) to enable windows VST/CLAP plugins to run under Wine and interface with
 them in a linux host daw seamlessly.
 
