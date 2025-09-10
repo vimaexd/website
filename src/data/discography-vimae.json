@@ -59,6 +59,22 @@
     ],
     "releases": [
         {
+            "slug": "token",
+            "title": "token",
+            "type": "Single",
+            "year": 2025,
+            "release_date": "11/09/2025",
+            "tracks": ["track:token"],
+            "links": {
+                "bandcamp": "https://vimae.bandcamp.com/album/token",
+                "applemusic": "https://music.apple.com/us/song/token/1838322804",
+                "spotify": "https://open.spotify.com/album/3B8pkJEDQSTpcUUaSlkUSu",
+                "soundcloud": "https://soundcloud.com/vimae/token-1"
+            },
+            "artist_comment": "regarding an unforeseen time of unstability;",
+            "album_art": "/assets/music/covers/token.jpg"
+        },
+        {
             "slug": "backhome",
             "title": "back home",
             "type": "Single",
@@ -133,22 +149,6 @@
             },
             "artist_comment": "this is the first song i've really felt that speaks to me, and something meaningful i can release.",
             "album_art": "/assets/music/covers/chase.png"
-        },
-        {
-            "slug": "token",
-            "title": "token",
-            "type": "Single",
-            "year": 2025,
-            "release_date": "11/09/2025",
-            "tracks": ["track:token"],
-            "links": {
-                "bandcamp": "https://vimae.bandcamp.com/album/token",
-                "applemusic": "https://music.apple.com/us/song/token/1838322804",
-                "spotify": "https://open.spotify.com/album/3B8pkJEDQSTpcUUaSlkUSu",
-                "soundcloud": "https://soundcloud.com/vimae/token-1"
-            },
-            "artist_comment": "regarding an unforeseen time of unstability;",
-            "album_art": "/assets/music/covers/token.jpg"
         }
     ]
 }
