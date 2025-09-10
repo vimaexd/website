@@ -138,6 +138,7 @@
             "slug": "token",
             "title": "token",
             "type": "Single",
+            "year": 2025,
             "release_date": "11/09/2025",
             "tracks": ["track:token"],
             "links": {
