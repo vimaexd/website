@@ -45,7 +45,7 @@ export default function Release({release}: {release: IResolvedRelease}) {
                 href={release.links.bandcamp}
                 icon={`bx bx-sm mr-2 ${(release.is_free) ? "bx-down-arrow-alt" : "bx-money"}`}
                 style={ButtonStyle.Unstyled}
-                className='flex justify-center bg-ctp-mauve text-ctp-base hover:bg-purple-500'/>
+                className='flex w-1/6 justify-center bg-ctp-mauve text-ctp-base hover:bg-purple-500'/>
             }
             {
               release.links.applemusic &&
