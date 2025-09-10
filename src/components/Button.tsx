@@ -1,6 +1,5 @@
-// 'use client'
+'use client'
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import {Howl, Howler} from 'howler';
 
@@ -9,10 +8,11 @@ const soundClick = new Howl({
   volume: 0.2
 });
 
-enum ButtonStyle {
+export enum ButtonStyle {
   Unstyled = 0,
   Primary,
-  Active
+  Active,
+  Outline
 }
 
 export default function Button({text, href, className, icon, onClick, style = ButtonStyle.Primary}: 
@@ -25,8 +25,6 @@ export default function Button({text, href, className, icon, onClick, style = Bu
     style?: ButtonStyle;
   }
 ) {
-  const pathname = usePathname();
-
   const playSound = () => {
     if(onClick) onClick();
     soundClick.play()
@@ -43,16 +41,17 @@ export default function Button({text, href, className, icon, onClick, style = Bu
     temp += "select-none transition-all duration-75 ease-out py-1 px-4 rounded-md active:scale-90"
     temp += " " + className
 
-    if(style == ButtonStyle.Unstyled) return;
-
     switch(style) {
       case ButtonStyle.Active:
-        temp += " " + "bg-ctp-mauve text-ctp-crust font-semibold"
+        temp += " " + "flex justify-center bg-ctp-mauve text-ctp-crust font-semibold"
         break;
 
       case ButtonStyle.Primary:
-        temp += " " + " bg-ctp-surface0 hover:bg-ctp-surface1 text-white"
+        temp += " " + "flex justify-center bg-ctp-surface0 hover:bg-ctp-surface1 text-white"
         break;
+
+      case ButtonStyle.Outline:
+        temp += " " + "flex justify-center outline-1 outline-double outline-neutral-400 text-center text-ctp-text hover:bg-white hover:text-black bg-transparent"
     }
 
     setClasses(temp)
@@ -60,11 +59,11 @@ export default function Button({text, href, className, icon, onClick, style = Bu
   }, [className, style])
 
   return (
-    <Link href={href} onClick={playSound} className='inline-flex'>
-      <button className={classes}>
+    <Link href={href} onClick={playSound} className={classes}>
+      {/* <button className={classes}> */}
         {icon && <i className={icon}></i>}
         {text}
-      </button>
+      {/* </button> */}
     </Link>
   )
 }

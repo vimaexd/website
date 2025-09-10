@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { Suspense } from 'react'
 import Image from 'next/image';
 
-import Button from '@mae/components/Button'
+import Button, { ButtonStyle } from '@mae/components/Button'
 import type { IResolvedRelease } from '@mae/misc/discography/types'
 import { useRecoilState } from 'recoil';
 import { transparentNavbar } from '@mae/store/transparentNavbar';
@@ -44,15 +44,8 @@ export default function Release({release}: {release: IResolvedRelease}) {
                 text={(release.is_free ? "Free Download" : "Buy")}
                 href={release.links.bandcamp}
                 icon={`bx bx-sm mr-2 ${(release.is_free) ? "bx-down-arrow-alt" : "bx-money"}`}
-                className='flex lg:w-42 justify-center bg-ctp-mauve hover:bg-purple-500 text-center'/>
-            }
-            {
-              release.links.spotify &&
-                <Button 
-                text="Spotify" 
-                href={release.links.spotify}
-                icon="bx bxl-spotify bx-sm mr-2"
-                className='flex justify-center outline-1 outline-double outline-neutral-400 text-center hover:bg-white hover:text-black bg-transparent'/>
+                style={ButtonStyle.Unstyled}
+                className='flex justify-center bg-ctp-mauve text-ctp-base hover:bg-purple-500'/>
             }
             {
               release.links.applemusic &&
@@ -60,7 +53,15 @@ export default function Release({release}: {release: IResolvedRelease}) {
                 text="Apple Music" 
                 href={release.links.applemusic}
                 icon="bx bxl-apple bx-sm mr-2"
-                className='flex justify-center outline-1 outline-double outline-neutral-400 text-center hover:bg-white hover:text-black bg-transparent'/>
+                style={ButtonStyle.Outline}/>
+            }
+            {
+              release.links.spotify &&
+                <Button 
+                text="Spotify" 
+                href={release.links.spotify}
+                icon="bx bxl-spotify bx-sm mr-2"
+                style={ButtonStyle.Outline}/>
             }
             {
               release.links.soundcloud &&
@@ -68,7 +69,7 @@ export default function Release({release}: {release: IResolvedRelease}) {
                 text="SoundCloud" 
                 href={release.links.soundcloud}
                 icon="bx bxl-soundcloud bx-sm mr-2"
-                className='flex justify-center outline-1 outline-double outline-neutral-400 text-center hover:bg-white hover:text-black bg-transparent'/>
+                style={ButtonStyle.Outline}/>
             }
             {
               release.links.youtube &&
@@ -76,7 +77,7 @@ export default function Release({release}: {release: IResolvedRelease}) {
                 text="YouTube" 
                 href={release.links.youtube}
                 icon="bx bxl-youtube bx-sm mr-2"
-                className='flex justify-center outline-1 outline-double outline-neutral-400 text-center hover:bg-white hover:text-black bg-transparent'/>
+                style={ButtonStyle.Outline}/>
             }
           </div>
 
