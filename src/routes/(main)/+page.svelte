@@ -166,9 +166,19 @@
 					alt="disphing"
 				/>
 				<WebBadge
-					href="https://disphing.com"
+					href="https://daniela.lol"
 					src="/assets/buttons/friends/daniela.gif"
-					alt="disphing"
+					alt="daniela"
+				/>
+				<WebBadge
+					href="https://sapphic.moe"
+					src="/assets/buttons/friends/sapphic.png"
+					alt="Sapphic Angels"
+				/>
+				<WebBadge
+					href="https://wangleline.com"
+					src="/assets/buttons/friends/line.png"
+					alt="WangleLine"
 				/>
 			</div>
 
