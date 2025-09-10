@@ -48,6 +48,13 @@
             "genre": "Electronic",
             "length": "2:56",
             "artists": ["vimae"]
+        },
+        {
+            "id": "token",
+            "name": "token",
+            "genre": "Electro House",
+            "lenght": "3:42",
+            "artists": ["vimae"]
         }
     ],
     "releases": [
@@ -126,6 +133,21 @@
             },
             "artist_comment": "this is the first song i've really felt that speaks to me, and something meaningful i can release.",
             "album_art": "/assets/music/covers/chase.png"
+        },
+        {
+            "slug": "token",
+            "title": "token",
+            "type": "Single",
+            "release_date": "09/11/2025",
+            "tracks": ["track:token"],
+            "links": {
+                "bandcamp": "https://vimae.bandcamp.com/album/token",
+                "spotify": "https://open.spotify.com/album/3B8pkJEDQSTpcUUaSlkUSu",
+                "soundcloud": "https://soundcloud.com/vimae/token-1",
+                "applemusic": "https://music.apple.com/us/song/token/1838322804"
+            },
+            "artist_comment": "regarding an unforeseen time of unstability;",
+            "album_art": "/assets/music/covers/token.jpg"
         }
     ]
 }
