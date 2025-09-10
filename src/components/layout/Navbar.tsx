@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Button, { ButtonStyle } from '@mae/components/Button';
 import VimaeLogo from '@mae/assets/icons/logo-vimae';
+import VimaeLogoMono from '@mae/assets/icons/logo-vimae-mono';
 import { usePathname } from 'next/navigation';
 import { useRecoilState } from 'recoil';
 import { transparentNavbar } from '@mae/store/transparentNavbar';
@@ -74,9 +75,15 @@ export default function Navbar({version}: {version: string}) {
 }
 
 function LogoText() {
+  const [isTransparentPage, setTransparentPage] = useRecoilState(transparentNavbar);
+
   return (
     <Link href='/' className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">
-      <VimaeLogo width="128px" height="fit" className="pb-2"/>
+      {
+      (isTransparentPage)
+      ? <VimaeLogoMono width="128px" height="fit" className="pb-2"/>
+      : <VimaeLogo width="128px" height="fit" className="pb-2"/>
+      }
     </Link>
   )
 }
