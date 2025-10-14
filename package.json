@@ -24,6 +24,7 @@
     "boxicons": "^2.1.4",
     "dayjs": "^1.11.9",
     "howler": "^2.2.3",
+    "jotai": "^2.15.0",
     "lodash": "^4.17.21",
     "next": "15.5.5",
     "next-plausible": "^3.12.0",

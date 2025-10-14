@@ -1,6 +1,3 @@
-import { atom } from "recoil";
+import { atom } from 'jotai';
 
-export const fakeAdHideCountState = atom({
-  key: "@mae/fakeAdHideCount",
-  default: 0
-})
+export const fakeAdHideCountState = atom(0);

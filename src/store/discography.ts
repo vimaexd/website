@@ -1,5 +1,4 @@
-import { atom } from "recoil";
-import { localStorageEffect } from "./effects/localStorageEffect";
+import { atomWithStorage } from 'jotai/utils'
 
 export enum DiscographyView {
   GRIDLIST = 0,
@@ -12,16 +11,10 @@ export enum DiscographyGroup {
   TYPE = "type"
 }
 
-export const discography = atom<{
+export const discography = atomWithStorage<{
   group: DiscographyGroup;
   view: DiscographyView;
-}>({
-  key: "@mae/discography",
-  default: {
-    group: DiscographyGroup.YEAR,
-    view: DiscographyView.GRIDLIST
-  },
-  effects: [
-    localStorageEffect('mae.music.discography')
-  ]
+}>("mae.music.discography", {
+  group: DiscographyGroup.YEAR,
+  view: DiscographyView.GRIDLIST
 })
