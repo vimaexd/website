@@ -8,6 +8,11 @@ const soundClick = new Howl({
   volume: 0.2
 });
 
+const soundHover = new Howl({
+		src: ['/assets/sfx/hover.wav'],
+		volume: 0.5
+});
+
 export enum ButtonStyle {
   Unstyled = 0,
   Primary,
@@ -25,10 +30,16 @@ export default function Button({text, href, className, icon, onClick, style = Bu
     style?: ButtonStyle;
   }
 ) {
-  const playSound = () => {
+  const onButtonPress = () => {
     if(onClick) onClick();
     soundClick.play()
   }
+
+  const onHover = () => {
+    console.log("tick")
+		soundHover.rate(Math.floor(Math.random() * 10) - 10);
+		soundHover.play();
+	};
 
   if(onClick) {
     let href = null;
@@ -59,11 +70,9 @@ export default function Button({text, href, className, icon, onClick, style = Bu
   }, [className, style])
 
   return (
-    <Link href={href} onClick={playSound} className={classes}>
-      {/* <button className={classes}> */}
-        {icon && <i className={icon}></i>}
-        {text}
-      {/* </button> */}
+    <Link href={href} onClick={onButtonPress} onMouseOver={onHover} onFocus={onHover} className={classes}>
+      {icon && <i className={icon}></i>}
+      {text}
     </Link>
   )
 }
