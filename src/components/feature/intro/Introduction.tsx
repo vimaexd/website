@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from 'next/link';
 import { Tooltip } from 'react-tooltip'
 import { useLayoutEffect } from 'react';
-import Chip from '../ui/Chip';
+import Chip from '../../ui/Chip';
 
 import anime from 'animejs/lib/anime.es';
 

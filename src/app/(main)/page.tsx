@@ -1,6 +1,6 @@
 import React from 'react';
 import PageContainer from "@mae/components/core/PageContainer";
-import Introduction from "@mae/components/frontpageBlocks/Introduction";
+import Introduction from "@mae/components/feature/intro/Introduction";
 import {
     ToolBoxicon,
 } from "@mae/components/misc/Tool";
