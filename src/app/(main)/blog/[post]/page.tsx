@@ -12,7 +12,7 @@ export async function generateMetadata(
   props: any,
   parent: any
 ): Promise<Metadata> {
-  const postPath = path.join(process.cwd(), 'blog', props.params.post)
+  const postPath = path.join(process.cwd(), 'blog', (await props.params).post)
   try {
     await fs.access(postPath, fs.constants.R_OK)
   } catch(err) {
@@ -35,7 +35,7 @@ export async function generateMetadata(
 }
 
 export default async function page(props: any) {
-  const postPath = path.join(process.cwd(), 'blog', props.params.post)
+  const postPath = path.join(process.cwd(), 'blog', (await props.params).post)
   try {
     await fs.access(postPath, fs.constants.R_OK)
   } catch(err) {

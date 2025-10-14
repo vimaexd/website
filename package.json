@@ -3,11 +3,11 @@
   "version": "8.6.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "postbuild": "next-sitemap && tsx ./src/misc/genRssFeed.ts",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
@@ -15,8 +15,8 @@
     "@types/howler": "^2.2.7",
     "@types/lodash": "^4.14.195",
     "@types/node": "18.15.7",
-    "@types/react": "^18.2.27",
-    "@types/react-dom": "^18.2.12",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "@types/rss": "^0.0.32",
     "animejs": "^3.2.1",
     "axios": "^1.4.0",
@@ -25,12 +25,12 @@
     "dayjs": "^1.11.9",
     "howler": "^2.2.3",
     "lodash": "^4.17.21",
-    "next": "^14.2.2",
+    "next": "15.5.5",
     "next-plausible": "^3.12.0",
     "next-sitemap": "^4.2.3",
     "pixi.js": "^7.2.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-svg": "^16.1.7",
     "react-tooltip": "^5.11.1",
     "recoil": "^0.7.7",
@@ -44,10 +44,15 @@
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
+    "@eslint/eslintrc": "^3",
     "autoprefixer": "^10.4.14",
     "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
+    "eslint-config-next": "15.5.5",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
+  },
+  "overrides": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2"
   }
 }
