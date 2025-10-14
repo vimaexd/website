@@ -179,12 +179,6 @@ export default function Home() {
                 </div>
 
                 <HorizSeperator />
-
-                <div id='cobaltWebring' style={{
-                    display: "flex",
-                    imageRendering: "pixelated"
-                }}></div>
-                <Script src="https://instances.hyper.lol/assets/js/webring.js" />
             </PageContainer>
 
             {/* sideblocks desktop */}
