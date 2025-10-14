@@ -3,7 +3,7 @@ import { transparentNavbar } from '@mae/store/transparentNavbar';
 import Link from 'next/link';
 import React, { useEffect } from 'react'
 import { useRecoilState } from 'recoil';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { usePathname } from 'next/navigation';
 
 export default function NavbarMusic() {
@@ -37,10 +37,18 @@ export default function NavbarMusic() {
 
         <div className='ml-auto'>
           <Link href="https://vimae.bandcamp.com">
-            <Image src="/assets/logos/bandcamp.png" width={120} height={20} alt="Bandcamp"/>
+            <Image
+              src="/assets/logos/bandcamp.png"
+              width={120}
+              height={20}
+              alt="Bandcamp"
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

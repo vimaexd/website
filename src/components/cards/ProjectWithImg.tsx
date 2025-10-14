@@ -1,5 +1,5 @@
 import type { ProjectPropsImg } from './types';
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function ProjectWithImg(props: ProjectPropsImg) {
   return (
@@ -10,12 +10,14 @@ export default function ProjectWithImg(props: ProjectPropsImg) {
         <Image
           src={props.image}
           alt={"Background image"}
-          layout="fill"
-          objectFit="cover"
-          objectPosition='top'
           className='rounded-lg'
           quality={40}
-        />
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            objectPosition: "top"
+          }} />
         <div className='p-4 space-y-1 z-10'>
           <h3 className='font-bold text-lg shadow-beeg'>{props.title}</h3>
           <p className='leading-5 text-sm pb-2 shadow-beeg'>
@@ -27,5 +29,5 @@ export default function ProjectWithImg(props: ProjectPropsImg) {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 'use client'
 import axios from 'axios'
 import React, { useState } from 'react'
-import Image from "next/legacy/image"
+import Image from "next/image"
 import Link from 'next/link'
 
 const ImageWithFallback = (props: any) => {
@@ -9,13 +9,16 @@ const ImageWithFallback = (props: any) => {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
-      <Image
-          {...rest}
-          src={imgSrc}
-          onError={() => {
-              setImgSrc(fallbackSrc);
-          }}
-      />
+    <Image
+      {...rest}
+      src={imgSrc}
+      onError={() => {
+          setImgSrc(fallbackSrc);
+      }}
+      style={{
+        maxWidth: "100%",
+        height: "auto"
+      }} />
   );
 };
 
@@ -70,7 +73,15 @@ export default function BandcampSupporters() {
   return (
     <div className='space-y-4'>
       <div className='flex justify-center gap-2 bg-throne-gradient rounded-lg py-2'>
-        <Image src="/assets/logos/throne_wordmark_white.svg" width={120} height={20} alt="Throne"/>
+        <Image
+          src="/assets/logos/throne_wordmark_white.svg"
+          width={120}
+          height={20}
+          alt="Throne"
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       <div className='grid auto-cols-max grid-cols-2 sm:grid-cols-4 gap-2'>
         {
@@ -83,5 +94,5 @@ export default function BandcampSupporters() {
         }
       </div>
     </div>
-  )
+  );
 }

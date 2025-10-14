@@ -15,7 +15,6 @@ let navOptions: {[path: string]: string} = {
   "/blog": "📝 Blog",
   "/projects": "📦 Projects",
   "/music": "🎵 Music",
-  "/services": "💻 Services",
   "/gear": "⌨️ Gear",
   "/contact": "📱 Contact",
   "/donate": "💰 Donate"

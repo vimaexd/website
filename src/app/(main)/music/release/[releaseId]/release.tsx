@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link'
 import React, { Suspense } from 'react'
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import Button, { ButtonStyle } from '@mae/components/Button'
 import type { IResolvedRelease } from '@mae/misc/discography/types'
@@ -18,7 +18,16 @@ export default function Release({release}: {release: IResolvedRelease}) {
     <div className='overflow-hidden'>
       <div className='w-full h-full blur-3xl absolute top-0 left-0 z-10'>
         <div className='w-full h-full absolute top-0 left-0 z-20 bg-black opacity-60'></div>
-        <Image src={release.album_art} alt="" fill={true} quality={1} className='w-full h-full object-cover object-center'/>
+        <Image
+          src={release.album_art}
+          alt=""
+          fill={true}
+          quality={1}
+          className='w-full h-full object-cover object-center'
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       <div className="z-10 sticky flex justify-center my-16 mx-4 min-h-screen">
         <div className='lg:w-[1024px] w-full space-y-8 mx-4'>
@@ -30,7 +39,17 @@ export default function Release({release}: {release: IResolvedRelease}) {
             <Suspense fallback={
               <div className='bg-slate-600' style={{width: 120, height: 120}}></div>
             }>
-              <Image src={release.album_art} quality={90} width="120" height="120" alt="Cover art" className='lg:w-fit h-fit rounded-lg shadow-xl'></Image>
+              <Image
+                src={release.album_art}
+                quality={90}
+                width="120"
+                height="120"
+                alt="Cover art"
+                className='lg:w-fit h-fit rounded-lg shadow-xl'
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}></Image>
             </Suspense>
             <div className='flex flex-col justify-end'>
               <h1 className='lg:text-7xl text-4xl font-bold'>{release.title}</h1>
@@ -122,5 +141,5 @@ export default function Release({release}: {release: IResolvedRelease}) {
         </div>
       </div>
     </div>
-  )
+  );
 }

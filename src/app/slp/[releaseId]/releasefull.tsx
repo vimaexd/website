@@ -1,6 +1,6 @@
 import { IResolvedRelease } from '@mae/misc/discography/types'
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import Button from '@mae/components/Button';
 
@@ -23,11 +23,32 @@ const serviceSlugToName: {[a: string]: string;} = {
 export default function releasefull({release}: {release: IResolvedRelease}) {
   return (
     <>
-      <Image src={release.album_art} alt="album art" fill={true} objectFit='cover' quality={1} className='rounded-lg blur-xl outline-black outline-4'/>
+      <Image
+        src={release.album_art}
+        alt="album art"
+        fill={true}
+        quality={1}
+        className='rounded-lg blur-xl outline-black outline-4'
+        style={{
+          maxWidth: "100%",
+          height: "auto",
+          objectFit: "cover"
+        }} />
       <div className='flex flex-col justify-center items-center h-screen w-screen z-10 gap-8'>
         <div className='w-80 min-w-[256px] gap-4 flex items-center flex-col p-4 bg-ctp-base rounded-lg shadow-xl'>
           <div className='flex items-center justify-center'>
-            <Image src={release.album_art} alt="album art" width={512} height={512} quality={95} className='rounded-lg'/>
+            <Image
+              src={release.album_art}
+              alt="album art"
+              width={512}
+              height={512}
+              quality={95}
+              className='rounded-lg'
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "cover"
+              }} />
           </div>
           <div className='w-full'>
             <h2 className="font-semibold text-4xl">{release.title}</h2>
@@ -49,5 +70,5 @@ export default function releasefull({release}: {release: IResolvedRelease}) {
         </div>
       </div>
     </>
-  )
+  );
 }

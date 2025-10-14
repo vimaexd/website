@@ -10,7 +10,7 @@ import Button from "@mae/components/Button";
 import HorizSeperator from "@mae/components/HorizSeperator";
 import WebBadge from "@mae/components/WebBadge";
 import Tool from '@mae/components/frontpageBlocks/Tool'
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Script from 'next/script'
 
 export default function Home() {
@@ -39,9 +39,10 @@ export default function Home() {
                             unoptimized={true}
                             style={{
                                 boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)",
-                                imageRendering: "pixelated"
-                            }}
-                        />
+                                imageRendering: "pixelated",
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                     <div className="space-y-4 h-full">
                         <h2 className="text-2xl font-semibold">🪐 i do a lot of things!</h2>
@@ -68,8 +69,9 @@ export default function Home() {
                             alt="a screenshot of visual studio code"
                             style={{
                                 boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)",
-                            }}
-                        />
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                     <div className="space-y-4">
                         <h2 className="text-2xl font-semibold">
@@ -106,7 +108,16 @@ export default function Home() {
                     </p>
                     <div className="grid grid-flow-col grid-rows-2 sm:grid-rows-1 items-center py-4 gap-4">
                         <Tool name="Rust" color="#ff954d">
-                            <Image src="/assets/logos/rust.svg" alt="Rust logo" width={32} height={32} style={{ filter: "invert(100%)" }} />
+                            <Image
+                                src="/assets/logos/rust.svg"
+                                alt="Rust logo"
+                                width={32}
+                                height={32}
+                                style={{
+                                    filter: "invert(100%)",
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </Tool>
                         <Tool name="JavaScript" color="#f7df1e">
                             <ToolBoxicon icon="bxl-javascript" />
@@ -180,7 +191,6 @@ export default function Home() {
 
                 <HorizSeperator />
             </PageContainer>
-
             {/* sideblocks desktop */}
             <div className="min-[670px]:block hidden lg:mr-0 mr-4">
                 <FrontpageSideblocks />

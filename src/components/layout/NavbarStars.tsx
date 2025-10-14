@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import _ from 'lodash';
 import { Ref, useEffect, useState } from 'react';
 
@@ -41,16 +41,22 @@ export default function NavbarStars({barWidth, barHeight}: {barWidth: number; ba
         <div className="absolute top-0 left-0 lg:w-[1024px] w-full opacity-60 z-0 text-clip" aria-hidden={true}>
             {
               stars.map((star, i) => (
-                <Image 
-                src={`/assets/stars/star_${star[2]}.png`}
-                width={16} 
-                height={16} 
-                alt="star" 
-                className={'absolute ' + `anim_star`} 
-                style={{top: star[1], left: star[0], imageRendering: "pixelated"}}
-                key={"star_" + i}/>
+                <Image
+                    src={`/assets/stars/star_${star[2]}.png`}
+                    width={16}
+                    height={16}
+                    alt="star"
+                    className={'absolute ' + `anim_star`}
+                    key={"star_" + i}
+                    style={{
+                        top: star[1],
+                        left: star[0],
+                        imageRendering: "pixelated",
+                        maxWidth: "100%",
+                        height: "auto"
+                    }} />
               ))
             }
         </div>
-    )
+    );
 }

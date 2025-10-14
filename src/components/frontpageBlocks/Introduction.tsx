@@ -1,5 +1,5 @@
 'use client'
-import Image from "next/legacy/image"
+import Image from "next/image"
 import Link from 'next/link';
 import { Tooltip } from 'react-tooltip'
 import { useLayoutEffect } from 'react';
@@ -51,19 +51,26 @@ export default function Introduction() {
       </div>
       <h1 className='text-6xl font-bold tracking-tight text-center' data-anim="goober">
         <span className='inline-block mr-4'>
-          <Image src="/assets/maewave.png" width={52} height={52} alt={'A drawing of Mae\'s OC waving'}></Image>
+          <Image
+            src="/assets/maewave.png"
+            width={52}
+            height={52}
+            alt={'A drawing of Mae\'s OC waving'}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }}></Image>
         </span>
         hiii! i'm vimae
       </h1>
       <p className='text-center text-lg' data-anim="goober">
         i code, make music and live on the internet
       </p>
-      
       <div className='flex justify-center gap-2 mt-4' data-anim="tags">
         <Chip text='🏳️‍⚧️ she • they' hideDot={true} className='bg-ctp-surface0 text-ctp-text select-none shadow-xl'></Chip>
         <Chip text=' autistic' hideDot={true} className='bg-ctp-surface0 text-ctp-text select-none shadow-xl'></Chip>
         <Chip text='🇬🇧 en-gb' hideDot={true} className='bg-ctp-surface0 text-ctp-text select-none shadow-xl'></Chip>
       </div>
     </div>
-  )
+  );
 }

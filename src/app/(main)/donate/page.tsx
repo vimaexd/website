@@ -2,7 +2,7 @@ import PageContainer from '@mae/components/layout/PageContainer'
 import PageHeader from '@mae/components/layout/PageHeader'
 import React from 'react'
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
@@ -25,12 +25,19 @@ export default async function Donate() {
         if you feel like you want to give me something for something i've made, or you just feel like wasting your extra money, 
         there are multiple ways you can donate to me below ^^
       </PageHeader>
-
       <div className='w-full rounded-lg bg-throne-gradient'>
         <div className='w-full h-full p-6 backdrop-blur-xl rounded-lg flex flex-row justify-start gap-4'>
           <div className='flex flex-col'>
             <div className='flex gap-2'>
-              <Image src="/assets/logos/throne_white.svg" width={32} height={32} alt="Throne Logo"></Image>
+              <Image
+                src="/assets/logos/throne_white.svg"
+                width={32}
+                height={32}
+                alt="Throne Logo"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}></Image>
               <h2 className='text-4xl font-bold tracking-tight'>
                 Throne
               </h2>
@@ -49,12 +56,20 @@ export default async function Donate() {
           </div>
         </div>
       </div>
-      
       <div className='w-full rounded-lg bg-[#FF5E5B]'>
         <div className='w-full h-full p-6 backdrop-blur-xl rounded-lg flex flex-row justify-start gap-4'>
           <div className='flex flex-col'>
           <div className='flex gap-2'>
-            <Image src="/assets/logos/kofi.png" width={32} height={32} alt="Ko-fi Logo" className='w-10 scale-125'></Image>
+            <Image
+              src="/assets/logos/kofi.png"
+              width={32}
+              height={32}
+              alt="Ko-fi Logo"
+              className='w-10 scale-125'
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }}></Image>
             <h2 className='text-4xl font-bold tracking-tight'>Ko-fi</h2>
           </div>
             <p className='md:w-2/3 w-full'>
@@ -70,7 +85,6 @@ export default async function Donate() {
           </div>
         </div>
       </div>
-
       <h2 className='font-bold text-4xl'>Supporters</h2>
       <p>
         thank you so much to the people below for supporting me 😄<br/>
@@ -81,5 +95,5 @@ export default async function Donate() {
       <DiscordSupporters/>
       <OtherSupporters/>
     </PageContainer>
-  ) 
+  ); 
 }

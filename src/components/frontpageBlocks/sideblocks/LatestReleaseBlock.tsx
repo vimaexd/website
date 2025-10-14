@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image from "next/image"
 import React from 'react'
 import ChipButton from '@mae/components/ChipButton';
 import Releases from '@mae/data/discography-vimae.json';
@@ -14,7 +14,17 @@ export default function latest_release() {
         <div className='w-full h-full p-4 backdrop-blur-xl rounded-lg space-y-2'>
           <h2 className="text-xs font-semibold tracking-widest uppercase">Latest release</h2>
           <div className='flex flex-row gap-4'>
-            <Image src={latest.album_art} width={64} height={64} alt={'Cover art'} quality={100} className='w-fit h-fit rounded-lg'></Image>
+            <Image
+              src={latest.album_art}
+              width={64}
+              height={64}
+              alt={'Cover art'}
+              quality={100}
+              className='w-fit h-fit rounded-lg'
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }}></Image>
             <div className='flex flex-col justify-center'>
               <h3 className='text-2xl font-bold tracking-tight align-bottom -mt-2'>{latest.title}</h3>
               <p className='text-xs'>{latest.tracks.length} track{(latest.tracks.length > 1) && "s"} • {latest.year}</p>
@@ -31,5 +41,5 @@ export default function latest_release() {
         </div>
       </div>
     </Link>
-  )
+  );
 }

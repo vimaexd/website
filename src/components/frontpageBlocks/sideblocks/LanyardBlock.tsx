@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 import SideBlock from '@mae/components/frontpageBlocks/SideBlock'
 import {useLanyardWS} from 'use-lanyard';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 
 export default function LanyardBlock({id}: {id: `${bigint}`}) {
@@ -43,7 +43,16 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
           <div className='flex flex-row gap-2'>
             {
               lanyard.spotify.album_art_url &&
-              <Image src={lanyard.spotify.album_art_url} alt="Album art" width={48} height={48} className='w-fit h-fit'/>
+              <Image
+                src={lanyard.spotify.album_art_url}
+                alt="Album art"
+                width={48}
+                height={48}
+                className='w-fit h-fit'
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             }
             <div className="flex flex-col justify-center">
               <Link href={`https://open.spotify.com/track/${lanyard.spotify.track_id}`} className='text-white hover:underline'>
@@ -61,7 +70,16 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
           <div className='flex flex-row gap-2'>
             {
               musicbee.assets?.large_image && musicbee.assets?.large_image.startsWith("mp:external") &&
-              <Image src={musicbee.assets?.large_image.match(mediaProxyRegex)![1].replace("https/", "https://")} alt="Album art" width={48} height={48} className='w-fit h-fit'/>
+              <Image
+                src={musicbee.assets?.large_image.match(mediaProxyRegex)![1].replace("https/", "https://")}
+                alt="Album art"
+                width={48}
+                height={48}
+                className='w-fit h-fit'
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             }
             <div className="flex flex-col justify-center">
               <h2 className='text-sm font-medium'>{musicbee.details?.split("-")[1]}</h2>

@@ -1,7 +1,7 @@
 import PageContainer from '@mae/components/layout/PageContainer'
 import PageHeader from '@mae/components/layout/PageHeader'
 import React from 'react'
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import { promises as fs } from 'fs';
 import path from 'path'
@@ -20,19 +20,25 @@ export default async function WallpaperPage() {
       <PageHeader title='🖼️ wallpapers'>
         free to download desktop wallpapers
       </PageHeader>
-
       <div className='grid grid-cols-2 sm:grid-cols-3 gap-8'>
         {
           dir.map((filename: string) => (
             <div className='flex flex-col gap-2 w-fit'>
-              <Image src={`/downloads/wallpaper/${filename}`} width={256} height={10} alt="Wallpaper"></Image>
+              <Image
+                src={`/downloads/wallpaper/${filename}`}
+                width={256}
+                height={10}
+                alt="Wallpaper"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}></Image>
               <p className='font-mono text-sm'>{filename.split("_")[1]}</p>
               <Button href={`/downloads/wallpaper/${filename}`} text='Download' className='w-fit'/>
             </div>
           ))
         }
       </div>
-
     </PageContainer>
-  )
+  );
 }

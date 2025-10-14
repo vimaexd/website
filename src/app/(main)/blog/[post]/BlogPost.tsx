@@ -1,6 +1,6 @@
 import PageContainer from '@mae/components/layout/PageContainer'
 import React from 'react'
-import Image from "next/legacy/image";
+import Image from "next/image";
 import dayjs from 'dayjs';
 
 export default function BlogPost({content, meta}: {content: any; meta: any;}) {
@@ -25,7 +25,10 @@ export default function BlogPost({content, meta}: {content: any; meta: any;}) {
                 height={32}
                 alt="Profile picture"
                 className="rounded-full"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
               <p>mae</p>
             </div>
           </div>
