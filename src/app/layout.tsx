@@ -5,10 +5,9 @@ import Footer from '@mae/components/core/Footer';
 import LayoutWrappers from './layoutWrappers';
 import { ComponentChildren } from '@mae/misc/types';
 
-import 'react-tooltip/dist/react-tooltip.css';
 import '../css/globals.css';
+import 'react-tooltip/dist/react-tooltip.css';
 import 'boxicons/css/boxicons.min.css';
-// import '../../public/assets/fonts/Inter/inter.css'
 
 import { promises as fs } from 'fs';
 import path from 'path'

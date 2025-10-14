@@ -3,9 +3,7 @@ import PageContainer from '@mae/components/core/PageContainer';
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
-const PageClient = dynamic(() => import('./pageClient'), {
-  ssr: false
-})
+const PageClient = dynamic(() => import('./pageClient'))
 
 export const metadata: Metadata = {
   title: 'Music (Discography) | mae ✨',

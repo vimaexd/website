@@ -6,9 +6,7 @@ export const metadata: Metadata = {
   description: 'projects that i have written or contributed to'
 }
 
-const PageClient = dynamic(() => import('./pageClient'), {
-  ssr: false
-})
+const PageClient = dynamic(() => import('./pageClient'))
 
 
 export default function ProjectsPage() {

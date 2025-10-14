@@ -10,7 +10,7 @@ export default function Tool({name, children, color, useBoxShadow=false}: {name:
   }
   
   return (
-    <div className='h-24 flex items-center justify-center mae-tool rounded-lg border-2 border-opacity-10 border-white'
+    <div className='h-24 flex items-center justify-center mae-tool rounded-lg border-2 border-opacity-10 border-white/10'
     style={style}
     >
       <Tooltip id={`frontpage-tool-${name}`} />

@@ -1,6 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@import '@catppuccin/tailwindcss/mocha.css';
+
+
+@theme {
+  --font-sans: InterDisplay;
+
+  --shadow-mae: 0px 2px 32px 8px rgba(133, 72, 245, 0.1);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root {
     font-variation-settings: "opsz" 25;
@@ -70,7 +89,7 @@ hr {
 }
 
 a {
-    @apply text-ctp-mauve;
+    /* @apply text-ctp-mauve; */
 }
 
 /* misc */

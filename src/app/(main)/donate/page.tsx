@@ -6,10 +6,10 @@ import Image from "next/image";
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
-const BandcampSupporters = dynamic(() => import('@mae/components/feature/supporters/BandcampSupporters'), { ssr: false });
-const DiscordSupporters = dynamic(() => import('@mae/components/feature/supporters/DiscordSupporters'), { ssr: false });
-const ThroneSupporters = dynamic(() => import('@mae/components/feature/supporters/ThroneSupporters'), { ssr: false });
-const OtherSupporters = dynamic(() => import('@mae/components/feature/supporters/OtherSupporters'), { ssr: false });
+const BandcampSupporters = dynamic(() => import('@mae/components/feature/supporters/BandcampSupporters'));
+const DiscordSupporters = dynamic(() => import('@mae/components/feature/supporters/DiscordSupporters'));
+const ThroneSupporters = dynamic(() => import('@mae/components/feature/supporters/ThroneSupporters'));
+const OtherSupporters = dynamic(() => import('@mae/components/feature/supporters/OtherSupporters'));
 
 export const metadata: Metadata = {
   title: 'Donate | mae ✨',
