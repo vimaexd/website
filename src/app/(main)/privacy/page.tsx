@@ -1,6 +1,6 @@
 import PageContainer from '@mae/components/layout/PageContainer'
 import React from 'react'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Button from '@mae/components/Button';
 import { Metadata } from 'next';
 import PageHeader from '@mae/components/layout/PageHeader';

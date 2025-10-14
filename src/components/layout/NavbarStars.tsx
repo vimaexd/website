@@ -1,5 +1,5 @@
 "use client";
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import _ from 'lodash';
 import { Ref, useEffect, useState } from 'react';
 

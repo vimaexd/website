@@ -2,7 +2,7 @@ import PageContainer from '@mae/components/layout/PageContainer'
 import PageHeader from '@mae/components/layout/PageHeader'
 import React from 'react'
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 

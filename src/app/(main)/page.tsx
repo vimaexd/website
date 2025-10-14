@@ -10,7 +10,7 @@ import Button from "@mae/components/Button";
 import HorizSeperator from "@mae/components/HorizSeperator";
 import WebBadge from "@mae/components/WebBadge";
 import Tool from '@mae/components/frontpageBlocks/Tool'
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Script from 'next/script'
 
 export default function Home() {

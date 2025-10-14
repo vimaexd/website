@@ -1,7 +1,7 @@
 'use client'
 import axios from 'axios'
 import React, { useState } from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Link from 'next/link'
 import _supporters from '@mae/data/otherSupporters.json';
 

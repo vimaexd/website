@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import React from 'react'
 import ChipButton from '@mae/components/ChipButton';
 import Releases from '@mae/data/discography-vimae.json';

@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 import SideBlock from '@mae/components/frontpageBlocks/SideBlock'
 import {useLanyardWS} from 'use-lanyard';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 export default function LanyardBlock({id}: {id: `${bigint}`}) {
@@ -54,7 +54,6 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
           </div>
         </SideBlock>
       }
-
       {
         /* MusicBee now playing */
         musicbee != null && 
@@ -72,5 +71,5 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
         </SideBlock>
       }
     </Fragment>
-  )
+  );
 }

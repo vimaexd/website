@@ -3,7 +3,7 @@ export const dynamic = "force-dynamic";
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 const bandcampImageEndpoint = "https://f4.bcbits.com/img/"
 

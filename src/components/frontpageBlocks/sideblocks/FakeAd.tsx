@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect } from 'react'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import useLocalStorage from 'use-local-storage';
 import fakeAds from '@mae/data/fakeAds.json';
 import { fakeAdHideCountState } from '@mae/store/fakeAdHideCount';

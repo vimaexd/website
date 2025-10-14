@@ -1,7 +1,7 @@
 import PageContainer from '@mae/components/layout/PageContainer'
 import PageHeader from '@mae/components/layout/PageHeader'
 import React from 'react'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import { promises as fs } from 'fs';
 import path from 'path'

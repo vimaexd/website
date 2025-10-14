@@ -1,5 +1,5 @@
 import type { ProjectPropsImg } from './types';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 export default function ProjectWithImg(props: ProjectPropsImg) {
   return (

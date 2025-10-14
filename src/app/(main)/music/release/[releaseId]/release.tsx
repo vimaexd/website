@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link'
 import React, { Suspense } from 'react'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import Button, { ButtonStyle } from '@mae/components/Button'
 import type { IResolvedRelease } from '@mae/misc/discography/types'
