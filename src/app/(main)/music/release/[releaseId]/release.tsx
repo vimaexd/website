@@ -26,7 +26,6 @@ export default function Release({release}: {release: IResolvedRelease}) {
           className='w-full h-full object-cover object-center'
           style={{
             maxWidth: "100%",
-            height: "auto"
           }} />
       </div>
       <div className="z-10 sticky flex justify-center my-16 mx-4 min-h-screen">

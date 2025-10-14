@@ -68,7 +68,6 @@ export default function GearPage() {
                           className="object-cover rounded-lg shadow-mae"
                           style={{
                               maxWidth: "100%",
-                              height: "auto"
                           }} />
                   </div>
           </div>
@@ -105,7 +104,6 @@ export default function GearPage() {
                       className="object-cover rounded-lg shadow-mae"
                       style={{
                           maxWidth: "100%",
-                          height: "auto"
                       }} />
               </div>
           </div>
@@ -146,7 +144,6 @@ export default function GearPage() {
                       className="object-cover rounded-lg shadow-mae"
                       style={{
                           maxWidth: "100%",
-                          height: "auto"
                       }} />
               </div>
           </div>
@@ -183,7 +180,6 @@ export default function GearPage() {
                       className="object-cover rounded-lg shadow-mae"
                       style={{
                           maxWidth: "100%",
-                          height: "auto"
                       }} />
               </div>
           </div>
@@ -246,7 +242,6 @@ export default function GearPage() {
                           alt="Screenshot of Ableton Live"
                           style={{
                               maxWidth: "100%",
-                              height: "auto"
                           }}></Image>
                   </div>
                   <div className="relative">
@@ -257,7 +252,6 @@ export default function GearPage() {
                           alt="Screenshot of Visual Studio Code"
                           style={{
                               maxWidth: "100%",
-                              height: "auto"
                           }}></Image>
                   </div>
               </div>
