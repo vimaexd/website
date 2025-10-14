@@ -64,7 +64,7 @@ export default function Navbar({version}: {version: string}) {
         <div className={`lg:ml-auto lg:flex lg:flex-row flex-col lg:justify-end flex-wrap gap-2 lg:w-8/12 anim-navbar-tray ${(menuVisible) ? 'flex' : 'hidden'}`}>
           {
             Object.keys(navOptions).map((op) => (
-              <Button text={navOptions[op]} href={op} style={(pathname == op) ? ButtonStyle.Active : ButtonStyle.Primary}/>
+              <Button key={op} text={navOptions[op]} href={op} style={(pathname == op) ? ButtonStyle.Active : ButtonStyle.Primary}/>
             ))
           }
         </div>
