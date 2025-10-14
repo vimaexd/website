@@ -35,7 +35,7 @@ export default function Button({text, href, className, icon, onClick, style = Bu
     soundClick.play()
   }
 
-  const onHover = () => {
+  const onButtonHover = () => {
     console.log("tick")
 		soundHover.rate(Math.floor(Math.random() * 10) - 10);
 		soundHover.play();
@@ -70,7 +70,10 @@ export default function Button({text, href, className, icon, onClick, style = Bu
   }, [className, style])
 
   return (
-    <Link href={href} onClick={onButtonPress} onMouseOver={onHover} onFocus={onHover} className={classes}>
+    <Link href={href} 
+    onClick={onButtonPress} 
+    onMouseOver={onButtonHover} 
+    onFocus={onButtonHover} className={classes}>
       {icon && <i className={icon}></i>}
       {text}
     </Link>
