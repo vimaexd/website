@@ -1,7 +1,14 @@
 {
     "projects": [
         {
-            "title": "href webtoys (Commission)",
+            "title": "sparkler",
+            "description": "a private data browser for the Fortnite Festival CMS",
+            "image": "/assets/project_images/sparkler.jpg",
+            "type": "Project",
+            "links": []
+        },
+        {
+            "title": "href webtoys (commission)",
             "description": "9 webtoys created for electronic artist disphing to coincide with the launch of their album \"href\"",
             "image": "/assets/project_images/comm_href.png",
             "type": "Project",
@@ -13,24 +20,24 @@
             ]
         },
         {
-            "title": "campfire UI",
-            "description": "designing the user interface and assisting with code for campfire, a WIP fediverse client with ari melody",
+            "title": "campfire",
+            "description": "lead designer and code assistance for campfire, a WIP fediverse client",
             "image": "/assets/project_images/campfire.png",
             "type": "Project",
             "links": [
                 {
-                    "name": "Campfire Client Beta",
+                    "name": "Website",
                     "href": "https://campfire.bliss.town"
                 },
                 {
-                    "name": "ari melody",
-                    "href": "https://arimelody.me"
+                    "name": "Source",
+                    "href": "https://forge.bliss.town/blisstown/campfire"
                 }
             ]
         },
         {
             "title": "Fortnite Festival Setlist Bot",
-            "description": "A Mastodon bot that posts the daily playable songs for the game Fortnite Festival, written in Rust.",
+            "description": "a Mastodon bot that posts the daily playable songs for the game Fortnite Festival, written in Rust.",
             "image": "/assets/project_images/festivalbot.png",
             "type": "Project",
             "links": [
@@ -46,7 +53,7 @@
         },
         {
             "title": "Stream Anywhere",
-            "description": "A Rust-based Discord bot that provides alternative services for Spotify and Apple Music links posted using the Odesli API.",
+            "description": "a Rust-based Discord bot that provides alternative services for Spotify and Apple Music links posted using the Odesli API.",
             "image": "/assets/project_images/stream-anywhere.png",
             "type": "ProjectWithImg",
             "links": [
@@ -57,20 +64,20 @@
             ]
         },
         {
-            "title": "Online Confine Dashboard",
-            "description": "A web dashboard for authenticated users to manage DNS records for subdomains assigned to them.",
+            "title": "dnsdash",
+            "description": "a web dashboard for authenticated users to manage DNS records for subdomains assigned to them.",
             "image": "/assets/project_images/ocdash.png",
             "type": "ProjectWithImg",
             "links": [
                 {
                     "name": "Source",
-                    "href": "https://github.com/vimaexd/oc_dashboard"
+                    "href": "https://github.com/vimaexd/dnsdash"
                 }
             ]
         },
         {
             "title": "Satori",
-            "description": "A Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.",
+            "description": "a Discord chat bot that managed XP and provided chat minigames for the Flute Gang community complete with a web dashboard to view stats.",
             "image": "/assets/project_images/satori.png",
             "type": "ProjectWithImg",
             "links": [
@@ -82,7 +89,7 @@
         },
         {
             "title": "Server Count",
-            "description": "A website that counts how many Discord servers you have joined, completely client side.",
+            "description": "a website that counts how many Discord servers you have joined, completely client side.",
             "image": "/assets/project_images/servercount.png",
             "type": "ProjectWithImg",
             "links": [
@@ -94,14 +101,14 @@
         },
         {
             "title": "Disq",
-            "description": "A service which allowed you to upload screenshots (with ShareX support) and create Short URLs.",
+            "description": "a service which allowed you to upload screenshots (with ShareX support) and create Short URLs.",
             "image": "/assets/project_images/disq.png",
             "type": "ProjectWithImg",
             "links": []
         },
         {
             "title": "Knok",
-            "description": "A web UI and server to make an iPad act as a doorbell for my room.",
+            "description": "a web UI and server to make an iPad act as a doorbell for my room.",
             "type": "Project",
             "links": [
                 {
