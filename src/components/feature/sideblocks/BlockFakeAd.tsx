@@ -4,11 +4,11 @@ import Image from "next/image";
 import useLocalStorage from 'use-local-storage';
 import fakeAds from '@mae/data/fakeAds.json';
 import { fakeAdHideCountState } from '@mae/store/fakeAdHideCount';
-import { useRecoilState } from 'recoil';
+import { useAtom } from 'jotai';
 
 export default function FakeAd() {
   const [visible, setVisibility] = useLocalStorage("mae.showFakeAds", true);
-  const [hideCount, setHideCount] = useRecoilState(fakeAdHideCountState);
+  const [hideCount, setHideCount] = useAtom(fakeAdHideCountState);
 
   const toggleFakeAds = () => {
     setVisibility(!visible)

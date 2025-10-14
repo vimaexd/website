@@ -13,7 +13,7 @@ import LatestReleaseBlock from "@mae/components/feature/sideblocks/BlockLatestRe
 import { useEffect } from "react";
 
 import { fakeAdHideCountState } from "@mae/store/fakeAdHideCount";
-import { useRecoilState } from "recoil";
+import { useAtom } from "jotai";
 import LogoBsky from '@mae/assets/icons/logo-bluesky';
 
 const FakeAdBlock = dynamic(
@@ -28,7 +28,7 @@ const MaesweeperGameBlock = dynamic(
 );
 
 export default function FrontpageSideblocks() {
-    const [hideCount, setHideCount] = useRecoilState(fakeAdHideCountState);
+    const [hideCount, setHideCount] = useAtom(fakeAdHideCountState);
 
     if (hideCount >= 6) {
         return (

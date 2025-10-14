@@ -1,6 +1,3 @@
-import { atom } from "recoil";
+import { atom } from "jotai";
 
-export const transparentNavbar = atom<boolean>({ 
-  key: "@mae/transparentNavbar",
-  default: false 
-});
+export const transparentNavbar = atom(false);

@@ -2,13 +2,13 @@
 import { transparentNavbar } from '@mae/store/transparentNavbar';
 import Link from 'next/link';
 import React, { useEffect } from 'react'
-import { useRecoilState } from 'recoil';
+import { useAtom } from 'jotai';
 import Image from "next/image";
 import { usePathname } from 'next/navigation';
 
 export default function NavbarBlog() {
   const pathname = usePathname();
-  const [isTransparentPage, setTransparentPage] = useRecoilState(transparentNavbar);
+  const [isTransparentPage, setTransparentPage] = useAtom(transparentNavbar);
 
   // when navigating to a new page, set the transparent state to default
   useEffect(() => {

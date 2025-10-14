@@ -1,16 +1,16 @@
 'use client';
 import React, { useState, Fragment, Suspense, useEffect } from 'react';
 import PageHeader from '@mae/components/core/PageHeader';
-import { useRecoilState } from 'recoil';
 import { discography, DiscographyGroup, DiscographyView } from '@mae/store/discography';
 import { IDiscography, IUnresolvedRelease } from '@mae/misc/discography/types';
 import discog from '@mae/data/discography-vimae.json'
 import { groupReleasesByKey, groupReleasesByYear } from '@mae/misc/discography/utils';
 import ReleaseCard from '@mae/components/feature/discography/ReleaseCard';
 import ReleaseRow from '@mae/components/feature/discography/ReleaseRow';
+import { useAtom } from 'jotai';
 
 export default function MusicPageClient() {
-  const [discogStore, setDiscography] = useRecoilState(discography);
+  const [discogStore, setDiscography] = useAtom(discography);
   const {group, view} = discogStore;
 
   const releases = (discog as IDiscography).releases;

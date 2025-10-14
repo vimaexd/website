@@ -5,13 +5,13 @@ import Image from "next/image";
 
 import Button, { ButtonStyle } from '@mae/components/ui/Button'
 import type { IResolvedRelease } from '@mae/misc/discography/types'
-import { useRecoilState } from 'recoil';
+import { useAtom } from 'jotai';
 import { transparentNavbar } from '@mae/store/transparentNavbar';
 
 // TODO: make this responsive
 
 export default function Release({release}: {release: IResolvedRelease}) {
-  const [isTransparentPage, setTransparentPage] = useRecoilState(transparentNavbar);
+  const [isTransparentPage, setTransparentPage] = useAtom(transparentNavbar);
   setTransparentPage(true);
 
   return (

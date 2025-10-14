@@ -6,7 +6,7 @@ import Button, { ButtonStyle } from '@mae/components/ui/Button';
 import VimaeLogo from '@mae/assets/icons/logo-vimae';
 import VimaeLogoMono from '@mae/assets/icons/logo-vimae-mono';
 import { usePathname } from 'next/navigation';
-import { useRecoilState } from 'recoil';
+import { useAtom } from 'jotai';
 import { transparentNavbar } from '@mae/store/transparentNavbar';
 import NavbarStars from '@mae/components/subnavigation/StarryBg';
 
@@ -22,7 +22,7 @@ let navOptions: {[path: string]: string} = {
 
 export default function Navbar({version}: {version: string}) {
   const pathname = usePathname();
-  const [isTransparentPage, setTransparentPage] = useRecoilState(transparentNavbar);
+  const [isTransparentPage, setTransparentPage] = useAtom(transparentNavbar);
 
   // when navigating to a new page, set the transparent state to default
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function Navbar({version}: {version: string}) {
 }
 
 function LogoText() {
-  const [isTransparentPage, setTransparentPage] = useRecoilState(transparentNavbar);
+  const [isTransparentPage, setTransparentPage] = useAtom(transparentNavbar);
 
   return (
     <Link href='/' className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">
