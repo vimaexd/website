@@ -12,7 +12,7 @@ const ThroneSupporters = dynamic(() => import('@mae/components/supporters/Throne
 const OtherSupporters = dynamic(() => import('@mae/components/supporters/OtherSupporters'), { ssr: false });
 
 export const metadata: Metadata = {
-  title: 'Donate to me :3 | mae ✨',
+  title: 'Donate | mae ✨',
   description: 'donate to me if you want :)'
 }
 
