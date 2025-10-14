@@ -4,9 +4,9 @@ import React, { Fragment } from 'react'
 
 export default function SideBlock({children, title, disablePadding = false}: {title: string, disablePadding?: boolean, children?: ComponentChildren}) {
   return (
-    <div className='w-full bg-ctp-base rounded-lg min-w-[288px] shadow-[rgba(255,255,255,0.1)]'>
+    <div className='w-full bg-ctp-surface0 rounded-lg min-w-[288px] shadow-[rgba(255,255,255,0.1)] border border-white/25'>
       <div className='flex items-center'>
-        <span className='font-normal text-sm px-2 py-1'>
+        <span className='font-normal text-sm px-4 py-2'>
           {title}
         </span>
         {/* <span className='ml-auto font-mono h-full select-none'>
@@ -18,7 +18,7 @@ export default function SideBlock({children, title, disablePadding = false}: {ti
       {
         children &&
         <Fragment>
-          <hr className='border-t-ctp-surface1'/>
+          <hr className='border-t-ctp-mauve border-t'/>
           <div className={(!disablePadding) ? 'p-2' : ''}>{children}</div>
         </Fragment>
       }
