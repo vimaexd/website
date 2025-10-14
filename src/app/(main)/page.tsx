@@ -123,29 +123,59 @@ export default function Home() {
                     </div>
                 </div>
                 <HorizSeperator />
+                <div className="flex flex-col gap-4">         
+                    <h3 className="font-bold text-lg">friends</h3>       
+                    <div className="flex flex-wrap gap-2">
+                        <WebBadge href="https://mae.wtf" src="/assets/buttons/mae.png" alt="mae" />
+                        <WebBadge href="https://arimelody.me" src="/assets/buttons/friends/ari.gif" alt="ari melody" />
+                        <WebBadge href="https://invoxiplaygames.uk" src="/assets/buttons/friends/ipg.png" alt="InvoxiPlayGames" />
+                        <WebBadge href="https://supitszaire.com" src="/assets/buttons/friends/zaire.gif" alt="zaire" />
+                        <WebBadge href="https://notnite.com" src="/assets/buttons/friends/notnite.png" alt="notnite" />
+                        <WebBadge href="https://lexd0g.eu.org" src="/assets/buttons/friends/lexd0g.png" alt="lexd0g" />
+                        <WebBadge href="https://deci.pages.gay" src="/assets/buttons/friends/deci.png" alt="deci" />
+                        <WebBadge href="https://boxy.neocities.org" src="/assets/buttons/friends/boky.png" alt="boxy"></WebBadge>
+                        <WebBadge href="https://ioletsgo.gay" src="/assets/buttons/friends/ivory.gif" alt="ioletsgo"></WebBadge>
+                        <WebBadge href="https://idkimjustadog.neocities.org" src="/assets/buttons/friends/ellie.png" alt="ellie"></WebBadge>
+                        <WebBadge href="https://ixnoah.live" src="/assets/buttons/friends/noah.gif" alt="ixnoah"></WebBadge>
+                        <WebBadge href="https://disphing.com" src="/assets/buttons/friends/disphing.gif" alt="disphing" />
+                        <WebBadge
+                            href="https://daniela.lol"
+                            src="/assets/buttons/friends/daniela.gif"
+                            alt="daniela"
+                        />
+                        <WebBadge
+                            href="https://sapphic.moe"
+                            src="/assets/buttons/friends/sapphic.png"
+                            alt="Sapphic Angels"
+                        />
+                        <WebBadge
+                            href="https://wangleline.com"
+                            src="/assets/buttons/friends/line.png"
+                            alt="WangleLine"
+                        />
+                        <WebBadge
+                            href="https://ellie53.neocities.org/"
+                            src="/assets/buttons/friends/ellie53.png"
+                            alt="Ellie53"
+                        />
+                        <WebBadge
+                            href="https://j0.lol/"
+                            src="/assets/buttons/friends/j0.gif"
+                            alt="Ellie53"
+                        />
+                    </div>
 
-                <div className="flex justify-center flex-wrap gap-2">
-                    <WebBadge href="https://mae.wtf" src="/assets/buttons/mae.png" alt="mae" />
-                    <WebBadge href="https://arimelody.me" src="/assets/buttons/friends/ari.gif" alt="ari melody" />
-                    <WebBadge href="https://invoxiplaygames.uk" src="/assets/buttons/friends/ipg.png" alt="InvoxiPlayGames" />
-                    <WebBadge href="https://supitszaire.com" src="/assets/buttons/friends/zaire.gif" alt="zaire" />
-                    <WebBadge href="https://notnite.com" src="/assets/buttons/friends/notnite.png" alt="notnite" />
-                    <WebBadge href="https://lexd0g.eu.org" src="/assets/buttons/friends/lexd0g.png" alt="lexd0g" />
-                    <WebBadge href="https://deci.pages.gay" src="/assets/buttons/friends/deci.png" alt="deci" />
-                    <WebBadge href="https://boxy.neocities.org" src="/assets/buttons/friends/boky.png" alt="boxy"></WebBadge>
-                    <WebBadge href="https://ioletsgo.gay" src="/assets/buttons/friends/ivory.gif" alt="ioletsgo"></WebBadge>
-                    <WebBadge href="https://idkimjustadog.neocities.org" src="/assets/buttons/friends/ellie.png" alt="ellie"></WebBadge>
-                    <WebBadge href="https://ixnoah.live" src="/assets/buttons/friends/noah.gif" alt="ixnoah"></WebBadge>
-                    <WebBadge href="https://disphing.com" src="/assets/buttons/friends/disphing.gif" alt="disphing" />
-
-                    <WebBadge href="https://wetdry.world" src="/assets/buttons/misc/wdw.gif" alt="Wet-Dry World"></WebBadge>
-                    <WebBadge href="https://eightyeightthirty.one" src="/assets/buttons/misc/eightyeight.png" alt="8831"></WebBadge>
-                    <WebBadge href="https://undertale.com" src="/assets/buttons/misc/ut.gif" alt="Webmaster loves Undertale"></WebBadge>
-                    <WebBadge href="https://deltarune.com" src="/assets/buttons/misc/dt.gif" alt="Deltarune.com"></WebBadge>
-                    <WebBadge src="/assets/buttons/misc/wii.gif" alt="Wii"></WebBadge>
-                    <WebBadge src="/assets/buttons/misc/firtnite.png" alt="Firtnite"></WebBadge>
-                    <WebBadge src="/assets/buttons/misc/trans.png" alt="Transgender flag"></WebBadge>
-                    <WebBadge src="/assets/buttons/misc/bi.png" alt="Bisexual flag"></WebBadge>
+                    <h3 className="font-bold text-lg">cool stuff</h3>
+                    <div className='flex flex-wrap gap-2'>
+                        <WebBadge href="https://wetdry.world" src="/assets/buttons/misc/wdw.gif" alt="Wet-Dry World"></WebBadge>
+                        <WebBadge href="https://eightyeightthirty.one" src="/assets/buttons/misc/eightyeight.png" alt="8831"></WebBadge>
+                        <WebBadge href="https://undertale.com" src="/assets/buttons/misc/ut.gif" alt="Webmaster loves Undertale"></WebBadge>
+                        <WebBadge href="https://deltarune.com" src="/assets/buttons/misc/dt.gif" alt="Deltarune.com"></WebBadge>
+                        <WebBadge src="/assets/buttons/misc/wii.gif" alt="Wii"></WebBadge>
+                        <WebBadge src="/assets/buttons/misc/firtnite.png" alt="Firtnite"></WebBadge>
+                        <WebBadge src="/assets/buttons/misc/trans.png" alt="Transgender flag"></WebBadge>
+                        <WebBadge src="/assets/buttons/misc/bi.png" alt="Bisexual flag"></WebBadge>
+                    </div>
                 </div>
 
                 <HorizSeperator />
