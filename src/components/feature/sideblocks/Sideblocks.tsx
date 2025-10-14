@@ -1,15 +1,15 @@
 "use client";
-import SideblockWrapper from "@mae/components/frontpageBlocks/SideblockWrapper";
+import SideblockWrapper from "@mae/components/feature/sideblocks/SideblocksWrapper";
 import dynamic from "next/dynamic";
-import { FakeAdPlaceholder } from "@mae/components/frontpageBlocks/sideblocks/FakeAd";
+import { FakeAdPlaceholder } from "@mae/components/feature/sideblocks/BlockFakeAd";
 
-import SideBlock from "@mae/components/frontpageBlocks/SideBlock";
-import LanyardBlock from "@mae/components/frontpageBlocks/sideblocks/LanyardBlock";
+import SideBlock from "@mae/components/feature/sideblocks/Block";
+import LanyardBlock from "@mae/components/feature/sideblocks/BlockLanyard";
 import SocialSpeeddialBlock, {
     SocialSpeeddialSvg,
-} from "@mae/components/frontpageBlocks/sideblocks/SocialSpeeddialBlock";
-import ClockBlock from "@mae/components/frontpageBlocks/sideblocks/ClockBlock";
-import LatestReleaseBlock from "@mae/components/frontpageBlocks/sideblocks/LatestReleaseBlock";
+} from "@mae/components/feature/sideblocks/BlockSocial";
+import ClockBlock from "@mae/components/feature/sideblocks/BlockClock";
+import LatestReleaseBlock from "@mae/components/feature/sideblocks/BlockLatestRelease";
 import { useEffect } from "react";
 
 import { fakeAdHideCountState } from "@mae/store/fakeAdHideCount";
@@ -17,14 +17,14 @@ import { useRecoilState } from "recoil";
 import LogoBsky from '@mae/assets/icons/logo-bluesky';
 
 const FakeAdBlock = dynamic(
-    () => import("@mae/components/frontpageBlocks/sideblocks/FakeAd"),
+    () => import("@mae/components/feature/sideblocks/BlockFakeAd"),
     {
         ssr: false,
         loading: () => <FakeAdPlaceholder />,
     }
 );
 const MaesweeperGameBlock = dynamic(
-    () => import("@mae/components/games/Maesweeper")
+    () => import("@mae/components/feature/maesweeper/Maesweeper")
 );
 
 export default function FrontpageSideblocks() {

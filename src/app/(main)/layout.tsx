@@ -1,5 +1,5 @@
 import Navbar from '@mae/components/layout/Navbar';
-import Footer from '@mae/components/layout/Footer';
+import Footer from '@mae/components/core/Footer';
 import { ComponentChildren } from '@mae/misc/types';
 
 import { promises as fs } from 'fs';

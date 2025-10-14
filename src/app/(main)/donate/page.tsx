@@ -1,15 +1,15 @@
-import PageContainer from '@mae/components/layout/PageContainer'
-import PageHeader from '@mae/components/layout/PageHeader'
+import PageContainer from '@mae/components/core/PageContainer'
+import PageHeader from '@mae/components/core/PageHeader'
 import React from 'react'
 import Link from 'next/link';
 import Image from "next/image";
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
-const BandcampSupporters = dynamic(() => import('@mae/components/supporters/BandcampSupporters'), { ssr: false });
-const DiscordSupporters = dynamic(() => import('@mae/components/supporters/DiscordSupporters'), { ssr: false });
-const ThroneSupporters = dynamic(() => import('@mae/components/supporters/ThroneSupporters'), { ssr: false });
-const OtherSupporters = dynamic(() => import('@mae/components/supporters/OtherSupporters'), { ssr: false });
+const BandcampSupporters = dynamic(() => import('@mae/components/feature/supporters/BandcampSupporters'), { ssr: false });
+const DiscordSupporters = dynamic(() => import('@mae/components/feature/supporters/DiscordSupporters'), { ssr: false });
+const ThroneSupporters = dynamic(() => import('@mae/components/feature/supporters/ThroneSupporters'), { ssr: false });
+const OtherSupporters = dynamic(() => import('@mae/components/feature/supporters/OtherSupporters'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'Donate | mae ✨',

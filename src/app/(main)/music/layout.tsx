@@ -1,4 +1,4 @@
-import NavbarMusic from '@mae/components/layout/NavbarMusic';
+import NavbarMusic from '@mae/components/subnavigation/NavbarMusic';
 import { ComponentChildren } from '@mae/misc/types'
 import React, { Fragment } from 'react'
 

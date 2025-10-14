@@ -1,5 +1,5 @@
-import PageContainer from "@mae/components/layout/PageContainer";
-import PageHeader from "@mae/components/layout/PageHeader";
+import PageContainer from "@mae/components/core/PageContainer";
+import PageHeader from "@mae/components/core/PageHeader";
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";

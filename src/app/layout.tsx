@@ -1,7 +1,7 @@
 import localFont from 'next/font/local';
 import { Inter, JetBrains_Mono } from 'next/font/google';
-import Navbar from '@mae/components/layout/Navbar';
-import Footer from '@mae/components/layout/Footer';
+import Navbar from '@mae/components/core/Navbar';
+import Footer from '@mae/components/core/Footer';
 import LayoutWrappers from './layoutWrappers';
 import { ComponentChildren } from '@mae/misc/types';
 

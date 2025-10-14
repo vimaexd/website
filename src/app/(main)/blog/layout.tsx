@@ -1,4 +1,4 @@
-import NavbarBlog from '@mae/components/layout/NavbarBlog';
+import NavbarBlog from '@mae/components/subnavigation/NavbarBlog';
 import { ComponentChildren } from '@mae/misc/types'
 import React, { Fragment } from 'react'
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import PageContainer from '@mae/components/layout/PageContainer';
+import PageContainer from '@mae/components/core/PageContainer';
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 

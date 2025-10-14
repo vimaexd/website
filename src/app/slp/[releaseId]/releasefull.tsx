@@ -2,7 +2,7 @@ import { IResolvedRelease } from '@mae/misc/discography/types'
 import React from 'react';
 import Image from "next/image";
 import Link from 'next/link';
-import Button from '@mae/components/Button';
+import Button from '@mae/components/ui/Button';
 
 const serviceToIcon: {[a: string]: string;} = {
   "bandcamp": "bx bx-money",

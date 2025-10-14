@@ -1,9 +1,9 @@
-import PageContainer from '@mae/components/layout/PageContainer'
+import PageContainer from '@mae/components/core/PageContainer'
 import React from 'react'
 import Image from "next/image";
-import Button from '@mae/components/Button';
+import Button from '@mae/components/ui/Button';
 import { Metadata } from 'next';
-import PageHeader from '@mae/components/layout/PageHeader';
+import PageHeader from '@mae/components/core/PageHeader';
 
 export const metadata: Metadata = {
   title: 'Privacy | mae ✨',

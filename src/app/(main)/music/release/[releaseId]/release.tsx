@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { Suspense } from 'react'
 import Image from "next/image";
 
-import Button, { ButtonStyle } from '@mae/components/Button'
+import Button, { ButtonStyle } from '@mae/components/ui/Button'
 import type { IResolvedRelease } from '@mae/misc/discography/types'
 import { useRecoilState } from 'recoil';
 import { transparentNavbar } from '@mae/store/transparentNavbar';

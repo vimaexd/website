@@ -1,4 +1,4 @@
-import PageContainer from '@mae/components/layout/PageContainer'
+import PageContainer from '@mae/components/core/PageContainer'
 import React from 'react'
 import Image from "next/image";
 import dayjs from 'dayjs';

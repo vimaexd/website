@@ -5,12 +5,10 @@ import { useEffect } from 'react';
 
 import projectData from '@mae/data/projects.json'
 
-import Project from '@mae/components/cards/Project';
-import ProjectWithImg from '@mae/components/cards/ProjectWithImg';
-import ProjectJumbotron from '@mae/components/cards/ProjectJumbotron';
-import ChipButton from '@mae/components/ChipButton';
-import PageContainer from '@mae/components/layout/PageContainer';
-import PageHeader from '@mae/components/layout/PageHeader';
+import Card from '@mae/components/ui/Card';
+import ChipButton from '@mae/components/ui/ChipButton';
+import PageContainer from '@mae/components/core/PageContainer';
+import PageHeader from '@mae/components/core/PageHeader';
 
 export default function pageClient() {
   useEffect(() => {
@@ -24,36 +22,20 @@ export default function pageClient() {
   })
 
   const buildProjectComponent = (p: any) => {
-    if(p.image) {
-      return <ProjectWithImg
-        title={p.title}
-        description={p.description}
-        image={p.image}
-      >
-        {
-          p.links.map((l: any) => {
-            return <ChipButton
-            href={l.href}
-            text={l.name}
-            />
-          })
-        }
-      </ProjectWithImg>
-    } else {
-      return <Project
-        title={p.title}
-        description={p.description}
-      >
-        {
-          p.links.map((l: any) => {
-            return <ChipButton
-            href={l.href}
-            text={l.name}
-            />
-          })
-        }
-      </Project>
-    }
+    return <Card
+      title={p.title}
+      description={p.description}
+      image={p.image}
+    >
+      {
+        p.links.map((l: any) => {
+          return <ChipButton
+          href={l.href}
+          text={l.name}
+          />
+        })
+      }
+    </Card>
   }
 
   return (

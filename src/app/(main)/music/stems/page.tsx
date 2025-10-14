@@ -1,5 +1,5 @@
-import PageContainer from '@mae/components/layout/PageContainer'
-import PageHeader from '@mae/components/layout/PageHeader'
+import PageContainer from '@mae/components/core/PageContainer'
+import PageHeader from '@mae/components/core/PageHeader'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'

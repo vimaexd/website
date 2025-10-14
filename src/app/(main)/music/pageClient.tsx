@@ -1,13 +1,13 @@
 'use client';
 import React, { useState, Fragment, Suspense, useEffect } from 'react';
-import PageHeader from '@mae/components/layout/PageHeader';
+import PageHeader from '@mae/components/core/PageHeader';
 import { useRecoilState } from 'recoil';
 import { discography, DiscographyGroup, DiscographyView } from '@mae/store/discography';
 import { IDiscography, IUnresolvedRelease } from '@mae/misc/discography/types';
 import discog from '@mae/data/discography-vimae.json'
 import { groupReleasesByKey, groupReleasesByYear } from '@mae/misc/discography/utils';
-import ReleaseCard from '@mae/components/music/releaseCard';
-import ReleaseRow from '@mae/components/music/ReleaseRow';
+import ReleaseCard from '@mae/components/feature/discography/ReleaseCard';
+import ReleaseRow from '@mae/components/feature/discography/ReleaseRow';
 
 export default function MusicPageClient() {
   const [discogStore, setDiscography] = useRecoilState(discography);

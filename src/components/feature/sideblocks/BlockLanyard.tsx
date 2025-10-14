@@ -1,6 +1,6 @@
 'use client';
 import React, { Fragment } from 'react'
-import SideBlock from '@mae/components/frontpageBlocks/SideBlock'
+import SideBlock from '@mae/components/feature/sideblocks/Block'
 import {useLanyardWS} from 'use-lanyard';
 import Image from "next/image";
 import Link from 'next/link';

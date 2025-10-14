@@ -1,15 +1,15 @@
 import React from 'react';
-import PageContainer from "@mae/components/layout/PageContainer";
+import PageContainer from "@mae/components/core/PageContainer";
 import Introduction from "@mae/components/frontpageBlocks/Introduction";
 import {
     ToolBoxicon,
-} from "@mae/components/frontpageBlocks/Tool";
-import FrontpageSideblocks from "@mae/components/frontpageBlocks/FrontpageSideblocks";
+} from "@mae/components/misc/Tool";
+import FrontpageSideblocks from "@mae/components/feature/sideblocks/Sideblocks";
 import Link from "next/link";
-import Button from "@mae/components/Button";
-import HorizSeperator from "@mae/components/HorizSeperator";
-import WebBadge from "@mae/components/WebBadge";
-import Tool from '@mae/components/frontpageBlocks/Tool'
+import Button from "@mae/components/ui/Button";
+import HorizSeperator from "@mae/components/core/HorizSeperator";
+import WebBadge from "@mae/components/misc/WebBadge";
+import Tool from '@mae/components/misc/Tool'
 import Image from "next/image";
 import Script from 'next/script'
 

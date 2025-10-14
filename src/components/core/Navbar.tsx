@@ -2,13 +2,13 @@
 import anime from 'animejs';
 import Link from 'next/link'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import Button, { ButtonStyle } from '@mae/components/Button';
+import Button, { ButtonStyle } from '@mae/components/ui/Button';
 import VimaeLogo from '@mae/assets/icons/logo-vimae';
 import VimaeLogoMono from '@mae/assets/icons/logo-vimae-mono';
 import { usePathname } from 'next/navigation';
 import { useRecoilState } from 'recoil';
 import { transparentNavbar } from '@mae/store/transparentNavbar';
-import NavbarStars from './NavbarStars';
+import NavbarStars from '@mae/components/subnavigation/StarryBg';
 
 let navOptions: {[path: string]: string} = {
   "/": "🏠 Home",
