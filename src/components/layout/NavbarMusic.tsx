@@ -27,9 +27,6 @@ export default function NavbarMusic() {
           <Link href="/music/stems">
             Stems
           </Link>
-          <Link href="/music/wallpapers">
-            Wallpapers
-          </Link>
         </div>
         {/* <Link href="/music">
           Latest release
