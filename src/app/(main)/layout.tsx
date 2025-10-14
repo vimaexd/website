@@ -1,4 +1,4 @@
-import Navbar from '@mae/components/layout/Navbar';
+import Navbar from '@mae/components/core/Navbar';
 import Footer from '@mae/components/core/Footer';
 import { ComponentChildren } from '@mae/misc/types';
 

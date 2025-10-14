@@ -4,7 +4,7 @@ import React from 'react'
 
 import { promises as fs } from 'fs';
 import path from 'path'
-import ProjectWithImg from '@mae/components/cards/ProjectWithImg';
+import Card from '@mae/components/ui/Card';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 
@@ -37,11 +37,11 @@ export default async function BlogAllPostsPage() {
           posts.map((d) => (
             <Link key={d.id} href={`/blog/${d.id}`} 
               className='text-white hover:scale-110 translate-z-0 backface-hidden transition-all duration-300 ease-out cursor-pointer select-none w-auto'>
-              <ProjectWithImg
+              <Card
               title={d.title}
               description={`${dayjs(d.date).format("DD/MM/YYYY")} • ${d.tags.join(", ")}`}
               image={`/assets/blog_img/${d.id}/${d.header_img}`}>
-              </ProjectWithImg>
+              </Card>
             </Link>
           ))
         }

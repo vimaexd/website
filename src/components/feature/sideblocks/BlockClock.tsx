@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import SideBlock from '../SideBlock'
+import SideBlock from '@mae/components/feature/sideblocks/Block'
 import { useDayjsCurrentTime } from '@mae/misc/useDayjsFormat'
 
 export default function ClockBlock() {
