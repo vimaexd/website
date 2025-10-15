@@ -28,9 +28,6 @@ export default function NavbarMusic() {
             Stems
           </Link>
         </div>
-        {/* <Link href="/music">
-          Latest release
-        </Link> */}
 
         <div className='ml-auto'>
           <Link href="https://vimae.bandcamp.com">

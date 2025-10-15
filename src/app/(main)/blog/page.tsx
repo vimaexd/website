@@ -36,7 +36,7 @@ export default async function BlogAllPostsPage() {
         {
           posts.map((d) => (
             <Link key={d.id} href={`/blog/${d.id}`} 
-              className='text-white hover:scale-110 translate-z-0 backface-hidden transition-all duration-300 ease-out cursor-pointer select-none w-auto'>
+              className='a-unstyled text-white hover:scale-110 translate-z-0 backface-hidden transition-all duration-300 ease-out cursor-pointer select-none w-auto'>
               <Card
               title={d.title}
               description={`${dayjs(d.date).format("DD/MM/YYYY")} • ${d.tags.join(", ")}`}

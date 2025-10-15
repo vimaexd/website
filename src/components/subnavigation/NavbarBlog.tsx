@@ -22,9 +22,6 @@ export default function NavbarBlog() {
         <Link href="/blog">
           All Posts
         </Link>
-        {/* <Link href="/music">
-          Latest release
-        </Link> */}
 
         <div className='ml-auto'>
           <a href="/rss.xml">RSS Feed</a>

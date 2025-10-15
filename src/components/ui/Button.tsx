@@ -50,7 +50,7 @@ export default function Button({text, href, className, icon, onClick, style = Bu
 
   useEffect(() => {
     let temp = ""
-    temp += "select-none transition-all duration-75 ease-out py-1 px-4 rounded-md active:scale-90"
+    temp += "select-none transition-all duration-75 ease-out py-1 px-4 rounded-md active:scale-90 a-unstyled "
     temp += " " + className
 
     switch(style) {

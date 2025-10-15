@@ -76,7 +76,11 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
             {
               desktopMusicApp.assets?.large_image && desktopMusicApp.assets?.large_image.startsWith("mp:external") &&
               <Image
-                src={desktopMusicApp.assets?.large_image.match(mediaProxyRegex)![1].replace("https/", "https://")}
+                src={
+                  desktopMusicApp.assets?.large_image
+                  .match(mediaProxyRegex)![1]
+                  .replace("https/", "https://")
+                }
                 alt="Album art"
                 width={64}
                 height={64}

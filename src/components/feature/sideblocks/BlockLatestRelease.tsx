@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function latest_release() {
   const latest = Releases.releases[0]
   return (
-    <Link href={`/music/release/${latest.slug}`} className='text-white'>
+    <Link href={`/music/release/${latest.slug}`} className='text-white a-unstyled'>
       <div className='w-full bg-neutral-800 rounded-lg bg-center bg-cover' style={{
         backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 100%), url(${latest.album_art})`
       }}>

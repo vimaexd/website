@@ -85,7 +85,7 @@ td {
 }
 
 
-a:not(:has(*)) {
+a:not(.a-unstyled) {
     @apply text-ctp-mauve;
 }
 
