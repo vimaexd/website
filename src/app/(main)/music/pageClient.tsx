@@ -108,11 +108,11 @@ export default function MusicPageClient() {
         .map((groupTitle) => {
           const groupContents = getGroupings()[groupTitle];
           return (
-            <div className=''>
+            <div className='' key={groupTitle}>
               <h2 className="text-2xl font-bold mb-2">{groupTitle}</h2>
               <div className="flex gap-4 flex-wrap p-4 bg-ctp-base rounded-lg">
                 {groupContents.map((release: IUnresolvedRelease) => (
-                  <Suspense
+                  <Suspense key={release.slug}
                     fallback={
                       <div className="w-[128px] h-[128px] bg-gray-500 animate-pulse"></div>
                     }
