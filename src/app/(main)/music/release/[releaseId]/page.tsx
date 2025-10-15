@@ -14,8 +14,7 @@ export async function generateMetadata(
   const discog = (_discog as IDiscography)
   let unresolved = discog
     .releases
-    .find(d => (d.slug == /* @next-codemod-error 'props.params' is accessed without awaiting.*/
-  props.params.releaseId))
+    .find(d => (d.slug == props.params.releaseId))
 
   if(!unresolved)
     return {}
@@ -36,8 +35,7 @@ export default function ReleaseWrapper(props: any) {
   const discog = (_discog as IDiscography)
   let unresolved = discog
     .releases
-    .find(d => (d.slug == /* @next-codemod-error 'props.params' is accessed without awaiting.*/
-  props.params.releaseId))
+    .find(d => (d.slug == props.params.releaseId))
 
   if(!unresolved) {
     notFound()
