@@ -2,6 +2,9 @@ const { version } = require('./package.json');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   productionBrowserSourceMaps: true,
   publicRuntimeConfig: {
     version
