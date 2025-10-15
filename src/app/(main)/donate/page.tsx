@@ -7,7 +7,6 @@ import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
 const BandcampSupporters = dynamic(() => import('@mae/components/feature/supporters/BandcampSupporters'));
-const DiscordSupporters = dynamic(() => import('@mae/components/feature/supporters/DiscordSupporters'));
 const ThroneSupporters = dynamic(() => import('@mae/components/feature/supporters/ThroneSupporters'));
 const OtherSupporters = dynamic(() => import('@mae/components/feature/supporters/OtherSupporters'));
 
@@ -91,7 +90,6 @@ export default async function Donate() {
       </p>
       <ThroneSupporters/>
       <BandcampSupporters/>
-      <DiscordSupporters/>
       <OtherSupporters/>
     </PageContainer>
   ); 
