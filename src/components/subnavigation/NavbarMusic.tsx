@@ -13,7 +13,7 @@ export default function NavbarMusic() {
   // when navigating to a new page, set the transparent state to default
   useEffect(() => {
     setTransparentPage(false)
-  }, [pathname])
+  }, [pathname, setTransparentPage])
 
   return (
     <div 

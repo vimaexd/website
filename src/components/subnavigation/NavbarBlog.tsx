@@ -3,7 +3,6 @@ import { transparentNavbar } from '@mae/store/transparentNavbar';
 import Link from 'next/link';
 import React, { useEffect } from 'react'
 import { useAtom } from 'jotai';
-import Image from "next/image";
 import { usePathname } from 'next/navigation';
 
 export default function NavbarBlog() {
@@ -13,7 +12,7 @@ export default function NavbarBlog() {
   // when navigating to a new page, set the transparent state to default
   useEffect(() => {
     setTransparentPage(false)
-  }, [pathname])
+  }, [pathname, setTransparentPage])
 
   return (
     <div 

@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import RSS from 'rss';
 import {remark} from 'remark'
 import remarkHtml from 'remark-html'
+import { BlogPostMetadata } from '@mae/app/(main)/blog/[post]/BlogPost';
 
 export async function generateRSSFeed() {
   // generate rss feed from blog dir using rss package
@@ -17,7 +18,7 @@ export async function generateRSSFeed() {
     posts.push(JSON.parse(meta));
   }
 
-  posts = posts.sort((a: any, b: any) => {
+  posts = posts.sort((a: BlogPostMetadata, b: BlogPostMetadata) => {
     const da = dayjs(a.date).unix()
     const db = dayjs(b.date).unix()
     return db - da
@@ -33,7 +34,7 @@ export async function generateRSSFeed() {
     copyright: 'vimae',
   })
 
-  for await(let p of posts) {
+  for await(const p of posts) {
     // fetch post
     const rawContent = await fs.readFile(path.join(postPath, p.id, p.file), {encoding: "utf-8"});
     

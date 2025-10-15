@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react'
 
 export default function Chip({className, text, onClick, hideDot}: {className: string; text: string; onClick?: () => any; hideDot?: boolean;}) {

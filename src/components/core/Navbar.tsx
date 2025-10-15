@@ -10,7 +10,7 @@ import { useAtom } from 'jotai';
 import { transparentNavbar } from '@mae/store/transparentNavbar';
 import NavbarStars from '@mae/components/subnavigation/StarryBg';
 
-let navOptions: {[path: string]: string} = {
+const navOptions: {[path: string]: string} = {
   "/": "🏠 Home",
   "/blog": "📝 Blog",
   "/projects": "📦 Projects",
@@ -27,7 +27,7 @@ export default function Navbar({version}: {version: string}) {
   // when navigating to a new page, set the transparent state to default
   useEffect(() => {
     setTransparentPage(false)
-  }, [pathname])
+  }, [pathname, setTransparentPage])
 
   const bar = useRef<HTMLDivElement>(null);
   const [menuVisible, setMenuVisible] = useState(false);
@@ -74,7 +74,7 @@ export default function Navbar({version}: {version: string}) {
 }
 
 function LogoText() {
-  const [isTransparentPage, setTransparentPage] = useAtom(transparentNavbar);
+  const [isTransparentPage] = useAtom(transparentNavbar);
 
   return (
     <Link href='/' className='font-bold text-5xl tracking-tighter text-white' data-anim="logo">

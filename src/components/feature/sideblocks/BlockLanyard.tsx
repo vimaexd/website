@@ -20,7 +20,7 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
   console.log(lanyard)
 
   const mediaProxyRegex = /mp:external\/[^\/]*\/(.*)/;
-  let musicbee = lanyard.activities.find(a => a.application_id == "409394531948298250");
+  const musicbee = lanyard.activities.find(a => a.application_id == "409394531948298250");
 
   return (
     <Fragment>

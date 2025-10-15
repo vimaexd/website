@@ -1,5 +1,4 @@
 'use client';
-import Link from 'next/link'
 import anime from 'animejs/lib/anime.es';
 import { useEffect } from 'react';
 
@@ -10,7 +9,7 @@ import ChipButton from '@mae/components/ui/ChipButton';
 import PageContainer from '@mae/components/core/PageContainer';
 import PageHeader from '@mae/components/core/PageHeader';
 
-export default function pageClient() {
+export default function ProjectPageClient() {
   useEffect(() => {
     anime({
       targets: ".anim-projects",
@@ -30,6 +29,7 @@ export default function pageClient() {
       {
         p.links.map((l: any) => {
           return <ChipButton
+          key={l.href}
           href={l.href}
           text={l.name}
           />
@@ -66,7 +66,7 @@ export default function pageClient() {
       </div> */}
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12'>
         {
-          projectData.projects.map((p: any, i: number) => {
+          projectData.projects.map((p: any) => {
             return buildProjectComponent(p)
           })
         }

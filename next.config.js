@@ -1,4 +1,3 @@
-const { version } = require('./package.json');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -6,9 +5,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   productionBrowserSourceMaps: true,
-  publicRuntimeConfig: {
-    version
-  },
   async redirects() {
     return [
       {

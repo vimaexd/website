@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import _ from 'lodash';
-import { Ref, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function NavbarStars({barWidth, barHeight}: {barWidth: number; barHeight: number;}) {
     const [stars, setStars] = useState<number[][]>([]);
@@ -12,11 +12,11 @@ export default function NavbarStars({barWidth, barHeight}: {barWidth: number; ba
         const width = barWidth;
         const height = barHeight;
 
-        let newStars = []
+        const newStars = []
         for(let i = 0; i < 8; i++) {
-            let star = Math.floor(Math.random() * (4));
-            let randX = Math.floor(Math.random() * (width - 16)) + 0;
-            let randY = Math.floor(Math.random() * (height - 16));
+            const star = Math.floor(Math.random() * (4));
+            const randX = Math.floor(Math.random() * (width - 16)) + 0;
+            const randY = Math.floor(Math.random() * (height - 16));
             newStars.push([randX, randY, star])
         }
         setStarsDone(true)

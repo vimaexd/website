@@ -16,17 +16,19 @@ export function useDayjsCurrentTime(formatString?: string | undefined) {
   const [initialized, setInitialized] = useState(false);
   const [time, setTime] = useState("");
 
-  const fetchTime = () => {
-    const timestring = dayjs().tz('Europe/London').format(formatString);
-    setTime(timestring);
-  }
-
   useEffect(() => {
+    const fetchTime = () => {
+      const timestring = dayjs().tz('Europe/London').format(formatString);
+      setTime(timestring);
+    }
+
     if(!initialized) {
       setInterval(fetchTime, 1000);
+      setInitialized(true);
       fetchTime();
     }
-  })
+
+  }, [initialized, formatString])
 
   return time;
 }

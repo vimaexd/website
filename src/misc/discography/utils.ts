@@ -1,4 +1,4 @@
-import { IBaseRelease, IResolvedRelease, ITrack, IUnresolvedRelease } from "./types";
+import { IResolvedRelease, ITrack, IUnresolvedRelease } from "./types";
 
 /**
  * Resolves the tracks of unresolved releases
@@ -30,30 +30,11 @@ export const resolveRelease = (unresolved: IUnresolvedRelease, tracks: ITrack[] 
   return resolved;
 }
 
-/**
- * @deprecated
- * @param releases IUnresolvedRelease[]
- * @returns {[year: string]: IUnresolvedRelease[]}
- */
-export const groupReleasesByYear = (releases: IUnresolvedRelease[]): {[year: string]: IUnresolvedRelease[]} => {
-  let groups: {[year: string]: IUnresolvedRelease[]} = {}
-
-  for(let i = 0; i < releases.length; i++) {
-    let release = releases[i];
-    if(!groups.hasOwnProperty(release.year))
-      groups[release.year] = [];
-
-    groups[release.year].push(release);
-  }
-  
-  return groups;
-}
-
 export const groupReleasesByKey = (releases: IUnresolvedRelease[], key: string): {[year: string]: IUnresolvedRelease[]} => {
-  let groups: {[title: string]: IUnresolvedRelease[]} = {}
+  const groups: {[title: string]: IUnresolvedRelease[]} = {}
 
   for(let i = 0; i < releases.length; i++) {
-    let release = releases[i];
+    const release = releases[i];
     if(!groups.hasOwnProperty((release as any)[key]))
       groups[(release as any)[key]] = [];
 

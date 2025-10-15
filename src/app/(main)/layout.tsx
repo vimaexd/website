@@ -10,8 +10,8 @@ export default async function Layout({
   children: ComponentChildren
 }) 
 {
-  let pack: any = await fs.readFile('package.json', {encoding: "utf-8"})
-  pack = JSON.parse(pack);
+  const _pack: string = await fs.readFile('package.json', {encoding: "utf-8"})
+  const pack: { version: string; } = JSON.parse(_pack);
 
   return (
     <>

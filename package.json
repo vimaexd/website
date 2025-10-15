@@ -45,7 +45,12 @@
     "use-local-storage": "^3.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
     "autoprefixer": "^10.4.14",
+    "eslint": "^9.37.0",
+    "eslint-config-next": "15.5.5",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.14"
   },

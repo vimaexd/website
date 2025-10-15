@@ -2,7 +2,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import Image from "next/image"
-import Link from 'next/link'
 
 const ImageWithFallback = (props: any) => {
   const { src, fallbackSrc, ...rest } = props;
@@ -12,6 +11,7 @@ const ImageWithFallback = (props: any) => {
     <Image
       {...rest}
       src={imgSrc}
+      alt="Profile picture"
       onError={() => {
           setImgSrc(fallbackSrc);
       }}
@@ -23,10 +23,10 @@ const ImageWithFallback = (props: any) => {
 };
 
 export default function BandcampSupporters() {
-  let [fetching, setFetching] = useState(false);
-  let [fetched, setFetched] = useState(false);
-  let [error, setError] = useState(false);
-  let [supporters, setSupporters] = useState<{username: string; pfp: string;}[]>([]);
+  const [fetching, setFetching] = useState(false);
+  const [fetched, setFetched] = useState(false);
+  const [error, setError] = useState(false);
+  const [supporters, setSupporters] = useState<{username: string; pfp: string;}[]>([]);
 
   const getThroneGifters = async () => {
     if(fetched || fetching) return;

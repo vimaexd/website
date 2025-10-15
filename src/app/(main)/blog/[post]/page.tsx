@@ -10,12 +10,12 @@ import { Metadata } from 'next';
 
 export async function generateMetadata(
   props: any,
-  parent: any
 ): Promise<Metadata> {
   const postPath = path.join(process.cwd(), 'blog', (await props.params).post)
   try {
     await fs.access(postPath, fs.constants.R_OK)
   } catch(err) {
+    console.error(err)
     return {};
   }
 
@@ -39,6 +39,7 @@ export default async function page(props: any) {
   try {
     await fs.access(postPath, fs.constants.R_OK)
   } catch(err) {
+    console.error(err)
     return notFound();
   }
 
@@ -50,6 +51,6 @@ export default async function page(props: any) {
   .process(contentRaw)
 
   return (
-    <BlogPost content={content} meta={meta}/>
+    <BlogPost content={content.toString()} meta={meta}/>
   )
 }

@@ -1,17 +1,16 @@
 'use client';
-import Link from 'next/link'
 import React, { Suspense } from 'react'
 import Image from "next/image";
 
 import Button, { ButtonStyle } from '@mae/components/ui/Button'
 import type { IResolvedRelease } from '@mae/misc/discography/types'
-import { useAtom } from 'jotai';
+import { useSetAtom } from 'jotai';
 import { transparentNavbar } from '@mae/store/transparentNavbar';
 
 // TODO: make this responsive
 
 export default function Release({release}: {release: IResolvedRelease}) {
-  const [isTransparentPage, setTransparentPage] = useAtom(transparentNavbar);
+  const setTransparentPage = useSetAtom(transparentNavbar);
   setTransparentPage(true);
 
   return (

@@ -3,9 +3,19 @@ import React from 'react'
 import Image from "next/image";
 import dayjs from 'dayjs';
 
-export default function BlogPost({content, meta}: {content: any; meta: any;}) {
-  let pageContent = `<h1>${meta.title}</h1>
-    ${content.toString()}
+export interface BlogPostMetadata {
+  id: string;
+  title: string;
+  file: string;
+  date: string;
+  header_img: string;
+  tags: string[];
+  original_src?: string;
+}
+
+export default function BlogPost({content, meta}: {content: string; meta: BlogPostMetadata;}) {
+  const pageContent = `<h1>${meta.title}</h1>
+    ${content}
     <hr/>
   `
   return (

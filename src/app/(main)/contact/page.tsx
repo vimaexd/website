@@ -1,11 +1,8 @@
 import PageContainer from "@mae/components/core/PageContainer";
 import PageHeader from "@mae/components/core/PageHeader";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import anime from "animejs";
 import { Metadata } from "next";
-import { StringLiteral } from "typescript";
 
 export const metadata: Metadata = {
     title: "Contact me | mae ✨",

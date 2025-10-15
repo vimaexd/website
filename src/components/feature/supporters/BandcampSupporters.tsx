@@ -8,10 +8,10 @@ import Image from "next/image"
 const bandcampImageEndpoint = "https://f4.bcbits.com/img/"
 
 export default function BandcampSupporters() {
-  let [fetching, setFetching] = useState(false);
-  let [fetched, setFetched] = useState(false);
-  let [error, setError] = useState(false);
-  let [supporters, setSupporters] = useState<{name: string; image_id: string;}[]>([]);
+  const [fetching, setFetching] = useState(false);
+  const [fetched, setFetched] = useState(false);
+  const [error, setError] = useState(false);
+  const [supporters, setSupporters] = useState<{name: string; image_id: string;}[]>([]);
 
   const askBandcampVeryNicely = async () => {
     if(fetched || fetching) return;
@@ -41,7 +41,7 @@ export default function BandcampSupporters() {
 
   useEffect(() => {
     askBandcampVeryNicely();
-  }, []);
+  }, [askBandcampVeryNicely]);
 
   if(!fetched) return (
     <div className='flex gap-2 items-center'>
@@ -70,7 +70,7 @@ export default function BandcampSupporters() {
       <div className='grid auto-cols-max grid-cols-2 sm:grid-cols-4 gap-2'>
         {
           supporters.map((s) => (
-            <div className='text-neutral-200'>
+            <div className='text-neutral-200' key={s.name}>
               <div key={s.name} className='flex gap-2 text-xs items-center'>
                 <Image
                   src={bandcampImageEndpoint + s.image_id + "_42.jpg"}

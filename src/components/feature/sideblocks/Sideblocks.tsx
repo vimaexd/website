@@ -10,7 +10,6 @@ import SocialSpeeddialBlock, {
 } from "@mae/components/feature/sideblocks/BlockSocial";
 import ClockBlock from "@mae/components/feature/sideblocks/BlockClock";
 import LatestReleaseBlock from "@mae/components/feature/sideblocks/BlockLatestRelease";
-import { useEffect } from "react";
 
 import { fakeAdHideCountState } from "@mae/store/fakeAdHideCount";
 import { useAtom } from "jotai";
@@ -23,12 +22,13 @@ const FakeAdBlock = dynamic(
         loading: () => <FakeAdPlaceholder />,
     }
 );
+
 const MaesweeperGameBlock = dynamic(
     () => import("@mae/components/feature/maesweeper/Maesweeper")
 );
 
 export default function FrontpageSideblocks() {
-    const [hideCount, setHideCount] = useAtom(fakeAdHideCountState);
+    const [hideCount] = useAtom(fakeAdHideCountState);
 
     if (hideCount >= 6) {
         return (

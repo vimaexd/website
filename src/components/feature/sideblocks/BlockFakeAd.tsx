@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react'
+import React from 'react'
 import Image from "next/image";
 import useLocalStorage from 'use-local-storage';
 import fakeAds from '@mae/data/fakeAds.json';

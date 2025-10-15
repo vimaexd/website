@@ -1,13 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from "next/image";
-import { IBaseRelease, IUnresolvedRelease } from '@mae/misc/discography/types';
+import { IUnresolvedRelease } from '@mae/misc/discography/types';
 import anime from 'animejs/lib/anime.es';
 import Link from 'next/link';
 
 export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
   const [isExpanded, setExpanded] = useState(false);
-  let hasAnimatedIn = false;
+  const [hasAnimatedIn, setHasAnimatedIn] = useState(false);
   const popoverId = `musicpopover-${release.slug}`
 
   const enter = () => {
@@ -23,7 +23,7 @@ export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
       duration: 0,
       complete() {
         setExpanded(false)
-        hasAnimatedIn = false;
+        setHasAnimatedIn(false);
       }
     })
   }
@@ -44,9 +44,9 @@ export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
         easing: "spring(0.5, 120, 10, 0)",
         delay: anime.stagger(50)
       })
-      hasAnimatedIn = true;
+      setHasAnimatedIn(true);
     }
-  })
+  }, [hasAnimatedIn, setHasAnimatedIn])
 
   return (
     <div className='flex flex-col items-center gap-2 cursor-pointer'>

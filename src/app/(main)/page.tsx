@@ -6,12 +6,10 @@ import {
 } from "@mae/components/misc/Tool";
 import FrontpageSideblocks from "@mae/components/feature/sideblocks/Sideblocks";
 import Link from "next/link";
-import Button from "@mae/components/ui/Button";
 import HorizSeperator from "@mae/components/core/HorizSeperator";
 import WebBadge from "@mae/components/misc/WebBadge";
 import Tool from '@mae/components/misc/Tool'
 import Image from "next/image";
-import Script from 'next/script'
 
 export default function Home() {
     return (

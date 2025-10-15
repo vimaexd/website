@@ -1,10 +1,10 @@
 'use client';
-import React, { useState, Fragment, Suspense, useEffect } from 'react';
+import React, { Fragment, Suspense } from 'react';
 import PageHeader from '@mae/components/core/PageHeader';
 import { discography, DiscographyGroup, DiscographyView } from '@mae/store/discography';
 import { IDiscography, IUnresolvedRelease } from '@mae/misc/discography/types';
 import discog from '@mae/data/discography-vimae.json'
-import { groupReleasesByKey, groupReleasesByYear } from '@mae/misc/discography/utils';
+import { groupReleasesByKey } from '@mae/misc/discography/utils';
 import ReleaseCard from '@mae/components/feature/discography/ReleaseCard';
 import ReleaseRow from '@mae/components/feature/discography/ReleaseRow';
 import { useAtom } from 'jotai';
@@ -21,8 +21,8 @@ export default function MusicPageClient() {
         return groupReleasesByKey(releases, "year");
 
       case DiscographyGroup.TYPE:
-        let groupedByType = groupReleasesByKey(releases, "type");
-        let typeOrder = ["Album", "EP", "Single"]
+        const groupedByType = groupReleasesByKey(releases, "type");
+        const typeOrder = ["Album", "EP", "Single"]
 
         const ordered = Object
           .keys(groupedByType)
@@ -33,7 +33,7 @@ export default function MusicPageClient() {
             return posB - posA
           })
           .reduce((obj: any, title: string) => {
-            let temp = {
+            const temp = {
               ...obj
             }
             temp[title] = groupedByType[title];

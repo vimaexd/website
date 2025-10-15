@@ -1,7 +1,6 @@
 import { IResolvedRelease } from '@mae/misc/discography/types'
 import React from 'react';
 import Image from "next/image";
-import Link from 'next/link';
 import Button from '@mae/components/ui/Button';
 
 const serviceToIcon: {[a: string]: string;} = {
@@ -58,8 +57,9 @@ export default function releasefull({release}: {release: IResolvedRelease}) {
           <div className='flex flex-col gap-2 w-full'>
             {
               Object.keys(release.links)
-                .map((e: any, i) => {
+                .map((e: string, i) => {
                   return <Button 
+                  key={e}
                   text={serviceSlugToName[e]} 
                   href={Object.values(release.links)[i]} 
                   className={((e == "bandcamp") ? "!bg-ctp-mauve !text-ctp-surface0" : "") + ' w-full h-10 flex justify-center items-center'}

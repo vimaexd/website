@@ -1,5 +1,4 @@
-import { ComponentChildren } from '@mae/misc/types';
-import React from 'react'
+import React, { JSX } from 'react'
 
 export default function PageHeader({title, children}: {title: string; children?: string | JSX.Element | (string | JSX.Element)[]}) {
   return (

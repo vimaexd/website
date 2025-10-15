@@ -1,6 +1,6 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import { IBaseRelease, IUnresolvedRelease } from '@mae/misc/discography/types';
+import React from 'react'
+import { IUnresolvedRelease } from '@mae/misc/discography/types';
 import Link from 'next/link';
 
 export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {

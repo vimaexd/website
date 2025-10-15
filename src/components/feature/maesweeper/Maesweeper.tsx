@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react'
 import * as PIXI from 'pixi.js';
-import _ from 'lodash';
 
 export default function MaesweeperGame() {
   const wrapper = useRef<HTMLDivElement>(null);
@@ -14,7 +13,7 @@ export default function MaesweeperGame() {
   */
   let flags = [];
   let mines: number[][] = [];
-  let tiles: {[a: string]: PIXI.Graphics} = {};
+  const tiles: {[a: string]: PIXI.Graphics} = {};
 
   /*
     Static/config
@@ -31,7 +30,7 @@ export default function MaesweeperGame() {
   const clearNearbyEmpties = (pos: number[]) => {
     for (let x = -1; x < 2; x++) { 
       for (let y = -1; y < 2; y++) { 
-        let checking = [pos[0] + x, pos[1] + y]
+        const checking = [pos[0] + x, pos[1] + y]
         if(checking == pos) continue;
 
         if(calculateBombProximity([x,y]) < 1) {
@@ -47,8 +46,8 @@ export default function MaesweeperGame() {
     Position <-> Key serialization
     i'm doing this because js dosent play well with arrays as keys
   */
-  const posToKey = (pos: number[]) => (`${pos[0]}:${pos[1]}`);
-  const keyToPos = (key: string) => ([key.split(":")[0], key.split(":")[1]]);
+  // const posToKey = (pos: number[]) => (`${pos[0]}:${pos[1]}`);
+  // const keyToPos = (key: string) => ([key.split(":")[0], key.split(":")[1]]);
   
   /*
     Bombs
@@ -71,7 +70,7 @@ export default function MaesweeperGame() {
     let num = 0;
     for (let x = -1; x < 2; x++) { 
       for (let y = -1; y < 2; y++) { 
-        let checking = [pos[0] + x, pos[1] + y]
+        const checking = [pos[0] + x, pos[1] + y]
         if(checking == pos) continue;
 
         if(isBomb(checking))
@@ -85,6 +84,7 @@ export default function MaesweeperGame() {
     Game
   */ 
   const initializeGame = async () => {
+    flags = [0]
     setInit(true);
     app = new PIXI.Application({
       width: 288,
@@ -104,7 +104,7 @@ export default function MaesweeperGame() {
     for(let y = 0; y < 16; y++) {
       for(let x = 0; x < 16; x++) {
         const key = `${x}:${y}`;
-        let obj = new PIXI.Graphics();
+        const obj = new PIXI.Graphics();
 
         if(dev && isBomb([x,y])) {
           obj.beginFill(0x875050);
@@ -112,10 +112,10 @@ export default function MaesweeperGame() {
           obj.beginFill(0x7d7d7d);
         }
 
-        let screenX = (16*x)+(x*2)
-        let screenY = (16*y)+(y*2)
+        const screenX = (16*x)+(x*2)
+        const screenY = (16*y)+(y*2)
 
-        let decoWidth = 2;
+        const decoWidth = 2;
 
         obj.drawRect(screenX, screenY, 16, 16);
 
@@ -175,7 +175,7 @@ export default function MaesweeperGame() {
     if (wrapper.current && !initialized) {
       initializeGame();
     }
-  }, [wrapper])
+  }, [wrapper, initializeGame, initialized])
 
   return <div ref={wrapper} style={{imageRendering: "pixelated"}}></div>;
 }

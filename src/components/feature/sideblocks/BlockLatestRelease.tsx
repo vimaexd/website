@@ -1,11 +1,10 @@
 import Image from "next/image"
 import React from 'react'
-import ChipButton from '@mae/components/ui/ChipButton';
 import Releases from '@mae/data/discography-vimae.json';
 import Link from 'next/link';
 
 export default function latest_release() {
-  let latest = Releases.releases[0]
+  const latest = Releases.releases[0]
   return (
     <Link href={`/music/release/${latest.slug}`} className='text-white'>
       <div className='w-full bg-neutral-800 rounded-lg bg-center bg-cover' style={{

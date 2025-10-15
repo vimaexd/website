@@ -2,13 +2,12 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import Image from "next/image"
-import Link from 'next/link'
 
 export default function BandcampSupporters() {
-  let [fetching, setFetching] = useState(false);
-  let [fetched, setFetched] = useState(false);
-  let [error, setError] = useState(false);
-  let [supporters, setSupporters] = useState<{username: string; pfp: string;}[]>([]);
+  const [fetching, setFetching] = useState(false);
+  const [fetched, setFetched] = useState(false);
+  const [error, setError] = useState(false);
+  const [supporters, setSupporters] = useState<{username: string; pfp: string;}[]>([]);
 
   const getDiscordUsers = async () => {
     if(fetched || fetching) return;

@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
-import {Howl, Howler} from 'howler';
+import {Howl} from 'howler';
 
 const soundClick = new Howl({
   src: ['/assets/sfx/click.wav'],
@@ -42,10 +42,11 @@ export default function Button({text, href, className, icon, onClick, style = Bu
 	};
 
   if(onClick) {
-    let href = null;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const href = null;
   }
 
-  let [classes, setClasses] = useState("");
+  const [classes, setClasses] = useState("");
 
   useEffect(() => {
     let temp = ""

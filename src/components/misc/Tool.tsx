@@ -3,7 +3,7 @@ import { ComponentChildren } from '@mae/misc/types';
 import React from 'react'
 import { Tooltip } from 'react-tooltip'
 
-export default function Tool({name, children, color, useBoxShadow=false}: {name: string; children: ComponentChildren; color: string; useBoxShadow?: boolean}) {
+export default function Tool({name, children, color}: {name: string; children: ComponentChildren; color: string;}) {
   
   const style: React.CSSProperties = {
     background: `${color}20`

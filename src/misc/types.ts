@@ -1,3 +1,3 @@
-import { ReactNode } from "react";
+import { JSX } from "react";
 
 export type ComponentChildren = JSX.Element | JSX.Element[]

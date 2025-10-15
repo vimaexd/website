@@ -51,7 +51,7 @@ export async function POST() {
         })
     );
 
-    let supporters = Object.values(collectedBy.data.collected_by).reduce(
+    const supporters = Object.values(collectedBy.data.collected_by).reduce(
         (prev: any[], cur: any) => {
             let all = cur.reviews.concat(cur.thumbs);
             all = all.filter(

@@ -1,9 +1,7 @@
 'use client'
-import axios from 'axios'
-import React, { useState } from 'react'
-import Image from "next/image"
-import Link from 'next/link'
+import React from 'react'
 import _supporters from '@mae/data/otherSupporters.json';
+import Image from 'next/image';
 
 export default function BandcampSupporters() {
   const supporters = (_supporters as {[a: string]: string;})
@@ -15,13 +13,13 @@ export default function BandcampSupporters() {
       <div className="grid auto-cols-max grid-cols-2 sm:grid-cols-4 gap-2">
         {Object.keys(supporters).map((username) => (
           <div key={username} className="flex gap-2 text-xs items-center">
-            <img
+            <Image
               src={supporters[username]}
               height={32}
               width={32}
               alt="Profile picture"
               className="rounded-full"
-            ></img>
+            ></Image>
             {username}
           </div>
         ))}

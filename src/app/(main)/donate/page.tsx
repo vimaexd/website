@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   description: 'donate to me if you want :)'
 }
 
-let cache_test = 0
 
 export default async function Donate() {
   return (

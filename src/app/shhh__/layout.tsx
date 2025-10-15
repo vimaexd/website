@@ -1,15 +1,11 @@
 import { ComponentChildren } from '@mae/misc/types';
 
-import { promises as fs } from 'fs';
-
 export default async function Layout({
   children,
 }: {
   children: ComponentChildren
 }) 
 {
-  let pack: any = await fs.readFile('package.json', {encoding: "utf-8"})
-  pack = JSON.parse(pack);
 
   return (
     <>
