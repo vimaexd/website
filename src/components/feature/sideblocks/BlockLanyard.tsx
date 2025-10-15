@@ -19,8 +19,13 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
 
   console.log(lanyard)
 
-  const mediaProxyRegex = /mp:external\/[^\/]*\/(.*)/;
-  const musicbee = lanyard.activities.find(a => a.application_id == "409394531948298250");
+  const mediaProxyRegex = /mp:external\/.*?(http.*)/;
+  const desktopMusicAppIds = [
+    "409394531948298250", // musicbee
+    "911790844204437504", // cider
+    "1165957668758900787" // feishin
+  ]
+  const desktopMusicApp = lanyard.activities.find(a => desktopMusicAppIds.includes(a.application_id!.toString()));
 
   return (
     <Fragment>
@@ -64,26 +69,27 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
         </SideBlock>
       }
       {
-        /* MusicBee now playing */
-        musicbee != null && 
+        /* Music App now playing */
+        desktopMusicApp != null && 
         <SideBlock title="🎧 now playing">
-          <div className='flex flex-row gap-2'>
+          <div className='flex flex-row gap-3 p-1'>
             {
-              musicbee.assets?.large_image && musicbee.assets?.large_image.startsWith("mp:external") &&
+              desktopMusicApp.assets?.large_image && desktopMusicApp.assets?.large_image.startsWith("mp:external") &&
               <Image
-                src={musicbee.assets?.large_image.match(mediaProxyRegex)![1].replace("https/", "https://")}
+                src={desktopMusicApp.assets?.large_image.match(mediaProxyRegex)![1].replace("https/", "https://")}
                 alt="Album art"
-                width={48}
-                height={48}
-                className='w-fit h-fit'
+                width={64}
+                height={64}
+                className='w-fit h-fit rounded-md'
                 style={{
                   maxWidth: "100%",
                   height: "auto"
-                }} />
+                }} 
+                />
             }
             <div className="flex flex-col justify-center">
-              <h2 className='text-sm font-medium'>{musicbee.details?.split("-")[1]}</h2>
-              <h3 className='text-xs'>{musicbee.details?.split("-")[0]}</h3>
+              <h2 className='text-sm font-medium'>{desktopMusicApp.details}</h2>
+              <h3 className='text-xs'>{desktopMusicApp.state}</h3>
             </div>
           </div>
         </SideBlock>

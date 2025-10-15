@@ -22,29 +22,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "cdn.mae.wtf"
+        hostname: "*"
       },
-      {
-        hostname: "i.scdn.co"
-      },
-      {
-        hostname: "cdn.discordapp.com"
-      },
-      {
-        hostname: "media.discordapp.net"
-      },
-      {
-        hostname: "f4.bcbits.com"
-      },
-      {
-        hostname: "static-cdn.jtvnw.net"
-      },
-      {
-        hostname: "i.imgur.com"
-      },
-      {
-        hostname: "thronecdn.com"
-      }
     ]
   },
 }

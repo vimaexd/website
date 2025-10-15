@@ -84,12 +84,9 @@ td {
     @apply px-4 py-2;
 }
 
-hr {
-    border-top: 2px solid #bbb;
-}
 
-a {
-    /* @apply text-ctp-mauve; */
+a:not(:has(*)) {
+    @apply text-ctp-mauve;
 }
 
 /* misc */

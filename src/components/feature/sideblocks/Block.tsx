@@ -18,7 +18,7 @@ export default function SideBlock({children, title, disablePadding = false}: {ti
       {
         children &&
         <Fragment>
-          <hr className='border-t-ctp-mauve border-t'/>
+          <hr className='border-t border-t-ctp-mauve'/>
           <div className={(!disablePadding) ? 'p-2' : ''}>{children}</div>
         </Fragment>
       }
