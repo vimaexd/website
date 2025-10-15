@@ -24,30 +24,49 @@ const nextConfig = {
       {
         hostname: "cdn.mae.wtf"
       },
-      {
-        hostname: "i.scdn.co"
-      },
+
+      // discord profile pictures
       {
         hostname: "cdn.discordapp.com"
       },
       {
         hostname: "media.discordapp.net"
       },
+
+      // bandcamp profile pictures
       {
         hostname: "f4.bcbits.com"
       },
+
+      // twitch.tv profile pictures
       {
         hostname: "static-cdn.jtvnw.net"
       },
+
+      // throne profile pictures
+      {
+        hostname: "thronecdn.com"
+      },
+
+      // imgur (for musicbee album arts)
       {
         hostname: "i.imgur.com"
       },
+
+      // spotify (album art)
       {
-        hostname: "thronecdn.com"
+        hostname: "i.scdn.co"
+      },
+
+      // apple music (album art)
+      {
+        hostname: "*.mzstatic.com"
       },
       {
         hostname: "rise.cider.sh"
       },
+
+      // jellyfin (album art)
       {
         hostname: "jellyfin.maecafe.link"
       }
