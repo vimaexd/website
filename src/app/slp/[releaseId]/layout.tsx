@@ -1,8 +1,7 @@
-import { ComponentChildren } from '@mae/misc/types'
-import React, { Fragment } from 'react'
+import React from 'react'
 import VimaeLogoMono from '@mae/assets/icons/logo-vimae-mono';
 
-export default function layout({children}: {children: ComponentChildren}) {
+export default function layout({children}: {children: React.ReactNode}) {
   return (
     <>
       <div className='flex justify-center items-center h-screen w-screen'>

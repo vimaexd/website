@@ -22,7 +22,7 @@ const interVariable = localFont({
 export default async function RootLayout({
   children,
 }: {
-  children: ComponentChildren
+  children: React.ReactNode
 }) 
 {
   return (
