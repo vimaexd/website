@@ -170,7 +170,12 @@ export default function Home() {
                         <WebBadge
                             href="https://j0.lol/"
                             src="/assets/buttons/friends/j0.gif"
-                            alt="Ellie53"
+                            alt="j0"
+                        />
+                        <WebBadge
+                            href="https://girlthi.ng/~thermia/"
+                            src="/assets/buttons/friends/thermia.gif"
+                            alt="thermia"
                         />
                     </div>
 
