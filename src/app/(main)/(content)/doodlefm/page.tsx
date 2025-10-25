@@ -7,7 +7,8 @@ import PfpEllie from './pfps/ellie53.jpg';
 import PfpThermia from './pfps/thermia.webp';
 import PfpZaire from './pfps/claire.webp';
 import PfpCrayyn from './pfps/crayyn.webp'
-import PfpIvy from './pfps/ivy.webp'
+import PfpIvy from './pfps/ivy.webp';
+import PfpJulia from './pfps/julia.png';
 
 export default function DoodleFMPage() {
     return (
@@ -69,6 +70,14 @@ export default function DoodleFMPage() {
                 ]}
                 imageUrl={PfpIvy}
                 link="https://ivynyabula.cc"
+            />
+            <CreditBlock
+                name="Julia"
+                roles={[
+                    "Caller Voiceover"
+                ]}
+                imageUrl={PfpJulia}
+                link="https://insertdomain.name"
             />
 
             <h2 className="text-2xl font-semibold">Setlist</h2>
