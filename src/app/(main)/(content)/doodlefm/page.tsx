@@ -33,7 +33,7 @@ export default function DoodleFMPage() {
                     "Ad - Magical Hearts XX: Upgrade Ultimate ~EXTENSION~ DESTROYER Ascend!",
                 ]}
                 imageUrl={PfpEllie}
-                link="https://girlthi.ng/~thermia"
+                link="https://ellie53.neocities.org"
             />
             <CreditBlock
                 name="thermia"
