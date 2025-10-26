@@ -23,7 +23,9 @@ export default function DoodleFMPage() {
                     "Overlay Developer / Operator",
                     "Doodle Trivia Themes", 
                     "Doodle Travel Theme", 
-                    "Ad - Paracetamol"]}
+                    "Ad - Paracetamol",
+                    "Ad - Ceiling Bird (production)"
+                ]}
                 imageUrl="/assets/pfp.png"
                 link="/"
             />
@@ -48,6 +50,8 @@ export default function DoodleFMPage() {
                     "Ad - BeefBox",
                     "Ad - Pocket Transgirl",
                     "Ad - Chair Hospital",
+                    "Ad - F150 (production)",
+                    "Ad - Ceiling Bird (idea)",
                     "Co-host",
                 ]}
                 imageUrl={PfpZaire}
@@ -74,7 +78,8 @@ export default function DoodleFMPage() {
             <CreditBlock
                 name="Julia"
                 roles={[
-                    "Caller Voiceover"
+                    "Caller Voiceover",
+                    "Ad - Ceiling Bird (voice)"
                 ]}
                 imageUrl={PfpJulia}
                 link="https://insertdomain.name"
