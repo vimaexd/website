@@ -70,7 +70,8 @@ export default function DoodleFMPage() {
             <CreditBlock
                 name="IvyNyabula"
                 roles={[
-                    "Ad - Lewis Daimon Rehabilitation Center"
+                    "Ad - Lewis Daimon Rehabilitation Center",
+                    "Ad - Ceiling Bird (bird)"
                 ]}
                 imageUrl={PfpIvy}
                 link="https://ivynyabula.cc"
