@@ -16,7 +16,16 @@ export const metadata: Metadata = {
 }
 
 const interVariable = localFont({
-  src: "../assets/fonts/Inter/InterVariable.woff2"
+  src: [
+    {
+        path: "../assets/fonts/Inter/InterVariable.woff2",
+        style: "normal"
+    },
+    {
+        path: "../assets/fonts/Inter/InterVariable-Italic.woff2",
+        style: "italic"
+    }
+  ],
 });
 
 export default async function RootLayout({

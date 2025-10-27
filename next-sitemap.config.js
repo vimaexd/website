@@ -1,4 +1,4 @@
-const fs = require('fs/promises')
+import fs from 'fs/promises';
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
@@ -6,13 +6,14 @@ module.exports = {
   generateRobotsTxt: true,
   exclude: [
     "/api/*",
-    "/shhh__/*"
+    "/shhh__/*",
+    "/doodlefm"
   ],
   async additionalPaths() {
     let paths = []
     
     // discog
-    const discography = await require('./src/data/discography-vimae.json');
+    const discography = await import('./src/data/discography-vimae.json');
     discography.releases.forEach((r) => {
       paths.push({loc: "/music/release/" + r.slug})
     })
