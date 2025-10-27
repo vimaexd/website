@@ -38,7 +38,7 @@ export default async function RootLayout({
     <html lang="en">
       <head>
       </head>
-      <body className={`${interVariable.className} bg-ctp-crust text-gray-200`}>
+      <body className={`mocha ${interVariable.className} bg-ctp-crust text-gray-200`}>
         <LayoutWrappers>
           {children}
         </LayoutWrappers>
