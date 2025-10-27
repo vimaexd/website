@@ -1,4 +1,5 @@
-import fs from 'fs/promises';
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const fs = require('fs/promises');
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
@@ -13,7 +14,8 @@ module.exports = {
     let paths = []
     
     // discog
-    const discography = await import('./src/data/discography-vimae.json');
+    const _discography = await fs.readFile('./src/data/discography-vimae.json', { encoding: "utf-8"});
+    const discography = JSON.parse(_discography);
     discography.releases.forEach((r) => {
       paths.push({loc: "/music/release/" + r.slug})
     })
