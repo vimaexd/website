@@ -1,6 +1,22 @@
 {
     "projects": [
         {
+            "title": "doodle FM overlay",
+            "description": "a custom stream overlay for the doodle FM live show built on Cloudflare Workers and Durable Objects",
+            "image": "/assets/project_images/doodlefm.png",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Live Show",
+                    "href": "https://www.twitch.tv/videos/2603027436"
+                },
+                {
+                    "name": "Source",
+                    "href": "https://codeberg.org/vimae/doodlefm-overlay"
+                }
+            ]
+        },
+        {
             "title": "sparkler",
             "description": "a private data browser for the Fortnite Festival CMS",
             "image": "/assets/project_images/sparkler.jpg",
