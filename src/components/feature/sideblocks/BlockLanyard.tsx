@@ -25,7 +25,9 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
     "911790844204437504", // cider
     "1165957668758900787" // feishin
   ]
-  const desktopMusicApp = lanyard.activities.find(a => desktopMusicAppIds.includes(a.application_id!.toString()));
+  const desktopMusicApp = lanyard.activities
+    .filter(a => a.type == 2)
+    .find(a => desktopMusicAppIds.includes(a.application_id!.toString()));
 
   return (
     <Fragment>
@@ -43,7 +45,7 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
       }
       {
         /* Spotify now playing */
-        lanyard.spotify && 
+        lanyard.spotify &&
         <SideBlock title="🎧 now playing">
           <div className='flex flex-row gap-2'>
             {
@@ -70,7 +72,7 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
       }
       {
         /* Music App now playing */
-        desktopMusicApp != null && 
+        desktopMusicApp != null &&
         <SideBlock title="🎧 now playing">
           <div className='flex flex-row gap-3 p-1'>
             {
@@ -88,7 +90,7 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
                 style={{
                   maxWidth: "100%",
                   height: "auto"
-                }} 
+                }}
                 />
             }
             <div className="flex flex-col justify-center">
