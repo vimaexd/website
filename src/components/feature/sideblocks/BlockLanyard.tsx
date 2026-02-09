@@ -25,7 +25,10 @@ export default function LanyardBlock({id}: {id: `${bigint}`}) {
     "911790844204437504", // cider
     "1165957668758900787" // feishin
   ]
-  const desktopMusicApp = lanyard.activities.find(a => desktopMusicAppIds.includes(a.application_id!.toString()));
+
+  const desktopMusicApp = lanyard.activities
+    .filter(a => a.type == 0)
+    .find(a => desktopMusicAppIds.includes(a.application_id!.toString()));
 
   return (
     <Fragment>
