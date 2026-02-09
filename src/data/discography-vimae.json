@@ -53,11 +53,35 @@
             "id": "token",
             "name": "token",
             "genre": "Electro House",
-            "lenght": "3:42",
+            "length": "3:42",
             "artists": ["vimae"]
+        },
+        {
+            "id": "honestly",
+            "name": "honestly [feat. vimae]",
+            "genre": "Indie Pop",
+            "length": "3:30",
+            "artists": ["zaire", "vimae"]
         }
     ],
     "releases": [
+        {
+            "slug": "honestly",
+            "title": "honestly [feat. vimae]",
+            "type": "Single",
+            "year": 2026,
+            "release_date": "06/02/2026",
+            "tracks": ["track:honestly"],
+            "links": {
+                "bandcamp": "https://trirecords.bandcamp.com/track/honestly-feat-vimae",
+                "applemusic": "https://music.apple.com/gb/album/honestly-feat-vimae-single/1870660149",
+                "spotify": "https://open.spotify.com/album/4w5osqAvtj05TD3apTq31x",
+                "soundcloud": "https://soundcloud.com/supitszaire/honestly",
+                "youtube": "https://youtu.be/8QTP2XotXWc"
+            },
+            "artist_comment": "featuring on zaire's song, released via Tri Records",
+            "album_art": "/assets/music/covers/honestly.jpg"
+        },
         {
             "slug": "token",
             "title": "token",
