@@ -27,7 +27,7 @@
     "howler": "^2.2.3",
     "jotai": "^2.15.0",
     "lodash": "^4.17.21",
-    "next": "15.5.5",
+    "next": "15.5.7",
     "next-plausible": "^3.12.0",
     "next-sitemap": "^4.2.3",
     "pixi.js": "^7.2.4",
