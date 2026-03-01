@@ -1,6 +1,30 @@
 {
     "projects": [
         {
+            "title": "pin-gen",
+            "description": "a reverse engineered key-generator for my universities' attendance system",
+            "image": "/assets/project_images/pingen.png",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Website",
+                    "href": "https://pingen.vimae.workers.dev"
+                }
+            ]
+        },
+        {
+            "title": "Bird Pro",
+            "description": "bespoke cross-platform text-to-speech software for mute users",
+            "image": "/assets/project_images/birdpro.png",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Source",
+                    "href": "https://codeberg.org/vimae/birdpro"
+                }
+            ]
+        },
+        {
             "title": "doodle FM overlay",
             "description": "a custom stream overlay for the doodle FM live show built on Cloudflare Workers and Durable Objects",
             "image": "/assets/project_images/doodlefm.png",
