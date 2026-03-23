@@ -20,6 +20,7 @@ const nextConfig = {
             {
                 source: "/nightlight",
                 destination: "https://hypeddit.com/h3fekt",
+                permanent: false,
             },
         ];
     },
