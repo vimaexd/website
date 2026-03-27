@@ -19,7 +19,7 @@ const nextConfig = {
             },
             {
                 source: "/nightlight",
-                destination: "https://hypeddit.com/h3fekt",
+                destination: "/slp/nightlight",
                 permanent: false,
             },
         ];
