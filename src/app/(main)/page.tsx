@@ -132,8 +132,8 @@ export default function Home() {
                     </div>
                 </div>
                 <HorizSeperator />
-                <div className="flex flex-col gap-4">         
-                    <h3 className="font-bold text-lg">friends</h3>       
+                <div className="flex flex-col gap-4">
+                    <h3 className="font-bold text-lg">friends</h3>
                     <div className="flex flex-wrap gap-2">
                         <WebBadge href="https://mae.wtf" src="/assets/buttons/mae.png" alt="mae" />
                         <WebBadge href="https://arimelody.me" src="/assets/buttons/friends/ari.gif" alt="ari melody" />
@@ -193,6 +193,18 @@ export default function Home() {
                 </div>
 
                 <HorizSeperator />
+                <div className="flex flex-col gap-4">
+                    <h3 className="font-bold text-lg">webrings</h3>
+                    <div className="flex flex-wrap gap-2">
+                        <div className='flex items-center gap-4'>
+                            <a className='bg-ctp-base hover:bg-ctp-surface0 p-4 rounded-xl' href="https://melon-ring.pathetic.systems/vimae/previous">◀</a>
+                            <a href="https://melon-ring.pathetic.systems">melon-ring</a>
+                            <a className='bg-ctp-base hover:bg-ctp-surface0 p-4 rounded-xl' href="https://melon-ring.pathetic.systems/vimae/next">▶</a>
+                        </div>
+                    </div>
+                </div>
+
+
             </PageContainer>
             {/* sideblocks desktop */}
             <div className="min-[670px]:block hidden lg:mr-0 mr-4">
