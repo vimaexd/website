@@ -4,8 +4,9 @@
 
 @import '@catppuccin/tailwindcss/mocha.css';
 
-@theme {
+@theme inline {
   --font-sans: InterDisplay;
+  --font-mono: "monaspace", monospace;
 
   --shadow-mae: 0px 2px 32px 8px rgba(133, 72, 245, 0.1);
 }
@@ -135,4 +136,25 @@ a:not(.a-unstyled) {
 
 .backface-hidden {
     backface-visibility: hidden;
+}
+
+
+/* star anim*/
+.anim_star {
+    animation: 2s star-flicker linear infinite;
+    /*animation-timing-function: steps(3, end);*/
+}
+
+@keyframes star-flicker {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
 }

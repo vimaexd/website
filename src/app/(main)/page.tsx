@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 import PageContainer from "@mae/components/core/PageContainer";
 import Introduction from "@mae/components/feature/intro/Introduction";
-import {
-    ToolBoxicon,
-} from "@mae/components/misc/Tool";
+import { ToolBoxicon } from "@mae/components/misc/Tool";
 import FrontpageSideblocks from "@mae/components/feature/sideblocks/Sideblocks";
 import Link from "next/link";
 import HorizSeperator from "@mae/components/core/HorizSeperator";
 import WebBadge from "@mae/components/misc/WebBadge";
-import Tool from '@mae/components/misc/Tool'
+import Tool from "@mae/components/misc/Tool";
 import Image from "next/image";
+
+import projectData from "@mae/data/projects.json";
 
 export default function Home() {
     return (
@@ -18,135 +18,175 @@ export default function Home() {
                 <Introduction />
 
                 {/* sideblocks mobile */}
-                <div className="max-[670px]:block hidden">
+                <div className="flex flex-col">
                     <FrontpageSideblocks />
                 </div>
                 <HorizSeperator />
 
                 {/* backstory (mae lore) */}
                 <div className="flex flex-col md:flex-row gap-8">
-                    <div className="block">
-                        <Image
-                            src="/assets/moon16by9_origres.png"
-                            width={1000}
-                            height={500}
-                            className="rounded-sm"
-                            alt="a pixel art illustration of mae's oc sitting on grass by the beach next to a building
-                that says NUU CORP with a transgender flag on top. there is a moon in the corner of the frame
-                and icons in the other corner"
-                            unoptimized={true}
-                            style={{
-                                boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)",
-                                imageRendering: "pixelated",
-                                maxWidth: "100%",
-                                height: "auto"
-                            }} />
-                    </div>
                     <div className="space-y-4 h-full">
-                        <h2 className="text-2xl font-semibold">🪐 i do a lot of things!</h2>
-                        <p className="leading-6">
-                            i enjoy screwing around with creative software and really just
-                            anything.
-                            <br />
-                            <br />
-                            i've done webdev, gamedev, 3D modelling, pixelart, graphic design,
-                            reverse engineering, native development and system administration.
+                        <h2 className="font-semibold text-2xl">
+                            👩‍💻
+                        </h2>
+                        <p className="leading-7">
+                            i'm a <b>programmer</b> and <b>musician</b> and enjoy making things
+                            to share with the world. i like to poke into different fields, so
+                            you can find me doing web dev, desktop dev,
+                            reverse engineering, game dev and much more! i primarily run a linux desktop
+                            for fun and i love to build computers.
                         </p>
-                        <br/>
-                        <a href="/projects">see more projects...</a>
+                        <p>here are some recent things i've made:</p>
+                        <div className="flex flex-col gap-4 w-full min-w-0">
+                            {projectData.projects.slice(0, 4).map((p: any) => (
+                                <div
+                                    key={p.title}
+                                    className="flex items-center gap-4 w-full min-w-0"
+                                >
+                                    <Image
+                                        src={p.image}
+                                        alt="Project image"
+                                        width={48}
+                                        height={24}
+                                        className="rounded-md shrink-0"
+                                    />
+                                    <div className="flex flex-col min-w-0 flex-1">
+                                        <h1 className="font-bold overflow-hidden text-ellipsis text-nowrap">
+                                            {p.title}
+                                        </h1>
+                                        <p className="text-sm min-w-0">
+                                            {p.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                            <Link href="/projects" className="w-fit">
+                                <p className="ml-16">More projects</p>
+                            </Link>
+                        </div>
+                        <div className="flex">
+
+                        </div>
+                        <p>
+                            i also contribute to various open source projects
+                            from time to time over on my{" "}
+                            <a href="https://codeberg.com/vimaexd">Codeberg</a>{" "}
+                            and <a href="https://github.com/vimaexd">GitHub</a>{" "}
+                            from time to time.
+                        </p>
+
                     </div>
                 </div>
                 <HorizSeperator />
-                <div className="flex flex-col md:flex-row-reverse gap-8">
-                    <div className="block">
-                        <Image
-                            src="/assets/ableton_screenshot.png"
-                            width={1280}
-                            height={720}
-                            className="rounded-sm "
-                            alt="a screenshot of visual studio code"
-                            style={{
-                                boxShadow: "0px 2px 32px 8px rgba(133, 72, 245, 0.1)",
-                                maxWidth: "100%",
-                                height: "auto"
-                            }} />
-                    </div>
-                    <div className="space-y-4">
-                        <h2 className="text-2xl font-semibold">
-                            🎼 i really really like music
+                <div className="flex sm:flex-row flex-col items-center-safe gap-16 md:gap-32">
+                    <div className="sm:w-2/3">
+                        <h2 className="font-semibold text-2xl">
+                            🎹
                         </h2>
-                        <p>
-                            i've been making music since 2020 in <b>Ableton Live</b> and <b>FL Studio</b>. i'm still
-                            trying to figure out what my style is but i've made a lot of electronic centered music
-                            in the past
+                        <p className="leading-7 mt-4">
+                            i have a deep love of music in many styles, but my tastes{" "}
+                            usually centers around <b>pop</b> and <b>electronic</b> music.
+                            the music i make varies from genre to genre, and you can find my music{" "}
+                            <Link href="/music" className="font-bold">here!</Link>
+                            <br /><br />
+
+                            i also enjoy arcade rhythm games, such as <b>Sound Voltex</b>,{" "}
+                            <b>DanceDanceRevolution</b>, <b>maimai</b> and find the modern
+                            online service tech really interesting!
                         </p>
-                        <p>
-                            as for listening, i listen to a variety of genres - a lot of
-                            hyperpop, pop, electronic stuff, dubstep, indie, occasionally rock
-                            or metal. check out my{" "}
-                            <Link href="https://last.fm/user/etstringy" className="font-bold">
-                                last.fm
-                            </Link>{" "}
-                            to see what i've been listening to lately~
-                        </p>
+                    </div>
+                    <div className="z-10 relative w-full sm:w-3/12 h-64 rounded-lg overflow-hidden sm:scale-125 rotate-[4deg] border border-white/50">
+                        <Image
+                            src="/assets/arcade.jpeg"
+                            alt="A WACCA arcade cabinet"
+                            fill
+                            className="object-cover"
+                        />
                     </div>
                 </div>
                 <HorizSeperator />
 
                 {/* tools i work with */}
                 <div className="flex flex-col space-y-2">
-                    <h2 className="font-semibold text-2xl">🔧 what i work with</h2>
+                    <h2 className="font-semibold text-2xl">
+                        🔧
+                    </h2>
                     <p>
-                        i've written software in <b>JavaScript</b>, <b>Python</b>, <b>Rust</b>,&nbsp;
-                        <b>C#</b>, <b>Java</b> (in order of confidence)
+                        i work with many tools:
                     </p>
-                    <p>
-                        on the web side, i'm experienced with modern frameworks and toolsets like&nbsp;
-                        <b>React</b>, <b>Next.js</b>, <b>Svelte</b>, <b>SvelteKit</b>, <b>Vite</b> and <b>TailwindCSS</b>
-                    </p>
-                    <div className="grid grid-flow-col grid-rows-2 sm:grid-rows-1 items-center py-4 gap-4">
-                        <Tool name="Rust" color="#ff954d">
-                            <Image
-                                src="/assets/logos/rust.svg"
-                                alt="Rust logo"
-                                width={32}
-                                height={32}
-                                style={{
-                                    filter: "invert(100%)",
-                                    maxWidth: "100%",
-                                    height: "auto"
-                                }} />
-                        </Tool>
-                        <Tool name="JavaScript" color="#f7df1e">
-                            <ToolBoxicon icon="bxl-javascript" />
-                        </Tool>
-                        <Tool name="Python" color="#27cc53">
-                            <ToolBoxicon icon="bxl-python" />
-                        </Tool>
-                        <Tool name="React" color="#00d8ff">
-                            <ToolBoxicon icon="bxl-react" />
-                        </Tool>
-                        <Tool name="Tailwind CSS" color="#0064a5">
-                            <ToolBoxicon icon="bxl-tailwind-css" />
-                        </Tool>
-                    </div>
+                    <ul className="list-disc list-inside">
+                        <li>TypeScript</li>
+                        <li>React (Next, Vite)</li>
+                        <li>Svelte (SvelteKit, Vite)</li>
+                        <li>TailwindCSS</li>
+                        <li>Rust</li>
+                        <li>Python</li>
+                    </ul>
                 </div>
                 <HorizSeperator />
                 <div className="flex flex-col gap-4">
                     <h3 className="font-bold text-lg">friends</h3>
                     <div className="flex flex-wrap gap-2">
-                        <WebBadge href="https://mae.wtf" src="/assets/buttons/mae.png" alt="mae" />
-                        <WebBadge href="https://arimelody.me" src="/assets/buttons/friends/ari.gif" alt="ari melody" />
-                        <WebBadge href="https://invoxiplaygames.uk" src="/assets/buttons/friends/ipg.png" alt="InvoxiPlayGames" />
-                        <WebBadge href="https://supitszaire.com" src="/assets/buttons/friends/zaire.gif" alt="zaire" />
-                        <WebBadge href="https://notnite.com" src="/assets/buttons/friends/notnite.png" alt="notnite" />
-                        <WebBadge href="https://lexd0g.eu.org" src="/assets/buttons/friends/lexd0g.png" alt="lexd0g" />
-                        <WebBadge href="https://deci.pages.gay" src="/assets/buttons/friends/deci.png" alt="deci" />
-                        <WebBadge href="https://boxy.neocities.org" src="/assets/buttons/friends/boky.png" alt="boxy"></WebBadge>
-                        <WebBadge href="https://ioletsgo.gay" src="/assets/buttons/friends/ivory.gif" alt="ioletsgo"></WebBadge>
-                        <WebBadge href="https://idkimjustadog.neocities.org" src="/assets/buttons/friends/ellie.png" alt="ellie"></WebBadge>
-                        <WebBadge href="https://ixnoah.live" src="/assets/buttons/friends/noah.gif" alt="ixnoah"></WebBadge>
-                        <WebBadge href="https://disphing.com" src="/assets/buttons/friends/disphing.gif" alt="disphing" />
+                        <WebBadge
+                            href="https://mae.wtf"
+                            src="/assets/buttons/mae.png"
+                            alt="mae"
+                        />
+                        <WebBadge
+                            href="https://arimelody.me"
+                            src="/assets/buttons/friends/ari.gif"
+                            alt="ari melody"
+                        />
+                        <WebBadge
+                            href="https://invoxiplaygames.uk"
+                            src="/assets/buttons/friends/ipg.png"
+                            alt="InvoxiPlayGames"
+                        />
+                        <WebBadge
+                            href="https://supitszaire.com"
+                            src="/assets/buttons/friends/zaire.gif"
+                            alt="zaire"
+                        />
+                        <WebBadge
+                            href="https://notnite.com"
+                            src="/assets/buttons/friends/notnite.png"
+                            alt="notnite"
+                        />
+                        <WebBadge
+                            href="https://lexd0g.eu.org"
+                            src="/assets/buttons/friends/lexd0g.png"
+                            alt="lexd0g"
+                        />
+                        <WebBadge
+                            href="https://deci.pages.gay"
+                            src="/assets/buttons/friends/deci.png"
+                            alt="deci"
+                        />
+                        <WebBadge
+                            href="https://boxy.neocities.org"
+                            src="/assets/buttons/friends/boky.png"
+                            alt="boxy"
+                        ></WebBadge>
+                        <WebBadge
+                            href="https://ioletsgo.gay"
+                            src="/assets/buttons/friends/ivory.gif"
+                            alt="ioletsgo"
+                        ></WebBadge>
+                        <WebBadge
+                            href="https://idkimjustadog.neocities.org"
+                            src="/assets/buttons/friends/ellie.png"
+                            alt="ellie"
+                        ></WebBadge>
+                        <WebBadge
+                            href="https://ixnoah.live"
+                            src="/assets/buttons/friends/noah.gif"
+                            alt="ixnoah"
+                        ></WebBadge>
+                        <WebBadge
+                            href="https://disphing.com"
+                            src="/assets/buttons/friends/disphing.gif"
+                            alt="disphing"
+                        />
                         <WebBadge
                             href="https://daniela.lol"
                             src="/assets/buttons/friends/daniela.gif"
@@ -180,15 +220,43 @@ export default function Home() {
                     </div>
 
                     <h3 className="font-bold text-lg">cool stuff</h3>
-                    <div className='flex flex-wrap gap-2'>
-                        <WebBadge href="https://wetdry.world" src="/assets/buttons/misc/wdw.gif" alt="Wet-Dry World"></WebBadge>
-                        <WebBadge href="https://eightyeightthirty.one" src="/assets/buttons/misc/eightyeight.png" alt="8831"></WebBadge>
-                        <WebBadge href="https://undertale.com" src="/assets/buttons/misc/ut.gif" alt="Webmaster loves Undertale"></WebBadge>
-                        <WebBadge href="https://deltarune.com" src="/assets/buttons/misc/dt.gif" alt="Deltarune.com"></WebBadge>
-                        <WebBadge src="/assets/buttons/misc/wii.gif" alt="Wii"></WebBadge>
-                        <WebBadge src="/assets/buttons/misc/firtnite.png" alt="Firtnite"></WebBadge>
-                        <WebBadge src="/assets/buttons/misc/trans.png" alt="Transgender flag"></WebBadge>
-                        <WebBadge src="/assets/buttons/misc/bi.png" alt="Bisexual flag"></WebBadge>
+                    <div className="flex flex-wrap gap-2">
+                        <WebBadge
+                            href="https://wetdry.world"
+                            src="/assets/buttons/misc/wdw.gif"
+                            alt="Wet-Dry World"
+                        ></WebBadge>
+                        <WebBadge
+                            href="https://eightyeightthirty.one"
+                            src="/assets/buttons/misc/eightyeight.png"
+                            alt="8831"
+                        ></WebBadge>
+                        <WebBadge
+                            href="https://undertale.com"
+                            src="/assets/buttons/misc/ut.gif"
+                            alt="Webmaster loves Undertale"
+                        ></WebBadge>
+                        <WebBadge
+                            href="https://deltarune.com"
+                            src="/assets/buttons/misc/dt.gif"
+                            alt="Deltarune.com"
+                        ></WebBadge>
+                        <WebBadge
+                            src="/assets/buttons/misc/wii.gif"
+                            alt="Wii"
+                        ></WebBadge>
+                        <WebBadge
+                            src="/assets/buttons/misc/firtnite.png"
+                            alt="Firtnite"
+                        ></WebBadge>
+                        <WebBadge
+                            src="/assets/buttons/misc/trans.png"
+                            alt="Transgender flag"
+                        ></WebBadge>
+                        <WebBadge
+                            src="/assets/buttons/misc/bi.png"
+                            alt="Bisexual flag"
+                        ></WebBadge>
                     </div>
                 </div>
 
@@ -196,20 +264,26 @@ export default function Home() {
                 <div className="flex flex-col gap-4">
                     <h3 className="font-bold text-lg">webrings</h3>
                     <div className="flex flex-wrap gap-2">
-                        <div className='flex items-center gap-4'>
-                            <a className='bg-ctp-base hover:bg-ctp-surface0 p-4 rounded-xl' href="https://melon-ring.pathetic.systems/vimae/previous">◀</a>
-                            <a href="https://melon-ring.pathetic.systems">melon-ring</a>
-                            <a className='bg-ctp-base hover:bg-ctp-surface0 p-4 rounded-xl' href="https://melon-ring.pathetic.systems/vimae/next">▶</a>
+                        <div className="flex items-center gap-4">
+                            <a
+                                className="bg-ctp-base hover:bg-ctp-surface0 p-4 rounded-xl"
+                                href="https://melon-ring.pathetic.systems/vimae/previous"
+                            >
+                                ◀
+                            </a>
+                            <a href="https://melon-ring.pathetic.systems">
+                                melon-ring
+                            </a>
+                            <a
+                                className="bg-ctp-base hover:bg-ctp-surface0 p-4 rounded-xl"
+                                href="https://melon-ring.pathetic.systems/vimae/next"
+                            >
+                                ▶
+                            </a>
                         </div>
                     </div>
                 </div>
-
-
             </PageContainer>
-            {/* sideblocks desktop */}
-            <div className="min-[670px]:block hidden lg:mr-0 mr-4">
-                <FrontpageSideblocks />
-            </div>
         </div>
     );
 }

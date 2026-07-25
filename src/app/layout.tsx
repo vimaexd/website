@@ -10,8 +10,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'mae / vimae\'s cozy site ✨',
-  description: 'vimae is a queer programmer, musician, fediverse person and internet user interested in tech.',
-  keywords: 'vimae, vimae discord, vimae twitter, mae, etstringy, maewtf, personal website',
+  description: 'vimae is a queer programmer, musician, and internet user.',
+  keywords: 'vimae, vimae discord, vimae twitter, mae, maewtf, personal website',
   robots: 'index, follow'
 }
 
@@ -28,17 +28,28 @@ const interVariable = localFont({
   ],
 });
 
+const monaspace = localFont({
+  src: [
+    {
+        path: "../assets/fonts/MonaspaceKrypton/Monaspace Krypton Var.woff2",
+
+    }
+    ],
+    display: "swap",
+    variable: '--font-monaspace',
+});
+
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) 
+})
 {
   return (
     <html lang="en">
       <head>
       </head>
-      <body className={`mocha ${interVariable.className} bg-ctp-crust text-gray-200`}>
+      <body className={`mocha ${interVariable.className} ${monaspace.variable} bg-ctp-crust text-gray-200`}>
         <LayoutWrappers>
           {children}
         </LayoutWrappers>

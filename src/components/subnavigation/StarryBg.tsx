@@ -2,6 +2,7 @@
 import Image from "next/image";
 import _ from "lodash";
 import { useEffect, useState } from "react";
+import anime from "animejs";
 
 export default function NavbarStars({
     barWidth,
@@ -26,7 +27,7 @@ export default function NavbarStars({
             newStars.push([randX, randY, star]);
         }
         setStarsDone(true);
-        setStars(stars.concat(newStars));
+        setStars(newStars);
     };
 
     const generateStars = _.debounce(() => {
@@ -34,7 +35,6 @@ export default function NavbarStars({
     }, 50);
 
     useEffect(() => {
-        console.log("star effect fired");
         if (!starsDone) {
             window.addEventListener("resize", () => {
                 generateStars();
@@ -62,6 +62,8 @@ export default function NavbarStars({
                         imageRendering: "pixelated",
                         maxWidth: "100%",
                         height: "auto",
+                        animationDelay: Math.floor(Math.random() * 300).toString() + "ms",
+                        animationDuration: (Math.floor(Math.random() * 1000) + 2500).toString() + "ms"
                     }}
                 />
             ))}

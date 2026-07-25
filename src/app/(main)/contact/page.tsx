@@ -48,6 +48,13 @@ export default function page() {
                         className="text-ctp-lavender"
                         link="https://bsky.app/profile/mae.wtf"
                     />
+
+                    <ContactLink
+                        text="@mae@f.mae.wtf"
+                        icon="bxl-mastodon"
+                        className="text-ctp-pink"
+                        link="https://f.mae.wtf/@mae"
+                    />
                 </div>
 
                 <div className="flex flex-col">
@@ -58,18 +65,7 @@ export default function page() {
                         className="text-ctp-pink"
                         link=""
                     />
-                    <ContactLink
-                        text="@mae@wetdry.world"
-                        icon="bxl-mastodon"
-                        className="text-ctp-pink"
-                        link="https://wetdry.world/@mae"
-                    />
-                    <ContactLink
-                        text="@mae@f.mae.wtf"
-                        icon="bxl-mastodon"
-                        className="text-ctp-pink"
-                        link="https://f.mae.wtf/@mae"
-                    />
+
                     <ContactLink
                         text="@vimaexd"
                         icon="bxl-twitter"

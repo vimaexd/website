@@ -12,7 +12,7 @@ export default function FakeAd() {
 
   const toggleFakeAds = () => {
     setVisibility(!visible)
-    
+
     if(!visible || hideCount > 0) {
       setHideCount(hideCount + 1);
     }
@@ -22,11 +22,11 @@ export default function FakeAd() {
   if(hideCount >= 6) {
     return (
       <p className='text-xs text-neutral-600'>
-        stop toggling fake ads so much. play minesweeper instead
+        okay screw you, you get nothing
       </p>
     )
   }
-  
+
   const index = Math.floor(Math.random() * fakeAds.list.length);
   const ad = fakeAds.list[index];
 
@@ -45,14 +45,14 @@ export default function FakeAd() {
     <div>
       {
         ad.filename.endsWith(".webm")
-        ? <video width={288} controls={false} muted={true} autoPlay={true} loop={true} aria-description="A fake advertisement video">
+        ? <video height={160} width={288} controls={false} muted={true} autoPlay={true} loop={true} aria-description="A fake advertisement video">
             <source src={`/assets/fakeads/${ad.filename}`} type="video/webm"></source>
           </video>
         : <Image
           src={`/assets/fakeads/${ad.filename}`}
           alt="A fake advertisement image"
           width="288"
-          height="120"
+          height="160"
           style={{
             maxWidth: "100%",
             height: "auto"
@@ -73,7 +73,7 @@ export default function FakeAd() {
 export function FakeAdPlaceholder() {
   return (
     <div>
-      <div className='w-full h-[160px] bg-gray-400 animate-pulse'></div>
+      <div className='w-full h-[160px] bg-ctp-base animate-pulse'></div>
       <div className='flex justify-between'>
         <div className='bg-gray-400 animate-pulse w-2/6'/>
         <div className='bg-gray-400 animate-pulse w-1/6'/>

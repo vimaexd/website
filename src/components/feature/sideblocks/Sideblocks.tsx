@@ -13,7 +13,7 @@ import LatestReleaseBlock from "@mae/components/feature/sideblocks/BlockLatestRe
 
 import { fakeAdHideCountState } from "@mae/store/fakeAdHideCount";
 import { useAtom } from "jotai";
-import LogoBsky from '@mae/assets/icons/logo-bluesky';
+
 
 const FakeAdBlock = dynamic(
     () => import("@mae/components/feature/sideblocks/BlockFakeAd"),
@@ -23,18 +23,12 @@ const FakeAdBlock = dynamic(
     }
 );
 
-const MaesweeperGameBlock = dynamic(
-    () => import("@mae/components/feature/maesweeper/Maesweeper")
-);
-
 export default function FrontpageSideblocks() {
     const [hideCount] = useAtom(fakeAdHideCountState);
 
     if (hideCount >= 6) {
         return (
             <SideblockWrapper>
-                {/* TODO uncomment when done */}
-                {/* <MaesweeperGameBlock/> */}
                 <FakeAdBlock />
             </SideblockWrapper>
         );
@@ -42,40 +36,9 @@ export default function FrontpageSideblocks() {
 
     return (
         <SideblockWrapper>
-            <SideBlock title="📱 socials">
-                <div className="text-4xl text-neutral-100 flex justify-evenly items-center">
-                    <SocialSpeeddialBlock
-                        href="https://discord.com/users/577743466940071949"
-                        tooltipContent="Discord"
-                        tooltipId="front:social:dc"
-                        icon="bxl-discord-alt"
-                    />
-                    <SocialSpeeddialSvg 
-                        href="https://bsky.app/profile/mae.wtf"
-                        tooltipContent="Bluesky"
-                        tooltipId="front:social:bsky"
-                    >
-                        <LogoBsky width={32} className="pl-1 pr-1 pb-1"/>
-                    </SocialSpeeddialSvg>
-                    <SocialSpeeddialBlock
-                        href="https://youtube.com/@vimaee"
-                        tooltipContent="YouTube"
-                        tooltipId="front:social:yt"
-                        icon="bxl-youtube"
-                    />
-                </div>
-            </SideBlock>
-            <ClockBlock />
-            <div className="row-span-2">
-                <LatestReleaseBlock />
-            </div>
-
-            {/* 
-        lanyard block is specifically at the bottom
-        so that it wont disrupt the ux flow of the blocks above it which are interactive
-      */}
             <LanyardBlock id={"577743466940071949"} />
-
+            <ClockBlock />
+            <LatestReleaseBlock />
             <FakeAdBlock />
         </SideblockWrapper>
     );

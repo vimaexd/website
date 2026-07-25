@@ -15,8 +15,8 @@ export default function NavbarBlog() {
   }, [pathname, setTransparentPage])
 
   return (
-    <div 
-    className={`w-full p-2 flex justify-center gap-4 items-center z-20 sticky ${isTransparentPage ? 'bg-[rgba(0,0,0,0.25)]' : 'bg-ctp-mantle'}`}>
+    <div
+    className={`w-full p-2 flex justify-center gap-4 items-center z-20 sticky bg-[rgba(0,0,0,0.25)]`}>
       <div className='flex items-center gap-8 w-full max-w-[1024px]'>
         <h2 className='text-2xl font-semibold'>📝</h2>
         <Link href="/blog">

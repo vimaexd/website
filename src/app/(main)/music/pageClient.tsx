@@ -48,7 +48,7 @@ export default function MusicPageClient() {
         }
     }
   }
-  
+
   console.log(getGroupings())
 
   return (
@@ -92,7 +92,7 @@ export default function MusicPageClient() {
               <i className="bx bxs-grid-alt bx-sm"></i>
             </button>
             <button
-              className="bg-ctp-surface0 p-2 rounded-lg flex items-center justify-center h-fit"
+              className=" p-2 rounded-lg flex items-center justify-center h-fit"
               onClick={() =>
                 setDiscography({ ...discogStore, view: DiscographyView.ROW })
               }
@@ -109,8 +109,8 @@ export default function MusicPageClient() {
           const groupContents = getGroupings()[groupTitle];
           return (
             <div className='' key={groupTitle}>
-              <h2 className="text-2xl font-bold mb-2">{groupTitle}</h2>
-              <div className="flex gap-4 flex-wrap p-4 bg-ctp-base rounded-lg">
+              <h2 className="text-2xl font-bold mb-4">{groupTitle}</h2>
+              <div className="flex gap-12 flex-wrap p-8 border-ctp-overlay0/50 border rounded-lg">
                 {groupContents.map((release: IUnresolvedRelease) => (
                   <Suspense key={release.slug}
                     fallback={

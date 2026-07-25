@@ -69,7 +69,7 @@ export default function Button({
             case ButtonStyle.Primary:
                 temp +=
                     " " +
-                    "flex justify-center bg-ctp-surface0 hover:bg-ctp-surface1 text-white";
+                    "flex justify-center bg-ctp-base hover:bg-ctp-surface1 text-white";
                 break;
 
             case ButtonStyle.Outline:

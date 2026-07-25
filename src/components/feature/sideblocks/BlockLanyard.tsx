@@ -9,12 +9,8 @@ export default function LanyardBlock({ id }: { id: `${bigint}` }) {
     const lanyard = useLanyardWS(id);
     if (!lanyard)
         return (
-            <SideBlock title="⚠️ status server unreachable">
-                <p className="text-sm text-center">
-                    couldn't reach the status server ☹️
-                    <span className="h-4"></span>
-                    check if your browser + connection supports WebSockets
-                </p>
+            <SideBlock title="system status">
+                <div className='w-full h-full bg-ctp-base animate-pulse'></div>
             </SideBlock>
         );
 
@@ -24,97 +20,90 @@ export default function LanyardBlock({ id }: { id: `${bigint}` }) {
     const desktopMusicAppIds = [
         "409394531948298250", // musicbee
         "911790844204437504", // cider
+        "886578863147192350", // cider (as apple music)
         "1165957668758900787", // feishin
     ];
 
     const desktopMusicApp = lanyard.activities
-        .filter((a) => a.type == 0)
+        .filter((a) => a.type == 2)
         .find((a) => desktopMusicAppIds.includes(a.application_id!.toString()));
 
     return (
         <Fragment>
-            {
-                /* Online status*/
-                lanyard.discord_status != "offline" && (
-                    <SideBlock title="🟢 online"></SideBlock>
-                )
-            }
             {
                 /* Offline status*/
                 lanyard.discord_status == "offline" && (
                     <SideBlock title="🌌 offline"></SideBlock>
                 )
             }
-            {
-                /* Spotify now playing */
-                lanyard.spotify && (
-                    <SideBlock title="🎧 now playing">
-                        <div className="flex flex-row gap-2">
-                            {lanyard.spotify.album_art_url && (
+            <SideBlock title={(lanyard.discord_status !== "offline") ? "system status" : "offline"}>
+                {
+                    (!desktopMusicApp && lanyard.discord_status !== "offline") && <>
+                        <div className="p-2 h-full flex flex-col items-center justify-center gap-2">
+                            <div className="flex justify-center items-center align-center gap-2">
                                 <Image
-                                    src={lanyard.spotify.album_art_url}
-                                    alt="Album art"
-                                    width={48}
-                                    height={48}
-                                    className="w-fit h-fit"
+                                    src={`https://cdn.discordapp.com/avatars/${lanyard.discord_user.id}/${lanyard.discord_user.avatar}`}
+                                    alt="Profile picture"
+                                    width={36}
+                                    height={36}
+                                    className="rounded-full"
                                     style={{
                                         maxWidth: "100%",
                                         height: "auto",
                                     }}
                                 />
-                            )}
-                            <div className="flex flex-col justify-center">
-                                <Link
-                                    href={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
-                                    className="text-white hover:underline"
-                                >
+                                <p className="text-sm font-medium">mae is online!</p>
+                            </div>
+                        </div>
+                    </>
+                }
+                {
+                    desktopMusicApp && (
+                        <div className="p-2 h-full flex flex-col items-center justify-center gap-2">
+                            <div className="flex justify-center items-center align-center gap-2">
+                                <Image
+                                    src={`https://cdn.discordapp.com/avatars/${lanyard.discord_user.id}/${lanyard.discord_user.avatar}`}
+                                    alt="Profile picture"
+                                    width={24}
+                                    height={24}
+                                    className="rounded-full"
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto",
+                                    }}
+                                />
+                                <p className="text-xs font-medium">mae is online! she's listening to:</p>
+                            </div>
+                            <div className="flex justify-center items-center flex-row gap-2 p-1">
+                                {desktopMusicApp.assets?.large_image &&
+                                    desktopMusicApp.assets?.large_image.startsWith(
+                                        "mp:external",
+                                    ) && (
+                                        <Image
+                                            src={desktopMusicApp.assets?.large_image
+                                                .match(mediaProxyRegex)![1]
+                                                .replace("https/", "https://")}
+                                            alt="Album art"
+                                            width={36}
+                                            height={36}
+                                            className="rounded-sm"
+                                            style={{
+                                                maxWidth: "100%",
+                                                height: "auto",
+                                            }}
+                                        />
+                                    )}
+                                <div className="flex flex-col justify-center -mt-1">
                                     <h2 className="text-sm font-medium">
-                                        {lanyard.spotify.song}
+                                        {desktopMusicApp.details}
                                     </h2>
-                                </Link>
-                                <h3 className="text-xs">
-                                    {lanyard.spotify.artist.replace(/;/g, ",")}
-                                </h3>
+                                    <h3 className="text-xs">{desktopMusicApp.state}</h3>
+                                </div>
                             </div>
                         </div>
-                    </SideBlock>
-                )
-            }
-            {
-                /* Music App now playing */
-                desktopMusicApp != null && (
-                    <SideBlock title="🎧 now playing">
-                        <div className="flex flex-row gap-3 p-1">
-                            {desktopMusicApp.assets?.large_image &&
-                                desktopMusicApp.assets?.large_image.startsWith(
-                                    "mp:external",
-                                ) && (
-                                    <Image
-                                        src={desktopMusicApp.assets?.large_image
-                                            .match(mediaProxyRegex)![1]
-                                            .replace("https/", "https://")}
-                                        alt="Album art"
-                                        width={64}
-                                        height={64}
-                                        className="w-fit h-fit rounded-md"
-                                        style={{
-                                            maxWidth: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
-                                )}
-                            <div className="flex flex-col justify-center">
-                                <h2 className="text-sm font-medium">
-                                    {desktopMusicApp.details}
-                                </h2>
-                                <h3 className="text-xs">
-                                    {desktopMusicApp.state}
-                                </h3>
-                            </div>
-                        </div>
-                    </SideBlock>
-                )
-            }
+                    )
+                }
+            </SideBlock>
         </Fragment>
     );
 }

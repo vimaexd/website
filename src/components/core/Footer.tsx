@@ -13,10 +13,10 @@ export default function Footer() {
           <div className='flex flex-col w-1/3'>
             <h4 className='font-bold text-2xl'>mae</h4>
             <p className='text-xs'>
-              ©️ 2018-{dayjs().year()} Stringy Software
+              ©️ 2018-{dayjs().year()} vimae. thank you! {"<3"}
             </p>
             <p>
-          
+
             </p>
             <Link href="https://github.com/vimaexd/website">
                 source code
@@ -47,14 +47,11 @@ export default function Footer() {
                 Music
               </Link>
               <Link href="/oc">
-                My OC
+                My OC (old)
               </Link>
             </div>
             <div className='flex flex-col'>
               <h3 className='font-semibold text-lg'>Services</h3>
-              <Link href="https://co.mae.wtf">
-                cobalt
-              </Link>
               <Link href="https://misc.mae.wtf">
                 misc
               </Link>
