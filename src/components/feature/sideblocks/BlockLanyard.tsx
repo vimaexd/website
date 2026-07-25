@@ -52,7 +52,7 @@ export default function LanyardBlock({ id }: { id: `${bigint}` }) {
                     </>
                 }
                 {
-                    desktopMusicApp && (
+                    (desktopMusicApp && lanyard.discord_status !== "offline") &&(
                         <div className="p-2 h-full flex flex-col items-center justify-center gap-2">
                             <div className="flex justify-center items-center align-center gap-2">
                                 <Image
