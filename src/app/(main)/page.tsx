@@ -84,14 +84,14 @@ export default function Home() {
                             🎹
                         </h2>
                         <p className="leading-7 mt-4">
-                            i have a deep love of music in many styles, but my tastes{" "}
+                            i have a deep love of music in many styles, but my taste{" "}
                             usually centers around <b>pop</b> and <b>electronic</b> music.
                             the music i make varies from genre to genre, and you can find my music{" "}
                             <Link href="/music" className="font-bold">here!</Link>
                             <br /><br />
 
                             i also enjoy arcade rhythm games, such as <b>Sound Voltex</b>,{" "}
-                            <b>DanceDanceRevolution</b>, <b>maimai</b> and find the modern
+                            <b>DanceDanceRevolution</b> and <b>maimai</b>. i find the modern
                             online service tech really interesting!
                         </p>
                     </div>
