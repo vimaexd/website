@@ -30,12 +30,6 @@ export default function LanyardBlock({ id }: { id: `${bigint}` }) {
 
     return (
         <Fragment>
-            {
-                /* Offline status*/
-                lanyard.discord_status == "offline" && (
-                    <SideBlock title="🌌 offline"></SideBlock>
-                )
-            }
             <SideBlock title={(lanyard.discord_status !== "offline") ? "system status" : "offline"}>
                 {
                     (!desktopMusicApp && lanyard.discord_status !== "offline") && <>
@@ -101,6 +95,13 @@ export default function LanyardBlock({ id }: { id: `${bigint}` }) {
                                 </div>
                             </div>
                         </div>
+                    )
+                }
+                {
+                    lanyard.discord_status == "offline" && (
+                    <div className="p-2 h-full flex flex-col items-center justify-center gap-2">
+                        <p className="text-xs font-medium">mae is offline, she's probably resting right now!</p>
+                    </div>
                     )
                 }
             </SideBlock>
