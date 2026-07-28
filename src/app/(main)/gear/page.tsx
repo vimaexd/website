@@ -3,6 +3,7 @@ import PageHeader from "@mae/components/core/PageHeader";
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
+import HorizSeperator from "@mae/components/core/HorizSeperator";
 
 export const metadata: Metadata = {
   title: "Gear | mae ✨",
@@ -12,50 +13,35 @@ export const metadata: Metadata = {
 export default function GearPage() {
   return (
       <PageContainer>
-          <PageHeader title="⌨️ gear">the stuff i use to make stuff</PageHeader>
-          <h2 className="font-semibold text-5xl">computers</h2>
+          <PageHeader title="⌨️ computers and gear">i love my computers and building, upgrading and taking care of them ^-^</PageHeader>
+
           {/* stargazer */}
-          <div className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 min-h-64">
+          <div className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 min-h-64 border border-white/20 p-8 rounded-md">
                   <div className="space-y-2">
-                      <h3 className="font-semibold text-4xl">💫 stargazer</h3>
-                  
+                      <h3 className="font-semibold text-3xl">💫 stargazer</h3>
+
                       <i>my main computer! evolving since 2019</i>
                       <ul className="list-inside">
                       <li>
                           <i className="bx bx-chip"></i> Intel Core i7-9700k
                       </li>
                       <li>
-                          <i className="bx bx-microchip"></i> 2x8GB Corsair Vengeance @ 3000MHz
+                          <i className="bx bx-microchip"></i> 16GB DDR4
                       </li>
                       <li>
-                          <i className="bx bx-microchip"></i> NVIDIA GeForce GTX 1080
+                          <i className="bx bx-microchip"></i> AMD RX 9070 XT
                       </li>
                       <li>
                           <i className="bx bx-microchip"></i> MSI Z370-A PRO
                       </li>
                       <li>
-                          <i className="bx bx-hdd"></i> 240GB SSD
-                      </li>
-                      <li>
-                          <i className="bx bx-hdd"></i> 480GB SSD
-                      </li>
-                      <li>
-                          <i className="bx bx-hdd"></i> 1TB HDD
-                      </li>
-                      <li>
-                          <i className="bx bx-hdd"></i> 1TB HDD (external)
-                      </li>
-                      <li>
-                          <i className="bx bx-hdd"></i> 2TB HDD (external)
-                      </li>
-                      <li>
-                          <i className="bx bx-wind"></i> DEEPCOOL AK620 WH
+                          <i className="bx bx-hdd"></i> a lot of storage
                       </li>
                       <li>
                           <i className="bx bx-box"></i> NZXT H5 Flow
                       </li>
                       <li>
-                          <i className="bx bx-disc"></i> Windows 11 Pro
+                          <i className="bx bx-disc"></i> Arch Linux <span className="italic opacity-25">btw</span>
                       </li>
                       </ul>
                   </div>
@@ -72,18 +58,14 @@ export default function GearPage() {
                   </div>
           </div>
           {/* nebula */}
-          <div className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 min-h-64">
+          <div className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 min-h-64 border border-white/20 p-8 rounded-md">
               <div className="space-y-2">
-                  <h3 className="font-semibold text-4xl">🌃 nebula</h3>
-              
+                  <h3 className="font-semibold text-3xl">🌃 nebula</h3>
+
                   <i>my laptop</i>
                   <ul className="list-inside">
                       <li>
-                          <i className="bx bx-laptop"></i> 2023 MacBook Pro
-                      </li>
-
-                      <li>
-                          <i className="bx bx-chip"></i> Apple M2 Pro
+                          <i className="bx bx-laptop"></i> 2023 MacBook Pro (M2 Pro)
                       </li>
 
                       <li>
@@ -108,10 +90,10 @@ export default function GearPage() {
               </div>
           </div>
           {/* aurora */}
-          <div className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 min-h-64">
+          <div className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 min-h-64 border border-white/20 p-8 rounded-md">
               <div className="space-y-2">
-                  <h3 className="font-semibold text-4xl">🌌 aurora</h3>
-              
+                  <h3 className="font-semibold text-3xl">🌌 aurora</h3>
+
                   <i>my home server made out of spare parts!</i>
                   <ul className="list-inside">
                       <li>
@@ -147,91 +129,53 @@ export default function GearPage() {
                       }} />
               </div>
           </div>
-          {/* orbit */}
-          <div className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 min-h-64">
-              <div className="space-y-2">
-                  <h3 className="font-semibold text-4xl">🪐 orbit</h3>
-              
-                  <i>an old laptop i use as a really really basic server</i>
-                  <ul className="list-inside">
-                      <li>
-                          <i className="bx bx-laptop"></i> Acer Aspire 5735
-                      </li>
-
-                      <li>
-                          <i className="bx bx-chip"></i> Intel Pentium Dual T3400
-                      </li>
-
-                      <li>
-                          <i className="bx bx-microchip"></i> 4GB RAM
-                      </li>
-
-                      <li>
-                          <i className="bx bx-disc"></i> Ubuntu
-                      </li>
-                  </ul>
-              </div>
-
-              <div className="relative">
-                  <Image
-                      src="/assets/computers/orbit.png"
-                      alt="A picture of a laptop computer displaying the text '10 years without a wireguard connection, think about what that does to a computer'"
-                      fill
-                      className="object-cover rounded-lg shadow-mae"
-                      style={{
-                          maxWidth: "100%",
-                      }} />
-              </div>
-          </div>
           {/* misc */}
           <div className="space-y-2 grid grid-cols-2">
               <div>
-                  <h3 className="font-semibold text-2xl">Accessories for stargazer</h3>
-                  <ul className="list-disc list-inside">
-                  <li>Custom Keyboard (gateron yellows)</li>
-                  <li>Logitech G Pro Superlight Mouse</li>
-                  <li>Beyerdynamic DT 990 Pro Headphones</li>
-                  <li>M-Audio M-Track 2x2 Audio Interface</li>
-                  <li>some cheap mic off amazon lmao</li>
+                  <ul className="">
+                  <li><span className="font-semibold">keyboard:</span> custom (kbdfans tofu60, gateron yellows)</li>
+                  <li><span className="font-semibold">mouse:</span>  g pro superlight</li>
+                  <li><span className="font-semibold">headphones:</span> beyerdynamic dt770</li>
+                    <li><span className="font-semibold">microphone:</span> tonor tc-2030</li>
+                    <li><span className="font-semibold">interface:</span> scarlett solo 4th gen</li>
+
                   </ul>
               </div>
               <div>
-                  <h3 className="font-semibold text-2xl">Misc</h3>
                   <ul className="list-disc list-inside">
-                  <li>Oculus Quest 2 for VR (i use a cheap link cable and a kiwi design headstrap)</li>
-                  <li>Alesis VI49 and Launchpad Pro for MIDI controllers</li>
+                  <li><span className="font-semibold">VR:</span> quest 2 (+ kiwi design headstrap)</li>
+                  <li><span className="font-semibold">MIDI:</span> alesis vi49, launchpad pro</li>
                   </ul>
               </div>
           </div>
           {/* software */}
-          <hr />
+          <HorizSeperator/>
           <div className="flex flex-row justify-between">
               <div className="space-y-4 flex-grow">
                   <h3 className="font-semibold text-4xl">Software</h3>
-                  <h4 className="font-semibold text-xl">🎵 for music:</h4>
+                  <h4 className="font-semibold text-xl">for music:</h4>
                   <ul className="list-disc list-inside">
                       <li>
-                          Ableton Live Suite
+                          ableton live suite
                       </li>
                       <li>
-                         FL Studio
+                          fl studio
                       </li>
 
-                      <li>Kilohearts stuff (phase plant)</li>
+                      <li>kilohearts suite (phase plant)</li>
                       <li>vital</li>
                       <li>spitfire LABS / orchestra</li>
-                      <li className="text-sm">lots of other plugins</li>
+                      <li>kontakt</li>
+                      <li className="text-sm">+ many other effect plugins</li>
                   </ul>
 
-                <h4 className="font-semibold text-xl">📽️ for videos:</h4>
+                <h4 className="font-semibold text-xl">for videos:</h4>
                 <ul className="list-disc list-inside">
-                  <li>Blender</li>
-                  <li>Premiere Pro</li>
-                  <li>After Effects</li>
-                  <li>Aseprite</li>
+                  <li>blender</li>
+                  <li>premiere pro</li>
+                  <li>after effects</li>
+                  <li>aseprite</li>
                 </ul>
-
-                <p className="text-sm">among others</p>
               </div>
                   <div className="h-auto w-1/2 gap-8 hidden lg:grid">
                   <div className="relative">
