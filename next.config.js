@@ -71,9 +71,12 @@ const nextConfig = {
                 hostname: "rise.cider.sh",
             },
 
-            // jellyfin (album art)
+            // jellyfin + navidrome (album art)
             {
                 hostname: "jellyfin.maecafe.link",
+            },
+            {
+                hostname: "navidrome.maecafe.link",
             },
         ],
     },
