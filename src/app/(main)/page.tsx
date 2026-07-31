@@ -70,7 +70,7 @@ export default function Home() {
                         <p>
                             i also contribute to various open source projects
                             from time to time over on my{" "}
-                            <a href="https://codeberg.com/vimaexd">Codeberg</a>{" "}
+                            <a href="https://codeberg.org/vimae">Codeberg</a>{" "}
                             and <a href="https://github.com/vimaexd">GitHub</a>{" "}
                             from time to time.
                         </p>
