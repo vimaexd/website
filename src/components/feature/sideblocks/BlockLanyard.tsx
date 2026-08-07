@@ -14,8 +14,6 @@ export default function LanyardBlock({ id }: { id: `${bigint}` }) {
             </SideBlock>
         );
 
-    console.log(lanyard);
-
     const mediaProxyRegex = /mp:external\/.*?(http.*)/;
     const desktopMusicAppIds = [
         "409394531948298250", // musicbee

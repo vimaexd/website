@@ -41,7 +41,6 @@ export default function Button({
     };
 
     const onButtonHover = () => {
-        console.log("tick");
         soundHover.rate(Math.floor(Math.random() * 10) - 10);
         soundHover.play();
     };

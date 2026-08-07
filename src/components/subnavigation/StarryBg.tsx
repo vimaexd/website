@@ -15,7 +15,7 @@ export default function NavbarStars({
     const [starsDone, setStarsDone] = useState(false);
 
     const _generateStars = () => {
-        console.log("✨");
+        console.log("✨ stars regenerated!");
         const width = barWidth;
         const height = barHeight;
 

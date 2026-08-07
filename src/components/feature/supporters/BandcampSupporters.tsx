@@ -18,9 +18,8 @@ export default function BandcampSupporters() {
     setFetching(true);
     axios.post('/api/bandcamp-supporters')
       .then((bc) => {
-        console.log(bc.data)
         setSupporters(bc.data.list);
-        
+
         setFetching(false);
         setFetched(true);
       })

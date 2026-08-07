@@ -25,7 +25,6 @@ export default async function BlogAllPostsPage() {
     return db - da
   })
 
-  // console.log(posts)
 
   return (
     <PageContainer>
@@ -35,7 +34,7 @@ export default async function BlogAllPostsPage() {
       <div className='grid sm:grid-cols-2 gap-8 flex-grow-0'>
         {
           posts.map((d) => (
-            <Link key={d.id} href={`/blog/${d.id}`} 
+            <Link key={d.id} href={`/blog/${d.id}`}
               className='a-unstyled text-white hover:scale-110 translate-z-0 backface-hidden transition-all duration-300 ease-out cursor-pointer select-none w-auto'>
               <Card
               title={d.title}

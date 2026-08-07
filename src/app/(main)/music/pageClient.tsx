@@ -49,8 +49,6 @@ export default function MusicPageClient() {
     }
   }
 
-  console.log(getGroupings())
-
   return (
     <Fragment>
       <div className="flex flex-col sm:flex-row justify-between gap-2">
