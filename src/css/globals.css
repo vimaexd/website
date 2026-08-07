@@ -142,7 +142,8 @@ a:not(.a-unstyled) {
 /* star anim*/
 .anim_star {
     animation: 2s star-flicker linear infinite;
-    /*animation-timing-function: steps(3, end);*/
+    /* let anime fade in first*/
+    animation-delay: 2000ms;
 }
 
 @keyframes star-flicker {
@@ -157,4 +158,14 @@ a:not(.a-unstyled) {
     100% {
         opacity: 1
     }
+}
+
+/* initaliation */
+[data-anim="goober"],
+[data-anim="tags"] div,
+[data-anim="serial"],
+[data-anim="initslide"],
+[data-anim="glow"],
+.anim-sideblock-wrapper > * {
+    opacity: 0;
 }

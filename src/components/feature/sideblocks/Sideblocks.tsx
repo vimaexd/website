@@ -14,14 +14,7 @@ import LatestReleaseBlock from "@mae/components/feature/sideblocks/BlockLatestRe
 import { fakeAdHideCountState } from "@mae/store/fakeAdHideCount";
 import { useAtom } from "jotai";
 
-
-const FakeAdBlock = dynamic(
-    () => import("@mae/components/feature/sideblocks/BlockFakeAd"),
-    {
-        ssr: false,
-        loading: () => <FakeAdPlaceholder />,
-    }
-);
+import FakeAdBlock from "@mae/components/feature/sideblocks/BlockFakeAd"
 
 export default function FrontpageSideblocks() {
     const [hideCount] = useAtom(fakeAdHideCountState);

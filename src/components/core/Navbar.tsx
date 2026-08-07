@@ -1,5 +1,5 @@
 "use client";
-import anime from "animejs";
+import { animate } from "animejs";
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Button, { ButtonStyle } from "@mae/components/ui/Button";
@@ -61,8 +61,7 @@ export default function Navbar({ version }: { version: string }) {
                         <i
                             className="bx bx-menu bx-md cursor-pointer anim-navbar-hamburger"
                             onClick={() => {
-                                anime({
-                                    targets: ".anim-navbar-hamburger",
+                                animate(".anim-navbar-hamburger", {
                                     rotateZ: [0, 180],
                                 });
                                 setMenuVisible(!menuVisible);

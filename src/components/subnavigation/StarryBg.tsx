@@ -2,7 +2,7 @@
 import Image from "next/image";
 import _ from "lodash";
 import { useEffect, useState } from "react";
-import anime from "animejs";
+import { animate, stagger, waapi } from "animejs";
 
 export default function NavbarStars({
     barWidth,
@@ -43,6 +43,15 @@ export default function NavbarStars({
         generateStars();
     }, [barWidth, barHeight]);
 
+    useEffect(() => {
+        waapi.animate('.anim_star', {
+            opacity: [0, 1],
+            duration: 1400,
+            ease: "outExpo",
+            delay: stagger(100)
+        });
+    }, [stars])
+
     return (
         <div
             className="absolute top-0 left-0 lg:w-[1024px] w-full opacity-60 z-0 text-clip"
@@ -62,7 +71,6 @@ export default function NavbarStars({
                         imageRendering: "pixelated",
                         maxWidth: "100%",
                         height: "auto",
-                        animationDelay: Math.floor(Math.random() * 300).toString() + "ms",
                         animationDuration: (Math.floor(Math.random() * 1000) + 2500).toString() + "ms"
                     }}
                 />

@@ -19,7 +19,7 @@
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "@types/rss": "^0.0.32",
-    "animejs": "^3.2.1",
+    "animejs": "^4.5.0",
     "axios": "^1.4.0",
     "axios-cache-interceptor": "^1.2.0",
     "boxicons": "^2.1.4",

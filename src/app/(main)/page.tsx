@@ -17,7 +17,6 @@ export default function Home() {
             <PageContainer>
                 <Introduction />
 
-                {/* sideblocks mobile */}
                 <div className="flex flex-col">
                     <FrontpageSideblocks />
                 </div>

@@ -8,61 +8,75 @@ import SocialSpeeddialBlock, {
 } from "@mae/components/feature/sideblocks/BlockSocial";
 import LogoBsky from '@mae/assets/icons/logo-bluesky';
 
-import anime from "animejs/lib/anime.es";
+import { animate, stagger, createTimeline, createSpring } from 'animejs';
+import { set } from "animejs";
 
 export default function Introduction() {
     useLayoutEffect(() => {
-        anime({
-            targets: '[data-anim="initslide"]',
+        // everything is set to 0 opacity in CSS
+        // in globals.css
+
+        animate('[data-anim="glow"]', {
+            opacity: [0, 0.8],
+            delay: 200,
+            duration: 800,
+        })
+
+        animate('[data-anim="initslide"]', {
             opacity: [0, 1],
             duration: 1000,
-            translateX: [-6, 0],
-            delay: anime.stagger(100),
+            x: [-6, 0],
+            delay: stagger(100),
         });
 
-        anime
-            .timeline({
-                targets: '[data-anim="goober"]',
-                delay: anime.stagger(20),
-            })
-            .add({
-                translateX: [-8, 5],
-                rotateX: [-2, 0],
-                easing: "easeOutExpo",
+        createTimeline({
+            defaults: {
+                delay: stagger(100, { start: 200}),
+            },
+        })
+            .add('[data-anim="goober"]', {
+                x: [-16, 5],
+                ease: createSpring({
+                    bounce: 0.50,
+                    duration: 400
+                }),
                 opacity: [0, 1],
-                duration: 1200,
+                letterSpacing: [-6, -1]
             })
-            .add({
-                scaleY: 1,
-                scaleX: 1,
-                translateY: 0,
-                easing: "easeOutExpo",
-                duration: 200,
-            })
-            .add({
-                targets: '[data-anim="serial"]',
-                translateY: [8, 0],
+            .add('[data-anim="serial"]', {
+                y: [8, 0],
                 opacity: [0, 1],
-
+                ease: 'outExpo',
+                duration: 900,
             }, 800);
 
-        anime({
-            targets: '[data-anim="tags"] div',
-            translateY: [-20, 0],
-            easing: "easeOutExpo",
+        animate('.anim-sideblock-wrapper > *', {
+            y: [20, 0],
+            ease: 'outExpo',
             opacity: [0, 1],
-            delay: anime.stagger(200),
+            delay: stagger(100, {
+                start: 600
+            }),
+        })
+
+        animate('[data-anim="tags"] div', {
+            y: [-20, 0],
+            ease: 'outExpo',
+            opacity: [0, 1],
+            delay: stagger(200, {
+                start: 400
+            }),
         });
     });
     return (
         <div className="flex flex-col sm:flex-row w-full items-center">
             <div className="flex flex-col my-16">
                 <div className="relative">
-                    <div className="absolute left-0 -translate-x-1/2 w-1/3 h-24 bg-ctp-mauve blur-[64px] rounded-full opacity-80 -z-10" />
+                    <div data-anim="glow" className="absolute left-0 -translate-x-1/2 w-1/3 h-24 bg-ctp-mauve blur-[64px] rounded-full opacity-80 -z-10" />
                 </div>
                 <div className="flex gap-4 items-end">
                     <h1
-                        className="text-6xl font-bold tracking-tight md:text-left"
+                        className="text-6xl font-bold tracking-tight md:text-left will-change-auto"
                         data-anim="goober"
                     >
                         vimae
