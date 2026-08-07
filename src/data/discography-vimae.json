@@ -111,9 +111,35 @@
             "genre": "Alternative",
             "length": "3:12",
             "artists": ["vimae"]
+        },
+        {
+            "id": "finditvip",
+            "name": "find it (violet's mix)",
+            "genre": "Speed House",
+            "length": "4:17",
+            "artists": ["vimae"]
         }
     ],
     "releases": [
+        {
+            "slug": "finditviolet",
+            "title": "find it (violet's mix)",
+            "type": "Single",
+            "year": 2026,
+            "release_date": "07/08/2026",
+            "tracks": [
+                "track:finditvip"
+            ],
+            "links": {
+                "bandcamp": "https://vimae.bandcamp.com/album/find-it-violets-mix",
+                "applemusic": "",
+                "spotify": "",
+                "soundcloud": "https://soundcloud.com/vimae/findit-violet",
+                "youtube": ""
+            },
+            "artist_comment": "",
+            "album_art": "/assets/music/covers/finditv.jpg"
+        },,
         {
             "slug": "nightlight",
             "title": "nightlight",
