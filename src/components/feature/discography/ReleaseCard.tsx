@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from "next/image";
 import { IUnresolvedRelease } from '@mae/misc/discography/types';
-import anime from 'animejs/lib/anime.es';
+import { animate, stagger } from 'animejs';
 import Link from 'next/link';
 
 export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
@@ -15,8 +15,7 @@ export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
   }
 
   const exit = () => {
-    anime({
-      targets: `[data-anim=${popoverId}]`,
+    animate(`[data-anim=${popoverId}]`, {
       translateX: [0, -10],
       opacity: [1, 0],
       easing: 'easeOutExpo',
@@ -30,19 +29,17 @@ export default function ReleaseCard({release}: {release: IUnresolvedRelease}) {
 
   useEffect(() => {
     if(!hasAnimatedIn) {
-      anime({
-        targets: `[data-anim=${popoverId}]`,
+      animate(`[data-anim=${popoverId}]`, {
         translateX: [-10, 0],
         opacity: [0, 1],
         easing: 'easeOutExpo',
         duration: 200
       })
-      anime({
-        targets: [`[data-anim=${popoverId}] h3`, `[data-anim=${popoverId}] p`],
+      animate([`[data-anim=${popoverId}] h3`, `[data-anim=${popoverId}] p`], {
         translateX: [-5, 0],
         opacity: [0, 1],
         easing: "spring(0.5, 120, 10, 0)",
-        delay: anime.stagger(50)
+        delay: stagger(50)
       })
       setHasAnimatedIn(true);
     }

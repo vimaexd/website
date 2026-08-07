@@ -1,5 +1,5 @@
 "use client";
-import anime from "animejs/lib/anime.es";
+import { animate, createSpring, stagger } from "animejs";
 import { useEffect } from "react";
 
 import projectData from "@mae/data/projects.json";
@@ -11,12 +11,15 @@ import PageHeader from "@mae/components/core/PageHeader";
 
 export default function ProjectPageClient() {
     useEffect(() => {
-        anime({
-            targets: ".anim-projects",
+        animate(".anim-projects", {
             translateY: [20, 0],
             opacity: [0, 1],
             duration: 1000,
-            delay: anime.stagger(50),
+            ease: createSpring({
+                bounce: 0.6,
+                duration: 500
+            }),
+            delay: stagger(50),
         });
     });
 

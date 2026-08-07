@@ -2,7 +2,7 @@
 import Image from "next/image";
 import _ from "lodash";
 import { useEffect, useState } from "react";
-import { animate, stagger, waapi } from "animejs";
+import { stagger, waapi } from "animejs";
 
 export default function NavbarStars({
     barWidth,

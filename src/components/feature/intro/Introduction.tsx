@@ -9,7 +9,6 @@ import SocialSpeeddialBlock, {
 import LogoBsky from '@mae/assets/icons/logo-bluesky';
 
 import { animate, stagger, createTimeline, createSpring } from 'animejs';
-import { set } from "animejs";
 
 export default function Introduction() {
     useLayoutEffect(() => {
