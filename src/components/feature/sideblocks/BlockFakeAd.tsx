@@ -7,7 +7,7 @@ import { fakeAdHideCountState } from "@mae/store/fakeAdHideCount";
 import { useAtom } from "jotai";
 
 export default function FakeAd() {
-    const [ad, setAd] = useState<{ filename: string; author: string; } | undefined>(null);
+    const [ad, setAd] = useState<{ filename: string; author: string; } | undefined>();
     const [visible, setVisibility] = useLocalStorage("mae.showFakeAds", true);
     const [hideCount, setHideCount] = useAtom(fakeAdHideCountState);
 
