@@ -132,10 +132,10 @@
             ],
             "links": {
                 "bandcamp": "https://vimae.bandcamp.com/album/find-it-violets-mix",
-                "applemusic": "",
-                "spotify": "",
+                "applemusic": "https://music.apple.com/gb/album/find-it-violets-mix-single/6800388653   ",
+                "spotify": "https://open.spotify.com/track/4CL5JmcewKkXE0vJhpqLWN",
                 "soundcloud": "https://soundcloud.com/vimae/findit-violet",
-                "youtube": ""
+                "youtube": "https://www.youtube.com/watch?v=9re1PsQMUpM"
             },
             "artist_comment": "",
             "album_art": "/assets/music/covers/finditv.jpg"
