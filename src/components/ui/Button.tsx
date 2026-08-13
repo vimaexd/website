@@ -1,17 +1,23 @@
-"use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import { Howl } from "howler";
 
-const soundClick = new Howl({
-    src: ["/assets/sfx/click.wav"],
-    volume: 0.2,
-});
 
-const soundHover = new Howl({
-    src: ["/assets/sfx/hover.wav"],
-    volume: 0.5,
-});
+let soundClick: Howl;
+let soundHover: Howl;
+
+if (typeof window !== undefined) {
+    soundClick = new Howl({
+        src: ["/assets/sfx/click.wav"],
+        volume: 0.2,
+    });
+
+    soundHover = new Howl({
+        src: ["/assets/sfx/hover.wav"],
+        volume: 0.5,
+    });
+}
+
 
 export enum ButtonStyle {
     Unstyled = 0,
@@ -50,34 +56,27 @@ export default function Button({
         const href = null;
     }
 
-    const [classes, setClasses] = useState("");
-
-    useEffect(() => {
-        let temp = "";
-        temp +=
+    const classes = useMemo(() => {
+        let temp =
             "select-none transition-all duration-75 ease-out py-1 px-4 rounded-md active:scale-90 a-unstyled ";
-        temp += " " + className;
-
+        temp += " " + (className ?? "");
         switch (style) {
             case ButtonStyle.Active:
                 temp +=
                     " " +
                     "flex justify-center bg-ctp-mauve text-ctp-crust font-semibold";
                 break;
-
             case ButtonStyle.Primary:
                 temp +=
                     " " +
                     "flex justify-center bg-ctp-base hover:bg-ctp-surface1 text-white";
                 break;
-
             case ButtonStyle.Outline:
                 temp +=
                     " " +
                     "flex justify-center outline-1 outline-double outline-neutral-400 text-center text-white hover:bg-white hover:text-black bg-transparent";
         }
-
-        setClasses(temp);
+        return temp;
     }, [className, style]);
 
     return (
