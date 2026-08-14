@@ -47,7 +47,7 @@ export default function Button({
     };
 
     const onButtonHover = () => {
-        soundHover.rate(Math.floor(Math.random() * 8) + 2);
+        soundHover.rate(Math.floor(Math.random() * 1.75) + 1);
         soundHover.play();
     };
 
