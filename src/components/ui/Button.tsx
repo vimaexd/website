@@ -1,7 +1,7 @@
+'use client'
 import Link from "next/link";
 import React, { useMemo } from "react";
 import { Howl } from "howler";
-
 
 let soundClick: Howl;
 let soundHover: Howl;
@@ -47,7 +47,7 @@ export default function Button({
     };
 
     const onButtonHover = () => {
-        soundHover.rate(Math.floor(Math.random() * 10) - 10);
+        soundHover.rate(Math.floor(Math.random() * 100) - 10);
         soundHover.play();
     };
 

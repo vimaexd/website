@@ -8,7 +8,7 @@ import SocialSpeeddialBlock, {
 } from "@mae/components/feature/sideblocks/BlockSocial";
 import LogoBsky from '@mae/assets/icons/logo-bluesky';
 
-import { animate, stagger, createTimeline, createSpring } from 'animejs';
+import { animate, stagger, createTimeline, spring } from 'animejs';
 
 export default function Introduction() {
     useLayoutEffect(() => {
@@ -35,7 +35,7 @@ export default function Introduction() {
         })
             .add('[data-anim="goober"]', {
                 x: [-16, 5],
-                ease: createSpring({
+                ease: spring({
                     bounce: 0.50,
                     duration: 400
                 }),
@@ -71,7 +71,7 @@ export default function Introduction() {
         <div className="flex flex-col sm:flex-row w-full items-center">
             <div className="flex flex-col my-16">
                 <div className="relative">
-                    <div data-anim="glow" className="absolute left-0 -translate-x-1/2 w-1/3 h-24 bg-ctp-mauve blur-[64px] rounded-full opacity-80 -z-10" />
+                    <div data-anim="glow" className="absolute left-0 -translate-x-1/2 w-1/3 h-24 bg-ctp-mauve blur-3xl rounded-full opacity-80 -z-10" />
                 </div>
                 <div className="flex gap-4 items-end">
                     <h1

@@ -15,9 +15,6 @@
     "@types/animejs": "^3.1.7",
     "@types/howler": "^2.2.7",
     "@types/lodash": "^4.14.195",
-    "@types/node": "18.15.7",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
     "@types/rss": "^0.0.32",
     "animejs": "^4.5.0",
     "axios": "^1.4.0",
@@ -27,7 +24,7 @@
     "howler": "^2.2.3",
     "jotai": "^2.15.0",
     "lodash": "^4.17.21",
-    "next": "15.5.7",
+    "next": "16.3.0",
     "next-plausible": "^3.12.0",
     "next-sitemap": "^4.2.3",
     "react": "19.2.0",
@@ -43,6 +40,9 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/node": "18.15.7",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
     "@typescript-eslint/parser": "^8.46.1",
     "autoprefixer": "^10.4.14",
@@ -58,6 +58,8 @@
   },
   "trustedDependencies": [
     "@tailwindcss/oxide",
+    "esbuild",
+    "sharp",
     "unrs-resolver"
   ]
 }

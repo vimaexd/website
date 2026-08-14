@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
     productionBrowserSourceMaps: true,
     async redirects() {
         return [
@@ -25,6 +22,7 @@ const nextConfig = {
         ];
     },
     images: {
+        qualities: [25, 50, 75, 100],
         remotePatterns: [
             {
                 hostname: "cdn.mae.wtf",
