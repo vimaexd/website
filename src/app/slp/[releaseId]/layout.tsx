@@ -8,7 +8,7 @@ export default function layout({children}: {children: React.ReactNode}) {
         {children}
       </div>
       <div className='absolute left-1/2 -translate-x-1/2 bottom-8'>
-        <VimaeLogoMono width="128px" height="fit"/>
+          <VimaeLogoMono width="128px" height="fit" className="opacity-80"/>
       </div>
     </>
   )

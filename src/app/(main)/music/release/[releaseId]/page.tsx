@@ -9,14 +9,15 @@ import { resolveRelease } from '@mae/misc/discography/utils';
 export async function generateMetadata(
   props: any,
 ) {
+  const params = await props.params;
   const discog = (_discog as IDiscography)
   const unresolved = discog
     .releases
-    .find(d => (d.slug == props.params.releaseId))
+    .find(d => (d.slug == params.releaseId))
 
   if(!unresolved)
     return {}
- 
+
   const release = resolveRelease(unresolved, discog.tracks);
 
   return {
@@ -29,11 +30,12 @@ export async function generateMetadata(
 }
 
 // wrapper fetches the release from the json and then supplies it to the component
-export default function ReleaseWrapper(props: any) {
+export default async function ReleaseWrapper(props: any) {
+  const params = await props.params;
   const discog = (_discog as IDiscography)
   const unresolved = discog
     .releases
-    .find(d => (d.slug == props.params.releaseId))
+    .find(d => (d.slug == params.releaseId))
 
   if(!unresolved) {
     notFound()

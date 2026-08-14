@@ -27,10 +27,9 @@ export default function releasefull({release}: {release: IResolvedRelease}) {
         alt="album art"
         fill={true}
         quality={1}
-        className='rounded-lg blur-xl outline-black outline-4'
+        className='rounded-lg blur-3xl outline-black outline-4'
         style={{
           maxWidth: "100%",
-          height: "auto",
           objectFit: "cover"
         }} />
       <div className='flex flex-col justify-center items-center h-screen w-screen z-10 gap-8'>
@@ -45,7 +44,6 @@ export default function releasefull({release}: {release: IResolvedRelease}) {
               className='rounded-lg'
               style={{
                 maxWidth: "100%",
-                height: "auto",
                 objectFit: "cover"
               }} />
           </div>
@@ -58,10 +56,10 @@ export default function releasefull({release}: {release: IResolvedRelease}) {
             {
               Object.keys(release.links)
                 .map((e: string, i) => {
-                  return <Button 
+                  return <Button
                   key={e}
-                  text={serviceSlugToName[e]} 
-                  href={Object.values(release.links)[i]} 
+                  text={serviceSlugToName[e]}
+                  href={Object.values(release.links)[i]}
                   className={((e == "bandcamp") ? "!bg-ctp-mauve !text-ctp-surface0" : "") + ' w-full h-10 flex justify-center items-center'}
                   icon={serviceToIcon[e] + " bx-sm mr-2"}/>;
                 })
