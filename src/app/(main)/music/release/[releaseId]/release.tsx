@@ -30,7 +30,7 @@ export default function Release({ release }: { release: IResolvedRelease }) {
             </div>
             <div className="z-10 sticky flex justify-center my-16 mx-4 min-h-screen">
                 <div className="lg:w-[1024px] w-full space-y-8 mx-4">
-                    <div className="flex gap-8 ">
+                    <div className="flex gap-4">
                         <Suspense
                             fallback={
                                 <div
@@ -53,7 +53,7 @@ export default function Release({ release }: { release: IResolvedRelease }) {
                             ></Image>
                         </Suspense>
                         <div className="flex flex-col justify-end">
-                            <h1 className="lg:text-7xl text-4xl font-bold mb-2">
+                            <h1 className="text-4xl font-bold mb-2">
                                 {release.title}
                             </h1>
                             <h2 className="align-baseline">
