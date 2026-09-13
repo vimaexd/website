@@ -221,6 +221,11 @@ export default function Home() {
                             src="/assets/buttons/friends/spikiii.png"
                             alt="Spikiii"
                         />
+                        <WebBadge
+                            href="https://smudgebap.com/"
+                            src="/assets/buttons/friends/smudgebap.png"
+                            alt="smudgebap"
+                        />
                     </div>
 
                     <h3 className="font-bold text-lg">cool stuff</h3>
