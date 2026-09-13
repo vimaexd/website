@@ -216,6 +216,11 @@ export default function Home() {
                             src="/assets/buttons/friends/thermia.gif"
                             alt="thermia"
                         />
+                        <WebBadge
+                            href="https://spikiii.nekoweb.org/"
+                            src="/assets/buttons/friends/spikiii.png"
+                            alt="Spikiii"
+                        />
                     </div>
 
                     <h3 className="font-bold text-lg">cool stuff</h3>
