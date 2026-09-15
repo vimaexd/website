@@ -1,6 +1,18 @@
 {
     "projects": [
         {
+            "title": "wringler",
+            "description": "stupid simple webring software in rust",
+            "image": "/assets/project_images/wringler.png",
+            "type": "Project",
+            "links": [
+                {
+                    "name": "Source",
+                    "href": "https://codeberg.org/vimae/wringler"
+                }
+            ]
+        },
+        {
             "title": "pin-gen",
             "description": "a reverse engineered key-generator for my universities' attendance system",
             "image": "/assets/project_images/pingen.png",
