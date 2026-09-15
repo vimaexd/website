@@ -291,6 +291,26 @@ export default function Home() {
                             </a>
                         </div>
                     </div>
+
+                    <div className="flex flex-wrap gap-2">
+                        <div className="flex items-center gap-4">
+                            <a
+                                className="bg-ctp-base hover:bg-ctp-surface0 p-4 rounded-xl"
+                                href="https://ring.transgendermafia.top/vimae/prev"
+                            >
+                                ◀
+                            </a>
+                            <a href="https://ring.transgendermafia.top">
+                                underground transgender mafia webring
+                            </a>
+                            <a
+                                className="bg-ctp-base hover:bg-ctp-surface0 p-4 rounded-xl"
+                                href="https://ring.transgendermafia.top/vimae/next"
+                            >
+                                ▶
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </PageContainer>
         </div>
