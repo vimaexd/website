@@ -23,8 +23,7 @@ RUN pnpm run build
 FROM node:24-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production PORT=8080 HOSTNAME=0.0.0.0
-COPY --from=build --chown=node:node /app/.next/standalone ./
-COPY --from=build --chown=node:node /app/.next/static ./.next/static
+COPY --from=build --chown=node:node /app/.next ./.next
 COPY --from=build --chown=node:node /app/public ./public
 COPY --from=build --chown=node:node /app/blog ./blog
 EXPOSE 8080
