@@ -27,4 +27,4 @@ COPY --from=build --chown=node:node /app/.next ./.next
 COPY --from=build --chown=node:node /app/public ./public
 COPY --from=build --chown=node:node /app/blog ./blog
 EXPOSE 8080
-CMD ["node", "server.js"]
+CMD ["pnpm", "run", "start"]
