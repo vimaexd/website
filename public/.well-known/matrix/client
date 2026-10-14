@@ -1,0 +1,1 @@
+{"m.homeserver":{"base_url":"https://matrix.mae.wtf/"},"org.matrix.msc4143.rtc_foci":[{"type":"livekit","livekit_service_url":"https://lk.mae.wtf"}]}
